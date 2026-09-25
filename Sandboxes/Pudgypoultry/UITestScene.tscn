@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://d3ctdt85tea20"]
+
+[ext_resource type="Texture2D" uid="uid://y8uamtovj52g" path="res://Sandboxes/Pudgypoultry/PunchcardTest1.png" id="1_4212n"]
+[ext_resource type="Texture2D" uid="uid://4pwtjt8t5arw" path="res://Sandboxes/Pudgypoultry/PunchcardTest2.png" id="2_ugvkj"]
+[ext_resource type="Texture2D" uid="uid://bjqct1q31swo6" path="res://Sandboxes/Pudgypoultry/PunchcardTest3.png" id="3_w0xjk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rojf5"]
+size = Vector2(1150, 249.5)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_pxqgl"]
+size = Vector2(100, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pxqgl"]
+size = Vector2(100, 140)
+
+[node name="UiTestScene" type="Node2D" unique_id=823867001]
+
+[node name="CardArea" type="Area2D" parent="." unique_id=428687191]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CardArea" unique_id=79786796]
+position = Vector2(575, 528)
+shape = SubResource("RectangleShape2D_rojf5")
+
+[node name="Sprite2D" type="Sprite2D" parent="CardArea" unique_id=662401993]
+texture = SubResource("PlaceholderTexture2D_pxqgl")
+
+[node name="Punchcard1" type="Area2D" parent="." unique_id=1891695601]
+position = Vector2(138, 528)
+scale = Vector2(0.8, 0.8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Punchcard1" unique_id=1587628996]
+shape = SubResource("RectangleShape2D_pxqgl")
+
+[node name="Sprite2D" type="Sprite2D" parent="Punchcard1" unique_id=32481247]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_4212n")
+
+[node name="Punchcard2" type="Area2D" parent="." unique_id=49247345]
+position = Vector2(266, 528)
+scale = Vector2(0.8, 0.8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Punchcard2" unique_id=738827798]
+shape = SubResource("RectangleShape2D_pxqgl")
+
+[node name="Sprite2D" type="Sprite2D" parent="Punchcard2" unique_id=1139931261]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_ugvkj")
+
+[node name="Punchcard3" type="Area2D" parent="." unique_id=1790920725]
+position = Vector2(392, 540)
+scale = Vector2(0.8, 0.8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Punchcard3" unique_id=1581610369]
+shape = SubResource("RectangleShape2D_pxqgl")
+
+[node name="Sprite2D" type="Sprite2D" parent="Punchcard3" unique_id=1616967490]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_w0xjk")

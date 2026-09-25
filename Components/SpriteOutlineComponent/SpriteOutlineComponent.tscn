@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bqormgwvc5m8j"]
+
+[ext_resource type="Script" uid="uid://bprcjj5fph3sx" path="res://Components/SpriteOutlineComponent/SpriteOutlineComponent.gd" id="1_rrwd7"]
+
+[node name="SpriteOutlineComponent" type="Node" unique_id=1057435061]
+script = ExtResource("1_rrwd7")

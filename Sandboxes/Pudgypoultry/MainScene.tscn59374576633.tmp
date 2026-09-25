@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://ctdaasj4f8m1v"]
+
+[ext_resource type="Script" uid="uid://b0fonqqc6uj7w" path="res://Sandboxes/Pudgypoultry/PunchCard.gd" id="1_0dkyw"]
+[ext_resource type="Texture2D" uid="uid://y8uamtovj52g" path="res://Sandboxes/Pudgypoultry/PunchcardTest1.png" id="1_t2s15"]
+[ext_resource type="PackedScene" uid="uid://dr8vwsmgcojh1" path="res://Components/DragAndDropComponent/DragAndDropComponent.tscn" id="3_td0uf"]
+[ext_resource type="PackedScene" uid="uid://cip0xm1ix1vte" path="res://Components/HighlightComponent/HighlightComponent.tscn" id="4_ij23q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rkc6c"]
+size = Vector3(1.5, 0.05, 0.6)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rojf5"]
+albedo_color = Color(0, 0.21040133, 0.33125, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_t2s15"]
+material = SubResource("StandardMaterial3D_rojf5")
+size = Vector3(1.5, 0.05, 0.6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rojf5"]
+size = Vector3(2.5, 0.05, 3.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vpxdg"]
+albedo_texture = ExtResource("1_t2s15")
+uv1_scale = Vector3(2.5, 2.5, 2.5)
+uv1_offset = Vector3(0.25, 0, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0dkyw"]
+material = SubResource("StandardMaterial3D_vpxdg")
+size = Vector3(2.5, 0.05, 3.5)
+
+[sub_resource type="Environment" id="Environment_vpxdg"]
+
+[node name="MainScene" type="Node3D" unique_id=904660948]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=552463633]
+transform = Transform3D(1, 0, 0, 0, 0.72838235, 0.6851709, 0, -0.6851709, 0.72838235, 0, 0.18689814, -0.21655041)
+
+[node name="PlayArea" type="StaticBody3D" parent="." unique_id=1047502078]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.38435474, -0.6226615)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayArea" unique_id=1703039763]
+shape = SubResource("BoxShape3D_rkc6c")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayArea" unique_id=1823532582]
+mesh = SubResource("BoxMesh_t2s15")
+
+[node name="PunchCard1" type="StaticBody3D" parent="PlayArea" unique_id=1030936977]
+transform = Transform3D(0.04, 0, 0, 0, 0.040000003, 9.313226e-10, 0, -9.313226e-10, 0.040000003, 0, 0.033325434, -0.01170516)
+script = ExtResource("1_0dkyw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayArea/PunchCard1" unique_id=585696319]
+shape = SubResource("BoxShape3D_rojf5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayArea/PunchCard1" unique_id=1596750261]
+mesh = SubResource("BoxMesh_0dkyw")
+
+[node name="DragAndDropComponent" parent="PlayArea/PunchCard1" unique_id=765073431 instance=ExtResource("3_td0uf")]
+pickup_height = null
+drag_speed = null
+debug = null
+
+[node name="HighlightComponent" parent="PlayArea/PunchCard1" unique_id=857237700 instance=ExtResource("4_ij23q")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1762969380]
+environment = SubResource("Environment_vpxdg")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=682498599]
+transform = Transform3D(0.99998707, 0.003685923, -0.0035099322, 0, 0.68960667, 0.7241841, 0.00508976, -0.72417474, 0.6895977, 0, 2.7550595, -6.472185)
+
+[connection signal="mouse_entered" from="PlayArea/PunchCard1" to="PlayArea/PunchCard1/HighlightComponent" method="apply_highlight"]
+[connection signal="mouse_exited" from="PlayArea/PunchCard1" to="PlayArea/PunchCard1/HighlightComponent" method="remove_highlight"]

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cip0xm1ix1vte"]
+
+[ext_resource type="Script" uid="uid://dndlg244snj0a" path="res://Components/HighlightComponent/HighlightComponent.gd" id="1_jfg23"]
+[ext_resource type="Shader" uid="uid://8e573ymunmjw" path="res://Components/HighlightComponent/outline.gdshader" id="2_e03ag"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bmdwb"]
+render_priority = 0
+shader = ExtResource("2_e03ag")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/size = 1.05
+
+[node name="HighlightComponent" type="Node" unique_id=857237700]
+script = ExtResource("1_jfg23")
+highlight_material = SubResource("ShaderMaterial_bmdwb")
