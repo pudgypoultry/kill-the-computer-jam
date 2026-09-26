@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://c82j06v17qfbp"]
+
+[ext_resource type="Shader" uid="uid://8myhxj2c0ghq" path="res://Sandboxes/Pudgypoultry/Monochrome.gdshader" id="1_dbkhw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pxqgl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hh20u"]
+albedo_color = Color(0.40625, 0.40625, 0.40625, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rojf5"]
+material = SubResource("StandardMaterial3D_hh20u")
+size = Vector3(20, 1, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ytoc7"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_c3mj6"]
+material = SubResource("StandardMaterial3D_hh20u")
+size = Vector3(10, 5, 1)
+
+[sub_resource type="Gradient" id="Gradient_ytoc7"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_hh20u"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_rojf5"]
+noise = SubResource("FastNoiseLite_hh20u")
+color_ramp = SubResource("Gradient_ytoc7")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pxqgl"]
+shader = ExtResource("1_dbkhw")
+shader_parameter/tiledtexture = SubResource("NoiseTexture2D_rojf5")
+shader_parameter/opacity = 1.0
+shader_parameter/pixel_size = 0.005
+shader_parameter/greyscale = true
+shader_parameter/contrast = 0.0
+shader_parameter/pixel_colors = Color(0, 1, 0, 1)
+shader_parameter/background_color = Color(0, 0, 0, 1)
+
+[node name="Node3D" type="Node3D" unique_id=212615922]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=417143241]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 10)
+current = true
+
+[node name="Palette" type="StaticBody3D" parent="." unique_id=778592638]
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Palette" unique_id=188468556]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Palette" unique_id=1569864879]
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=1667103585]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1364595274]
+shape = SubResource("BoxShape3D_pxqgl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=920507612]
+mesh = SubResource("BoxMesh_rojf5")
+
+[node name="Wall" type="StaticBody3D" parent="." unique_id=304307069]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.128678, 2.2796702, 5.1364994)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall" unique_id=122239588]
+shape = SubResource("BoxShape3D_ytoc7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall" unique_id=130442367]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("BoxMesh_c3mj6")
+
+[node name="Wall2" type="StaticBody3D" parent="." unique_id=526824419]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.129, 2.28, 5.136)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall2" unique_id=1275616426]
+shape = SubResource("BoxShape3D_ytoc7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall2" unique_id=908214809]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("BoxMesh_c3mj6")
+
+[node name="Floor2" type="StaticBody3D" parent="." unique_id=798567463]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3018312, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor2" unique_id=13444751]
+shape = SubResource("BoxShape3D_pxqgl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor2" unique_id=248624185]
+mesh = SubResource("BoxMesh_rojf5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2136070968]
+
+[node name="TextureRect" type="ColorRect" parent="CanvasLayer" unique_id=165340112]
+material = SubResource("ShaderMaterial_pxqgl")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=113107046]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1619386943]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5668914, 2.4958978, 6.4618206)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1495194109]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2875755, 2.4958978, 2.6299314)
