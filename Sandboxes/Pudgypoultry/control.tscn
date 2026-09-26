@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://dsnsji0heoey1"]
+
+[ext_resource type="Script" uid="uid://4kjffawdh8tu" path="res://rich_text_label.gd" id="1_0fbet"]
+
+[node name="Control" type="Control" unique_id=1239144695]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=751684407]
+layout_mode = 0
+offset_right = 1214.0
+offset_bottom = 264.0
+text = "Place of Honor
+Atomic Priesthood
+“What is broken is not holy. What is sundered cannot be repaired.”
+“Fear what cannot be seen but sickens.”
+“The flame of truth must never be extinguished. No matter the cost.”
+“To be martyred is a blessing. To become in death a warning—there is no higher calling.”
+Verses
+Robot skeletons
+Bible
+Closer to the center , older priests ,with clearer knowledge
+“One day you will be like us”
+“When my time comes, I will be blessed with an apparatus of mine own, and marched gladly into the
+core.”
+“My brethren await us, at the heart of this place.”
+“Saint Cornelius, Patron Saint of Twitching”
+“Saint Bibinia, the Bookworm”
+“Saint Expiditus
+“Saint Guinefort, the Loyal” (he was a dog)
+“Saint Bucolus”
+Why do we do what we do? Why, because we’ve always done it. And to preserve thus world from
+annihilation, of course.
+So it begins, at last. The holiest of countdowns, numerals descending like benedictions from the
+heavens.
+The division between selves must be either split or fused, empowered or erupted.
+God lives in the Core.
+We cannot look upon God, for God would destroy us.
+Once, in ages past, God sustained this world. By God’s power did the machines of this world spin and
+whir and soar. Then, in wisdom and in wrath did God smite this world. God’s light was dreadful to look
+upon. God’s heat could melt flesh. God’s fingerprints left poison deep within the soil and stones, and
+streaked poison across the sky.
+Now does God sleep, so we must guard God. And guard the world from God, lest he again awaken.
+We have but one task: Not to.
+None shall enter but the dead.
+None shall venture out again upon crossing that threshold.
+Maintain threshold. Do not permeate.
+The Ritual
+1. Cleanse
+2. Augment
+3. Venture
+4. Labyrinth
+5. Capture
+6. SHINE
+7. Key
+8. Mythologize/Eulogize/Benediction
+9. Circle
+10. GOD
+https://www.zygonjournal.org/article/id/14327/
+Quotes from Source:
+“time frame of 10,000 years”
+“relay system, which allows updating of the relevant information every three generations (Sebeok , 26).
+Written warnings shall therefore be translated and adjusted to the changing linguistic and cultural realm
+roughly every 100 years”
+“ moral reasons” for avoiding these sites, “with perhaps the veiled threat that to ignore the mandate
+would be tantamount to inviting some sort of supernatural retribution” (Sebeok , 27)
+self‐selective in membership, using whatever devices for enforcement are at its disposal, including
+those of folkloristic character,” such as rituals and legends (Sebeok , 28).
+oscillation between a utopia and a dystopia
+eternal commitment, which can only be dealt with if we presume the succession of a perpetual social
+apparatus.
+military priesthood which guards against inadvertent use of nuclear weapons. (Weinberg , 34).
+religion in its broadest sense … must be another term for that obscurity that surrounds man's efforts to
+defend himself by curative and preventative means against his own violence,” - Rene Girard
+devoid of God, because nuclear power has already assumed this role. Its “existential condition” brings
+us Heaven or Hell transfigured as nuclear prosperity or nuclear Holocaust
+artificially created and nurtured ritual‐and‐legend"
+visible_characters = 12
+visible_ratio = 0.0037488285
+script = ExtResource("1_0fbet")

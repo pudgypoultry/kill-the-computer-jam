@@ -5,6 +5,7 @@ class_name PunchCard
 @export var sprite : Sprite3D
 
 var parent_surface : Node3D
+var is_slotted : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

@@ -2,7 +2,7 @@ extends Node
 class_name DragAndDropComponent
 
 @export var check_ray : RayCast3D
-
+@export var ghost_source : GeometryInstance3D   # the card's Sprite3D or MeshInstance3D
 @export_flags_3d_physics var checkray_layers
 @export var pickup_height : float = 0.1
 @export var drag_speed_x : float = 0.3
@@ -20,16 +20,13 @@ var original_parent : Node3D
 var potential_drop : Node3D
 var valid_drop : bool
 var pickup_timer : float = 0.0
-var pickup_interval : float = 0.2
+var pickup_interval : float = 0.1
 var can_pickup : bool = true
 var camera : Camera3D
 var surface : StaticBody3D
 var grab_offset : Vector3 = Vector3.ZERO
 var drag_plane : Plane
 var is_highlighted : bool = false
-
-signal dropping(collision)
-signal picking_up(collision)
 
 
 func _ready() -> void:
@@ -45,6 +42,7 @@ func _ready() -> void:
 	actor_reference.connect("mouse_exited", _on_mouse_exited)
 	camera = get_viewport().get_camera_3d()
 	call_deferred("_late_ready")
+#ajdkjaskdjlaskdj
 
 
 func _late_ready() -> void:
@@ -82,14 +80,9 @@ func pick_up():
 	if actor_reference.get_parent() != original_parent:
 		actor_reference.reparent(original_parent)
 
-	# Drag along a plane at the lifted height, so the ray meets the card where it's drawn
 	var normal : Vector3 = surface.global_transform.basis.y.normalized()
 	var lifted : Vector3 = original_position + normal * pickup_height
 	drag_plane = Plane(normal, lifted)
-
-	## Remember where on the card it was grabbed, so it doesn't snap its center to the cursor
-	#var hit = get_mouse_hit_on_plane(drag_plane)
-	#grab_offset = lifted - hit if hit != null else Vector3.ZERO
 
 
 func drag(delta):
@@ -104,19 +97,19 @@ func drag(delta):
 
 
 func drop():
+	# check if position is allowed
+	if !check_ray.is_colliding():
+		return
+	# find drop position
+	var collider = check_ray.get_collider()
 	var drop_position = check_ray.get_collision_point()
-	if !is_slottable or (is_slottable && !potential_drop):
-		if !is_valid_drop():
-			actor_reference.global_position = original_position
-		else:
-			actor_reference.global_position = Vector3(drop_position.x, BoardManager.board_height, drop_position.z)
-	elif potential_drop && valid_drop:
-		dropping.emit(potential_drop)
-		actor_reference.reparent(potential_drop)
-		actor_reference.global_position = potential_drop.slot_position.global_position
-	else:
-		actor_reference.global_position = original_position
-	BoardManager.current_focus = null
+	# Layer 2 is the table itself
+	if collider.get_collision_layer_value(2):
+		actor_reference.global_position = Vector3(drop_position.x, BoardManager.board_height, drop_position.z)
+	# Layer 3 is the slot position
+	elif collider.get_collision_layer_value(3):
+		collider.slot_card(actor_reference)
+		# Call slot function, pass it this card
 	just_dropped()
 
 
@@ -131,6 +124,7 @@ func is_valid_drop() -> bool:
 
 
 func just_dropped():
+	BoardManager.current_focus = null
 	pickup_timer = 0.0
 	can_pickup = false
 	is_being_dragged = false
