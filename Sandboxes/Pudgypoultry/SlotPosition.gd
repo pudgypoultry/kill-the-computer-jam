@@ -1,5 +1,5 @@
 extends StaticBody3D
-class_name SlotPosition
+class_name CardSlot
 
 @export var start_position : Node3D
 @export var insert_position : Node3D
@@ -16,8 +16,8 @@ func slot_card(card : PunchCard):
 	card.is_slotted = true
 	BoardManager.player_actionable = false
 	var tween = get_tree().create_tween().bind_node(card)
-	
-	tween.tween_property(card, "global_position", insert_position.global_position, 2.0)
+	tween.set_trans(Tween.TRANS_BACK)
+	tween.tween_property(card, "global_position", insert_position.global_position, 1.0)
 	# wait until that's done
 	await tween.finished
 	BoardManager.player_actionable = true
@@ -29,6 +29,7 @@ func eject_card():
 	current_card.is_slotted = false
 	var tween = get_tree().create_tween().bind_node(current_card)
 	BoardManager.player_actionable = false
-	tween.tween_property(current_card, "global_position", expel_position.global_position, 2.0)
+	tween.set_trans(Tween.TRANS_BACK)
+	tween.tween_property(current_card, "global_position", expel_position.global_position, 1.0)
 	await tween.finished
 	BoardManager.player_actionable = true

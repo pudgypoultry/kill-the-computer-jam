@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://y8uamtovj52g"
-path.s3tc="res://.godot/imported/PunchcardTest1.png-f16b4a629d2298b60f841c5b5cf70aad.s3tc.ctex"
+uid="uid://bjqct1q31swo6"
+path.s3tc="res://.godot/imported/PunchcardTest3.png-2069940c9e990542fc96e64455525921.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Sandboxes/Pudgypoultry/PunchcardTest1.png"
-dest_files=["res://.godot/imported/PunchcardTest1.png-f16b4a629d2298b60f841c5b5cf70aad.s3tc.ctex"]
+source_file="res://Scenes/Punchcards/PunchcardTest3.png"
+dest_files=["res://.godot/imported/PunchcardTest3.png-2069940c9e990542fc96e64455525921.s3tc.ctex"]
 
 [params]
 

@@ -3,9 +3,11 @@ class_name PunchCard
 
 @export var pickup_height : float = 0.5
 @export var sprite : Sprite3D
+@export var step_length : float = 5.0
 
 var parent_surface : Node3D
 var is_slotted : bool = false
+var character : Node3D = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -18,4 +20,5 @@ func _process(delta: float) -> void:
 
 
 func execute() -> void:
-	print(name, " has not overridden execute correctly!")
+	if character == null:
+		character = BoardManager.reactor_character
