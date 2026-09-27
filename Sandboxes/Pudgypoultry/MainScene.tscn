@@ -1,16 +1,19 @@
 [gd_scene format=4 uid="uid://ctdaasj4f8m1v"]
 
-[ext_resource type="Script" uid="uid://b0fonqqc6uj7w" path="res://Sandboxes/Pudgypoultry/PunchCard.gd" id="1_0dkyw"]
+[ext_resource type="Script" uid="uid://dk42jjmq7vmeu" path="res://Scenes/Punchcards/Move_Forward/Punch_Move_Forward.gd" id="1_1uf6b"]
 [ext_resource type="Script" uid="uid://gxmp1la5doos" path="res://Sandboxes/Pudgypoultry/TestButton.gd" id="1_3tf8q"]
-[ext_resource type="Texture2D" uid="uid://y8uamtovj52g" path="res://Sandboxes/Pudgypoultry/PunchcardTest1.png" id="1_t2s15"]
+[ext_resource type="Texture2D" uid="uid://y8uamtovj52g" path="res://Scenes/Punchcards/PunchcardTest1.png" id="1_t2s15"]
 [ext_resource type="Shader" uid="uid://6ue1scpi6ugg" path="res://Components/SpriteOutlineComponent/SpriteHighlight.gdshader" id="2_td0uf"]
-[ext_resource type="Texture2D" uid="uid://4pwtjt8t5arw" path="res://Sandboxes/Pudgypoultry/PunchcardTest2.png" id="2_vpxdg"]
-[ext_resource type="Texture2D" uid="uid://bjqct1q31swo6" path="res://Sandboxes/Pudgypoultry/PunchcardTest3.png" id="3_0dkyw"]
+[ext_resource type="Texture2D" uid="uid://4pwtjt8t5arw" path="res://Scenes/Punchcards/PunchcardTest2.png" id="2_vpxdg"]
+[ext_resource type="Texture2D" uid="uid://bjqct1q31swo6" path="res://Scenes/Punchcards/PunchcardTest3.png" id="3_0dkyw"]
 [ext_resource type="PackedScene" uid="uid://dr8vwsmgcojh1" path="res://Components/DragAndDropComponent/DragAndDropComponent.tscn" id="3_td0uf"]
 [ext_resource type="PackedScene" uid="uid://bqormgwvc5m8j" path="res://Components/SpriteOutlineComponent/SpriteOutlineComponent.tscn" id="4_0dkyw"]
+[ext_resource type="Script" uid="uid://by4niajalghyy" path="res://Scenes/Punchcards/Rotate_Left/Punch_Rotate_Left.gd" id="6_w0dj5"]
 [ext_resource type="Texture2D" uid="uid://47m5jkj355bh" path="res://Sandboxes/Pudgypoultry/Outline.png" id="8_5msbe"]
+[ext_resource type="Script" uid="uid://d00yrxpvcdaqk" path="res://Scenes/Punchcards/Rotate_Right/Punch_Rotate_Right.gd" id="8_41b3u"]
 [ext_resource type="Script" uid="uid://w4h4gaoyuvic" path="res://Sandboxes/Pudgypoultry/SlotPosition.gd" id="8_qebm6"]
 [ext_resource type="PackedScene" uid="uid://5wyl3766mgej" path="res://Sandboxes/Pudgypoultry/test_slot.tscn" id="9_sh0p1"]
+[ext_resource type="PackedScene" uid="uid://c82j06v17qfbp" path="res://Scenes/ReactorArea/ReactorView.tscn" id="12_qaeli"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rkc6c"]
 size = Vector3(1.5, 0.05, 0.6)
@@ -96,12 +99,26 @@ _surfaces = [{
 "vertex_data": PackedByteArray("M5m0OSbngD/4zwE/Yi1KPSbngD8pMgE/wejJPSbngD+oq/4+g2QWPibngD8gf/g+3mFGPibngD/y7e8+IHZ0PibngD8+DeU+2BeQPibngD/T99c+X5GkPibngD/1zcg+LHW3PibngD8Gtbc+rJTIPibngD8s16Q+qMXXPibngD/tYpA+reLkPibngD9nFXU+ZMvvPibngD+3CEc+6mT4PibngD9VERc+Cpr+PibngD8CS8s9vC0BPybngD9M/Ew9+M8BPybngD83mbQ5KTIBPybngD9iLUq9qKv+PibngD/B6Mm9IH/4PibngD+DZBa+8u3vPibngD/eYUa+Pg3lPibngD8gdnS+0/fXPibngD/YF5C+9c3IPibngD9fkaS+BrW3PibngD8sdbe+LNekPibngD+slMi+7WKQPibngD+oxde+ZxV1PibngD+t4uS+twhHPibngD9ky+++VREXPibngD/qZPi+AkvLPSbngD8Kmv6+TPxMPSbngD+8LQG/N5m0OSbngD/4zwG/Yi1KvSbngD8pMgG/wejJvSbngD+oq/6+g2QWvibngD8gf/i+3mFGvibngD/y7e++IHZ0vibngD8+DeW+2BeQvibngD/T99e+X5GkvibngD/1zci+LHW3vibngD8Gtbe+rJTIvibngD8s16S+qMXXvibngD/tYpC+reLkvibngD9nFXW+ZMvvvibngD+3CEe+6mT4vibngD9VERe+Cpr+vibngD8CS8u9vC0BvybngD9M/Ey9+M8BvybngD83mbS5KTIBvybngD9iLUo9qKv+vibngD/B6Mk9IH/4vibngD+DZBY+8u3vvibngD/eYUY+Pg3lvibngD8gdnQ+0/fXvibngD/YF5A+9c3IvibngD9fkaQ+BrW3vibngD8sdbc+LNekvibngD+slMg+7WKQvibngD+oxdc+ZxV1vibngD+t4uQ+twhHvibngD9ky+8+VREXvibngD/qZPg+AkvLvSbngD8Kmv4+TPxMvSbngD+8LQE/M5m0OSbngD/4zwE/5sv+OZqZGT+WjgI/pcRKPZqZGT/F8AE/fMnKPZqZGT+YEgA/WB4XPpqZGT9V8fk+YWNHPpqZGT9DVfE+1rx1PpqZGT81ZuY+OtyQPpqZGT8eP9k+43SlPpqZGT9tAMo+onW4PpqZGT+3z7g+m6/JPpqZGT9e16U+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qKv+vibngL/B6Mk9IH/4vibngL+DZBY+8u3vvibngL/eYUY+Pg3lvibngL8gdnQ+0/fXvibngL/YF5A+9c3IvibngL9fkaQ+BrW3vibngL8sdbc+LNekvibngL+slMg+7WKQvibngL+oxdc+ZxV1vibngL+t4uQ+twhHvibngL9ky+8+VREXvibngL/qZPg+AkvLvSbngL8Kmv4+TPxMvSbngL+8LQE/N5m0OSbngL/4zwE/AAAAAK5HgT8AAAAAM5m0OSbngD/4zwE/Yi1KPSbngD8pMgE/wejJPSbngD+oq/4+g2QWPibngD8gf/g+3mFGPibngD/y7e8+IHZ0PibngD8+DeU+2BeQPibngD/T99c+X5GkPibngD/1zcg+LHW3PibngD8Gtbc+rJTIPibngD8s16Q+qMXXPibngD/tYpA+reLkPibngD9nFXU+ZMvvPibngD+3CEc+6mT4PibngD9VERc+Cpr+PibngD8CS8s9vC0BPybngD9M/Ew9+M8BPybngD83mbQ5KTIBPybngD9iLUq9qKv+PibngD/B6Mm9IH/4PibngD+DZBa+8u3vPibngD/eYUa+Pg3lPibngD8gdnS+0/fXPibngD/YF5C+9c3IPibngD9fkaS+BrW3PibngD8sdbe+LNekPibngD+slMi+7WKQPibngD+oxde+ZxV1PibngD+t4uS+twhHPibngD9ky+++VREXPibngD/qZPi+AkvLPSbngD8Kmv6+TPxMPSbngD+8LQG/N5m0OSbngD/4zwG/Yi1KvSbngD8pMgG/wejJvSbngD+oq/6+g2QWvibngD8gf/i+3mFGvibngD/y7e++IHZ0vibngD8+DeW+2BeQvibngD/T99e+X5GkvibngD/1zci+LHW3vibngD8Gtbe+rJTIvibngD8s16S+qMXXvibngD/tYpC+reLkvibngD9nFXW+ZMvvvibngD+3CEe+6mT4vibngD9VERe+Cpr+vibngD8CS8u9vC0BvybngD9M/Ey9+M8BvybngD83mbS5KTIBvybngD9iLUo9qKv+vibngD/B6Mk9IH/4vibngD+DZBY+8u3vvibngD/eYUY+Pg3lvibngD8gdnQ+0/fXvibngD/YF5A+9c3IvibngD9fkaQ+BrW3vibngD8sdbc+LNekvibngD+slMg+7WKQvibngD+oxdc+ZxV1vibngD+t4uQ+twhHvibngD9ky+8+VREXvibngD/qZPg+AkvLvSbngD8Kmv4+TPxMvSbngD+8LQE/M5m0OSbngD/4zwE/AAAAAK5Hgb8AAAAAN5m0OSbngL/4zwE/Yi1KPSbngL8pMgE/wejJPSbngL+oq/4+g2QWPibngL8gf/g+3mFGPibngL/y7e8+IHZ0PibngL8+DeU+2BeQPibngL/T99c+X5GkPibngL/1zcg+LHW3PibngL8Gtbc+rJTIPibngL8s16Q+qMXXPibngL/tYpA+reLkPibngL9nFXU+ZMvvPibngL+3CEc+6mT4PibngL9VERc+Cpr+PibngL8CS8s9vC0BPybngL9M/Ew9+M8BPybngL8zmbQ5KTIBPybngL9iLUq9qKv+PibngL/B6Mm9IH/4PibngL+DZBa+8u3vPibngL/eYUa+Pg3lPibngL8gdnS+0/fXPibngL/YF5C+9c3IPibngL9fkaS+BrW3PibngL8sdbe+LNekPibngL+slMi+7WKQPibngL+oxde+ZxV1PibngL+t4uS+twhHPibngL9ky+++VREXPibngL/qZPi+AkvLPSbngL8Kmv6+TPxMPSbngL+8LQG/M5m0OSbngL/4zwG/Yi1KvSbngL8pMgG/wejJvSbngL+oq/6+g2QWvibngL8gf/i+3mFGvibngL/y7e++IHZ0vibngL8+DeW+2BeQvibngL/T99e+X5GkvibngL/1zci+LHW3vibngL8Gtbe+rJTIvibngL8s16S+qMXXvibngL/tYpC+reLkvibngL9nFXW+ZMvvvibngL+3CEe+6mT4vibngL9VERe+Cpr+vibngL8CS8u9vC0BvybngL9M/Ey9+M8BvybngL8zmbS5KTIBvybngL9iLUo9qKv+vibngL/B6Mk9IH/4vibngL+DZBY+8u3vvibngL/eYUY+Pg3lvibngL8gdnQ+0/fXvibngL/YF5A+9c3IvibngL9fkaQ+BrW3vibngL8sdbc+LNekvibngL+slMg+7WKQvibngL+oxdc+ZxV1vibngL+t4uQ+twhHvibngL9ky+8+VREXvibngL/qZPg+AkvLvSbngL8Kmv4+TPxMvSbngL+8LQE/N5m0OSbngL/4zwE//3//f////795i/9///+8xTuV/3///53KyZ3/f///5M58pf9///+90pWs/3///0rWRLP/f///odmxuf9////Y3P+//3/////fTMb/f///JeO6zP9///9c5mnT/3///7Tpgdr/f///QO004v9///8Z8cLq/3///2D1hPT/f///Qvr//wCA////////eYsAAEL6//87lQAAYPX//8mdAAAZ8f//fKUAAEDt//+VrAAAtOn//0SzAABc5v//sbkAACXj////vwAA/9///0zGAADY3P//uswAAKHZ//9p0wAAStb//4HaAAC90v//NOIAAOTO///C6gAAncr//4X0AAC8xf////8AAP+/AACF9HgL/78AAMLqOxX/vwAANOLJHf+/AACB2n0l/78AAGnTlSz/vwAAusxEM/+/AABMxrI5/78AAP+//z//vwAAsblNRv+/AABEs7lM/78AAJWsaFP/vwAAfKWCWv+/AADJnTVi/78AADuVw2r/vwAAeYuFdP+/AAAAgP9//794C/9/eYv/vzsV/387lf+/yR3/f8md/799Jf9/fKX/v5Us/3+VrP+/RDP/f0Sz/7+yOf9/sbn/v/8//3//v/+/TUb/f0zG/7+5TP9/usz/v2hT/39p0/+/glr/f4Ha/781Yv9/NOL/v8Nq/3/C6v+/hXT/f4T0/7//f/9/////v/9//3////+/eYv/f///vMU7lf9///+dysmd/3///+TOfKX/f///vdKVrP9///9K1kSz/3///6HZsbn/f///2Nz/v/9/////30zG/3///yXjusz/f///XOZp0/9///+06YHa/3///0DtNOL/f///GfHC6v9///9g9YT0/3///0L6//8AgP///////3mLAABC+v//O5UAAGD1///JnQAAGfH//3ylAABA7f//lawAALTp//9EswAAXOb//7G5AAAl4////78AAP/f//9MxgAA2Nz//7rMAACh2f//adMAAErW//+B2gAAvdL//zTiAADkzv//wuoAAJ3K//+F9AAAvMX/////AAD/vwAAhfR4C/+/AADC6jsV/78AADTiyR3/vwAAgdp9Jf+/AABp05Us/78AALrMRDP/vwAATMayOf+/AAD/v/8//78AALG5TUb/vwAARLO5TP+/AACVrGhT/78AAHylglr/vwAAyZ01Yv+/AAA7lcNq/78AAHmLhXT/vwAAAID/f/+/eAv/f3mL/787Ff9/O5X/v8kd/3/Jnf+/fSX/f3yl/7+VLP9/laz/v0Qz/39Es/+/sjn/f7G5/7//P/9//7//v01G/39Mxv+/uUz/f7rM/79oU/9/adP/v4Ja/3+B2v+/NWL/fzTi/7/Dav9/wur/v4V0/3+E9P+//3//f////7//f/9/////v3mL/3///7zFO5X/f///ncrJnf9////kznyl/3///73Slaz/f///StZEs/9///+h2bG5/3///9jc/7//f////99Mxv9///8l47rM/3///1zmadP/f///tOmB2v9///9A7TTi/3///xnxwur/f///YPWE9P9///9C+v//AID///////95iwAAQvr//zuVAABg9f//yZ0AABnx//98pQAAQO3//5WsAAC06f//RLMAAFzm//+xuQAAJeP///+/AAD/3///TMYAANjc//+6zAAAodn//2nTAABK1v//gdoAAL3S//804gAA5M7//8LqAACdyv//hfQAALzF/////wAA/78AAIX0eAv/vwAAwuo7Ff+/AAA04skd/78AAIHafSX/vwAAadOVLP+/AAC6zEQz/78AAEzGsjn/vwAA/7//P/+/AACxuU1G/78AAESzuUz/vwAAlaxoU/+/AAB8pYJa/78AAMmdNWL/vwAAO5XDav+/AAB5i4V0/78AAACA/3//v3gL/395i/+/OxX/fzuV/7/JHf9/yZ3/v30l/398pf+/lSz/f5Ws/79EM/9/RLP/v7I5/3+xuf+//z//f/+//79NRv9/TMb/v7lM/3+6zP+/aFP/f2nT/7+CWv9/gdr/vzVi/3804v+/w2r/f8Lq/7+FdP9/hPT/v/9//3////+//3//f////795i/9///+8xTuV/3///53KyZ3/f///5M58pf9///+90pWs/3///0rWRLP/f///odmxuf9////Y3P+//3/////fTMb/f///JeO6zP9///9c5mnT/3///7Tpgdr/f///QO004v9///8Z8cLq/3///2D1hPT/f///Qvr//wCA////////eYsAAEL6//87lQAAYPX//8mdAAAZ8f//fKUAAEDt//+VrAAAtOn//0SzAABc5v//sbkAACXj////vwAA/9///0zGAADY3P//uswAAKHZ//9p0wAAStb//4HaAAC90v//NOIAAOTO///C6gAAncr//4X0AAC8xf////8AAP+/AACF9HgL/78AAMLqOxX/vwAANOLJHf+/AACB2n0l/78AAGnTlSz/vwAAusxEM/+/AABMxrI5/78AAP+//z//vwAAsblNRv+/AABEs7lM/78AAJWsaFP/vwAAfKWCWv+/AADJnTVi/78AADuVw2r/vwAAeYuFdP+/AAAAgP9//794C/9/eYv/vzsV/387lf+/yR3/f8md/799Jf9/fKX/v5Us/3+VrP+/RDP/f0Sz/7+yOf9/sbn/v/8//3//v/+/TUb/f0zG/7+5TP9/usz/v2hT/39p0/+/glr/f4Ha/781Yv9/NOL/v8Nq/3/C6v+/hXT/f4T0/7//f/9/////v/9//3////+/eYv/f///vMU7lf9///+dysmd/3///+TOfKX/f///vdKVrP9///9K1kSz/3///6HZsbn/f///2Nz/v/9/////30zG/3///yXjusz/f///XOZp0/9///+06YHa/3///0DtNOL/f///GfHC6v9///9g9YT0/3///0L6//8AgP///////3mLAABC+v//O5UAAGD1///JnQAAGfH//3ylAABA7f//lawAALTp//9EswAAXOb//7G5AAAl4////78AAP/f//9MxgAA2Nz//7rMAACh2f//adMAAErW//+B2gAAvdL//zTiAADkzv//wuoAAJ3K//+F9AAAvMX/////AAD/vwAAhfR4C/+/AADC6jsV/78AADTiyR3/vwAAgdp9Jf+/AABp05Us/78AALrMRDP/vwAATMayOf+/AAD/v/8//78AALG5TUb/vwAARLO5TP+/AACVrGhT/78AAHylglr/vwAAyZ01Yv+/AAA7lcNq/78AAHmLhXT/vwAAAID/f/+/eAv/f3mL/787Ff9/O5X/v8kd/3/Jnf+/fSX/f3yl/7+VLP9/laz/v0Qz/39Es/+/sjn/f7G5/7//P/9//7//v01G/39Mxv+/uUz/f7rM/79oU/9/adP/v4Ja/3+B2v+/NWL/fzTi/7/Dav9/wur/v4V0/3+E9P+//3//f////7//f/9/////v3mL/3///7zFO5X/f///ncrJnf9////kznyl/3///73Slaz/f///StZEs/9///+h2bG5/3///9jc/7//f////99Mxv9///8l47rM/3///1zmadP/f///tOmB2v9///9A7TTi/3///xnxwur/f///YPWE9P9///9C+v//AID///////95iwAAQvr//zuVAABg9f//yZ0AABnx//98pQAAQO3//5WsAAC06f//RLMAAFzm//+xuQAAJeP///+/AAD/3///TMYAANjc//+6zAAAodn//2nTAABK1v//gdoAAL3S//804gAA5M7//8LqAACdyv//hfQAALzF/////wAA/78AAIX0eAv/vwAAwuo7Ff+/AAA04skd/78AAIHafSX/vwAAadOVLP+/AAC6zEQz/78AAEzGsjn/vwAA/7//P/+/AACxuU1G/78AAESzuUz/vwAAlaxoU/+/AAB8pYJa/78AAMmdNWL/vwAAO5XDav+/AAB5i4V0/78AAACA/3//v3gL/395i/+/OxX/fzuV/7/JHf9/yZ3/v30l/398pf+/lSz/f5Ws/79EM/9/RLP/v7I5/3+xuf+//z//f/+//79NRv9/TMb/v7lM/3+6zP+/aFP/f2nT/7+CWv9/gdr/vzVi/3804v+/w2r/f8Lq/7+FdP9/hPT/v/9//3////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AIAAAP///78AgAAA////vwCAAAD///+/AIAAAP///78AgAAA////vwCAAAD///+/AIAAAP///78AgAAA////vwCAAAD///+/AIAAAP///78AgAAA////vwCAAAD///+/AIAAAP///78AgAAA////vwCAAAD///+/AIAAAP///78AgAAA////vwCAAAD///+/AIAAAP///78AgAAA////vwCAAAD///+/AIAAAP///78AgAAA////vwCAAAD///+/AIAAAP///78AgAAA////vwCAAAD///+/AIAAAP///78AgAAA////vwCAAAD///+/AIAAAP///78AgAAA////vwCAAAD///+/AIAAAP///78AgAAA////vwCAAAD///+/AIAAAP///78AgAAA////vwCAAAD///+/AIAAAP///78AgAAA////vwCAAAD///+/AIAAAP///78AgAAA////vwCAAAD///+/AIAAAP///78AgAAA////vwCAAAD///+/AIAAAP///78AgAAA////vwCAAAD///+/AIAAAP///78AgAAA////vwCAAAD///+/AIAAAP///78AgAAA////vwCAAAD///+/AIAAAP///78AgAAA////vwCAAAD///+/AIAAAP///78AgAAA////vwCAAAD///+/AIAAAP///78AgAAA////vwCAAAD///+/")
 }]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_cmfyp"]
+size = Vector3(0.1, 5, 5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0cdp6"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1uf6b"]
+material = SubResource("StandardMaterial3D_0cdp6")
+size = Vector3(0.1, 5, 5)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_w0dj5"]
+viewport_path = NodePath("ReactorView/SubViewport")
+
 [sub_resource type="Environment" id="Environment_vpxdg"]
 
 [node name="MainScene" type="Node3D" unique_id=904660948]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=552463633]
-transform = Transform3D(1, 0, 0, 0, 0.39034483, 0.9206687, 0, -0.9206687, 0.39034483, 0, 1.4052002, 0.12025276)
+transform = Transform3D(1, 0, 0, 0, 0.8231816, 0.5677781, 0, -0.5677781, 0.8231816, 0, 1.8711429, 0.29803267)
+current = true
 
 [node name="PlayArea" type="StaticBody3D" parent="." unique_id=1047502078]
 transform = Transform3D(2.005, 0, 0, 0, 2.005, 0, 0, 0, 2.005, 0, 0, -0.623)
@@ -116,7 +133,7 @@ mesh = SubResource("BoxMesh_t2s15")
 
 [node name="PunchCard1" type="StaticBody3D" parent="PlayArea" unique_id=1030936977 node_paths=PackedStringArray("sprite")]
 transform = Transform3D(0.04, 0, 0, 0, 0.040000003, 9.313226e-10, 0, -9.313226e-10, 0.040000003, -0.1846558, 0.033325434, -0.01170516)
-script = ExtResource("1_0dkyw")
+script = ExtResource("1_1uf6b")
 sprite = NodePath("Sprite3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PlayArea/PunchCard1" unique_id=585696319]
@@ -135,7 +152,7 @@ sprite_outline_component = NodePath("../SpriteOutlineComponent")
 
 [node name="PunchCard2" type="StaticBody3D" parent="PlayArea" unique_id=1154303001 node_paths=PackedStringArray("sprite")]
 transform = Transform3D(0.04, 0, 0, 0, 0.040000003, 9.313226e-10, 0, -9.313226e-10, 0.040000003, 0, 0.033325434, -0.01170516)
-script = ExtResource("1_0dkyw")
+script = ExtResource("6_w0dj5")
 sprite = NodePath("Sprite3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PlayArea/PunchCard2" unique_id=792407668]
@@ -154,7 +171,7 @@ sprite_outline_component = NodePath("../SpriteOutlineComponent")
 
 [node name="PunchCard3" type="StaticBody3D" parent="PlayArea" unique_id=1328306460 node_paths=PackedStringArray("sprite")]
 transform = Transform3D(0.04, 0, 0, 0, 0.040000003, 9.313226e-10, 0, -9.313226e-10, 0.040000003, 0.2190342, 0.033325434, -0.01170516)
-script = ExtResource("1_0dkyw")
+script = ExtResource("8_41b3u")
 sprite = NodePath("Sprite3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PlayArea/PunchCard3" unique_id=1529505556]
@@ -171,7 +188,7 @@ sprite_outline_component = NodePath("../SpriteOutlineComponent")
 
 [node name="SpriteOutlineComponent" parent="PlayArea/PunchCard3" unique_id=1707183935 instance=ExtResource("4_0dkyw")]
 
-[node name="SlotPosition" type="StaticBody3D" parent="PlayArea" unique_id=840352343 node_paths=PackedStringArray("start_position", "insert_position", "expel_position")]
+[node name="CardSlot" type="StaticBody3D" parent="PlayArea" unique_id=840352343 node_paths=PackedStringArray("start_position", "insert_position", "expel_position")]
 transform = Transform3D(0.04, 0, 0, 0, 0.040000003, 9.313226e-10, 0, -9.313226e-10, 0.040000003, 0.6783512, 0.033325434, -0.20783907)
 collision_layer = 4
 collision_mask = 4
@@ -180,43 +197,65 @@ start_position = NodePath("Marker3D")
 insert_position = NodePath("../TestSlot")
 expel_position = NodePath("Marker3D")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayArea/SlotPosition" unique_id=1288313320]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayArea/CardSlot" unique_id=1288313320]
+transform = Transform3D(1, 0, 0, 0, 1, 1.7763568e-15, 0, -1.7763568e-15, 1, 0, -0.19680452, 0)
 shape = SubResource("BoxShape3D_rojf5")
 
-[node name="Sprite3D" type="Sprite3D" parent="PlayArea/SlotPosition" unique_id=1157961305]
+[node name="Sprite3D" type="Sprite3D" parent="PlayArea/CardSlot" unique_id=1157961305]
 transform = Transform3D(0.5, 0, 0, 0, -2.1855694e-08, 0.5, 0, -0.5, -2.1855694e-08, 0, 0, 0)
 layers = 3
 texture = ExtResource("8_5msbe")
 
-[node name="Marker3D" type="Marker3D" parent="PlayArea/SlotPosition" unique_id=724133688]
+[node name="Marker3D" type="Marker3D" parent="PlayArea/CardSlot" unique_id=724133688]
+
+[node name="Pillar1" type="StaticBody3D" parent="PlayArea/CardSlot" unique_id=1568594903]
+transform = Transform3D(4.850001, 0, 0, 0, 4.8500004, -1.12922855e-07, 0, 1.12922855e-07, 4.8500004, 0.0025157928, -4.4204206, -4.3814936)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayArea/CardSlot/Pillar1" unique_id=1764656707]
+shape = SubResource("BoxShape3D_qaeli")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayArea/CardSlot/Pillar1" unique_id=1166007971]
+mesh = SubResource("BoxMesh_tq65w")
+
+[node name="Button" type="StaticBody3D" parent="PlayArea/CardSlot/Pillar1" unique_id=1966102039 node_paths=PackedStringArray("highlight_mesh", "slot")]
+transform = Transform3D(0.23, 0, 0, 0, 0.23, 0, 0, 0, 0.23, 0, 0.8409982, 0)
+script = ExtResource("1_3tf8q")
+highlight_mesh = NodePath("MeshInstance3D/Highlight")
+slot = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayArea/CardSlot/Pillar1/Button" unique_id=531895809]
+shape = SubResource("CylinderShape3D_cmfyp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayArea/CardSlot/Pillar1/Button" unique_id=1165335292]
+mesh = SubResource("CylinderMesh_1uf6b")
+
+[node name="Highlight" type="MeshInstance3D" parent="PlayArea/CardSlot/Pillar1/Button/MeshInstance3D" unique_id=1726743175]
+visible = false
+mesh = SubResource("ArrayMesh_w0dj5")
 
 [node name="TestSlot" parent="PlayArea" unique_id=1918669586 instance=ExtResource("9_sh0p1")]
 transform = Transform3D(0.19999997, 0, 0, 0, 0.19999997, 0, 0, 0, 0.19999997, 0.6783512, 0.033325434, -0.38814694)
 
-[node name="Pillar1" type="StaticBody3D" parent="PlayArea" unique_id=1568594903]
-transform = Transform3D(0.194, 0, 0, 0, 0.194, 0, 0, 0, 0.194, 0.6784519, -0.1434914, -0.3830989)
+[node name="Monitor" type="StaticBody3D" parent="PlayArea" unique_id=415347585]
+transform = Transform3D(-6.775263e-09, 0, 0.15499996, -0.07324256, 0.13660349, -3.2015341e-09, -0.13660349, -0.07324256, -5.971128e-09, 0, 0.20584898, -0.555774)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayArea/Pillar1" unique_id=1764656707]
-shape = SubResource("BoxShape3D_qaeli")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayArea/Monitor" unique_id=1407027063]
+shape = SubResource("BoxShape3D_cmfyp")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayArea/Pillar1" unique_id=1166007971]
-mesh = SubResource("BoxMesh_tq65w")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayArea/Monitor" unique_id=1081661852]
+transform = Transform3D(1.0000029, 1.4901161e-06, 2.842171e-14, -1.4901161e-06, 1.0000029, -1.9539925e-14, 1.314504e-13, 2.1316282e-14, 0.9999999, 0, 0, 0)
+mesh = SubResource("BoxMesh_1uf6b")
 
-[node name="Button" type="StaticBody3D" parent="PlayArea/Pillar1" unique_id=1966102039 node_paths=PackedStringArray("highlight_mesh", "slot")]
-transform = Transform3D(0.23, 0, 0, 0, 0.23, 0, 0, 0, 0.23, 0, 0.8409982, 0)
-script = ExtResource("1_3tf8q")
-highlight_mesh = NodePath("MeshInstance3D/Highlight")
-slot = NodePath("../../SlotPosition")
+[node name="MonitorExample" type="Sprite3D" parent="PlayArea/Monitor" unique_id=35232053]
+transform = Transform3D(1.1998777e-07, 0, -0.91500014, 0, 0.91500014, 0, 0.91500014, 0, 1.1998777e-07, -0.10792732, 0, 0)
+texture = SubResource("ViewportTexture_w0dj5")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayArea/Pillar1/Button" unique_id=531895809]
-shape = SubResource("CylinderShape3D_cmfyp")
+[node name="ReactorView" parent="." unique_id=212615922 node_paths=PackedStringArray("card_slot") instance=ExtResource("12_qaeli")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.09114, 0, -34.631355)
+card_slot = NodePath("../PlayArea/CardSlot")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayArea/Pillar1/Button" unique_id=1165335292]
-mesh = SubResource("CylinderMesh_1uf6b")
-
-[node name="Highlight" type="MeshInstance3D" parent="PlayArea/Pillar1/Button/MeshInstance3D" unique_id=1726743175]
-visible = false
-mesh = SubResource("ArrayMesh_w0dj5")
+[node name="Camera3D" parent="ReactorView/SubViewport" parent_id_path=PackedInt32Array(212615922, 726431392) index="0" unique_id=417143241]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.09114, 2.9377618, -23.464233)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1762969380]
 environment = SubResource("Environment_vpxdg")
@@ -224,5 +263,7 @@ environment = SubResource("Environment_vpxdg")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=682498599]
 transform = Transform3D(0.99998707, 0.003685923, -0.0035099322, 0, 0.68960667, 0.7241841, 0.00508976, -0.72417474, 0.6895977, 0, 2.7550595, -6.472185)
 
-[connection signal="mouse_entered" from="PlayArea/Pillar1/Button" to="PlayArea/Pillar1/Button" method="_focus"]
-[connection signal="mouse_exited" from="PlayArea/Pillar1/Button" to="PlayArea/Pillar1/Button" method="_unfocus"]
+[connection signal="mouse_entered" from="PlayArea/CardSlot/Pillar1/Button" to="PlayArea/CardSlot/Pillar1/Button" method="_focus"]
+[connection signal="mouse_exited" from="PlayArea/CardSlot/Pillar1/Button" to="PlayArea/CardSlot/Pillar1/Button" method="_unfocus"]
+
+[editable path="ReactorView"]

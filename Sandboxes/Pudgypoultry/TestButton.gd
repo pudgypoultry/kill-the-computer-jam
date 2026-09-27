@@ -1,7 +1,7 @@
 extends Interactable
 
 @export var highlight_mesh : MeshInstance3D
-@export var slot : SlotPosition
+@export var slot : CardSlot
 
 var can_press : bool = false
 
