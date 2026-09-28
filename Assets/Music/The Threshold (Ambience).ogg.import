@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cgqm3lsrye1cf"
+path="res://.godot/imported/The Threshold (Ambience).ogg-7f91bd54f712aa010362cc7312b9d76c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Music/The Threshold (Ambience).ogg"
+dest_files=["res://.godot/imported/The Threshold (Ambience).ogg-7f91bd54f712aa010362cc7312b9d76c.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

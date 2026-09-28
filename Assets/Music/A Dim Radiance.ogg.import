@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://q2orkymwqrqe"
+path="res://.godot/imported/A Dim Radiance.ogg-85314b3418c1b5ce0df64f3b8d8c7d45.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Music/A Dim Radiance.ogg"
+dest_files=["res://.godot/imported/A Dim Radiance.ogg-85314b3418c1b5ce0df64f3b8d8c7d45.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
