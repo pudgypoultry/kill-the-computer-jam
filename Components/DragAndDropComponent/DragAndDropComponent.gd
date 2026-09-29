@@ -56,9 +56,9 @@ func _process(delta: float) -> void:
 	
 	if is_being_dragged:
 		drag(delta)
-	if Input.is_action_just_released("pick_up") && is_being_dragged:
+	if Input.is_action_just_released("interact") && is_being_dragged:
 		drop()
-	if Input.is_action_just_pressed("pick_up") && BoardManager.current_focus == actor_reference:
+	if Input.is_action_just_pressed("interact") && BoardManager.current_focus == actor_reference:
 		pick_up()
 
 	if BoardManager.current_focus == actor_reference:
