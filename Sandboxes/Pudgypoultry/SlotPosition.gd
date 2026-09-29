@@ -5,14 +5,17 @@ class_name CardSlot
 @export var insert_position : Node3D
 @export var expel_position : Node3D
 
-var current_card : PunchCard
+var current_card : PunchCard = null
+var original_rotation
 
 signal card_slotted(action : Callable)
 
 func slot_card(card : PunchCard):
 	# move card to position slowly
 	current_card = card
+	original_rotation = card.global_rotation
 	card.global_position = start_position.global_position
+	card.global_rotation = global_rotation
 	card.is_slotted = true
 	BoardManager.player_actionable = false
 	var tween = get_tree().create_tween().bind_node(card)
@@ -20,9 +23,10 @@ func slot_card(card : PunchCard):
 	tween.tween_property(card, "global_position", insert_position.global_position, 1.0)
 	# wait until that's done
 	await tween.finished
-	BoardManager.player_actionable = true
 	# produce effect on screen
 	card_slotted.emit(card.execute)
+	await get_tree().create_timer(1.0).timeout
+	eject_card()
 
 
 func eject_card():
@@ -32,4 +36,7 @@ func eject_card():
 	tween.set_trans(Tween.TRANS_BACK)
 	tween.tween_property(current_card, "global_position", expel_position.global_position, 1.0)
 	await tween.finished
+	current_card.global_position = current_card.original_position
+	current_card.global_rotation = original_rotation
+	current_card = null
 	BoardManager.player_actionable = true

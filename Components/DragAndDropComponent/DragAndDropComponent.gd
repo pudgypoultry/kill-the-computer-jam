@@ -14,9 +14,8 @@ class_name DragAndDropComponent
 var actor_reference : Node3D
 var is_current_focus : bool = false
 var is_being_dragged : bool = false
-var is_slottable : bool
 var original_position : Vector3 = Vector3.ZERO
-var original_parent : Node3D
+#var original_parent : Node3D
 var potential_drop : Node3D
 var valid_drop : bool
 var pickup_timer : float = 0.0
@@ -35,14 +34,14 @@ func _ready() -> void:
 	if !pickup_height:
 		pickup_height = actor_reference.pickup_height
 	original_position = actor_reference.global_position
+	actor_reference.original_position = original_position
 	# print(name, " is trying to assign as parent:	", actor_reference.get_parent())
-	original_parent = actor_reference.get_parent()
+	# original_parent = actor_reference.get_parent()
 	actor_reference.set_collision_layer_value(2, true)
 	actor_reference.connect("mouse_entered", _on_mouse_entered)
 	actor_reference.connect("mouse_exited", _on_mouse_exited)
 	camera = get_viewport().get_camera_3d()
 	call_deferred("_late_ready")
-#ajdkjaskdjlaskdj
 
 
 func _late_ready() -> void:
@@ -73,12 +72,13 @@ func _process(delta: float) -> void:
 
 
 func pick_up():
-	if !can_pickup:
+	if !can_pickup or !BoardManager.player_actionable:
 		return
 	is_being_dragged = true
 	original_position = actor_reference.global_position
-	if actor_reference.get_parent() != original_parent:
-		actor_reference.reparent(original_parent)
+	actor_reference.original_position = original_position
+	#if actor_reference.get_parent() != original_parent:
+		#actor_reference.reparent(original_parent)
 
 	var normal : Vector3 = surface.global_transform.basis.y.normalized()
 	var lifted : Vector3 = original_position + normal * pickup_height
@@ -91,7 +91,6 @@ func drag(delta):
 	if hit == null:
 		return
 	var target : Vector3 = hit + grab_offset
-	# Frame-rate independent exponential smoothing
 	var weight := 1.0 - exp(-follow_speed * delta)
 	actor_reference.global_position = actor_reference.global_position.lerp(target, weight)
 
@@ -105,7 +104,7 @@ func drop():
 	var drop_position = check_ray.get_collision_point()
 	# Layer 2 is the table itself
 	if collider.get_collision_layer_value(2):
-		actor_reference.global_position = Vector3(drop_position.x, BoardManager.board_height, drop_position.z)
+		actor_reference.global_position = Vector3(drop_position.x, drop_position.y, original_position.z)
 	# Layer 3 is the slot position
 	elif collider.get_collision_layer_value(3):
 		collider.slot_card(actor_reference)
@@ -138,7 +137,8 @@ func get_mouse_hit_on_plane(plane: Plane):
 
 
 func _on_mouse_entered():
-	BoardManager.current_focus = actor_reference
+	if BoardManager.player_actionable:
+		BoardManager.current_focus = actor_reference
 
 func _on_mouse_exited():
 	if BoardManager.current_focus == actor_reference:
