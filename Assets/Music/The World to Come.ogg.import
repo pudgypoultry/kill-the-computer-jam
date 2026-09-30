@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dyueb8i8cdh30"
+path="res://.godot/imported/The World to Come.ogg-4949b3d2ea033aef25e11e3154aa5dd3.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Music/The World to Come.ogg"
+dest_files=["res://.godot/imported/The World to Come.ogg-4949b3d2ea033aef25e11e3154aa5dd3.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
