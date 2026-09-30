@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://305nqsaantl3"]
+
+[ext_resource type="Shader" uid="uid://ntxjgq0i3c13" path="res://Assets/Shaders/crt.gdshader" id="1_wh4l6"]
+
+[resource]
+shader = ExtResource("1_wh4l6")
+shader_parameter/mask_type = 1
+shader_parameter/curve = 0.00400000019
+shader_parameter/sharpness = 0.6666667
+shader_parameter/color_offset = 0.5
+shader_parameter/mask_brightness = 1.0
+shader_parameter/scanline_brightness = 1.0
+shader_parameter/min_scanline_thickness = 0.5
+shader_parameter/aspect = 0.75
+shader_parameter/wobble_strength = 0.0

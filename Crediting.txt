@@ -1,1 +1,2 @@
 https://godotshaders.com/shader/outline-and-glow-shader-sprite-3d/ - Sprite outline
+https://godotshaders.com/shader/crt-with-luminance-preservation/ - CRT shader

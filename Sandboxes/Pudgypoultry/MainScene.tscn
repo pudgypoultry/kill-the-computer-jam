@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://47m5jkj355bh" path="res://Sandboxes/Pudgypoultry/Outline.png" id="8_5msbe"]
 [ext_resource type="Script" uid="uid://d00yrxpvcdaqk" path="res://Scenes/Punchcards/Rotate_Right/Punch_Rotate_Right.gd" id="8_41b3u"]
 [ext_resource type="Script" uid="uid://w4h4gaoyuvic" path="res://Sandboxes/Pudgypoultry/SlotPosition.gd" id="8_qebm6"]
+[ext_resource type="Material" uid="uid://305nqsaantl3" path="res://Assets/Materials/crt_material.tres" id="11_duclc"]
 [ext_resource type="Script" uid="uid://d7m5rh6h5xik" path="res://Sandboxes/Pudgypoultry/MonitorManager.gd" id="11_w0dj5"]
 [ext_resource type="PackedScene" uid="uid://c82j06v17qfbp" path="res://Scenes/ReactorArea/ReactorView.tscn" id="12_qaeli"]
 [ext_resource type="AudioStream" uid="uid://dt7po1ntpriyr" path="res://Assets/SFX/CardInsert.wav" id="13_1uf6b"]
@@ -76,6 +77,9 @@ shader_parameter/glowSharpness = 3.2150001527125
 shader_parameter/alphaThreshold = 0.0
 
 [sub_resource type="Environment" id="Environment_vpxdg"]
+background_mode = 2
+tonemap_mode = 2
+tonemap_exposure = 0.7
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_w0dj5"]
 viewport_path = NodePath("ReactorView/FPSCamera")
@@ -86,7 +90,7 @@ size = Vector3(0.37805176, 0.9367139, 2.139956)
 [node name="MainScene" type="Node3D" unique_id=904660948]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=552463633]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.37406492, 0.22547305)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.37406492, 0.5209035)
 current = true
 
 [node name="PlayArea" type="StaticBody3D" parent="." unique_id=1047502078]
@@ -170,8 +174,15 @@ sprite_outline_component = NodePath("../SpriteOutlineComponent")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.09114, 0, -34.631355)
 card_slots = [NodePath("../Monitor/CardSlot1"), NodePath("../Monitor/CardSlot2")]
 
-[node name="Camera3D" parent="ReactorView/FPSCamera" parent_id_path=PackedInt32Array(212615922, 726431392) index="0" unique_id=417143241]
+[node name="FPSCamera" parent="ReactorView" index="4" unique_id=726431392]
+size = Vector2i(240, 240)
+
+[node name="Camera3D" parent="ReactorView/FPSCamera" index="0" unique_id=417143241]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.09114, 2.9377618, -23.464233)
+
+[node name="TextureRect" parent="ReactorView/FPSCamera/CanvasLayer" parent_id_path=PackedInt32Array(212615922, 2136070968) index="0" unique_id=165340112]
+visible = true
+material = ExtResource("11_duclc")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1762969380]
 environment = SubResource("Environment_vpxdg")
@@ -189,12 +200,12 @@ switch_double_sfx = ExtResource("15_q1446")
 slots = [NodePath("CardSlot1"), NodePath("CardSlot2")]
 
 [node name="Monitor1" type="Sprite3D" parent="Monitor" unique_id=688936377]
-transform = Transform3D(8.3047695e-08, 0, -1.1, 0, 1.1, 0, 1.1, 0, 8.3047695e-08, 0.25383425, 1.6419681, -2.4417856)
+transform = Transform3D(1.8874475e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 1.8874475e-07, 0.25383425, 1.6419681, -2.4417856)
 alpha_cut = 1
 texture = SubResource("ViewportTexture_w0dj5")
 
 [node name="Monitor2" type="Sprite3D" parent="Monitor" unique_id=35232053]
-transform = Transform3D(8.3047695e-08, 0, -1.1, 0, 1.1, 0, 1.1, 0, 8.3047695e-08, 0.25383425, 1.6419681, 4.2250614)
+transform = Transform3D(1.8874475e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 1.8874475e-07, 0.25383425, 1.6419681, 4.2250614)
 alpha_cut = 1
 texture = SubResource("ViewportTexture_w0dj5")
 
@@ -216,7 +227,6 @@ shape = SubResource("BoxShape3D_pxqgl")
 
 [node name="ToggleSFX" type="AudioStreamPlayer3D" parent="Monitor" unique_id=1758347235]
 transform = Transform3D(3.217763, 0, 0, 0, 3.217763, 0, 0, 0, 3.217763, 0, 0, 0)
-bus = &"SFX"
 
 [node name="CardSlot1" type="StaticBody3D" parent="Monitor" unique_id=840352343 node_paths=PackedStringArray("start_position", "insert_position", "expel_position", "audio_player")]
 transform = Transform3D(-3.1998532e-08, -0.65225327, -0.33233967, 0, 0.33233967, -0.65225327, 0.73204106, -2.8510897e-08, -1.45270285e-08, -0.67085123, -3.9393706, -2.867683)
@@ -246,7 +256,6 @@ texture = ExtResource("8_5msbe")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.788)
 
 [node name="CardSFX" type="AudioStreamPlayer3D" parent="Monitor/CardSlot1" unique_id=525041412]
-bus = &"SFX"
 
 [node name="CardSlot2" type="StaticBody3D" parent="Monitor" unique_id=1645716468 node_paths=PackedStringArray("start_position", "insert_position", "expel_position", "audio_player")]
 transform = Transform3D(-3.1998532e-08, -0.65240616, -0.33203948, 0, 0.33203948, -0.65240616, 0.73204106, -2.851758e-08, -1.4513907e-08, -0.67085123, -3.9393735, 4.63563)
@@ -276,7 +285,6 @@ texture = ExtResource("8_5msbe")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1920929e-07, -4.787747)
 
 [node name="CardSFX" type="AudioStreamPlayer3D" parent="Monitor/CardSlot2" unique_id=146404956]
-bus = &"SFX"
 
 [connection signal="mouse_entered" from="Monitor/ToggleArea" to="Monitor" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Monitor/ToggleArea" to="Monitor" method="_on_mouse_exited"]
