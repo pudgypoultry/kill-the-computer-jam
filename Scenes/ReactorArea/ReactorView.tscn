@@ -32,7 +32,7 @@ shader_parameter/background_color = Color(0, 0, 0, 1)
 
 [node name="ReactorView" type="Node3D" unique_id=212615922 node_paths=PackedStringArray("cam")]
 script = ExtResource("1_acc27")
-cam = NodePath("SubViewport/Camera3D")
+cam = NodePath("FPSCamera/Camera3D")
 
 [node name="Floor" type="StaticBody3D" parent="." unique_id=1667103585]
 
@@ -71,17 +71,17 @@ shape = SubResource("BoxShape3D_pxqgl")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor2" unique_id=248624185]
 mesh = SubResource("BoxMesh_rojf5")
 
-[node name="SubViewport" type="SubViewport" parent="." unique_id=726431392]
+[node name="FPSCamera" type="SubViewport" parent="." unique_id=726431392]
 handle_input_locally = false
 render_target_update_mode = 4
 
-[node name="Camera3D" type="Camera3D" parent="SubViewport" unique_id=417143241]
+[node name="Camera3D" type="Camera3D" parent="FPSCamera" unique_id=417143241]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 10)
 current = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="SubViewport" unique_id=2136070968]
+[node name="CanvasLayer" type="CanvasLayer" parent="FPSCamera" unique_id=2136070968]
 
-[node name="TextureRect" type="ColorRect" parent="SubViewport/CanvasLayer" unique_id=165340112]
+[node name="TextureRect" type="ColorRect" parent="FPSCamera/CanvasLayer" unique_id=165340112]
 visible = false
 material = SubResource("ShaderMaterial_pxqgl")
 anchors_preset = 15

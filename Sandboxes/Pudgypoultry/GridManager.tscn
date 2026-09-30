@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://duq477hnsw1wp"]
+
+[ext_resource type="Script" uid="uid://cpthijnejcx2a" path="res://Sandboxes/Pudgypoultry/GridManager.gd" id="1_t5r65"]
+
+[node name="GridManager" type="Node2D" unique_id=401646695]
+script = ExtResource("1_t5r65")
+
+[node name="CellFolder" type="Node2D" parent="." unique_id=48513814]

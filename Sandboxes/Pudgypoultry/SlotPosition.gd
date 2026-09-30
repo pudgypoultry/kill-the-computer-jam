@@ -4,9 +4,14 @@ class_name CardSlot
 @export var start_position : Node3D
 @export var insert_position : Node3D
 @export var expel_position : Node3D
+@export var single_mode : bool = true
+@export var audio_player : AudioStreamPlayer3D
+@export var insert_sfx : AudioStreamWAV
+@export var eject_sfx : AudioStreamWAV
 
 var current_card : PunchCard = null
 var original_rotation
+
 
 signal card_slotted(action : Callable)
 
@@ -18,6 +23,7 @@ func slot_card(card : PunchCard):
 	card.global_rotation = global_rotation
 	card.is_slotted = true
 	BoardManager.player_actionable = false
+	play_sfx(insert_sfx, 0.5)
 	var tween = get_tree().create_tween().bind_node(card)
 	tween.set_trans(Tween.TRANS_BACK)
 	tween.tween_property(card, "global_position", insert_position.global_position, 1.0)
@@ -33,6 +39,7 @@ func eject_card():
 	current_card.is_slotted = false
 	var tween = get_tree().create_tween().bind_node(current_card)
 	BoardManager.player_actionable = false
+	play_sfx(eject_sfx, 0.0)
 	tween.set_trans(Tween.TRANS_BACK)
 	tween.tween_property(current_card, "global_position", expel_position.global_position, 1.0)
 	await tween.finished
@@ -40,3 +47,9 @@ func eject_card():
 	current_card.global_rotation = original_rotation
 	current_card = null
 	BoardManager.player_actionable = true
+
+
+func play_sfx(sfx : AudioStreamWAV, await_time : float):
+	audio_player.stream = sfx
+	await get_tree().create_timer(await_time).timeout
+	audio_player.play()
