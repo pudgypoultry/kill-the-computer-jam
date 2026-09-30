@@ -5,7 +5,7 @@
 [node name="DragAndDropComponent" type="Node3D" unique_id=765073431 node_paths=PackedStringArray("check_ray")]
 script = ExtResource("1_nbtyy")
 check_ray = NodePath("CheckRay")
-checkray_layers = 2
+checkray_layers = 6
 
 [node name="CheckRay" type="RayCast3D" parent="." unique_id=1155428356]
 target_position = Vector3(0, -5, 0)
