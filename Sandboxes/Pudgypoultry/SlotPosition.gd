@@ -26,12 +26,12 @@ func slot_card(card : PunchCard):
 	play_sfx(insert_sfx, 0.5)
 	var tween = get_tree().create_tween().bind_node(card)
 	tween.set_trans(Tween.TRANS_BACK)
-	tween.tween_property(card, "global_position", insert_position.global_position, 1.0)
+	tween.tween_property(card, "global_position", insert_position.global_position, BoardManager.card_insert_time)
 	# wait until that's done
 	await tween.finished
 	# produce effect on screen
 	card_slotted.emit(card.execute)
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(BoardManager.player_move_time).timeout
 	eject_card()
 
 
@@ -41,7 +41,7 @@ func eject_card():
 	BoardManager.player_actionable = false
 	play_sfx(eject_sfx, 0.0)
 	tween.set_trans(Tween.TRANS_BACK)
-	tween.tween_property(current_card, "global_position", expel_position.global_position, 1.0)
+	tween.tween_property(current_card, "global_position", expel_position.global_position, BoardManager.card_insert_time)
 	await tween.finished
 	current_card.global_position = current_card.original_position
 	current_card.global_rotation = original_rotation

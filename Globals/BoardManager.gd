@@ -1,6 +1,9 @@
 extends Node
 
+# General game parameters
 @export var board_height : float = 0.15
+@export var player_move_time : float = 0.5
+@export var card_insert_time : float = 1.0
 
 var current_focus : Node3D
 var last_focus : Node3D

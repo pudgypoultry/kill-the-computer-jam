@@ -74,8 +74,8 @@ func move_forward():
 		target_position.x += grid_offset * forward.x
 	if forward.y != 0:
 		target_position.y += grid_offset * forward.y
-	player_tween.tween_property(player_marker, "global_position", target_position, 1.0)
-	camera_tween.tween_property(camera, "global_position", target_position, 1.0)
+	player_tween.tween_property(player_marker, "global_position", target_position, BoardManager.player_move_time)
+	camera_tween.tween_property(camera, "global_position", target_position, BoardManager.player_move_time)
 
 
 func turn(dir : String):
@@ -84,7 +84,7 @@ func turn(dir : String):
 	print("Was facing:	", current_direction)
 	match dir:
 		"left":
-			player_tween.tween_property(player_marker, "rotation_degrees", player_marker.rotation_degrees - 90, 1.0)
+			player_tween.tween_property(player_marker, "rotation_degrees", player_marker.rotation_degrees - 90, BoardManager.player_move_time)
 			match current_direction:
 				Direction.NORTH:
 					current_direction = Direction.WEST
@@ -95,7 +95,7 @@ func turn(dir : String):
 				Direction.WEST:
 					current_direction = Direction.SOUTH
 		"right":
-			player_tween.tween_property(player_marker, "rotation_degrees", player_marker.rotation_degrees + 90, 1.0)
+			player_tween.tween_property(player_marker, "rotation_degrees", player_marker.rotation_degrees + 90, BoardManager.player_move_time)
 			match current_direction:
 				Direction.NORTH:
 					current_direction = Direction.EAST
