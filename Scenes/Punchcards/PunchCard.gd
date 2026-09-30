@@ -3,7 +3,7 @@ class_name PunchCard
 
 @export var pickup_height : float = 0.5
 @export var sprite : Sprite3D
-@export var step_length : float = 5.0
+@export var step_length : float = 3.0
 @export var drag_component : DragAndDropComponent
 
 var parent_surface : Node3D

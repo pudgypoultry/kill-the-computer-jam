@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dtgb4jk7ogybv"]
+
+[ext_resource type="Script" uid="uid://wreh35xiuu1r" path="res://Sandboxes/Pudgypoultry/GridCell.gd" id="1_3o7j3"]
+[ext_resource type="Texture2D" uid="uid://cm05kjnbsoah3" path="res://Sandboxes/Pudgypoultry/CellOutline.png" id="2_pqucq"]
+
+[node name="GridCell" type="Node2D" unique_id=938959335 node_paths=PackedStringArray("sprite")]
+script = ExtResource("1_3o7j3")
+sprite = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=473202324]
+texture = ExtResource("2_pqucq")
