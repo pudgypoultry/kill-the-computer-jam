@@ -120,7 +120,8 @@ func is_valid_drop() -> bool:
 	if !check_ray.is_colliding():
 		return false
 	var landing_on = check_ray.get_collider().get_collision_layer() & (checkray_layers)
-	if !landing_on:
+	if landing_on != 0:
+		print(check_ray.get_collider().get_collision_layer())
 		return false
 	else:
 		return true
