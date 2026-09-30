@@ -8,3 +8,4 @@ var game_active : bool = false
 var last_pickup_position : Vector3 = Vector3.ZERO
 var player_actionable = true
 var reactor_character : Node3D = null
+var grid_manager : GridManager = null

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dhb3rfbxv8xra" path="res://Scenes/ReactorArea/ReactorManager.gd" id="1_acc27"]
 [ext_resource type="Shader" uid="uid://8myhxj2c0ghq" path="res://Sandboxes/Pudgypoultry/Monochrome.gdshader" id="1_dbkhw"]
+[ext_resource type="PackedScene" uid="uid://duq477hnsw1wp" path="res://Sandboxes/Pudgypoultry/GridManager.tscn" id="3_5q44f"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pxqgl"]
 
@@ -18,11 +19,11 @@ size = Vector3(20, 1, 20)
 material = SubResource("StandardMaterial3D_hh20u")
 size = Vector3(10, 5, 1)
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_fgfqk"]
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_5q44f"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pxqgl"]
 shader = ExtResource("1_dbkhw")
-shader_parameter/tiledtexture = SubResource("NoiseTexture2D_fgfqk")
+shader_parameter/tiledtexture = SubResource("NoiseTexture2D_5q44f")
 shader_parameter/opacity = 1.0
 shader_parameter/pixel_size = 0.01
 shader_parameter/greyscale = true
@@ -82,16 +83,21 @@ current = true
 [node name="CanvasLayer" type="CanvasLayer" parent="FPSCamera" unique_id=2136070968]
 
 [node name="TextureRect" type="ColorRect" parent="FPSCamera/CanvasLayer" unique_id=165340112]
-visible = false
 material = SubResource("ShaderMaterial_pxqgl")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1619386943]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5668914, 2.4958978, 6.4618206)
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1495194109]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2875755, 2.4958978, 2.6299314)
+
+[node name="GridCamera" type="SubViewport" parent="." unique_id=134290074]
+size = Vector2i(240, 240)
+
+[node name="GridManager" parent="GridCamera" unique_id=401646695 instance=ExtResource("3_5q44f")]

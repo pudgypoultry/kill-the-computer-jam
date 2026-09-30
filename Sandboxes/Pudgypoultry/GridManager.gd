@@ -7,6 +7,7 @@ enum Direction {NORTH, EAST, SOUTH, WEST}
 @export var grid_offset : float = 5
 @export var height : int = 30
 @export var width : int = 40
+@export var debug : bool = false
 
 @export_category("Plugging in Nodes")
 @export var cell_scene : PackedScene
@@ -25,6 +26,7 @@ var camera_tween : Tween
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	BoardManager.grid_manager = self
 	# Generate 2d grid of squares
 	var probe_scene : GridCell = cell_scene.instantiate()
 	sprite_width = probe_scene.sprite.texture.get_width()
@@ -33,22 +35,23 @@ func _ready() -> void:
 	generate_grid()
 	# Turn on all positions with a 1
 	# Set up player marker
-	await get_tree().create_timer(1.1).timeout
-	turn("right")
-	await get_tree().create_timer(1.1).timeout
-	move_forward()
-	await get_tree().create_timer(1.1).timeout
-	turn("right")
-	await get_tree().create_timer(1.1).timeout
-	move_forward()
-	await get_tree().create_timer(1.1).timeout
-	turn("left")
-	await get_tree().create_timer(1.1).timeout
-	move_forward()
-	await get_tree().create_timer(1.1).timeout
-	turn("right")
-	await get_tree().create_timer(1.1).timeout
-	move_forward()
+	if debug:
+		await get_tree().create_timer(1.1).timeout
+		turn("right")
+		await get_tree().create_timer(1.1).timeout
+		move_forward()
+		await get_tree().create_timer(1.1).timeout
+		turn("right")
+		await get_tree().create_timer(1.1).timeout
+		move_forward()
+		await get_tree().create_timer(1.1).timeout
+		turn("left")
+		await get_tree().create_timer(1.1).timeout
+		move_forward()
+		await get_tree().create_timer(1.1).timeout
+		turn("right")
+		await get_tree().create_timer(1.1).timeout
+		move_forward()
 
 
 func generate_grid() -> void:

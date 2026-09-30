@@ -21,6 +21,7 @@ var valid_drop : bool
 var pickup_timer : float = 0.0
 var pickup_interval : float = 0.1
 var can_pickup : bool = true
+var hovering : bool = false
 var camera : Camera3D
 var surface : StaticBody3D
 var grab_offset : Vector3 = Vector3.ZERO
@@ -72,17 +73,18 @@ func _process(delta: float) -> void:
 
 
 func pick_up():
-	if !can_pickup or !BoardManager.player_actionable:
+	if !can_pickup:
 		return
-	is_being_dragged = true
-	original_position = actor_reference.global_position
-	actor_reference.original_position = original_position
-	#if actor_reference.get_parent() != original_parent:
-		#actor_reference.reparent(original_parent)
+	if BoardManager.player_actionable:
+		is_being_dragged = true
+		original_position = actor_reference.global_position
+		actor_reference.original_position = original_position
+		#if actor_reference.get_parent() != original_parent:
+			#actor_reference.reparent(original_parent)
 
-	var normal : Vector3 = surface.global_transform.basis.y.normalized()
-	var lifted : Vector3 = original_position + normal * pickup_height
-	drag_plane = Plane(normal, lifted)
+		var normal : Vector3 = surface.global_transform.basis.y.normalized()
+		var lifted : Vector3 = original_position + normal * pickup_height
+		drag_plane = Plane(normal, lifted)
 
 
 func drag(delta):
@@ -97,7 +99,9 @@ func drag(delta):
 
 func drop():
 	# check if position is allowed
-	if !check_ray.is_colliding():
+	if !is_valid_drop():
+		actor_reference.global_position = original_position
+		just_dropped()
 		return
 	# find drop position
 	var collider = check_ray.get_collider()
@@ -123,9 +127,9 @@ func is_valid_drop() -> bool:
 
 
 func just_dropped():
-	BoardManager.current_focus = null
-	pickup_timer = 0.0
-	can_pickup = false
+	#BoardManager.current_focus = null
+	#pickup_timer = 0.0
+	#can_pickup = false
 	is_being_dragged = false
 
 
@@ -137,9 +141,10 @@ func get_mouse_hit_on_plane(plane: Plane):
 
 
 func _on_mouse_entered():
-	if BoardManager.player_actionable:
-		BoardManager.current_focus = actor_reference
+	BoardManager.current_focus = actor_reference
+	hovering = true
 
 func _on_mouse_exited():
 	if BoardManager.current_focus == actor_reference:
 		BoardManager.current_focus = null
+	hovering = false

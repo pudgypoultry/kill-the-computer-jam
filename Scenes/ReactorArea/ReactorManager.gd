@@ -3,6 +3,7 @@ class_name ReactorManager
 
 @export var card_slots : Array[CardSlot]
 @export var cam : Camera3D
+@export var grid_manager : GridManager
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,8 +14,3 @@ func _ready() -> void:
 
 func _handle_card_slotted(action : Callable):
 	action.call()
-
-
-func move_forward():
-	var tween = get_tree().create_tween().bind_node(cam)
-	tween.tween_property(cam, "position", cam.position.z - 1, 1.0)
