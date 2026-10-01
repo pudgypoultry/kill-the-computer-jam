@@ -20,12 +20,19 @@
 [ext_resource type="ArrayMesh" uid="uid://cahmfk41j6p7p" path="res://Assets/Models/RoomKit/Meshes/RoomKit_DoorHallway.res" id="18_rk23h"]
 [ext_resource type="ArrayMesh" uid="uid://c3xsdyr07amnr" path="res://Assets/Models/RoomKit/Meshes/RoomKit_WallHallwayEnd.res" id="19_eq286"]
 [ext_resource type="ArrayMesh" uid="uid://xuvtlan5ebqt" path="res://Assets/Models/RoomKit/Meshes/RoomKit_ExteriorCorner.res" id="19_n1aj8"]
+[ext_resource type="Material" uid="uid://cmeskc4bdpys0" path="res://Assets/Models/RoomKit/Materials/Wall_mat.tres" id="20_eq286"]
 [ext_resource type="ArrayMesh" uid="uid://du2jgqb4yhs2f" path="res://Assets/Models/RoomKit/Meshes/RoomKit_DoorCornerL.res" id="20_xwx3p"]
 [ext_resource type="ArrayMesh" uid="uid://hb616xg5y0o6" path="res://Assets/Models/RoomKit/Meshes/RoomKit_DoorCornerR.res" id="21_caq0p"]
 [ext_resource type="ArrayMesh" uid="uid://bminqihy1ij6p" path="res://Assets/Models/RoomKit/Meshes/RoomKit_GreebleWall.res" id="23_lf2ej"]
+[ext_resource type="PackedScene" uid="uid://774i3laiuwm3" path="res://Scenes/Environment/OverheadLight.tscn" id="25_xwx3p"]
+[ext_resource type="PackedScene" uid="uid://de250sht73l6m" path="res://Scenes/Environment/DoorLight.tscn" id="27_lf2ej"]
+[ext_resource type="PackedScene" uid="uid://dcs4xpynd2u0v" path="res://Scenes/Environment/DoorLightFlicker.tscn" id="28_aa4my"]
+[ext_resource type="PackedScene" uid="uid://b6lvgrqe058lm" path="res://Scenes/Environment/GrateLight.tscn" id="29_pmyuj"]
+[ext_resource type="PackedScene" uid="uid://bl4djye2ayi4v" path="res://Scenes/Environment/OverheadLightFlicker.tscn" id="30_5j5m2"]
+[ext_resource type="PackedScene" uid="uid://dijockbfqnx7o" path="res://Scenes/Environment/GrateLightFlicker.tscn" id="30_r8oan"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_lfxu0"]
-size = Vector3(30, 1, 33.8916)
+size = Vector3(29.853271, 1, 33.8916)
 
 [sub_resource type="Environment" id="Environment_lfxu0"]
 background_mode = 1
@@ -40,14 +47,11 @@ glow_enabled = true
 volumetric_fog_enabled = true
 volumetric_fog_albedo = Color(0.68, 0.63104, 0.5984, 1)
 
+[sub_resource type="BoxMesh" id="BoxMesh_hjb8m"]
+size = Vector3(45, 2.5, 30)
+
 [node name="ReactorView" type="Node3D" unique_id=212615922]
 script = ExtResource("1_1uncv")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1619386943]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4331083, 2.4958978, -2.5381794)
-
-[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1495194109]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2875755, 2.4958978, 5.6299314)
 
 [node name="GridCamera" type="SubViewport" parent="." unique_id=134290074]
 size = Vector2i(240, 240)
@@ -139,10 +143,6 @@ mesh = ExtResource("5_hwyj4")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9)
 mesh = ExtResource("5_hwyj4")
 
-[node name="RoomKitHallwayWall4" type="MeshInstance3D" parent="TestRoom" unique_id=1696765665]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
-mesh = ExtResource("5_hwyj4")
-
 [node name="RoomKitDoor2" type="MeshInstance3D" parent="TestRoom" unique_id=1708508084]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 3, 0, 0)
 mesh = ExtResource("7_t3aj2")
@@ -173,10 +173,6 @@ mesh = ExtResource("23_lf2ej")
 
 [node name="RoomKitStraightWall4" type="MeshInstance3D" parent="TestRoom" unique_id=1690774777]
 transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 2.9999995, 0, -8.999999)
-mesh = ExtResource("6_63f1i")
-
-[node name="RoomKitStraightWall5" type="MeshInstance3D" parent="TestRoom" unique_id=657860166]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -4.7683716e-07, 0, -8.999999)
 mesh = ExtResource("6_63f1i")
 
 [node name="RoomKitStraightWall6" type="MeshInstance3D" parent="TestRoom" unique_id=702219179]
@@ -216,6 +212,43 @@ upper_fade = 0.024740791
 
 [node name="Decal2" type="Decal" parent="TestRoom/Decals" unique_id=1947431084]
 transform = Transform3D(-0.78590345, 2.0187446e-07, -0.6183492, 0.6183492, 3.435293e-08, -0.78590345, -1.3741172e-07, -1, -1.51827e-07, 5.8051357, 1.3488688, 0.51190495)
+texture_albedo = ExtResource("9_ltei3")
+texture_normal = ExtResource("10_q4jax")
+texture_orm = ExtResource("11_a4yge")
+normal_fade = 0.516
+upper_fade = 0.024740791
+
+[node name="Decal6" type="Decal" parent="TestRoom/Decals" unique_id=2033672632]
+transform = Transform3D(1.9555966, 1.7573922e-07, -0.038218476, 0.04177503, -3.9967258e-08, 1.7891052, 3.420054e-07, -1.0000001, -7.8222115e-08, 4.049022, 3.4884925, -8.639265)
+texture_albedo = ExtResource("9_ltei3")
+texture_normal = ExtResource("10_q4jax")
+texture_orm = ExtResource("11_a4yge")
+normal_fade = 0.516
+upper_fade = 0.024740791
+
+[node name="Decal7" type="Decal" parent="TestRoom/Decals" unique_id=657295750]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 3.5506115, -0.18450296, -11.501263)
+texture_albedo = ExtResource("12_bia5g")
+texture_normal = ExtResource("13_33dek")
+texture_orm = ExtResource("14_gjo6u")
+upper_fade = 0.024740791
+
+[node name="Decal8" type="Decal" parent="TestRoom/Decals" unique_id=59761259]
+transform = Transform3D(1.5419799, 0, -1.4148912, 0, 1, 0, 1.9327337, 0, 1.1288332, 0.5506115, -0.18450296, -14.501263)
+texture_albedo = ExtResource("12_bia5g")
+texture_normal = ExtResource("13_33dek")
+texture_orm = ExtResource("14_gjo6u")
+upper_fade = 0.024740791
+
+[node name="Decal9" type="Decal" parent="TestRoom/Decals" unique_id=948665852]
+transform = Transform3D(1.3113416e-07, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, -1.3113416e-07, -5.7320566e-15, 9.313986, 1.0900586, -10.604467)
+texture_albedo = ExtResource("15_it2jg")
+texture_normal = ExtResource("16_kvwqd")
+texture_orm = ExtResource("17_5hags")
+upper_fade = 0.024740791
+
+[node name="Decal10" type="Decal" parent="TestRoom/Decals" unique_id=642747871]
+transform = Transform3D(-0.78590345, 2.0187446e-07, -0.6183492, 0.6183492, 3.435293e-08, -0.78590345, -1.3741172e-07, -1, -1.51827e-07, 5.8051357, 1.3488688, -8.488095)
 texture_albedo = ExtResource("9_ltei3")
 texture_normal = ExtResource("10_q4jax")
 texture_orm = ExtResource("11_a4yge")
@@ -332,18 +365,272 @@ mesh = ExtResource("6_63f1i")
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 mesh = ExtResource("6_63f1i")
 
+[node name="RoomKitFloor20" type="MeshInstance3D" parent="TestRoom" unique_id=1899145602]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9)
+mesh = ExtResource("4_4gcva")
+
+[node name="RoomKitFloor21" type="MeshInstance3D" parent="TestRoom" unique_id=609903628]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -9)
+mesh = ExtResource("4_4gcva")
+
+[node name="RoomKitFloor22" type="MeshInstance3D" parent="TestRoom" unique_id=1461049105]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -9)
+mesh = ExtResource("4_4gcva")
+
+[node name="RoomKitFloor23" type="MeshInstance3D" parent="TestRoom" unique_id=1099253080]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -9)
+mesh = ExtResource("4_4gcva")
+
+[node name="RoomKitFloor24" type="MeshInstance3D" parent="TestRoom" unique_id=1745869279]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -9)
+mesh = ExtResource("4_4gcva")
+
+[node name="RoomKitFloor25" type="MeshInstance3D" parent="TestRoom" unique_id=112920132]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12)
+mesh = ExtResource("4_4gcva")
+
+[node name="RoomKitFloor26" type="MeshInstance3D" parent="TestRoom" unique_id=1783221456]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -12)
+mesh = ExtResource("4_4gcva")
+
+[node name="RoomKitFloor27" type="MeshInstance3D" parent="TestRoom" unique_id=1721092350]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -12)
+mesh = ExtResource("4_4gcva")
+
+[node name="RoomKitFloor28" type="MeshInstance3D" parent="TestRoom" unique_id=1857985442]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -12)
+mesh = ExtResource("4_4gcva")
+
+[node name="RoomKitFloor29" type="MeshInstance3D" parent="TestRoom" unique_id=1072260453]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -12)
+mesh = ExtResource("4_4gcva")
+
+[node name="RoomKitFloor30" type="MeshInstance3D" parent="TestRoom" unique_id=83619517]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15)
+mesh = ExtResource("4_4gcva")
+
+[node name="RoomKitFloor31" type="MeshInstance3D" parent="TestRoom" unique_id=612821011]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -15)
+mesh = ExtResource("4_4gcva")
+
+[node name="RoomKitFloor32" type="MeshInstance3D" parent="TestRoom" unique_id=1728177998]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -15)
+mesh = ExtResource("4_4gcva")
+
+[node name="RoomKitFloor33" type="MeshInstance3D" parent="TestRoom" unique_id=726534132]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -15)
+mesh = ExtResource("4_4gcva")
+
+[node name="RoomKitFloor34" type="MeshInstance3D" parent="TestRoom" unique_id=1188812684]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -15)
+mesh = ExtResource("4_4gcva")
+
+[node name="RoomKitDoor3" type="MeshInstance3D" parent="TestRoom" unique_id=2054126308]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 3, 0, -9)
+mesh = ExtResource("7_t3aj2")
+
+[node name="RoomKitDoor4" type="MeshInstance3D" parent="TestRoom" unique_id=1815494022]
+transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, 0, 0, -9)
+mesh = ExtResource("7_t3aj2")
+
+[node name="RoomKitInteriorCorner5" type="MeshInstance3D" parent="TestRoom" unique_id=406085124]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9, 0, -9)
+mesh = ExtResource("8_gnx18")
+
+[node name="RoomKitInteriorCorner6" type="MeshInstance3D" parent="TestRoom" unique_id=882266325]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 9, 0, -18)
+mesh = ExtResource("8_gnx18")
+
+[node name="RoomKitInteriorCorner7" type="MeshInstance3D" parent="TestRoom" unique_id=2142156750]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -9)
+mesh = ExtResource("8_gnx18")
+
+[node name="RoomKitInteriorCorner8" type="MeshInstance3D" parent="TestRoom" unique_id=1673667090]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6, 0, -18)
+mesh = ExtResource("8_gnx18")
+
+[node name="RoomKitStraightWall9" type="MeshInstance3D" parent="TestRoom" unique_id=1617389998]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -12)
+mesh = ExtResource("23_lf2ej")
+
+[node name="RoomKitStraightWall10" type="MeshInstance3D" parent="TestRoom" unique_id=582860897]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9, 0, -15)
+mesh = ExtResource("23_lf2ej")
+
+[node name="RoomKitStraightWall11" type="MeshInstance3D" parent="TestRoom" unique_id=589777273]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 2.9999995, 0, -18)
+mesh = ExtResource("6_63f1i")
+
+[node name="RoomKitStraightWall12" type="MeshInstance3D" parent="TestRoom" unique_id=594604052]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -4.7683716e-07, 0, -18)
+mesh = ExtResource("6_63f1i")
+
+[node name="RoomKitStraightWall13" type="MeshInstance3D" parent="TestRoom" unique_id=206979312]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -3.0000005, 0, -18)
+mesh = ExtResource("6_63f1i")
+
+[node name="RoomKitCeiling26" type="MeshInstance3D" parent="TestRoom" unique_id=843028463]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -9)
+mesh = ExtResource("18_gcx8e")
+
+[node name="RoomKitCeiling27" type="MeshInstance3D" parent="TestRoom" unique_id=437284180]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 3, -9)
+mesh = ExtResource("18_gcx8e")
+
+[node name="RoomKitCeiling28" type="MeshInstance3D" parent="TestRoom" unique_id=1278738913]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 3, -9)
+mesh = ExtResource("18_gcx8e")
+
+[node name="RoomKitCeiling29" type="MeshInstance3D" parent="TestRoom" unique_id=1935601205]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 3, -9)
+mesh = ExtResource("18_gcx8e")
+
+[node name="RoomKitCeiling35" type="MeshInstance3D" parent="TestRoom" unique_id=923658099]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 3, -9)
+mesh = ExtResource("18_gcx8e")
+
+[node name="RoomKitCeiling36" type="MeshInstance3D" parent="TestRoom" unique_id=1419729204]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -12)
+mesh = ExtResource("18_gcx8e")
+
+[node name="RoomKitCeiling37" type="MeshInstance3D" parent="TestRoom" unique_id=958015614]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 3, -12)
+mesh = ExtResource("18_gcx8e")
+
+[node name="RoomKitCeiling38" type="MeshInstance3D" parent="TestRoom" unique_id=887323602]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 3, -12)
+mesh = ExtResource("18_gcx8e")
+
+[node name="RoomKitCeiling39" type="MeshInstance3D" parent="TestRoom" unique_id=1796053176]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 3, -12)
+mesh = ExtResource("18_gcx8e")
+
+[node name="RoomKitCeiling40" type="MeshInstance3D" parent="TestRoom" unique_id=665243131]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 3, -12)
+mesh = ExtResource("18_gcx8e")
+
+[node name="RoomKitCeiling41" type="MeshInstance3D" parent="TestRoom" unique_id=1323002905]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -15)
+mesh = ExtResource("18_gcx8e")
+
+[node name="RoomKitCeiling42" type="MeshInstance3D" parent="TestRoom" unique_id=229421164]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 3, -15)
+mesh = ExtResource("18_gcx8e")
+
+[node name="RoomKitCeiling43" type="MeshInstance3D" parent="TestRoom" unique_id=850206001]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 3, -15)
+mesh = ExtResource("18_gcx8e")
+
+[node name="RoomKitCeiling44" type="MeshInstance3D" parent="TestRoom" unique_id=1121162977]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 3, -15)
+mesh = ExtResource("18_gcx8e")
+
+[node name="RoomKitCeiling45" type="MeshInstance3D" parent="TestRoom" unique_id=1656033320]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 3, -15)
+mesh = ExtResource("18_gcx8e")
+
+[node name="RoomKitStraightWall14" type="MeshInstance3D" parent="TestRoom" unique_id=871348425]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6, 0, -9)
+mesh = ExtResource("6_63f1i")
+
+[node name="RoomKitStraightWall15" type="MeshInstance3D" parent="TestRoom" unique_id=286894638]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -9)
+mesh = ExtResource("6_63f1i")
+
+[node name="RoomKitInteriorCorner9" type="MeshInstance3D" parent="TestRoom" unique_id=1818147895]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9, 3, -9)
+mesh = ExtResource("8_gnx18")
+surface_material_override/0 = ExtResource("20_eq286")
+
+[node name="RoomKitInteriorCorner10" type="MeshInstance3D" parent="TestRoom" unique_id=1447970852]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 9, 3, -18)
+mesh = ExtResource("8_gnx18")
+surface_material_override/0 = ExtResource("20_eq286")
+
+[node name="RoomKitInteriorCorner11" type="MeshInstance3D" parent="TestRoom" unique_id=1913834093]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 3, -9)
+mesh = ExtResource("8_gnx18")
+surface_material_override/0 = ExtResource("20_eq286")
+
+[node name="RoomKitInteriorCorner12" type="MeshInstance3D" parent="TestRoom" unique_id=509127782]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6, 3, -18)
+mesh = ExtResource("8_gnx18")
+surface_material_override/0 = ExtResource("20_eq286")
+
+[node name="RoomKitStraightWall16" type="MeshInstance3D" parent="TestRoom" unique_id=2119283091]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 3, -12)
+mesh = ExtResource("23_lf2ej")
+surface_material_override/0 = ExtResource("20_eq286")
+
+[node name="RoomKitStraightWall17" type="MeshInstance3D" parent="TestRoom" unique_id=1412477705]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9, 3, -15)
+mesh = ExtResource("23_lf2ej")
+surface_material_override/0 = ExtResource("20_eq286")
+
+[node name="RoomKitStraightWall18" type="MeshInstance3D" parent="TestRoom" unique_id=522194726]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 2.9999995, 3, -18)
+mesh = ExtResource("6_63f1i")
+surface_material_override/0 = ExtResource("20_eq286")
+
+[node name="RoomKitStraightWall19" type="MeshInstance3D" parent="TestRoom" unique_id=659544746]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -4.7683716e-07, 3, -18)
+mesh = ExtResource("6_63f1i")
+surface_material_override/0 = ExtResource("20_eq286")
+
+[node name="RoomKitStraightWall20" type="MeshInstance3D" parent="TestRoom" unique_id=1974823271]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -3.0000005, 3, -18)
+mesh = ExtResource("6_63f1i")
+surface_material_override/0 = ExtResource("20_eq286")
+
+[node name="RoomKitStraightWall21" type="MeshInstance3D" parent="TestRoom" unique_id=149883685]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6, 3, -9)
+mesh = ExtResource("6_63f1i")
+surface_material_override/0 = ExtResource("20_eq286")
+
+[node name="RoomKitStraightWall23" type="MeshInstance3D" parent="TestRoom" unique_id=827025425]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 3, -9)
+mesh = ExtResource("6_63f1i")
+surface_material_override/0 = ExtResource("20_eq286")
+
+[node name="RoomKitStraightWall22" type="MeshInstance3D" parent="TestRoom" unique_id=187193581]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 3, -9)
+mesh = ExtResource("6_63f1i")
+surface_material_override/0 = ExtResource("20_eq286")
+
 [node name="RoomKitWallHallwayEnd" type="MeshInstance3D" parent="TestRoom" unique_id=1192930349]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
 mesh = ExtResource("19_eq286")
 
 [node name="LightBlocker" type="MeshInstance3D" parent="TestRoom" unique_id=520082399]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2901764, 4.601356, 1.901123)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2168121, 16.229195, 1.901123)
 mesh = SubResource("BoxMesh_lfxu0")
+
+[node name="DoorLight" parent="TestRoom" unique_id=957882005 instance=ExtResource("27_lf2ej")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9, 3, 27)
+
+[node name="DoorLightFlicker" parent="TestRoom" unique_id=1972426774 instance=ExtResource("28_aa4my")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9, 3, 30)
+
+[node name="GrateLight" parent="TestRoom" unique_id=561589854 instance=ExtResource("29_pmyuj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 3, 33)
+light_range = 5.0
+
+[node name="GrateLightFlicker" parent="TestRoom" unique_id=1366516224 instance=ExtResource("30_r8oan")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 3, 36)
+
+[node name="OverheadLight" parent="TestRoom" unique_id=1170619056 instance=ExtResource("25_xwx3p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 3, 39)
+light_fog_amount = 5.0
+cast_shadows = false
+
+[node name="OverheadLightFlicker" parent="TestRoom" unique_id=1534395050 instance=ExtResource("30_5j5m2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 3, 42)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=473229825]
 environment = SubResource("Environment_lfxu0")
 
 [node name="RoomKit" type="Node3D" parent="." unique_id=499962823]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 0, 27)
 
 [node name="RoomKitDoor" type="MeshInstance3D" parent="RoomKit" unique_id=1925874878]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 30, 0, -3)
@@ -389,6 +676,43 @@ mesh = ExtResource("6_63f1i")
 transform = Transform3D(1.1924881e-08, 0, 1, 0, 1, 0, -1, 0, 1.1924881e-08, 24, 0, 12)
 mesh = ExtResource("19_eq286")
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RoomKit" unique_id=2035343990]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, -1.2481384, 9.5)
+mesh = SubResource("BoxMesh_hjb8m")
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2013661058]
-transform = Transform3D(0.5581245, 0.45078605, -0.69662684, 2.374729e-08, 0.839555, 0.54327464, 0.8297572, -0.3032149, 0.46857622, 12, 0, 0)
+transform = Transform3D(0.5581245, 0.687714, -0.46426997, 1.4901161e-08, 0.559525, 0.82881343, 0.8297572, -0.4625811, 0.3122846, 12, 0, 0)
 shadow_enabled = true
+
+[node name="OverheadLight" parent="." unique_id=1549800196 instance=ExtResource("25_xwx3p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.432, 3, 9.955)
+light_colour = Color(0.9999997, 0.84763503, 0.69530445, 1)
+light_fog_amount = 5.0
+cast_shadows = false
+
+[node name="OverheadLightFlicker" parent="." unique_id=1089264642 instance=ExtResource("30_5j5m2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.475144, 2.9943607, 4.7659445)
+flicker_threshold = 0.7
+cast_shadows = true
+
+[node name="OverheadLight2" parent="." unique_id=663091930 instance=ExtResource("27_lf2ej")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.467709, 2.5612917, 0.12068534)
+
+[node name="OverheadLightFlicker2" parent="." unique_id=1034411495 instance=ExtResource("28_aa4my")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.4767139, 2.5718644, -0.15665177)
+
+[node name="GrateLight" parent="." unique_id=2027193099 instance=ExtResource("29_pmyuj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 3, -4.5)
+light_range = 5.0
+
+[node name="GrateLight3" parent="." unique_id=1177801894 instance=ExtResource("29_pmyuj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 3, -4.5)
+light_range = 5.0
+
+[node name="GrateLight2" parent="." unique_id=1133946233 instance=ExtResource("29_pmyuj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 6, -13.5)
+light_range = 9.0
+
+[node name="GrateLightFlicker2" parent="." unique_id=1552511784 instance=ExtResource("30_r8oan")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 6, -13.5)
+light_range = 9.0

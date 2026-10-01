@@ -1,0 +1,17 @@
+[gd_resource type="ORMMaterial3D" format=3 uid="uid://bdetmgy12jikg"]
+
+[ext_resource type="Texture2D" uid="uid://bss5bbgcjrmuk" path="res://Assets/Models/Lights/Textures/GrateLight_albedo.tga" id="1_6ychh"]
+[ext_resource type="Texture2D" uid="uid://ilism2ljh0w7" path="res://Assets/Models/Lights/Textures/GrateLight_emissive.tga" id="2_4wwfl"]
+[ext_resource type="Texture2D" uid="uid://da0n2hu4anqjd" path="res://Assets/Models/Lights/Textures/GrateLight_normal.tga" id="3_ooq36"]
+[ext_resource type="Texture2D" uid="uid://7a7o1mxmckfh" path="res://Assets/Models/Lights/Textures/GrateLight_mixmap.tga" id="4_aox8t"]
+
+[resource]
+albedo_texture = ExtResource("1_6ychh")
+orm_texture = ExtResource("4_aox8t")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 5.0
+emission_operator = 1
+emission_texture = ExtResource("2_4wwfl")
+normal_enabled = true
+normal_texture = ExtResource("3_ooq36")

@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://de250sht73l6m"]
+
+[ext_resource type="Script" uid="uid://e6ev50ld814v" path="res://Scenes/Environment/env_light.gd" id="1_rqavf"]
+[ext_resource type="Material" uid="uid://bwtkgpv1lbi8t" path="res://Assets/Models/Lights/Materials/DoorLight_mat.tres" id="2_78paj"]
+[ext_resource type="ArrayMesh" uid="uid://bnexkyahuajqk" path="res://Assets/Models/Lights/Meshes/DoorLight.res" id="3_arm21"]
+[ext_resource type="Texture2D" uid="uid://lul3fa2ox408" path="res://Assets/Models/Lights/Textures/DoorLight_albedo.tga" id="4_78paj"]
+[ext_resource type="Texture2D" uid="uid://jclt6mil4ej7" path="res://Assets/Models/Lights/Textures/DoorLight_emissive.tga" id="5_arm21"]
+[ext_resource type="Texture2D" uid="uid://bc2ojamkc13yv" path="res://Assets/Models/Lights/Textures/DoorLight_normal.tga" id="6_elfhk"]
+[ext_resource type="Texture2D" uid="uid://br4731k0sv05k" path="res://Assets/Models/Lights/Textures/DoorLight_mixmap.tga" id="7_44agj"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_78paj"]
+albedo_texture = ExtResource("4_78paj")
+orm_texture = ExtResource("7_44agj")
+emission_enabled = true
+emission = Color(1, 0.84705883, 0.69411767, 1)
+emission_energy_multiplier = 5.0
+emission_operator = 1
+emission_texture = ExtResource("5_arm21")
+normal_enabled = true
+normal_texture = ExtResource("6_elfhk")
+
+[node name="DoorLight" type="Node3D" unique_id=957882005]
+script = ExtResource("1_rqavf")
+mesh_material = ExtResource("2_78paj")
+light_colour = Color(1, 0.84705883, 0.69411767, 1)
+metadata/_custom_type_script = "uid://e6ev50ld814v"
+
+[node name="LightMesh" type="MeshInstance3D" parent="." unique_id=1584284493]
+unique_name_in_owner = true
+mesh = ExtResource("3_arm21")
+surface_material_override/0 = SubResource("ORMMaterial3D_78paj")
+
+[node name="Light" type="SpotLight3D" parent="." unique_id=1977279119]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, -0.9638081, 0.2665969, 0, -0.2665969, -0.9638081, 0, -0.033821702, 0.36802188)
+light_color = Color(1, 0.84705883, 0.69411767, 1)
+light_indirect_energy = 5.0
+light_volumetric_fog_energy = 5.0
+spot_angle = 80.0

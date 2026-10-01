@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bl4djye2ayi4v"]
+
+[ext_resource type="Script" uid="uid://rdqginq04xaj" path="res://Scenes/Environment/env_light_flicker.gd" id="1_ykj2m"]
+[ext_resource type="Material" uid="uid://bfb6pto6ntfqk" path="res://Assets/Models/Lights/Materials/OverheadLight_mat.tres" id="2_wn236"]
+[ext_resource type="ArrayMesh" uid="uid://cxavuy0ebhq8e" path="res://Assets/Models/Lights/Meshes/OverheadLight.res" id="3_wbxqs"]
+[ext_resource type="Texture2D" uid="uid://bfj68a688ylsx" path="res://Assets/Models/Lights/Textures/OverheadLight_albedo.tga" id="4_fhlen"]
+[ext_resource type="Texture2D" uid="uid://cnerl3knykku1" path="res://Assets/Models/Lights/Textures/OverheadLight_emissive.tga" id="5_rl15g"]
+[ext_resource type="Texture2D" uid="uid://vyk6mm3s7h4h" path="res://Assets/Models/Lights/Textures/OverheadLight_normal.tga" id="6_in63e"]
+[ext_resource type="Texture2D" uid="uid://cd5qlj0nhcqdy" path="res://Assets/Models/Lights/Textures/OverheadLight_mixmap.tga" id="7_cb2js"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_c2d1r"]
+albedo_texture = ExtResource("4_fhlen")
+orm_texture = ExtResource("7_cb2js")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 5.0
+emission_operator = 1
+emission_texture = ExtResource("5_rl15g")
+normal_enabled = true
+normal_texture = ExtResource("6_in63e")
+
+[node name="OverheadLightFlicker" type="Node3D" unique_id=1972426774]
+script = ExtResource("1_ykj2m")
+mesh_material = ExtResource("2_wn236")
+light_colour = Color(1, 0.84705883, 0.69411767, 1)
+metadata/_custom_type_script = "uid://rdqginq04xaj"
+
+[node name="LightMesh" type="MeshInstance3D" parent="." unique_id=1584284493]
+unique_name_in_owner = true
+mesh = ExtResource("3_wbxqs")
+surface_material_override/0 = SubResource("ORMMaterial3D_c2d1r")
+
+[node name="Light" type="SpotLight3D" parent="." unique_id=1977279119]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -0.19215298, 8.399273e-09)
+light_indirect_energy = 5.0
+light_volumetric_fog_energy = 5.0
+spot_angle = 80.0

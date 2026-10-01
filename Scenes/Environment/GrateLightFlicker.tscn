@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dijockbfqnx7o"]
+
+[ext_resource type="Script" uid="uid://rdqginq04xaj" path="res://Scenes/Environment/env_light_flicker.gd" id="1_7h4e2"]
+[ext_resource type="Material" uid="uid://bdetmgy12jikg" path="res://Assets/Models/Lights/Materials/GrateLight_mat.tres" id="2_7h4e2"]
+[ext_resource type="ArrayMesh" uid="uid://ngd03a0hpybm" path="res://Assets/Models/Lights/Meshes/GrateLight.res" id="3_vnlj1"]
+[ext_resource type="Texture2D" uid="uid://bss5bbgcjrmuk" path="res://Assets/Models/Lights/Textures/GrateLight_albedo.tga" id="4_7h4e2"]
+[ext_resource type="Texture2D" uid="uid://ilism2ljh0w7" path="res://Assets/Models/Lights/Textures/GrateLight_emissive.tga" id="5_vnlj1"]
+[ext_resource type="Texture2D" uid="uid://da0n2hu4anqjd" path="res://Assets/Models/Lights/Textures/GrateLight_normal.tga" id="6_dskyr"]
+[ext_resource type="Texture2D" uid="uid://7a7o1mxmckfh" path="res://Assets/Models/Lights/Textures/GrateLight_mixmap.tga" id="7_agb38"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_bqh1g"]
+albedo_texture = ExtResource("4_7h4e2")
+orm_texture = ExtResource("7_agb38")
+emission_enabled = true
+emission = Color(1, 0.84705883, 0.69411767, 1)
+emission_energy_multiplier = 5.0
+emission_operator = 1
+emission_texture = ExtResource("5_vnlj1")
+normal_enabled = true
+normal_texture = ExtResource("6_dskyr")
+
+[node name="GrateLightFlicker" type="Node3D" unique_id=1972426774]
+script = ExtResource("1_7h4e2")
+mesh_material = ExtResource("2_7h4e2")
+light_colour = Color(1, 0.84705883, 0.69411767, 1)
+metadata/_custom_type_script = "uid://rdqginq04xaj"
+
+[node name="LightMesh" type="MeshInstance3D" parent="." unique_id=1584284493]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.11948558, 0)
+mesh = ExtResource("3_vnlj1")
+surface_material_override/0 = SubResource("ORMMaterial3D_bqh1g")
+
+[node name="Light" type="SpotLight3D" parent="." unique_id=1977279119]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -0.06733316, 2.943226e-09)
+light_color = Color(1, 0.84705883, 0.69411767, 1)
+light_indirect_energy = 5.0
+light_volumetric_fog_energy = 5.0
+spot_angle = 60.0

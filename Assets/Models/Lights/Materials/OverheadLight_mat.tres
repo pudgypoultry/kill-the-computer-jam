@@ -1,0 +1,17 @@
+[gd_resource type="ORMMaterial3D" format=3 uid="uid://bfb6pto6ntfqk"]
+
+[ext_resource type="Texture2D" uid="uid://bfj68a688ylsx" path="res://Assets/Models/Lights/Textures/OverheadLight_albedo.tga" id="1_6byqn"]
+[ext_resource type="Texture2D" uid="uid://cnerl3knykku1" path="res://Assets/Models/Lights/Textures/OverheadLight_emissive.tga" id="2_wnfah"]
+[ext_resource type="Texture2D" uid="uid://vyk6mm3s7h4h" path="res://Assets/Models/Lights/Textures/OverheadLight_normal.tga" id="3_3m28i"]
+[ext_resource type="Texture2D" uid="uid://cd5qlj0nhcqdy" path="res://Assets/Models/Lights/Textures/OverheadLight_mixmap.tga" id="4_3m8sj"]
+
+[resource]
+albedo_texture = ExtResource("1_6byqn")
+orm_texture = ExtResource("4_3m8sj")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 5.0
+emission_operator = 1
+emission_texture = ExtResource("2_wnfah")
+normal_enabled = true
+normal_texture = ExtResource("3_3m28i")
