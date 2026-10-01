@@ -13,7 +13,9 @@ var current_card : PunchCard = null
 var original_rotation
 
 
-signal card_slotted(action : Callable)
+signal card_slotted_single(action : Callable)
+signal card_slotted_double(card_name : String)
+
 
 func slot_card(card : PunchCard):
 	# move card to position slowly
@@ -30,9 +32,13 @@ func slot_card(card : PunchCard):
 	# wait until that's done
 	await tween.finished
 	# produce effect on screen
-	card_slotted.emit(card.execute)
-	await get_tree().create_timer(BoardManager.player_move_time).timeout
-	eject_card()
+	if single_mode:
+		card_slotted_single.emit(card.execute)
+		await get_tree().create_timer(BoardManager.player_move_time).timeout
+		eject_card()
+	else:
+		card_slotted_double.emit(card.card_name)
+		BoardManager.player_actionable = true
 
 
 func eject_card():

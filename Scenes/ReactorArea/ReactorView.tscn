@@ -32,9 +32,10 @@ shader_parameter/contrast = 0.37
 shader_parameter/pixel_colors = Color(0, 1, 0, 1)
 shader_parameter/background_color = Color(0, 0, 0, 1)
 
-[node name="ReactorView" type="Node3D" unique_id=212615922 node_paths=PackedStringArray("cam")]
+[node name="ReactorView" type="Node3D" unique_id=212615922 node_paths=PackedStringArray("cam", "grid_manager")]
 script = ExtResource("1_acc27")
 cam = NodePath("FPSCamera/Camera3D")
+grid_manager = NodePath("GridCamera/GridManager")
 
 [node name="FPSCamera" type="SubViewport" parent="." unique_id=726431392]
 handle_input_locally = false

@@ -4,11 +4,11 @@ extends Node
 @export var board_height : float = 0.15
 @export var player_move_time : float = 0.5
 @export var card_insert_time : float = 1.0
+@export var step_length : float = 3.0
 
 var current_focus : Node3D
 var last_focus : Node3D
 var game_active : bool = false
 var last_pickup_position : Vector3 = Vector3.ZERO
 var player_actionable = true
-var reactor_character : Node3D = null
-var grid_manager : GridManager = null
+var reactor_manager : ReactorManager = null

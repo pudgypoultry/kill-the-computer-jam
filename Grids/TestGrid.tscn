@@ -1,0 +1,300 @@
+[gd_scene format=3 uid="uid://dtq18l1bmtx5"]
+
+[ext_resource type="PackedScene" uid="uid://dtgb4jk7ogybv" path="res://Sandboxes/Pudgypoultry/GridCell.tscn" id="1_ff2ub"]
+[ext_resource type="Texture2D" uid="uid://cm05kjnbsoah3" path="res://Sandboxes/Pudgypoultry/CellOutline.png" id="3_0dw3k"]
+
+[node name="CellFolder" type="Node2D" unique_id=48513814]
+
+[node name="0_0" parent="." unique_id=938959335 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+adjacencies = [NodePath("../1_0"), NodePath("../0_1")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="0_0" unique_id=473202324]
+texture = ExtResource("3_0dw3k")
+
+[node name="1_0" parent="." unique_id=1037642253 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(105, 0)
+grid_position = Vector2i(1, 0)
+adjacencies = [NodePath("../2_0"), NodePath("../1_1"), NodePath("../0_0")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="1_0" unique_id=262843457]
+texture = ExtResource("3_0dw3k")
+
+[node name="2_0" parent="." unique_id=577535739 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(210, 0)
+grid_position = Vector2i(2, 0)
+adjacencies = [NodePath("../3_0"), NodePath("../2_1"), NodePath("../1_0")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="2_0" unique_id=255489994]
+texture = ExtResource("3_0dw3k")
+
+[node name="3_0" parent="." unique_id=1015573676 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(315, 0)
+grid_position = Vector2i(3, 0)
+adjacencies = [NodePath("../4_0"), NodePath("../3_1"), NodePath("../2_0")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="3_0" unique_id=542704843]
+texture = ExtResource("3_0dw3k")
+
+[node name="4_0" parent="." unique_id=808027374 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(420, 0)
+grid_position = Vector2i(4, 0)
+adjacencies = [NodePath("../4_1"), NodePath("../3_0")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="4_0" unique_id=1969591596]
+texture = ExtResource("3_0dw3k")
+
+[node name="0_1" parent="." unique_id=1790723016 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(0, 105)
+grid_position = Vector2i(0, 1)
+adjacencies = [NodePath("../0_0"), NodePath("../1_1"), NodePath("../0_2")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="0_1" unique_id=1641808762]
+texture = ExtResource("3_0dw3k")
+
+[node name="1_1" parent="." unique_id=1619972206 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(105, 105)
+grid_position = Vector2i(1, 1)
+adjacencies = [NodePath("../1_0"), NodePath("../2_1"), NodePath("../1_2"), NodePath("../0_1")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="1_1" unique_id=896216811]
+texture = ExtResource("3_0dw3k")
+
+[node name="2_1" parent="." unique_id=1234767546 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(210, 105)
+grid_position = Vector2i(2, 1)
+adjacencies = [NodePath("../2_0"), NodePath("../3_1"), NodePath("../2_2"), NodePath("../1_1")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="2_1" unique_id=385546852]
+texture = ExtResource("3_0dw3k")
+
+[node name="3_1" parent="." unique_id=727976065 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(315, 105)
+grid_position = Vector2i(3, 1)
+adjacencies = [NodePath("../3_0"), NodePath("../4_1"), NodePath("../3_2"), NodePath("../2_1")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="3_1" unique_id=1484617725]
+texture = ExtResource("3_0dw3k")
+
+[node name="4_1" parent="." unique_id=1048404691 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(420, 105)
+grid_position = Vector2i(4, 1)
+adjacencies = [NodePath("../4_0"), NodePath("../4_2"), NodePath("../3_1")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="4_1" unique_id=413547420]
+texture = ExtResource("3_0dw3k")
+
+[node name="0_2" parent="." unique_id=1446652376 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(0, 210)
+grid_position = Vector2i(0, 2)
+adjacencies = [NodePath("../0_1"), NodePath("../1_2"), NodePath("../0_3")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="0_2" unique_id=1762818825]
+texture = ExtResource("3_0dw3k")
+
+[node name="1_2" parent="." unique_id=768151932 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(105, 210)
+grid_position = Vector2i(1, 2)
+adjacencies = [NodePath("../1_1"), NodePath("../2_2"), NodePath("../1_3"), NodePath("../0_2")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="1_2" unique_id=1109208784]
+texture = ExtResource("3_0dw3k")
+
+[node name="2_2" parent="." unique_id=1540510004 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(210, 210)
+grid_position = Vector2i(2, 2)
+adjacencies = [NodePath("../2_1"), NodePath("../3_2"), NodePath("../2_3"), NodePath("../1_2")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="2_2" unique_id=2060720441]
+texture = ExtResource("3_0dw3k")
+
+[node name="3_2" parent="." unique_id=344834152 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(315, 210)
+grid_position = Vector2i(3, 2)
+adjacencies = [NodePath("../3_1"), NodePath("../4_2"), NodePath("../3_3"), NodePath("../2_2")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="3_2" unique_id=403094455]
+texture = ExtResource("3_0dw3k")
+
+[node name="4_2" parent="." unique_id=223199147 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(420, 210)
+grid_position = Vector2i(4, 2)
+adjacencies = [NodePath("../4_1"), NodePath("../4_3"), NodePath("../3_2")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="4_2" unique_id=759177638]
+texture = ExtResource("3_0dw3k")
+
+[node name="0_3" parent="." unique_id=1977546666 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(0, 315)
+active = false
+grid_position = Vector2i(0, 3)
+adjacencies = [NodePath("../0_2"), NodePath("../1_3"), NodePath("../0_4")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="0_3" unique_id=1206453631]
+texture = ExtResource("3_0dw3k")
+
+[node name="1_3" parent="." unique_id=2018487705 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(105, 315)
+active = false
+grid_position = Vector2i(1, 3)
+adjacencies = [NodePath("../1_2"), NodePath("../2_3"), NodePath("../1_4"), NodePath("../0_3")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="1_3" unique_id=522054778]
+texture = ExtResource("3_0dw3k")
+
+[node name="2_3" parent="." unique_id=1448419077 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(210, 315)
+grid_position = Vector2i(2, 3)
+adjacencies = [NodePath("../2_2"), NodePath("../3_3"), NodePath("../2_4"), NodePath("../1_3")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="2_3" unique_id=267520527]
+texture = ExtResource("3_0dw3k")
+
+[node name="3_3" parent="." unique_id=3684949 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(315, 315)
+active = false
+grid_position = Vector2i(3, 3)
+adjacencies = [NodePath("../3_2"), NodePath("../4_3"), NodePath("../3_4"), NodePath("../2_3")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="3_3" unique_id=1182625302]
+texture = ExtResource("3_0dw3k")
+
+[node name="4_3" parent="." unique_id=1681451073 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(420, 315)
+active = false
+grid_position = Vector2i(4, 3)
+adjacencies = [NodePath("../4_2"), NodePath("../4_4"), NodePath("../3_3")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="4_3" unique_id=1306928415]
+texture = ExtResource("3_0dw3k")
+
+[node name="0_4" parent="." unique_id=1332467350 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(0, 420)
+active = false
+grid_position = Vector2i(0, 4)
+adjacencies = [NodePath("../0_3"), NodePath("../1_4"), NodePath("../0_5")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="0_4" unique_id=308492613]
+texture = ExtResource("3_0dw3k")
+
+[node name="1_4" parent="." unique_id=1948166987 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(105, 420)
+active = false
+grid_position = Vector2i(1, 4)
+adjacencies = [NodePath("../1_3"), NodePath("../2_4"), NodePath("../1_5"), NodePath("../0_4")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="1_4" unique_id=1464342815]
+texture = ExtResource("3_0dw3k")
+
+[node name="2_4" parent="." unique_id=601321673 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(210, 420)
+grid_position = Vector2i(2, 4)
+adjacencies = [NodePath("../2_3"), NodePath("../3_4"), NodePath("../2_5"), NodePath("../1_4")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="2_4" unique_id=185436458]
+texture = ExtResource("3_0dw3k")
+
+[node name="3_4" parent="." unique_id=955465017 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(315, 420)
+active = false
+grid_position = Vector2i(3, 4)
+adjacencies = [NodePath("../3_3"), NodePath("../4_4"), NodePath("../3_5"), NodePath("../2_4")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="3_4" unique_id=1926793161]
+texture = ExtResource("3_0dw3k")
+
+[node name="4_4" parent="." unique_id=2121168465 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(420, 420)
+active = false
+grid_position = Vector2i(4, 4)
+adjacencies = [NodePath("../4_3"), NodePath("../4_5"), NodePath("../3_4")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="4_4" unique_id=1263147444]
+texture = ExtResource("3_0dw3k")
+
+[node name="0_5" parent="." unique_id=2075832999 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(0, 525)
+active = false
+grid_position = Vector2i(0, 5)
+adjacencies = [NodePath("../0_4"), NodePath("../1_5"), NodePath("../0_6")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="0_5" unique_id=238838146]
+texture = ExtResource("3_0dw3k")
+
+[node name="1_5" parent="." unique_id=1053948352 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(105, 525)
+active = false
+grid_position = Vector2i(1, 5)
+adjacencies = [NodePath("../1_4"), NodePath("../2_5"), NodePath("../1_6"), NodePath("../0_5")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="1_5" unique_id=1298360399]
+texture = ExtResource("3_0dw3k")
+
+[node name="2_5" parent="." unique_id=1755233737 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(210, 525)
+grid_position = Vector2i(2, 5)
+adjacencies = [NodePath("../2_4"), NodePath("../3_5"), NodePath("../2_6"), NodePath("../1_5")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="2_5" unique_id=310037489]
+texture = ExtResource("3_0dw3k")
+
+[node name="3_5" parent="." unique_id=1681168056 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(315, 525)
+active = false
+grid_position = Vector2i(3, 5)
+adjacencies = [NodePath("../3_4"), NodePath("../4_5"), NodePath("../3_6"), NodePath("../2_5")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="3_5" unique_id=1548992445]
+texture = ExtResource("3_0dw3k")
+
+[node name="4_5" parent="." unique_id=1168806993 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(420, 525)
+active = false
+grid_position = Vector2i(4, 5)
+adjacencies = [NodePath("../4_4"), NodePath("../4_6"), NodePath("../3_5")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="4_5" unique_id=1610441997]
+texture = ExtResource("3_0dw3k")
+
+[node name="0_6" parent="." unique_id=1399384166 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(0, 630)
+active = false
+grid_position = Vector2i(0, 6)
+adjacencies = [NodePath("../0_5"), NodePath("../1_6")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="0_6" unique_id=997100021]
+texture = ExtResource("3_0dw3k")
+
+[node name="1_6" parent="." unique_id=1950591498 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(105, 630)
+active = false
+grid_position = Vector2i(1, 6)
+adjacencies = [NodePath("../1_5"), NodePath("../2_6"), NodePath("../0_6")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="1_6" unique_id=1584398772]
+texture = ExtResource("3_0dw3k")
+
+[node name="2_6" parent="." unique_id=1910030321 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(210, 630)
+grid_position = Vector2i(2, 6)
+adjacencies = [NodePath("../2_5"), NodePath("../3_6"), NodePath("../1_6")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="2_6" unique_id=890191678]
+texture = ExtResource("3_0dw3k")
+
+[node name="3_6" parent="." unique_id=224612546 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(315, 630)
+active = false
+grid_position = Vector2i(3, 6)
+adjacencies = [NodePath("../3_5"), NodePath("../4_6"), NodePath("../2_6")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="3_6" unique_id=391208812]
+texture = ExtResource("3_0dw3k")
+
+[node name="4_6" parent="." unique_id=23099029 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_ff2ub")]
+position = Vector2(420, 630)
+active = false
+grid_position = Vector2i(4, 6)
+adjacencies = [NodePath("../4_5"), NodePath("../3_6")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="4_6" unique_id=333114722]
+texture = ExtResource("3_0dw3k")

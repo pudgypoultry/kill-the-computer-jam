@@ -27,6 +27,12 @@ size = Vector3(0.3953247, 0.05, 0.66764224)
 [sub_resource type="BoxShape3D" id="BoxShape3D_rkc6c"]
 size = Vector3(0.49230957, 0.05, 1.14516)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_duclc"]
+size = Vector3(0.65384674, 0.05, 1.14516)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q1446"]
+size = Vector3(0.2559204, 0.05, 1.14516)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rojf5"]
 albedo_color = Color(0, 0.21040133, 0.33125, 1)
 
@@ -115,6 +121,14 @@ shape = SubResource("BoxShape3D_tq65w")
 transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 1.080025e-12, 0, -1.080025e-12, 0.9999998, -0.6345825, 0, 0.14820853)
 shape = SubResource("BoxShape3D_rkc6c")
 
+[node name="TopCollsion" type="CollisionShape3D" parent="PlayArea" unique_id=865005405]
+transform = Transform3D(-4.371138e-08, -4.370964e-08, -0.9999998, 4.3711392e-08, 0.9999998, -4.370965e-08, 0.9999998, -4.3711392e-08, -4.371064e-08, 0.13351366, 0, -0.09776482)
+shape = SubResource("BoxShape3D_duclc")
+
+[node name="RightCollision" type="CollisionShape3D" parent="PlayArea" unique_id=1199672086]
+transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 1.7337243e-12, 0, -1.7337243e-12, 0.9999998, 0.7903626, 0, 0.14820853)
+shape = SubResource("BoxShape3D_q1446")
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="PlayArea" unique_id=1823532582]
 visible = false
 mesh = SubResource("BoxMesh_t2s15")
@@ -182,6 +196,7 @@ sprite_outline_component = NodePath("../SpriteOutlineComponent")
 [node name="ReactorView" parent="." unique_id=212615922 node_paths=PackedStringArray("card_slots") instance=ExtResource("12_qaeli")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.09114, 0, -34.631355)
 card_slots = [NodePath("../Monitor/CardSlot1"), NodePath("../Monitor/CardSlot2")]
+starting_position = Vector2i(2, 6)
 
 [node name="FPSCamera" parent="ReactorView" index="0" unique_id=726431392]
 size = Vector2i(240, 240)

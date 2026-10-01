@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cpthijnejcx2a" path="res://Sandboxes/Pudgypoultry/GridManager.gd" id="1_t5r65"]
 [ext_resource type="PackedScene" uid="uid://dtgb4jk7ogybv" path="res://Sandboxes/Pudgypoultry/GridCell.tscn" id="2_d15gf"]
 [ext_resource type="Texture2D" uid="uid://c1xbkcf5185cq" path="res://Sandboxes/Pudgypoultry/PlayerMarker.png" id="3_2jinv"]
+[ext_resource type="PackedScene" uid="uid://dtq18l1bmtx5" path="res://Grids/TestGrid.tscn" id="3_86yd3"]
 [ext_resource type="Material" uid="uid://305nqsaantl3" path="res://Assets/Materials/crt_material.tres" id="3_gkgv3"]
 
 [node name="GridManager" type="Node2D" unique_id=401646695 node_paths=PackedStringArray("cell_folder", "player_marker", "camera")]
@@ -11,6 +12,7 @@ cell_scene = ExtResource("2_d15gf")
 cell_folder = NodePath("CellFolder")
 player_marker = NodePath("PlayerMarker")
 camera = NodePath("Camera2D")
+premade_grid = ExtResource("3_86yd3")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1439896953]
 custom_minimum_size = Vector2(10000, 10000)
@@ -28,6 +30,7 @@ color = Color(0, 0, 0, 1)
 [node name="CellFolder" type="Node2D" parent="." unique_id=48513814]
 
 [node name="PlayerMarker" type="Sprite2D" parent="." unique_id=595048113]
+z_index = 1
 texture = ExtResource("3_2jinv")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=583958183]

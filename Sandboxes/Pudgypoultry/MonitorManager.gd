@@ -19,7 +19,7 @@ func _process(delta : float):
 
 func flip_switch():
 	if BoardManager.player_actionable:
-		if switch_flipped:
+		if switch_flipped && check_slots() == 0:
 			switch_flipped = false
 			switched_faceplate.hide()
 			play_sfx(switch_single_sfx)
@@ -36,6 +36,14 @@ func flip_switch():
 func play_sfx(sfx : AudioStreamWAV):
 	audio_player.stream = sfx
 	audio_player.play()
+
+
+func check_slots() -> int:
+	var num_cards = 0
+	for slot in slots:
+		if slot.current_card != null:
+			num_cards += 1
+	return num_cards
 
 
 func _on_mouse_entered():
