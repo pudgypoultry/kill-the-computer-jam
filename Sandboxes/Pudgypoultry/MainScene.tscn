@@ -177,11 +177,11 @@ sprite_outline_component = NodePath("../SpriteOutlineComponent")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.09114, 0, -34.631355)
 card_slots = [NodePath("../Monitor/CardSlot1"), NodePath("../Monitor/CardSlot2")]
 
-[node name="FPSCamera" parent="ReactorView" index="4" unique_id=726431392]
+[node name="FPSCamera" parent="ReactorView" index="0" unique_id=726431392]
 size = Vector2i(240, 240)
 
 [node name="Camera3D" parent="ReactorView/FPSCamera" index="0" unique_id=417143241]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.09114, 2.9377618, -23.464233)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92.5, 1.88, -24)
 
 [node name="TextureRect" parent="ReactorView/FPSCamera/CanvasLayer" parent_id_path=PackedInt32Array(212615922, 2136070968) index="0" unique_id=165340112]
 material = ExtResource("11_duclc")

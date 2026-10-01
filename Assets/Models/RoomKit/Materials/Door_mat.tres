@@ -1,0 +1,12 @@
+[gd_resource type="ORMMaterial3D" format=3 uid="uid://b0ho4j6vjt85k"]
+
+[ext_resource type="Texture2D" uid="uid://phmxp1odhbw0" path="res://Assets/Models/RoomKit/Textures/Door_albedo.tga" id="1_n4ugw"]
+[ext_resource type="Texture2D" uid="uid://dn2uswg6kbx67" path="res://Assets/Models/RoomKit/Textures/Door_normal.tga" id="2_5cpjh"]
+[ext_resource type="Texture2D" uid="uid://drf0tgp5cwscb" path="res://Assets/Models/RoomKit/Textures/Door_mixmap.tga" id="3_hfq2f"]
+
+[resource]
+albedo_texture = ExtResource("1_n4ugw")
+orm_texture = ExtResource("3_hfq2f")
+normal_enabled = true
+normal_texture = ExtResource("2_5cpjh")
+texture_filter = 0

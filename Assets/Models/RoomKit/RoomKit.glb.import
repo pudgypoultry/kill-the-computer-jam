@@ -1,0 +1,111 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bxsiu8laaysgy"
+path="res://.godot/imported/RoomKit.glb-ff3ce2668037a075dc8f714a1eb30338.scn"
+
+[deps]
+
+source_file="res://Assets/Models/RoomKit/RoomKit.glb"
+dest_files=["res://.godot/imported/RoomKit.glb-ff3ce2668037a075dc8f714a1eb30338.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+mesh_library/use_node_names_as_mesh_names=false
+array_mesh/deduplicate_surfaces=true
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"meshes": {
+"RoomKit_Ceiling": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Models/RoomKit/Meshes/RoomKit_Ceiling.res",
+"save_to_file/path": "uid://ccu40tnum1qri"
+},
+"RoomKit_Door": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Models/RoomKit/Meshes/RoomKit_Door.res",
+"save_to_file/path": "uid://ban2jcyqrexh2"
+},
+"RoomKit_ExteriorCorner": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Models/RoomKit/Meshes/RoomKit_ExteriorCorner.res",
+"save_to_file/path": "uid://crbqoi7eqseg4"
+},
+"RoomKit_Floor": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Models/RoomKit/Meshes/RoomKit_Floor.res",
+"save_to_file/path": "uid://8ifdt51ruf3c"
+},
+"RoomKit_HallwayWall": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Models/RoomKit/Meshes/RoomKit_HallwayWall.res",
+"save_to_file/path": "uid://bm7prslmjftrc"
+},
+"RoomKit_InteriorCorner": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Models/RoomKit/Meshes/RoomKit_InteriorCorner.res",
+"save_to_file/path": "uid://4fd6hibbpmpd"
+},
+"RoomKit_StraightWall": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Models/RoomKit/Meshes/RoomKit_StraightWall.res",
+"save_to_file/path": "uid://bfatv8pckxpor"
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=1
+gltf/texture_map_mode=1

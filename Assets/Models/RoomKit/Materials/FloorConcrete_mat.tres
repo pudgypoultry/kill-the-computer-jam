@@ -1,0 +1,12 @@
+[gd_resource type="ORMMaterial3D" format=3 uid="uid://chiy4naduwqj1"]
+
+[ext_resource type="Texture2D" uid="uid://b1buaj1ua5rsn" path="res://Assets/Models/RoomKit/Textures/Floor_Concrete_albedo.tga" id="1_yi1lx"]
+[ext_resource type="Texture2D" uid="uid://c51fircllahof" path="res://Assets/Models/RoomKit/Textures/Floor_Concrete_normal.tga" id="2_s201a"]
+[ext_resource type="Texture2D" uid="uid://cqu0e5fr0fx41" path="res://Assets/Models/RoomKit/Textures/Floor_Concrete_mixmap.tga" id="3_byevx"]
+
+[resource]
+albedo_texture = ExtResource("1_yi1lx")
+orm_texture = ExtResource("3_byevx")
+normal_enabled = true
+normal_texture = ExtResource("2_s201a")
+texture_filter = 0
