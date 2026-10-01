@@ -80,6 +80,12 @@ shader_parameter/alphaThreshold = 0.0
 background_mode = 2
 tonemap_mode = 2
 tonemap_exposure = 0.7
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
+sdfgi_read_sky_light = false
+volumetric_fog_enabled = true
+volumetric_fog_albedo = Color(0.43, 0.43, 0.43, 1)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_w0dj5"]
 viewport_path = NodePath("ReactorView/FPSCamera")
@@ -191,6 +197,7 @@ environment = SubResource("Environment_vpxdg")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=682498599]
 transform = Transform3D(0.99998707, 0.003685923, -0.0035099322, 0, 0.68960667, 0.7241841, 0.00508976, -0.72417474, 0.6895977, 0, 2.7550595, -6.472185)
+visible = false
 
 [node name="Monitor" type="Node3D" parent="." unique_id=1978282037 node_paths=PackedStringArray("switched_faceplate", "audio_player", "slots")]
 transform = Transform3D(-1.3584404e-08, 0, 0.31077492, 0, 0.31077492, 0, -0.31077492, 0, -1.3584404e-08, 0, 0.41272724, -1.6721406)

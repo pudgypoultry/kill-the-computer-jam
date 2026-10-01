@@ -4,7 +4,7 @@
 
 [resource]
 shader = ExtResource("1_wh4l6")
-shader_parameter/mask_type = 1
+shader_parameter/mask_type = 2
 shader_parameter/curve = 0.00400000019
 shader_parameter/sharpness = 0.6666667
 shader_parameter/color_offset = 0.0
