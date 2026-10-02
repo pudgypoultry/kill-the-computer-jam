@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://chbcopil1diij"]
+[gd_scene format=3 uid="uid://bj5hajnbwsmau"]
 
 [ext_resource type="Shader" uid="uid://8myhxj2c0ghq" path="res://Sandboxes/Pudgypoultry/Monochrome.gdshader" id="1_8628y"]
 [ext_resource type="PackedScene" uid="uid://duq477hnsw1wp" path="res://Sandboxes/Pudgypoultry/GridManager.tscn" id="2_wcqu0"]

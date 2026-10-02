@@ -1,0 +1,971 @@
+[gd_scene format=3 uid="uid://bws36qtjwcoju"]
+
+[ext_resource type="ArrayMesh" uid="uid://ohewximqt2ql" path="res://Assets/Models/RoomKit/Meshes/RoomKit_Floor.res" id="1_bripf"]
+[ext_resource type="ArrayMesh" uid="uid://dumdvm4gy4q6q" path="res://Assets/Models/RoomKit/Meshes/RoomKit_HallwayWall.res" id="2_64b3b"]
+[ext_resource type="ArrayMesh" uid="uid://d2otdcqf1tnx1" path="res://Assets/Models/RoomKit/Meshes/RoomKit_StraightWall.res" id="3_r6i6q"]
+[ext_resource type="ArrayMesh" uid="uid://ff1ifx0hhi10" path="res://Assets/Models/RoomKit/Meshes/RoomKit_Door.res" id="4_o11oa"]
+[ext_resource type="ArrayMesh" uid="uid://105jecp2igls" path="res://Assets/Models/RoomKit/Meshes/RoomKit_InteriorCorner.res" id="5_mhh6y"]
+[ext_resource type="Texture2D" uid="uid://de6jykqg74cyx" path="res://Assets/Decals/Textures/PaintDamageDecal_01_albedo.tga" id="6_4tam1"]
+[ext_resource type="Texture2D" uid="uid://c4r46lowt0wx8" path="res://Assets/Decals/Textures/PaintDamageDecal_01_normal.tga" id="7_2cdcx"]
+[ext_resource type="Texture2D" uid="uid://44hsdqq07fnx" path="res://Assets/Decals/Textures/PaintDamageDecal_01_mixmap.tga" id="8_bs17m"]
+[ext_resource type="Texture2D" uid="uid://cxqtcw85v2be4" path="res://Assets/Decals/Textures/Decals_Concrete_Damaged_albedo.tga" id="9_okt7d"]
+[ext_resource type="Texture2D" uid="uid://dy7ulxfp14y6c" path="res://Assets/Decals/Textures/Decals_Concrete_Damaged_normal.tga" id="10_pqaes"]
+[ext_resource type="Texture2D" uid="uid://c0r78romphfpk" path="res://Assets/Decals/Textures/Decals_Concrete_Damaged_mixmap.tga" id="11_hva2l"]
+[ext_resource type="Texture2D" uid="uid://b603j6x4dyape" path="res://Assets/Decals/Textures/PaintDamageDecal_02_albedo.tga" id="12_slj7n"]
+[ext_resource type="Texture2D" uid="uid://bhcly6s2mr0ad" path="res://Assets/Decals/Textures/PaintDamageDecal_02_normal.tga" id="13_qam1a"]
+[ext_resource type="Texture2D" uid="uid://bn2mq5fliwnak" path="res://Assets/Decals/Textures/PaintDamageDecal_02_mixmap.tga" id="14_ar56e"]
+[ext_resource type="ArrayMesh" uid="uid://1ft8m83gryr5" path="res://Assets/Models/RoomKit/Meshes/RoomKit_Ceiling.res" id="15_fl23l"]
+[ext_resource type="ArrayMesh" uid="uid://xuvtlan5ebqt" path="res://Assets/Models/RoomKit/Meshes/RoomKit_ExteriorCorner.res" id="16_7solt"]
+
+[node name="RoomMeshes" type="Node3D" unique_id=360548649]
+
+[node name="RoomKitFloor" type="MeshInstance3D" parent="." unique_id=858191964]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor2" type="MeshInstance3D" parent="." unique_id=184857620]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor3" type="MeshInstance3D" parent="." unique_id=1577350857]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor4" type="MeshInstance3D" parent="." unique_id=502729331]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor5" type="MeshInstance3D" parent="." unique_id=849676852]
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor6" type="MeshInstance3D" parent="." unique_id=1890769381]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor8" type="MeshInstance3D" parent="." unique_id=1010461131]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor9" type="MeshInstance3D" parent="." unique_id=474829370]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor7" type="MeshInstance3D" parent="." unique_id=1351656940]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor10" type="MeshInstance3D" parent="." unique_id=626181877]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor11" type="MeshInstance3D" parent="." unique_id=111284150]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor12" type="MeshInstance3D" parent="." unique_id=1473212108]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -3)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor13" type="MeshInstance3D" parent="." unique_id=1021598267]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -3)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor14" type="MeshInstance3D" parent="." unique_id=814810318]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -3)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor15" type="MeshInstance3D" parent="." unique_id=1956087559]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor16" type="MeshInstance3D" parent="." unique_id=473341559]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -6)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor17" type="MeshInstance3D" parent="." unique_id=289509952]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -6)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor18" type="MeshInstance3D" parent="." unique_id=1726048051]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -6)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor19" type="MeshInstance3D" parent="." unique_id=992148680]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -6)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitHallwayWall" type="MeshInstance3D" parent="." unique_id=1965430208]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+mesh = ExtResource("2_64b3b")
+
+[node name="RoomKitHallwayWall3" type="MeshInstance3D" parent="." unique_id=1501239918]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9)
+mesh = ExtResource("2_64b3b")
+
+[node name="RoomKitHallwayWall4" type="MeshInstance3D" parent="." unique_id=400569184]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
+mesh = ExtResource("2_64b3b")
+
+[node name="RoomKitHallwayWall5" type="MeshInstance3D" parent="." unique_id=1872007603]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
+mesh = ExtResource("2_64b3b")
+
+[node name="RoomKitStraightWall" type="MeshInstance3D" parent="." unique_id=69902691]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 0, 12)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitDoor" type="MeshInstance3D" parent="." unique_id=2022519642]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+mesh = ExtResource("4_o11oa")
+
+[node name="RoomKitDoor5" type="MeshInstance3D" parent="." unique_id=141820120]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 45, 0, -21.022)
+mesh = ExtResource("4_o11oa")
+
+[node name="RoomKitDoor6" type="MeshInstance3D" parent="." unique_id=1312578960]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 48, 0, -21.022)
+mesh = ExtResource("4_o11oa")
+
+[node name="RoomKitDoor7" type="MeshInstance3D" parent="." unique_id=632473888]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, -30)
+mesh = ExtResource("4_o11oa")
+
+[node name="RoomKitStraightWall2" type="MeshInstance3D" parent="." unique_id=2077681023]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 42, 0, -33)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall12" type="MeshInstance3D" parent="." unique_id=1904286148]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 39, 0, -39)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall13" type="MeshInstance3D" parent="." unique_id=459812106]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 39, 0, -45)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall11" type="MeshInstance3D" parent="." unique_id=31393720]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 42, 0, -27)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitDoor8" type="MeshInstance3D" parent="." unique_id=1213551069]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 42, 0, -33)
+mesh = ExtResource("4_o11oa")
+
+[node name="RoomKitDoor17" type="MeshInstance3D" parent="." unique_id=1606165407]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 21, 0, -30)
+mesh = ExtResource("4_o11oa")
+
+[node name="RoomKitDoor18" type="MeshInstance3D" parent="." unique_id=2133119849]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 21, 0, -27)
+mesh = ExtResource("4_o11oa")
+
+[node name="RoomKitDoor9" type="MeshInstance3D" parent="." unique_id=1224257858]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 39, 0, -45)
+mesh = ExtResource("4_o11oa")
+
+[node name="RoomKitDoor10" type="MeshInstance3D" parent="." unique_id=1842501693]
+transform = Transform3D(0.99999636, 0, 0.0026900738, 0, 1, 0, -0.0026900738, 0, 0.99999636, 39, 0, -42)
+mesh = ExtResource("4_o11oa")
+
+[node name="RoomKitDoor2" type="MeshInstance3D" parent="." unique_id=1815902688]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 3, 0, 0)
+mesh = ExtResource("4_o11oa")
+
+[node name="RoomKitInteriorCorner" type="MeshInstance3D" parent="." unique_id=658738306]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9, 0, 0)
+mesh = ExtResource("5_mhh6y")
+
+[node name="RoomKitInteriorCorner3" type="MeshInstance3D" parent="." unique_id=1930629108]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 9, 0, -9)
+mesh = ExtResource("5_mhh6y")
+
+[node name="RoomKitInteriorCorner5" type="MeshInstance3D" parent="." unique_id=1496172151]
+transform = Transform3D(0.99999416, 0, -0.0034177238, 0, 1, 0, 0.0034177238, 0, 0.99999416, 21, 0, -9)
+mesh = ExtResource("5_mhh6y")
+
+[node name="RoomKitInteriorCorner7" type="MeshInstance3D" parent="." unique_id=1325888867]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 21, 0, -18)
+mesh = ExtResource("5_mhh6y")
+
+[node name="RoomKitInteriorCorner6" type="MeshInstance3D" parent="." unique_id=14739328]
+transform = Transform3D(0.0076901275, 0, 0.99997044, 0, 1, 0, -0.99997044, 0, 0.0076901275, 30, 0, -9)
+mesh = ExtResource("5_mhh6y")
+
+[node name="RoomKitInteriorCorner8" type="MeshInstance3D" parent="." unique_id=503359209]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 30, 0, -18)
+mesh = ExtResource("5_mhh6y")
+
+[node name="RoomKitInteriorCorner2" type="MeshInstance3D" parent="." unique_id=549149632]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+mesh = ExtResource("5_mhh6y")
+
+[node name="RoomKitInteriorCorner4" type="MeshInstance3D" parent="." unique_id=1423194049]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6, 0, -9)
+mesh = ExtResource("5_mhh6y")
+
+[node name="RoomKitStraightWall4" type="MeshInstance3D" parent="." unique_id=1227891650]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 2.9999995, 0, -8.999999)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall5" type="MeshInstance3D" parent="." unique_id=70421213]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -4.7683716e-07, 0, -8.999999)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall6" type="MeshInstance3D" parent="." unique_id=557570057]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -3.0000005, 0, -8.999999)
+mesh = ExtResource("3_r6i6q")
+
+[node name="Decals" type="Node3D" parent="." unique_id=340129131]
+
+[node name="Decal" type="Decal" parent="Decals" unique_id=204643328]
+transform = Transform3D(1, 1.7484555e-07, 7.642742e-15, 0, -4.371139e-08, 1, 1.7484555e-07, -1, -4.371139e-08, 3.5506115, 1.7589917, 0.4840436)
+texture_albedo = ExtResource("6_4tam1")
+texture_normal = ExtResource("7_2cdcx")
+texture_orm = ExtResource("8_bs17m")
+
+[node name="Decal4" type="Decal" parent="Decals" unique_id=840047003]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 3.5506115, -0.13251531, -2.5012622)
+texture_albedo = ExtResource("9_okt7d")
+texture_normal = ExtResource("10_pqaes")
+texture_orm = ExtResource("11_hva2l")
+
+[node name="Decal3" type="Decal" parent="Decals" unique_id=1020020747]
+transform = Transform3D(1.3113416e-07, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, -1.3113416e-07, -5.7320566e-15, 9.313986, 1.0900586, -1.6044679)
+texture_albedo = ExtResource("12_slj7n")
+texture_normal = ExtResource("13_qam1a")
+texture_orm = ExtResource("14_ar56e")
+
+[node name="Decal2" type="Decal" parent="Decals" unique_id=2031518088]
+transform = Transform3D(-0.78590345, 2.0187446e-07, -0.6183492, 0.6183492, 3.435293e-08, -0.78590345, -1.3741172e-07, -1, -1.51827e-07, 5.8051357, 1.3488688, 0.48404408)
+texture_albedo = ExtResource("6_4tam1")
+texture_normal = ExtResource("7_2cdcx")
+texture_orm = ExtResource("8_bs17m")
+
+[node name="RoomKitCeiling" type="MeshInstance3D" parent="." unique_id=362753263]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling2" type="MeshInstance3D" parent="." unique_id=395776957]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling3" type="MeshInstance3D" parent="." unique_id=1246254643]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling4" type="MeshInstance3D" parent="." unique_id=2071229616]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling5" type="MeshInstance3D" parent="." unique_id=670529134]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling6" type="MeshInstance3D" parent="." unique_id=1494121299]
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling7" type="MeshInstance3D" parent="." unique_id=798829551]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling8" type="MeshInstance3D" parent="." unique_id=993271425]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling9" type="MeshInstance3D" parent="." unique_id=283283211]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling10" type="MeshInstance3D" parent="." unique_id=206975756]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling11" type="MeshInstance3D" parent="." unique_id=1318812464]
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling12" type="MeshInstance3D" parent="." unique_id=394450961]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling13" type="MeshInstance3D" parent="." unique_id=1110549377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling14" type="MeshInstance3D" parent="." unique_id=1518257566]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling15" type="MeshInstance3D" parent="." unique_id=1802235030]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling16" type="MeshInstance3D" parent="." unique_id=841779823]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling17" type="MeshInstance3D" parent="." unique_id=1555092847]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling18" type="MeshInstance3D" parent="." unique_id=1228331472]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -3)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling19" type="MeshInstance3D" parent="." unique_id=356492066]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0026598, -4.7683716e-07, -2.991022)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling20" type="MeshInstance3D" parent="." unique_id=1185728519]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -3)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling21" type="MeshInstance3D" parent="." unique_id=1332714692]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling22" type="MeshInstance3D" parent="." unique_id=342644490]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -6)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling23" type="MeshInstance3D" parent="." unique_id=718600515]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -6)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling24" type="MeshInstance3D" parent="." unique_id=1139966989]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -6)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling25" type="MeshInstance3D" parent="." unique_id=324089651]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -6)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling35" type="MeshInstance3D" parent="." unique_id=774059462]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -15)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling34" type="MeshInstance3D" parent="." unique_id=1577945727]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -12)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling33" type="MeshInstance3D" parent="." unique_id=1566101468]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.398561, 0, -11.998283)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling32" type="MeshInstance3D" parent="." unique_id=1567449032]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.398561, 0, -11.998283)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling31" type="MeshInstance3D" parent="." unique_id=1952721215]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.398561, 0, -11.998283)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling30" type="MeshInstance3D" parent="." unique_id=880505554]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.012438, 0.0040540695, -15.000217)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling29" type="MeshInstance3D" parent="." unique_id=1163314050]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.398561, 0, -8.998283)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling28" type="MeshInstance3D" parent="." unique_id=968848559]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.398561, 0, -8.998283)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling27" type="MeshInstance3D" parent="." unique_id=2105074034]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.398561, 0, -8.998283)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling26" type="MeshInstance3D" parent="." unique_id=697648319]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.398561, 0, -8.998283)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitExteriorCorner" type="MeshInstance3D" parent="." unique_id=33047127]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6, 0, 3)
+mesh = ExtResource("16_7solt")
+
+[node name="RoomKitExteriorCorner2" type="MeshInstance3D" parent="." unique_id=241829376]
+transform = Transform3D(1, 0, -7.1054274e-15, 0, 1, 0, 7.1054274e-15, 0, 1, -3, 0, 3)
+mesh = ExtResource("16_7solt")
+
+[node name="RoomKitFloor20" type="MeshInstance3D" parent="." unique_id=387436508]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.994, 0, -3)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor24" type="MeshInstance3D" parent="." unique_id=1230031195]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -9.006)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor25" type="MeshInstance3D" parent="." unique_id=763827954]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -12.024)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor26" type="MeshInstance3D" parent="." unique_id=750770580]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -15.051286)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor27" type="MeshInstance3D" parent="." unique_id=1321937707]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.008026, 0, -18.034855)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor28" type="MeshInstance3D" parent="." unique_id=202614477]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 9.536743e-07, -18)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor29" type="MeshInstance3D" parent="." unique_id=1508976520]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -15)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor36" type="MeshInstance3D" parent="." unique_id=312572708]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -18)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor35" type="MeshInstance3D" parent="." unique_id=137171080]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0.003, -18)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor42" type="MeshInstance3D" parent="." unique_id=2053235577]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0.003, -18)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor41" type="MeshInstance3D" parent="." unique_id=344353867]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -18)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor34" type="MeshInstance3D" parent="." unique_id=1568737144]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -15)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor43" type="MeshInstance3D" parent="." unique_id=987889873]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -12)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor44" type="MeshInstance3D" parent="." unique_id=1511192636]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -9)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor47" type="MeshInstance3D" parent="." unique_id=1859907057]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.016808, 0, -15.051286)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor50" type="MeshInstance3D" parent="." unique_id=1018467823]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, -15.051)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor49" type="MeshInstance3D" parent="." unique_id=1969165715]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, -12.024)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor48" type="MeshInstance3D" parent="." unique_id=861550837]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, -9.006)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor59" type="MeshInstance3D" parent="." unique_id=663634135]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, -9.006)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor60" type="MeshInstance3D" parent="." unique_id=1741627550]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, -6)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor58" type="MeshInstance3D" parent="." unique_id=762835175]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, -12.024)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor57" type="MeshInstance3D" parent="." unique_id=1875953112]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, -15.051)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor61" type="MeshInstance3D" parent="." unique_id=1425898067]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, -18)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor72" type="MeshInstance3D" parent="." unique_id=1494519202]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, -33.044395)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor71" type="MeshInstance3D" parent="." unique_id=801384158]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, -30.095394)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor70" type="MeshInstance3D" parent="." unique_id=2090099836]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, -27.068394)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor69" type="MeshInstance3D" parent="." unique_id=1895992983]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, -21.044394)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor80" type="MeshInstance3D" parent="." unique_id=1425925898]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.15848, 0, -21.044394)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor79" type="MeshInstance3D" parent="." unique_id=1385899012]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, -27.068)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor78" type="MeshInstance3D" parent="." unique_id=666621070]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, -30.095)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor77" type="MeshInstance3D" parent="." unique_id=1821277560]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, -33.044)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor76" type="MeshInstance3D" parent="." unique_id=828660411]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.853466, 0, -21.044394)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor75" type="MeshInstance3D" parent="." unique_id=1386010373]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.853466, 0, -27.068394)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor74" type="MeshInstance3D" parent="." unique_id=986625753]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.853466, 0, -30.095394)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor73" type="MeshInstance3D" parent="." unique_id=919330753]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.853466, 0, -33.044395)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor86" type="MeshInstance3D" parent="." unique_id=397343228]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, -33.044)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor85" type="MeshInstance3D" parent="." unique_id=58294061]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, -30.095)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor84" type="MeshInstance3D" parent="." unique_id=2084846638]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, -27.068)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor83" type="MeshInstance3D" parent="." unique_id=1357862801]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, -27)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor82" type="MeshInstance3D" parent="." unique_id=1428437386]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, -33.044)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor95" type="MeshInstance3D" parent="." unique_id=419934146]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, -36)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor81" type="MeshInstance3D" parent="." unique_id=779391425]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, -30.095)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor89" type="MeshInstance3D" parent="." unique_id=1314728057]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, -39)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor88" type="MeshInstance3D" parent="." unique_id=1907610917]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, -41.988495)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor94" type="MeshInstance3D" parent="." unique_id=1652685114]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, -42)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor93" type="MeshInstance3D" parent="." unique_id=79417824]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, -39)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor137" type="MeshInstance3D" parent="." unique_id=1017280051]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, -39)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor136" type="MeshInstance3D" parent="." unique_id=1076447278]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, -42)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor135" type="MeshInstance3D" parent="." unique_id=355427772]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, -42)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor134" type="MeshInstance3D" parent="." unique_id=783890327]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, -39)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor133" type="MeshInstance3D" parent="." unique_id=1485003919]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, -45)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor132" type="MeshInstance3D" parent="." unique_id=1275453264]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, -45)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor131" type="MeshInstance3D" parent="." unique_id=922746953]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, -45)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor130" type="MeshInstance3D" parent="." unique_id=1757207535]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, -45)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor129" type="MeshInstance3D" parent="." unique_id=1961981022]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, -39)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor128" type="MeshInstance3D" parent="." unique_id=1459733957]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, -42)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor127" type="MeshInstance3D" parent="." unique_id=753494593]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, -42)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor126" type="MeshInstance3D" parent="." unique_id=955600024]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, -39)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor92" type="MeshInstance3D" parent="." unique_id=2108817654]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, -30.095)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor91" type="MeshInstance3D" parent="." unique_id=1893028849]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, -33.044)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor90" type="MeshInstance3D" parent="." unique_id=488805383]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, -27)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor87" type="MeshInstance3D" parent="." unique_id=855640465]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, -36)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor107" type="MeshInstance3D" parent="." unique_id=748009171]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -36)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor119" type="MeshInstance3D" parent="." unique_id=1712503454]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -36)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor118" type="MeshInstance3D" parent="." unique_id=1047866547]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -27)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor149" type="MeshInstance3D" parent="." unique_id=786435403]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -27)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor152" type="MeshInstance3D" parent="." unique_id=209216394]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -27)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor150" type="MeshInstance3D" parent="." unique_id=1147536077]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8457298, 0.04212758, 0.015535355)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor117" type="MeshInstance3D" parent="." unique_id=946714653]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -33.044)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor116" type="MeshInstance3D" parent="." unique_id=942839975]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -30.095)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor115" type="MeshInstance3D" parent="." unique_id=983059815]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -39)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor114" type="MeshInstance3D" parent="." unique_id=1921291325]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -42)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor113" type="MeshInstance3D" parent="." unique_id=881228789]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -42)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor125" type="MeshInstance3D" parent="." unique_id=19525287]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -45)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor124" type="MeshInstance3D" parent="." unique_id=1060249877]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, -45)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor123" type="MeshInstance3D" parent="." unique_id=208517900]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -45)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor122" type="MeshInstance3D" parent="." unique_id=43529]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -45)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor121" type="MeshInstance3D" parent="." unique_id=1136346247]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, -45)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor120" type="MeshInstance3D" parent="." unique_id=325989551]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, -45)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor112" type="MeshInstance3D" parent="." unique_id=104102395]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -39)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor111" type="MeshInstance3D" parent="." unique_id=881977558]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -30.095)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor110" type="MeshInstance3D" parent="." unique_id=1840526282]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -36)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor109" type="MeshInstance3D" parent="." unique_id=1024285124]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -33.044)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor108" type="MeshInstance3D" parent="." unique_id=1618693747]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -27)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor106" type="MeshInstance3D" parent="." unique_id=1620728850]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, -27)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor105" type="MeshInstance3D" parent="." unique_id=1158593391]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, -33.044)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor104" type="MeshInstance3D" parent="." unique_id=1353713954]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, -30.095)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor103" type="MeshInstance3D" parent="." unique_id=1927431133]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, -39)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor102" type="MeshInstance3D" parent="." unique_id=1400329031]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, -42)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor101" type="MeshInstance3D" parent="." unique_id=1775919449]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -42)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor100" type="MeshInstance3D" parent="." unique_id=687811433]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -39)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor99" type="MeshInstance3D" parent="." unique_id=1608797034]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -30.095)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor98" type="MeshInstance3D" parent="." unique_id=1295271617]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, -36)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor97" type="MeshInstance3D" parent="." unique_id=1827627777]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -33.044)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor96" type="MeshInstance3D" parent="." unique_id=1345054978]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -27)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor68" type="MeshInstance3D" parent="." unique_id=2075904630]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, -24.050392)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor46" type="MeshInstance3D" parent="." unique_id=1823594386]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.016808, 0, -12.024)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor45" type="MeshInstance3D" parent="." unique_id=1105740620]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, -9.006)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor52" type="MeshInstance3D" parent="." unique_id=309772833]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.97005, 0, -9.006)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor51" type="MeshInstance3D" parent="." unique_id=655756784]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.986858, 0, -12.024)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitStraightWall3" type="MeshInstance3D" parent="." unique_id=1778680059]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 24, 0, -18)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall10" type="MeshInstance3D" parent="." unique_id=650758207]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 30, 0, -18)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitDoor3" type="MeshInstance3D" parent="." unique_id=1820849025]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 24, 0, -18.086)
+mesh = ExtResource("4_o11oa")
+
+[node name="RoomKitDoor4" type="MeshInstance3D" parent="." unique_id=1946372147]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 27, 0, -18)
+mesh = ExtResource("4_o11oa")
+
+[node name="RoomKitDoor15" type="MeshInstance3D" parent="." unique_id=91785864]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9, 0, -6)
+mesh = ExtResource("4_o11oa")
+
+[node name="RoomKitDoor16" type="MeshInstance3D" parent="." unique_id=1421062594]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -3)
+mesh = ExtResource("4_o11oa")
+
+[node name="RoomKitStraightWall9" type="MeshInstance3D" parent="." unique_id=481117156]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 27, 0, -9)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall7" type="MeshInstance3D" parent="." unique_id=1227781768]
+transform = Transform3D(0.9999487, 0, 0.010135174, 0, 1, 0, -0.010135174, 0, 0.9999487, 21, 0, -12)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall8" type="MeshInstance3D" parent="." unique_id=1955632164]
+transform = Transform3D(-0.99998224, 0, -0.005974531, 0, 1, 0, 0.005974531, 0, -0.99998224, 30, 0, -15)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitFloor33" type="MeshInstance3D" parent="." unique_id=1273279743]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -18)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor147" type="MeshInstance3D" parent="." unique_id=220053785]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -21.014875)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor148" type="MeshInstance3D" parent="." unique_id=64316399]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -24)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor151" type="MeshInstance3D" parent="." unique_id=1933375370]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8457298, 0.04212758, 0.015535355)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor21" type="MeshInstance3D" parent="." unique_id=1333605218]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -3)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor22" type="MeshInstance3D" parent="." unique_id=1320943724]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.008, 0, -3)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor23" type="MeshInstance3D" parent="." unique_id=2018761987]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.994, 0, -6)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor32" type="MeshInstance3D" parent="." unique_id=1903000718]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.003, 0, -3)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor39" type="MeshInstance3D" parent="." unique_id=320998719]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, -3)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor38" type="MeshInstance3D" parent="." unique_id=1013773561]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -3)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor37" type="MeshInstance3D" parent="." unique_id=2131685530]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, -3)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor64" type="MeshInstance3D" parent="." unique_id=1935076389]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -3)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitDoor11" type="MeshInstance3D" parent="." unique_id=1579678746]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -6, 0, -6)
+mesh = ExtResource("4_o11oa")
+
+[node name="RoomKitDoor13" type="MeshInstance3D" parent="." unique_id=189123937]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -12, 0, -15.04)
+mesh = ExtResource("4_o11oa")
+
+[node name="RoomKitDoor14" type="MeshInstance3D" parent="." unique_id=720575453]
+transform = Transform3D(0.04630431, 0, -0.99892735, 0, 1, 0, 0.99892735, 0, 0.04630431, -15, 0, -15.04)
+mesh = ExtResource("4_o11oa")
+
+[node name="RoomKitDoor12" type="MeshInstance3D" parent="." unique_id=772455801]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -3)
+mesh = ExtResource("4_o11oa")
+
+[node name="RoomKitFloor63" type="MeshInstance3D" parent="." unique_id=1518311731]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -3)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor62" type="MeshInstance3D" parent="." unique_id=436964724]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -3)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor65" type="MeshInstance3D" parent="." unique_id=1401596498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -6)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor67" type="MeshInstance3D" parent="." unique_id=1270636993]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -12.022516)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor138" type="MeshInstance3D" parent="." unique_id=302799633]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -15.049744)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor140" type="MeshInstance3D" parent="." unique_id=2017926213]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.049341, 0, -15.049744)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor139" type="MeshInstance3D" parent="." unique_id=1751848363]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -15.05)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor143" type="MeshInstance3D" parent="." unique_id=1926951163]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -18.098438)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor142" type="MeshInstance3D" parent="." unique_id=564126801]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.049341, 0, -18.098183)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor141" type="MeshInstance3D" parent="." unique_id=1086558776]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -18.098183)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor146" type="MeshInstance3D" parent="." unique_id=1405352013]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -21)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor145" type="MeshInstance3D" parent="." unique_id=1336071367]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.049, 0, -21)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor144" type="MeshInstance3D" parent="." unique_id=763731273]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -21)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor66" type="MeshInstance3D" parent="." unique_id=1611853226]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -9)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor56" type="MeshInstance3D" parent="." unique_id=1435657751]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, -3)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor55" type="MeshInstance3D" parent="." unique_id=574465265]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, -3)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor54" type="MeshInstance3D" parent="." unique_id=458180214]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, -3)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor53" type="MeshInstance3D" parent="." unique_id=1796723687]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, -3)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor40" type="MeshInstance3D" parent="." unique_id=1771395903]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.006, 0, -6)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor31" type="MeshInstance3D" parent="." unique_id=710027684]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.016953, 0, -3)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor30" type="MeshInstance3D" parent="." unique_id=1757945070]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.008953, 0, -3)
+mesh = ExtResource("1_bripf")
