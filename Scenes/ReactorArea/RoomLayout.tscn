@@ -956,6 +956,38 @@ mesh = ExtResource("3_r6i6q")
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 30, 0, -48)
 mesh = ExtResource("3_r6i6q")
 
+[node name="RoomKitStraightWall78" type="MeshInstance3D" parent="." unique_id=1502348239]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 21, 0, -21)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall80" type="MeshInstance3D" parent="." unique_id=1970163877]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 30, 0, -21)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall82" type="MeshInstance3D" parent="." unique_id=1629373215]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 36, 0, -12)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall81" type="MeshInstance3D" parent="." unique_id=888116569]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 36, 0, -15)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall83" type="MeshInstance3D" parent="." unique_id=1574749890]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 36, 0, -18)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitInteriorCorner84" type="MeshInstance3D" parent="." unique_id=107059169]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 36, 0, -21)
+mesh = ExtResource("5_mhh6y")
+
+[node name="RoomKitStraightWall79" type="MeshInstance3D" parent="." unique_id=1145053769]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 27, 0, -21)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall77" type="MeshInstance3D" parent="." unique_id=904774888]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 24, 0, -21)
+mesh = ExtResource("3_r6i6q")
+
 [node name="RoomKitStraightWall65" type="MeshInstance3D" parent="." unique_id=772455867]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 27, 0, -48)
 mesh = ExtResource("3_r6i6q")
