@@ -11,6 +11,7 @@ func execute_a() -> void:
 	super()
 	# Check for valid move
 	print_debug("Zooming In")
+	BoardManager.switch_screen_to_grid()
 	reactor.zoom_in()
 
 func execute_b() -> void:
