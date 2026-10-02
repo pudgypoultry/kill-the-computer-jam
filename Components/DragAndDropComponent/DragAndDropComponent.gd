@@ -13,7 +13,6 @@ class_name DragAndDropComponent
 
 var actor_reference : Node3D
 var is_current_focus : bool = false
-var is_being_dragged : bool = false
 var original_position : Vector3 = Vector3.ZERO
 #var original_parent : Node3D
 var potential_drop : Node3D
@@ -21,13 +20,29 @@ var valid_drop : bool
 var pickup_timer : float = 0.0
 var pickup_interval : float = 0.1
 var can_pickup : bool = true
-var hovering : bool = false
 var camera : Camera3D
 var surface : StaticBody3D
 var grab_offset : Vector3 = Vector3.ZERO
 var drag_plane : Plane
 var is_highlighted : bool = false
 
+var is_being_dragged : bool = false:
+	set(value):
+		is_being_dragged = value
+		var mouse_cursor = MouseCursor.get_global_cursor()
+		if value:
+			mouse_cursor.add_grab_target(self)
+		else:
+			mouse_cursor.remove_grab_target(self)
+		
+var hovering : bool = false:
+	set(value):
+		hovering = value
+		var mouse_cursor = MouseCursor.get_global_cursor()
+		if value:
+			mouse_cursor.add_highlight_target(self)
+		else:
+			mouse_cursor.remove_highlight_target(self)
 
 func _ready() -> void:
 	actor_reference = get_parent()

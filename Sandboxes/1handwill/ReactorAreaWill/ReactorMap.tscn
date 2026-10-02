@@ -1,29 +1,28 @@
-[gd_scene format=3 uid="uid://chbcopil1diij"]
+[gd_scene format=3 uid="uid://bj5hajnbwsmau"]
 
-[ext_resource type="Script" uid="uid://g7tvs3iq6wn0" path="res://Sandboxes/1handwill/ReactorAreaWill/ReactorManager.gd" id="1_p2v21"]
-[ext_resource type="Shader" uid="uid://8myhxj2c0ghq" path="res://Sandboxes/Pudgypoultry/Monochrome.gdshader" id="2_c1rc1"]
-[ext_resource type="PackedScene" uid="uid://duq477hnsw1wp" path="res://Sandboxes/Pudgypoultry/GridManager.tscn" id="3_ds0jd"]
-[ext_resource type="ArrayMesh" uid="uid://ohewximqt2ql" path="res://Assets/Models/RoomKit/Meshes/RoomKit_Floor.res" id="4_rbn8s"]
-[ext_resource type="ArrayMesh" uid="uid://dumdvm4gy4q6q" path="res://Assets/Models/RoomKit/Meshes/RoomKit_HallwayWall.res" id="5_i4moh"]
-[ext_resource type="ArrayMesh" uid="uid://d2otdcqf1tnx1" path="res://Assets/Models/RoomKit/Meshes/RoomKit_StraightWall.res" id="6_uqnt2"]
-[ext_resource type="ArrayMesh" uid="uid://ff1ifx0hhi10" path="res://Assets/Models/RoomKit/Meshes/RoomKit_Door.res" id="7_mj06j"]
-[ext_resource type="ArrayMesh" uid="uid://105jecp2igls" path="res://Assets/Models/RoomKit/Meshes/RoomKit_InteriorCorner.res" id="8_wi6wn"]
-[ext_resource type="Texture2D" uid="uid://de6jykqg74cyx" path="res://Assets/Decals/Textures/PaintDamageDecal_01_albedo.tga" id="9_vh1b5"]
-[ext_resource type="Texture2D" uid="uid://c4r46lowt0wx8" path="res://Assets/Decals/Textures/PaintDamageDecal_01_normal.tga" id="10_ri104"]
-[ext_resource type="Texture2D" uid="uid://44hsdqq07fnx" path="res://Assets/Decals/Textures/PaintDamageDecal_01_mixmap.tga" id="11_h7r3c"]
-[ext_resource type="Texture2D" uid="uid://cxqtcw85v2be4" path="res://Assets/Decals/Textures/Decals_Concrete_Damaged_albedo.tga" id="12_o813o"]
-[ext_resource type="Texture2D" uid="uid://dy7ulxfp14y6c" path="res://Assets/Decals/Textures/Decals_Concrete_Damaged_normal.tga" id="13_buoyt"]
-[ext_resource type="Texture2D" uid="uid://c0r78romphfpk" path="res://Assets/Decals/Textures/Decals_Concrete_Damaged_mixmap.tga" id="14_mjv35"]
-[ext_resource type="Texture2D" uid="uid://b603j6x4dyape" path="res://Assets/Decals/Textures/PaintDamageDecal_02_albedo.tga" id="15_cdrvf"]
-[ext_resource type="Texture2D" uid="uid://bhcly6s2mr0ad" path="res://Assets/Decals/Textures/PaintDamageDecal_02_normal.tga" id="16_358vd"]
-[ext_resource type="Texture2D" uid="uid://bn2mq5fliwnak" path="res://Assets/Decals/Textures/PaintDamageDecal_02_mixmap.tga" id="17_gbv5h"]
-[ext_resource type="ArrayMesh" uid="uid://1ft8m83gryr5" path="res://Assets/Models/RoomKit/Meshes/RoomKit_Ceiling.res" id="18_qdmo5"]
-[ext_resource type="ArrayMesh" uid="uid://xuvtlan5ebqt" path="res://Assets/Models/RoomKit/Meshes/RoomKit_ExteriorCorner.res" id="19_uty86"]
+[ext_resource type="Shader" uid="uid://8myhxj2c0ghq" path="res://Sandboxes/Pudgypoultry/Monochrome.gdshader" id="1_8628y"]
+[ext_resource type="PackedScene" uid="uid://duq477hnsw1wp" path="res://Sandboxes/Pudgypoultry/GridManager.tscn" id="2_wcqu0"]
+[ext_resource type="ArrayMesh" uid="uid://ohewximqt2ql" path="res://Assets/Models/RoomKit/Meshes/RoomKit_Floor.res" id="3_btwhh"]
+[ext_resource type="ArrayMesh" uid="uid://dumdvm4gy4q6q" path="res://Assets/Models/RoomKit/Meshes/RoomKit_HallwayWall.res" id="4_guqxf"]
+[ext_resource type="ArrayMesh" uid="uid://d2otdcqf1tnx1" path="res://Assets/Models/RoomKit/Meshes/RoomKit_StraightWall.res" id="5_ep5yh"]
+[ext_resource type="ArrayMesh" uid="uid://ff1ifx0hhi10" path="res://Assets/Models/RoomKit/Meshes/RoomKit_Door.res" id="6_p2eer"]
+[ext_resource type="ArrayMesh" uid="uid://105jecp2igls" path="res://Assets/Models/RoomKit/Meshes/RoomKit_InteriorCorner.res" id="7_rmca4"]
+[ext_resource type="Texture2D" uid="uid://de6jykqg74cyx" path="res://Assets/Decals/Textures/PaintDamageDecal_01_albedo.tga" id="8_gh0hc"]
+[ext_resource type="Texture2D" uid="uid://c4r46lowt0wx8" path="res://Assets/Decals/Textures/PaintDamageDecal_01_normal.tga" id="9_u0kjd"]
+[ext_resource type="Texture2D" uid="uid://44hsdqq07fnx" path="res://Assets/Decals/Textures/PaintDamageDecal_01_mixmap.tga" id="10_jbafa"]
+[ext_resource type="Texture2D" uid="uid://cxqtcw85v2be4" path="res://Assets/Decals/Textures/Decals_Concrete_Damaged_albedo.tga" id="11_yr3cb"]
+[ext_resource type="Texture2D" uid="uid://dy7ulxfp14y6c" path="res://Assets/Decals/Textures/Decals_Concrete_Damaged_normal.tga" id="12_dox5r"]
+[ext_resource type="Texture2D" uid="uid://c0r78romphfpk" path="res://Assets/Decals/Textures/Decals_Concrete_Damaged_mixmap.tga" id="13_hgaub"]
+[ext_resource type="Texture2D" uid="uid://b603j6x4dyape" path="res://Assets/Decals/Textures/PaintDamageDecal_02_albedo.tga" id="14_ljtm1"]
+[ext_resource type="Texture2D" uid="uid://bhcly6s2mr0ad" path="res://Assets/Decals/Textures/PaintDamageDecal_02_normal.tga" id="15_t8i6a"]
+[ext_resource type="Texture2D" uid="uid://bn2mq5fliwnak" path="res://Assets/Decals/Textures/PaintDamageDecal_02_mixmap.tga" id="16_drug5"]
+[ext_resource type="ArrayMesh" uid="uid://1ft8m83gryr5" path="res://Assets/Models/RoomKit/Meshes/RoomKit_Ceiling.res" id="17_aa3nh"]
+[ext_resource type="ArrayMesh" uid="uid://xuvtlan5ebqt" path="res://Assets/Models/RoomKit/Meshes/RoomKit_ExteriorCorner.res" id="18_sh4fk"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_5q44f"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pxqgl"]
-shader = ExtResource("2_c1rc1")
+shader = ExtResource("1_8628y")
 shader_parameter/tiledtexture = SubResource("NoiseTexture2D_5q44f")
 shader_parameter/opacity = 1.0
 shader_parameter/pixel_size = 0.01
@@ -32,10 +31,7 @@ shader_parameter/contrast = 0.37
 shader_parameter/pixel_colors = Color(0, 1, 0, 1)
 shader_parameter/background_color = Color(0, 0, 0, 1)
 
-[node name="ReactorView" type="Node3D" unique_id=212615922 node_paths=PackedStringArray("cam", "grid_manager")]
-script = ExtResource("1_p2v21")
-cam = NodePath("FPSCamera/Camera3D")
-grid_manager = NodePath("GridCamera/GridManager")
+[node name="ReactorView" type="Node3D" unique_id=212615922]
 
 [node name="FPSCamera" type="SubViewport" parent="." unique_id=726431392]
 handle_input_locally = false
@@ -65,277 +61,277 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2875755, 2.4958978, 2.62993
 [node name="GridCamera" type="SubViewport" parent="." unique_id=134290074]
 size = Vector2i(240, 240)
 
-[node name="GridManager" parent="GridCamera" unique_id=401646695 instance=ExtResource("3_ds0jd")]
+[node name="GridManager" parent="GridCamera" unique_id=401646695 instance=ExtResource("2_wcqu0")]
 
 [node name="RoomMeshes" type="Node3D" parent="." unique_id=705350806]
 
 [node name="RoomKitFloor" type="MeshInstance3D" parent="RoomMeshes" unique_id=968135039]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9)
-mesh = ExtResource("4_rbn8s")
+mesh = ExtResource("3_btwhh")
 
 [node name="RoomKitFloor2" type="MeshInstance3D" parent="RoomMeshes" unique_id=1141769874]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
-mesh = ExtResource("4_rbn8s")
+mesh = ExtResource("3_btwhh")
 
 [node name="RoomKitFloor3" type="MeshInstance3D" parent="RoomMeshes" unique_id=85626872]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
-mesh = ExtResource("4_rbn8s")
+mesh = ExtResource("3_btwhh")
 
 [node name="RoomKitFloor4" type="MeshInstance3D" parent="RoomMeshes" unique_id=1122812130]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
-mesh = ExtResource("4_rbn8s")
+mesh = ExtResource("3_btwhh")
 
 [node name="RoomKitFloor5" type="MeshInstance3D" parent="RoomMeshes" unique_id=592279482]
-mesh = ExtResource("4_rbn8s")
+mesh = ExtResource("3_btwhh")
 
 [node name="RoomKitFloor6" type="MeshInstance3D" parent="RoomMeshes" unique_id=1756074125]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
-mesh = ExtResource("4_rbn8s")
+mesh = ExtResource("3_btwhh")
 
 [node name="RoomKitFloor8" type="MeshInstance3D" parent="RoomMeshes" unique_id=1611438448]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
-mesh = ExtResource("4_rbn8s")
+mesh = ExtResource("3_btwhh")
 
 [node name="RoomKitFloor9" type="MeshInstance3D" parent="RoomMeshes" unique_id=190694669]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
-mesh = ExtResource("4_rbn8s")
+mesh = ExtResource("3_btwhh")
 
 [node name="RoomKitFloor7" type="MeshInstance3D" parent="RoomMeshes" unique_id=1417070923]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
-mesh = ExtResource("4_rbn8s")
+mesh = ExtResource("3_btwhh")
 
 [node name="RoomKitFloor10" type="MeshInstance3D" parent="RoomMeshes" unique_id=1742269073]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
-mesh = ExtResource("4_rbn8s")
+mesh = ExtResource("3_btwhh")
 
 [node name="RoomKitFloor11" type="MeshInstance3D" parent="RoomMeshes" unique_id=827590462]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3)
-mesh = ExtResource("4_rbn8s")
+mesh = ExtResource("3_btwhh")
 
 [node name="RoomKitFloor12" type="MeshInstance3D" parent="RoomMeshes" unique_id=353727473]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -3)
-mesh = ExtResource("4_rbn8s")
+mesh = ExtResource("3_btwhh")
 
 [node name="RoomKitFloor13" type="MeshInstance3D" parent="RoomMeshes" unique_id=497757967]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -3)
-mesh = ExtResource("4_rbn8s")
+mesh = ExtResource("3_btwhh")
 
 [node name="RoomKitFloor14" type="MeshInstance3D" parent="RoomMeshes" unique_id=174432141]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -3)
-mesh = ExtResource("4_rbn8s")
+mesh = ExtResource("3_btwhh")
 
 [node name="RoomKitFloor15" type="MeshInstance3D" parent="RoomMeshes" unique_id=156454320]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
-mesh = ExtResource("4_rbn8s")
+mesh = ExtResource("3_btwhh")
 
 [node name="RoomKitFloor16" type="MeshInstance3D" parent="RoomMeshes" unique_id=2072515042]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -6)
-mesh = ExtResource("4_rbn8s")
+mesh = ExtResource("3_btwhh")
 
 [node name="RoomKitFloor17" type="MeshInstance3D" parent="RoomMeshes" unique_id=978643361]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -6)
-mesh = ExtResource("4_rbn8s")
+mesh = ExtResource("3_btwhh")
 
 [node name="RoomKitFloor18" type="MeshInstance3D" parent="RoomMeshes" unique_id=509044146]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -6)
-mesh = ExtResource("4_rbn8s")
+mesh = ExtResource("3_btwhh")
 
 [node name="RoomKitFloor19" type="MeshInstance3D" parent="RoomMeshes" unique_id=1799415110]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -6)
-mesh = ExtResource("4_rbn8s")
+mesh = ExtResource("3_btwhh")
 
 [node name="RoomKitHallwayWall" type="MeshInstance3D" parent="RoomMeshes" unique_id=354589095]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
-mesh = ExtResource("5_i4moh")
+mesh = ExtResource("4_guqxf")
 
 [node name="RoomKitHallwayWall3" type="MeshInstance3D" parent="RoomMeshes" unique_id=917388085]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9)
-mesh = ExtResource("5_i4moh")
+mesh = ExtResource("4_guqxf")
 
 [node name="RoomKitHallwayWall4" type="MeshInstance3D" parent="RoomMeshes" unique_id=1696765665]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
-mesh = ExtResource("5_i4moh")
+mesh = ExtResource("4_guqxf")
 
 [node name="RoomKitHallwayWall5" type="MeshInstance3D" parent="RoomMeshes" unique_id=457406298]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
-mesh = ExtResource("5_i4moh")
+mesh = ExtResource("4_guqxf")
 
 [node name="RoomKitStraightWall" type="MeshInstance3D" parent="RoomMeshes" unique_id=1875587402]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 0, 12)
-mesh = ExtResource("6_uqnt2")
+mesh = ExtResource("5_ep5yh")
 
 [node name="RoomKitDoor" type="MeshInstance3D" parent="RoomMeshes" unique_id=755598251]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
-mesh = ExtResource("7_mj06j")
+mesh = ExtResource("6_p2eer")
 
 [node name="RoomKitDoor2" type="MeshInstance3D" parent="RoomMeshes" unique_id=1708508084]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 3, 0, 0)
-mesh = ExtResource("7_mj06j")
+mesh = ExtResource("6_p2eer")
 
 [node name="RoomKitInteriorCorner" type="MeshInstance3D" parent="RoomMeshes" unique_id=1569450248]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9, 0, 0)
-mesh = ExtResource("8_wi6wn")
+mesh = ExtResource("7_rmca4")
 
 [node name="RoomKitInteriorCorner3" type="MeshInstance3D" parent="RoomMeshes" unique_id=1818662251]
 transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 9, 0, -9)
-mesh = ExtResource("8_wi6wn")
+mesh = ExtResource("7_rmca4")
 
 [node name="RoomKitInteriorCorner2" type="MeshInstance3D" parent="RoomMeshes" unique_id=1401331303]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
-mesh = ExtResource("8_wi6wn")
+mesh = ExtResource("7_rmca4")
 
 [node name="RoomKitInteriorCorner4" type="MeshInstance3D" parent="RoomMeshes" unique_id=1669088561]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6, 0, -9)
-mesh = ExtResource("8_wi6wn")
+mesh = ExtResource("7_rmca4")
 
 [node name="RoomKitStraightWall2" type="MeshInstance3D" parent="RoomMeshes" unique_id=875657702]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -3)
-mesh = ExtResource("6_uqnt2")
+mesh = ExtResource("5_ep5yh")
 
 [node name="RoomKitStraightWall3" type="MeshInstance3D" parent="RoomMeshes" unique_id=1713386422]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9, 0, -6)
-mesh = ExtResource("6_uqnt2")
+mesh = ExtResource("5_ep5yh")
 
 [node name="RoomKitStraightWall4" type="MeshInstance3D" parent="RoomMeshes" unique_id=1690774777]
 transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 2.9999995, 0, -8.999999)
-mesh = ExtResource("6_uqnt2")
+mesh = ExtResource("5_ep5yh")
 
 [node name="RoomKitStraightWall5" type="MeshInstance3D" parent="RoomMeshes" unique_id=657860166]
 transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -4.7683716e-07, 0, -8.999999)
-mesh = ExtResource("6_uqnt2")
+mesh = ExtResource("5_ep5yh")
 
 [node name="RoomKitStraightWall6" type="MeshInstance3D" parent="RoomMeshes" unique_id=702219179]
 transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -3.0000005, 0, -8.999999)
-mesh = ExtResource("6_uqnt2")
+mesh = ExtResource("5_ep5yh")
 
 [node name="Decals" type="Node3D" parent="RoomMeshes" unique_id=1640441197]
 
 [node name="Decal" type="Decal" parent="RoomMeshes/Decals" unique_id=1898987756]
 transform = Transform3D(1, 1.7484555e-07, 7.642742e-15, 0, -4.371139e-08, 1, 1.7484555e-07, -1, -4.371139e-08, 3.5506115, 1.7589917, 0.4840436)
-texture_albedo = ExtResource("9_vh1b5")
-texture_normal = ExtResource("10_ri104")
-texture_orm = ExtResource("11_h7r3c")
+texture_albedo = ExtResource("8_gh0hc")
+texture_normal = ExtResource("9_u0kjd")
+texture_orm = ExtResource("10_jbafa")
 
 [node name="Decal4" type="Decal" parent="RoomMeshes/Decals" unique_id=946811181]
 transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 3.5506115, -0.13251531, -2.5012622)
-texture_albedo = ExtResource("12_o813o")
-texture_normal = ExtResource("13_buoyt")
-texture_orm = ExtResource("14_mjv35")
+texture_albedo = ExtResource("11_yr3cb")
+texture_normal = ExtResource("12_dox5r")
+texture_orm = ExtResource("13_hgaub")
 
 [node name="Decal3" type="Decal" parent="RoomMeshes/Decals" unique_id=316627414]
 transform = Transform3D(1.3113416e-07, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, -1.3113416e-07, -5.7320566e-15, 9.313986, 1.0900586, -1.6044679)
-texture_albedo = ExtResource("15_cdrvf")
-texture_normal = ExtResource("16_358vd")
-texture_orm = ExtResource("17_gbv5h")
+texture_albedo = ExtResource("14_ljtm1")
+texture_normal = ExtResource("15_t8i6a")
+texture_orm = ExtResource("16_drug5")
 
 [node name="Decal2" type="Decal" parent="RoomMeshes/Decals" unique_id=1947431084]
 transform = Transform3D(-0.78590345, 2.0187446e-07, -0.6183492, 0.6183492, 3.435293e-08, -0.78590345, -1.3741172e-07, -1, -1.51827e-07, 5.8051357, 1.3488688, 0.48404408)
-texture_albedo = ExtResource("9_vh1b5")
-texture_normal = ExtResource("10_ri104")
-texture_orm = ExtResource("11_h7r3c")
+texture_albedo = ExtResource("8_gh0hc")
+texture_normal = ExtResource("9_u0kjd")
+texture_orm = ExtResource("10_jbafa")
 
 [node name="RoomKitCeiling" type="MeshInstance3D" parent="RoomMeshes" unique_id=622120172]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
-mesh = ExtResource("18_qdmo5")
+mesh = ExtResource("17_aa3nh")
 
 [node name="RoomKitCeiling2" type="MeshInstance3D" parent="RoomMeshes" unique_id=544552842]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9)
-mesh = ExtResource("18_qdmo5")
+mesh = ExtResource("17_aa3nh")
 
 [node name="RoomKitCeiling3" type="MeshInstance3D" parent="RoomMeshes" unique_id=357148107]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
-mesh = ExtResource("18_qdmo5")
+mesh = ExtResource("17_aa3nh")
 
 [node name="RoomKitCeiling4" type="MeshInstance3D" parent="RoomMeshes" unique_id=1554330041]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
-mesh = ExtResource("18_qdmo5")
+mesh = ExtResource("17_aa3nh")
 
 [node name="RoomKitCeiling5" type="MeshInstance3D" parent="RoomMeshes" unique_id=1690487459]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
-mesh = ExtResource("18_qdmo5")
+mesh = ExtResource("17_aa3nh")
 
 [node name="RoomKitCeiling6" type="MeshInstance3D" parent="RoomMeshes" unique_id=884823287]
-mesh = ExtResource("18_qdmo5")
+mesh = ExtResource("17_aa3nh")
 
 [node name="RoomKitCeiling7" type="MeshInstance3D" parent="RoomMeshes" unique_id=1485178047]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
-mesh = ExtResource("18_qdmo5")
+mesh = ExtResource("17_aa3nh")
 
 [node name="RoomKitCeiling8" type="MeshInstance3D" parent="RoomMeshes" unique_id=1114023135]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
-mesh = ExtResource("18_qdmo5")
+mesh = ExtResource("17_aa3nh")
 
 [node name="RoomKitCeiling9" type="MeshInstance3D" parent="RoomMeshes" unique_id=632735696]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
-mesh = ExtResource("18_qdmo5")
+mesh = ExtResource("17_aa3nh")
 
 [node name="RoomKitCeiling10" type="MeshInstance3D" parent="RoomMeshes" unique_id=1867064856]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
-mesh = ExtResource("18_qdmo5")
+mesh = ExtResource("17_aa3nh")
 
 [node name="RoomKitCeiling11" type="MeshInstance3D" parent="RoomMeshes" unique_id=1818917544]
-mesh = ExtResource("18_qdmo5")
+mesh = ExtResource("17_aa3nh")
 
 [node name="RoomKitCeiling12" type="MeshInstance3D" parent="RoomMeshes" unique_id=1843717099]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
-mesh = ExtResource("18_qdmo5")
+mesh = ExtResource("17_aa3nh")
 
 [node name="RoomKitCeiling13" type="MeshInstance3D" parent="RoomMeshes" unique_id=1982283302]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
-mesh = ExtResource("18_qdmo5")
+mesh = ExtResource("17_aa3nh")
 
 [node name="RoomKitCeiling14" type="MeshInstance3D" parent="RoomMeshes" unique_id=66363826]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
-mesh = ExtResource("18_qdmo5")
+mesh = ExtResource("17_aa3nh")
 
 [node name="RoomKitCeiling15" type="MeshInstance3D" parent="RoomMeshes" unique_id=1210228290]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
-mesh = ExtResource("18_qdmo5")
+mesh = ExtResource("17_aa3nh")
 
 [node name="RoomKitCeiling16" type="MeshInstance3D" parent="RoomMeshes" unique_id=1640422722]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
-mesh = ExtResource("18_qdmo5")
+mesh = ExtResource("17_aa3nh")
 
 [node name="RoomKitCeiling17" type="MeshInstance3D" parent="RoomMeshes" unique_id=1028661718]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3)
-mesh = ExtResource("18_qdmo5")
+mesh = ExtResource("17_aa3nh")
 
 [node name="RoomKitCeiling18" type="MeshInstance3D" parent="RoomMeshes" unique_id=1259758420]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -3)
-mesh = ExtResource("18_qdmo5")
+mesh = ExtResource("17_aa3nh")
 
 [node name="RoomKitCeiling19" type="MeshInstance3D" parent="RoomMeshes" unique_id=1155706448]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -3)
-mesh = ExtResource("18_qdmo5")
+mesh = ExtResource("17_aa3nh")
 
 [node name="RoomKitCeiling20" type="MeshInstance3D" parent="RoomMeshes" unique_id=59930149]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -3)
-mesh = ExtResource("18_qdmo5")
+mesh = ExtResource("17_aa3nh")
 
 [node name="RoomKitCeiling21" type="MeshInstance3D" parent="RoomMeshes" unique_id=536453885]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
-mesh = ExtResource("18_qdmo5")
+mesh = ExtResource("17_aa3nh")
 
 [node name="RoomKitCeiling22" type="MeshInstance3D" parent="RoomMeshes" unique_id=1772622879]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -6)
-mesh = ExtResource("18_qdmo5")
+mesh = ExtResource("17_aa3nh")
 
 [node name="RoomKitCeiling23" type="MeshInstance3D" parent="RoomMeshes" unique_id=283075581]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -6)
-mesh = ExtResource("18_qdmo5")
+mesh = ExtResource("17_aa3nh")
 
 [node name="RoomKitCeiling24" type="MeshInstance3D" parent="RoomMeshes" unique_id=1241041547]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -6)
-mesh = ExtResource("18_qdmo5")
+mesh = ExtResource("17_aa3nh")
 
 [node name="RoomKitCeiling25" type="MeshInstance3D" parent="RoomMeshes" unique_id=1325030644]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -6)
-mesh = ExtResource("18_qdmo5")
+mesh = ExtResource("17_aa3nh")
 
 [node name="RoomKitExteriorCorner" type="MeshInstance3D" parent="RoomMeshes" unique_id=1799863130]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6, 0, 3)
-mesh = ExtResource("19_uty86")
+mesh = ExtResource("18_sh4fk")
 
 [node name="RoomKitExteriorCorner2" type="MeshInstance3D" parent="RoomMeshes" unique_id=1025529056]
 transform = Transform3D(1, 0, -7.1054274e-15, 0, 1, 0, 7.1054274e-15, 0, 1, -3, 0, 3)
-mesh = ExtResource("19_uty86")
+mesh = ExtResource("18_sh4fk")

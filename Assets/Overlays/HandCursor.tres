@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://jrqpi4smedvx"]
+
+[ext_resource type="Texture2D" uid="uid://dipgpp7aqjlk0" path="res://Assets/Overlays/CursorAtlas.tga" id="1_tm0x8"]
+
+[resource]
+atlas = ExtResource("1_tm0x8")
+region = Rect2(256, 0, 256, 256)

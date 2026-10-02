@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://df05gj1qx2fth"]
+
+[ext_resource type="Script" uid="uid://d7m5rh6h5xik" path="res://Sandboxes/Pudgypoultry/MonitorManager.gd" id="1_emgvg"]
+[ext_resource type="AudioStream" uid="uid://c30ichlocj2dt" path="res://Assets/SFX/ToggleSwitch01.wav" id="2_idcpj"]
+[ext_resource type="AudioStream" uid="uid://50eufj4l7u7m" path="res://Assets/SFX/ToggleSwitch02.wav" id="3_ctek8"]
+[ext_resource type="Texture2D" uid="uid://bjg0yu81ysmrt" path="res://Assets/Overlays/FacePlate_Base.png" id="4_ttdpg"]
+[ext_resource type="Texture2D" uid="uid://c857g30gigf77" path="res://Assets/Overlays/FacePlate_SwitchFlip.png" id="5_ifpdf"]
+[ext_resource type="Script" uid="uid://w4h4gaoyuvic" path="res://Sandboxes/Pudgypoultry/SlotPosition.gd" id="6_xxdw3"]
+[ext_resource type="AudioStream" uid="uid://dt7po1ntpriyr" path="res://Assets/SFX/CardInsert.wav" id="7_1vsec"]
+[ext_resource type="AudioStream" uid="uid://dxqo0qwumtu5a" path="res://Assets/SFX/CardEject.wav" id="8_73dq0"]
+[ext_resource type="Texture2D" uid="uid://47m5jkj355bh" path="res://Sandboxes/Pudgypoultry/Outline.png" id="9_8ti2q"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_w0dj5"]
+viewport_path = NodePath("ReactorView/GridCamera")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_duclc"]
+viewport_path = NodePath("ReactorView/FPSCamera")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pxqgl"]
+size = Vector3(0.37805176, 0.9367139, 2.139956)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_10p01"]
+size = Vector3(3.41, 0.05, 3.5)
+
+[node name="Monitor" type="Node3D" unique_id=1842833820 node_paths=PackedStringArray("switched_faceplate", "audio_player", "slots", "screen_2")]
+transform = Transform3D(-1.3584404e-08, 0, 0.31077492, 0, 0.31077492, 0, -0.31077492, 0, -1.3584404e-08, 0, 0, 0)
+script = ExtResource("1_emgvg")
+switched_faceplate = NodePath("SwitchToggle")
+audio_player = NodePath("ToggleSFX")
+switch_single_sfx = ExtResource("2_idcpj")
+switch_double_sfx = ExtResource("3_ctek8")
+slots = [NodePath("CardSlot1"), NodePath("CardSlot2")]
+screen_2 = NodePath("Monitor1")
+
+[node name="Monitor1" type="Sprite3D" parent="." unique_id=55286909]
+transform = Transform3D(1.8874475e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 1.8874475e-07, 0.25383425, 1.6419681, -2.4417856)
+alpha_cut = 1
+texture = SubResource("ViewportTexture_w0dj5")
+
+[node name="Monitor2" type="Sprite3D" parent="." unique_id=831061316]
+transform = Transform3D(1.8874475e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 1.8874475e-07, 0.25383425, 1.6419681, 4.2250614)
+alpha_cut = 1
+texture = SubResource("ViewportTexture_duclc")
+
+[node name="FacePlate" type="Sprite3D" parent="." unique_id=1537681281]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+texture = ExtResource("4_ttdpg")
+
+[node name="SwitchToggle" type="Sprite3D" parent="." unique_id=307628269]
+transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, 0, 0, 0)
+visible = false
+texture = ExtResource("5_ifpdf")
+
+[node name="ToggleArea" type="StaticBody3D" parent="." unique_id=1009856005]
+transform = Transform3D(1, 0, 7.1054274e-15, 0, 1, 0, -7.1054274e-15, 0, 1, -0.42455244, -3.2928495, 0.9095099)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ToggleArea" unique_id=1722705971]
+transform = Transform3D(1, 0, -3.5527137e-15, 0, 1, 0, 3.5527137e-15, 0, 1, 0, -0.14914346, 0.013825715)
+shape = SubResource("BoxShape3D_pxqgl")
+
+[node name="ToggleSFX" type="AudioStreamPlayer3D" parent="." unique_id=1026389401]
+transform = Transform3D(3.217763, 0, 0, 0, 3.217763, 0, 0, 0, 3.217763, 0, 0, 0)
+
+[node name="CardSlot1" type="StaticBody3D" parent="." unique_id=1264573134 node_paths=PackedStringArray("start_position", "insert_position", "expel_position", "audio_player")]
+transform = Transform3D(-3.1998532e-08, -0.65225327, -0.33233967, 0, 0.33233967, -0.65225327, 0.73204106, -2.8510897e-08, -1.45270285e-08, -0.67085123, -3.9393706, -2.867683)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("6_xxdw3")
+start_position = NodePath("StartPos")
+insert_position = NodePath("EndPos")
+expel_position = NodePath("StartPos")
+audio_player = NodePath("CardSFX")
+insert_sfx = ExtResource("7_1vsec")
+eject_sfx = ExtResource("8_73dq0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CardSlot1" unique_id=2026080432]
+transform = Transform3D(1, 0, 0, 0, 1, 1.7763568e-15, 0, -1.7763568e-15, 1, 0, -0.19680452, 0)
+shape = SubResource("BoxShape3D_10p01")
+
+[node name="Sprite3D" type="Sprite3D" parent="CardSlot1" unique_id=585905640]
+transform = Transform3D(0.5, 0, 0, 0, -2.1855694e-08, 0.5, 0, -0.5, -2.1855694e-08, 0, 0, 0)
+visible = false
+layers = 3
+texture = ExtResource("9_8ti2q")
+
+[node name="StartPos" type="Marker3D" parent="CardSlot1" unique_id=627706290]
+
+[node name="EndPos" type="Marker3D" parent="CardSlot1" unique_id=413040677]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.788)
+
+[node name="CardSFX" type="AudioStreamPlayer3D" parent="CardSlot1" unique_id=1088956227]
+
+[node name="CardSlot2" type="StaticBody3D" parent="." unique_id=1056343227 node_paths=PackedStringArray("start_position", "insert_position", "expel_position", "audio_player")]
+transform = Transform3D(-3.1998532e-08, -0.65240616, -0.33203948, 0, 0.33203948, -0.65240616, 0.73204106, -2.851758e-08, -1.4513907e-08, -0.67085123, -3.9393735, 4.63563)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("6_xxdw3")
+start_position = NodePath("StartPos")
+insert_position = NodePath("EndPos")
+expel_position = NodePath("StartPos")
+slot_a = false
+audio_player = NodePath("CardSFX")
+insert_sfx = ExtResource("7_1vsec")
+eject_sfx = ExtResource("8_73dq0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CardSlot2" unique_id=1720713555]
+transform = Transform3D(1, 0, 0, 0, 1, 1.7763568e-15, 0, -1.7763568e-15, 1, 0, -0.19680452, 0)
+shape = SubResource("BoxShape3D_10p01")
+
+[node name="Sprite3D" type="Sprite3D" parent="CardSlot2" unique_id=1500239645]
+transform = Transform3D(0.5, 0, 0, 0, -2.1855694e-08, 0.5, 0, -0.5, -2.1855694e-08, 0, 0, 0)
+visible = false
+layers = 3
+texture = ExtResource("9_8ti2q")
+
+[node name="StartPos" type="Marker3D" parent="CardSlot2" unique_id=743348202]
+
+[node name="EndPos" type="Marker3D" parent="CardSlot2" unique_id=270622416]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1920929e-07, -4.787747)
+
+[node name="CardSFX" type="AudioStreamPlayer3D" parent="CardSlot2" unique_id=807985177]
+
+[connection signal="mouse_entered" from="ToggleArea" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ToggleArea" to="." method="_on_mouse_exited"]
