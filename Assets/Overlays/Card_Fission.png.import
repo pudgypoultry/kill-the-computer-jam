@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0svyj8ept34p"
-path="res://.godot/imported/Halo.png-065c7a36f1c23bc9b86e1a884c6c7992.ctex"
+uid="uid://dgi2orc14wawr"
+path="res://.godot/imported/Card_Fission.png-73d4ebb985045374412b883bc5fe01d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Overlays/Halo.png"
-dest_files=["res://.godot/imported/Halo.png-065c7a36f1c23bc9b86e1a884c6c7992.ctex"]
+source_file="res://Assets/Overlays/Card_Fission.png"
+dest_files=["res://.godot/imported/Card_Fission.png-73d4ebb985045374412b883bc5fe01d6.ctex"]
 
 [params]
 

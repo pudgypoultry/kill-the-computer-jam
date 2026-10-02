@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b313ubvjijqh6"
-path="res://.godot/imported/Cruciform.png-b685335f6c728d78034cf221e11ccd4b.ctex"
+uid="uid://mit3xoj2e8v8"
+path="res://.godot/imported/Card_Cruciform.png-53423c0876ec7247c9fd97b4c8f8ddee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Overlays/Cruciform.png"
-dest_files=["res://.godot/imported/Cruciform.png-b685335f6c728d78034cf221e11ccd4b.ctex"]
+source_file="res://Assets/Overlays/Card_Cruciform.png"
+dest_files=["res://.godot/imported/Card_Cruciform.png-53423c0876ec7247c9fd97b4c8f8ddee.ctex"]
 
 [params]
 

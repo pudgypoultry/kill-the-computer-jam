@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b16ldkahkamlm"
-path="res://.godot/imported/Fusion.png-abffdce79c8c124c56ace367b3e61cbc.ctex"
+uid="uid://blb8j5dnmd5fo"
+path="res://.godot/imported/Card_Fallout.png-a151356107a1bfe044a1e46f7b787428.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Overlays/Fusion.png"
-dest_files=["res://.godot/imported/Fusion.png-abffdce79c8c124c56ace367b3e61cbc.ctex"]
+source_file="res://Assets/Overlays/Card_Fallout.png"
+dest_files=["res://.godot/imported/Card_Fallout.png-a151356107a1bfe044a1e46f7b787428.ctex"]
 
 [params]
 
