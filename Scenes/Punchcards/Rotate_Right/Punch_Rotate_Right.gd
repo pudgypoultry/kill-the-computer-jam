@@ -5,7 +5,6 @@ func execute() -> void:
 	print("Rotating Right")
 	reactor.turn("right")
 
-
 func execute_a() -> void:
 	super()
 	BoardManager.reactor_manager.examine()

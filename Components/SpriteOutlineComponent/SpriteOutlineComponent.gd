@@ -23,6 +23,8 @@ func _apply_texture():
 	var shader_material : ShaderMaterial = actor_reference.material_override
 	shader_material.set_shader_parameter("sprite_texture", actor_reference.texture)
 	shader_material.set_shader_parameter("alphaThreshold", 0.0)
+	shader_material.set_shader_parameter("glowSize", 25.0)
+	shader_material.set_shader_parameter("glowSharpness", 5.0)
 
 
 func show_outline():

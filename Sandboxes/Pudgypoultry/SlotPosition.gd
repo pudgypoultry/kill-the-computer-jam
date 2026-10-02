@@ -17,7 +17,6 @@ var original_rotation
 signal card_slotted_single(action : Callable)
 signal card_slotted_double(card_name : String)
 
-
 func slot_card(card : PunchCard):
 	# move card to position slowly
 	current_card = card
@@ -26,12 +25,14 @@ func slot_card(card : PunchCard):
 	card.global_rotation = global_rotation
 	card.is_slotted = true
 	BoardManager.player_actionable = false
+	current_card.sort_front = false
 	play_sfx(insert_sfx, 0.5)
 	var tween = get_tree().create_tween().bind_node(card)
 	tween.set_trans(Tween.TRANS_BACK)
 	tween.tween_property(card, "global_position", insert_position.global_position, BoardManager.card_insert_time)
 	# wait until that's done
 	await tween.finished
+	current_card.visible = false
 	# produce effect on screen
 	if single_mode:
 		if slot_a:
@@ -44,8 +45,11 @@ func slot_card(card : PunchCard):
 		card_slotted_double.emit(card.card_name)
 		BoardManager.player_actionable = true
 
+func has_card() -> bool:
+	return is_instance_valid(current_card)
 
 func eject_card():
+	current_card.visible = true
 	current_card.is_slotted = false
 	var tween = get_tree().create_tween().bind_node(current_card)
 	BoardManager.player_actionable = false
@@ -55,6 +59,7 @@ func eject_card():
 	await tween.finished
 	current_card.global_position = current_card.original_position
 	current_card.global_rotation = original_rotation
+	current_card.sort_front = true
 	current_card = null
 	BoardManager.player_actionable = true
 

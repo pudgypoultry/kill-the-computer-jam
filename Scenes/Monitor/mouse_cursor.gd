@@ -54,6 +54,18 @@ func remove_grab_target(target:Object) -> void:
 	_grab_targets.erase(target)
 	_update_mouse_cursor()
 
+func has_highlight_target(target:Object) -> bool:
+	return _highlight_targets.has(target)
+
+func has_grab_target(target:Object) -> bool:
+	return _grab_targets.has(target)
+
+func is_highlighting() -> bool:
+	return !_highlight_targets.is_empty()
+
+func is_grabbing() -> bool:
+	return !_grab_targets.is_empty()
+
 func _process(_delta: float) -> void:
 	mouse_position.position = get_viewport().get_mouse_position()
 

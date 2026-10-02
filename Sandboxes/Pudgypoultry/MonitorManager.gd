@@ -8,23 +8,50 @@ class_name MonitorManager
 @export var slots : Array[CardSlot]
 @export var screen_2 : Sprite3D
 
+@onready var toggle_left_highlight: Sprite3D = %ToggleLeftHighlight
+@onready var toggle_right_highlight: Sprite3D = %ToggleRightHighlight
+
 var switch_flipped : bool = false
 var debug_timer = 0.0
 var debug_interval = 1.0
 
+var is_focused:bool = false:
+	set(value):
+		if value == is_focused:
+			return
+			
+		is_focused = value
+		var mouse_cursor = MouseCursor.get_global_cursor()
+		if value:
+			if BoardManager.player_actionable:
+				BoardManager.current_focus = self
+				mouse_cursor.add_highlight_target(self)
+		elif BoardManager.current_focus == self:
+				BoardManager.current_focus = null
+				mouse_cursor.remove_highlight_target(self)
+		
+		_update_highlight_state()
+			
 
 func _ready() -> void:
 	BoardManager.terminal_screen = screen_2
 
 
 func _process(_delta : float):
+	var mouse_cursor = MouseCursor.get_global_cursor()
+	
 	if BoardManager.current_focus == self && Input.is_action_just_pressed("interact"):
 		flip_switch()
-
+		mouse_cursor.add_grab_target(self)
+	elif Input.is_action_just_released("interact") and mouse_cursor.has_grab_target(self):
+		mouse_cursor.remove_grab_target(self)
 
 func flip_switch():
 	if BoardManager.player_actionable:
-		if switch_flipped && check_slots() == 0:
+		if switch_flipped:
+			for slot in slots:
+				if slot.has_card():
+					slot.eject_card()
 			switch_flipped = false
 			switched_faceplate.hide()
 			play_sfx(switch_single_sfx)
@@ -36,6 +63,8 @@ func flip_switch():
 			play_sfx(switch_double_sfx)
 			for slot in slots:
 				slot.single_mode = false
+				
+		_update_highlight_state()
 
 
 func play_sfx(sfx : AudioStreamWAV):
@@ -50,11 +79,21 @@ func check_slots() -> int:
 			num_cards += 1
 	return num_cards
 
+func _on_mouse_entered() -> void:
+	is_focused = true
 
-func _on_mouse_entered():
-	if BoardManager.player_actionable:
-		BoardManager.current_focus = self
+func _on_mouse_exited() -> void:
+	is_focused = false
 
-func _on_mouse_exited():
-	if BoardManager.current_focus == self:
-		BoardManager.current_focus = null
+func _update_highlight_state() -> void:
+	var mouse_cursor = MouseCursor.get_global_cursor()
+	if is_focused and (not mouse_cursor.is_grabbing() or mouse_cursor.has_grab_target(self)):
+		if switch_flipped:
+			toggle_left_highlight.visible = false
+			toggle_right_highlight.visible = true
+		else:
+			toggle_left_highlight.visible = true
+			toggle_right_highlight.visible = false
+	else:
+		toggle_left_highlight.visible = false
+		toggle_right_highlight.visible = false

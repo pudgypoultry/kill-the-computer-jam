@@ -13,7 +13,7 @@ class_name ReactorManager
 @export var terminal_subviewport: SubViewport
 @export var grid_subviewport: SubViewport
 
-var current_cards : Array = []
+var current_cards_scratch : Array = []
 var current_position : Vector2i
 var cam_tween : Tween
 
@@ -30,19 +30,20 @@ func _ready() -> void:
 func _handle_card_slotted_single(action : Callable):
 	action.call()
 
-
-func _handle_card_slotted_double(card_name : String):
-	if len(current_cards) == 1:
-		current_cards.append(card_name)
-		print(current_cards)
+func _handle_card_slotted_double(_card_name : String):
+	for slot in card_slots:
+		if slot.has_card():
+			current_cards_scratch.append(slot.current_card)
+	
+	if len(current_cards_scratch) == 2:
+		print(current_cards_scratch)
 		# check dictionary if valid combo, if not, reject both cards
 		# if so, perform action
-		current_cards.clear()
 		for slot in card_slots:
-			slot.eject_card()
-	else:
-		current_cards.append(card_name)
-		print(current_cards)
+			if slot.has_card():
+				slot.eject_card()
+		
+	current_cards_scratch.clear()
 
 
 func is_valid_move(forward : bool) -> bool:

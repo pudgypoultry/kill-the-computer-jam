@@ -134,6 +134,7 @@ shape = SubResource("BoxShape3D_rojf5")
 
 [node name="Sprite3D" type="Sprite3D" parent="PlayArea/PunchCard1" unique_id=881373012]
 transform = Transform3D(0.5, 0, 0, 0, -1.2894859e-08, 0.5, 0, -0.295, -2.1855694e-08, 0, 0, 0)
+sorting_offset = 20.0
 material_override = SubResource("ShaderMaterial_5msbe")
 texture = ExtResource("1_t2s15")
 
@@ -154,6 +155,7 @@ shape = SubResource("BoxShape3D_rojf5")
 
 [node name="Sprite3D" type="Sprite3D" parent="PlayArea/PunchCard2" unique_id=1746149423]
 transform = Transform3D(0.5, 0, 0, 0, -1.2894859e-08, 0.5, 0, -0.295, -2.1855694e-08, 0, 0, 0)
+sorting_offset = 20.0
 material_override = SubResource("ShaderMaterial_qebm6")
 texture = ExtResource("2_vpxdg")
 
@@ -174,6 +176,7 @@ shape = SubResource("BoxShape3D_rojf5")
 
 [node name="Sprite3D" type="Sprite3D" parent="PlayArea/PunchCard3" unique_id=490274197]
 transform = Transform3D(0.5, 0, 0, 0, -1.2894859e-08, 0.5, 0, -0.295, -2.1855694e-08, 0, 0, 0)
+sorting_offset = 20.0
 material_override = SubResource("ShaderMaterial_3tf8q")
 texture = ExtResource("3_0dkyw")
 

@@ -4,6 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://c30ichlocj2dt" path="res://Assets/SFX/ToggleSwitch01.wav" id="2_idcpj"]
 [ext_resource type="AudioStream" uid="uid://50eufj4l7u7m" path="res://Assets/SFX/ToggleSwitch02.wav" id="3_ctek8"]
 [ext_resource type="Texture2D" uid="uid://bjg0yu81ysmrt" path="res://Assets/Overlays/FacePlate_Base.png" id="4_ttdpg"]
+[ext_resource type="Texture2D" uid="uid://yxsekebkosnm" path="res://Assets/Overlays/ToggleHighlight.tga" id="5_idcpj"]
 [ext_resource type="Texture2D" uid="uid://c857g30gigf77" path="res://Assets/Overlays/FacePlate_SwitchFlip.png" id="5_ifpdf"]
 [ext_resource type="Script" uid="uid://w4h4gaoyuvic" path="res://Sandboxes/Pudgypoultry/SlotPosition.gd" id="6_xxdw3"]
 [ext_resource type="AudioStream" uid="uid://dt7po1ntpriyr" path="res://Assets/SFX/CardInsert.wav" id="7_1vsec"]
@@ -46,9 +47,24 @@ texture = SubResource("ViewportTexture_duclc")
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
 texture = ExtResource("4_ttdpg")
 
+[node name="ToggleLeftHighlight" type="Sprite3D" parent="FacePlate" unique_id=218055971]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.40120652, -3.4930832, -0.015908908)
+visible = false
+sorting_offset = 10.0
+texture = ExtResource("5_idcpj")
+
+[node name="ToggleRightHighlight" type="Sprite3D" parent="FacePlate" unique_id=173149215]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4040716, -3.4930832, -0.015908908)
+visible = false
+sorting_offset = 10.0
+texture = ExtResource("5_idcpj")
+
 [node name="SwitchToggle" type="Sprite3D" parent="." unique_id=307628269]
 transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, 0, 0, 0)
 visible = false
+sorting_offset = 5.0
 texture = ExtResource("5_ifpdf")
 
 [node name="ToggleArea" type="StaticBody3D" parent="." unique_id=1009856005]
