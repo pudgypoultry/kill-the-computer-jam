@@ -6,13 +6,18 @@ class_name MonitorManager
 @export var switch_single_sfx : AudioStreamWAV
 @export var switch_double_sfx : AudioStreamWAV
 @export var slots : Array[CardSlot]
+@export var screen_2 : Sprite3D
 
 var switch_flipped : bool = false
 var debug_timer = 0.0
 var debug_interval = 1.0
 
 
-func _process(delta : float):
+func _ready() -> void:
+	BoardManager.terminal_screen = screen_2
+
+
+func _process(_delta : float):
 	if BoardManager.current_focus == self && Input.is_action_just_pressed("interact"):
 		flip_switch()
 

@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://bpjar1abmxgdt"]
+
+[ext_resource type="Shader" uid="uid://6ue1scpi6ugg" path="res://Components/SpriteOutlineComponent/SpriteHighlight.gdshader" id="1_ic73j"]
+[ext_resource type="Script" uid="uid://by4niajalghyy" path="res://Scenes/Punchcards/Rotate_Left/Punch_Rotate_Left.gd" id="1_nd08f"]
+[ext_resource type="Texture2D" uid="uid://y8uamtovj52g" path="res://Scenes/Punchcards/PunchcardTest1.png" id="2_nd08f"]
+[ext_resource type="PackedScene" uid="uid://dr8vwsmgcojh1" path="res://Components/DragAndDropComponent/DragAndDropComponent.tscn" id="3_7gan7"]
+[ext_resource type="PackedScene" uid="uid://bqormgwvc5m8j" path="res://Components/SpriteOutlineComponent/SpriteOutlineComponent.tscn" id="4_suy73"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gr77n"]
+size = Vector3(2.5, 0.05, 2)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qebm6"]
+load_path = "res://.godot/imported/PunchcardTest1.png-f16b4a629d2298b60f841c5b5cf70aad.s3tc.ctex"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jq8eq"]
+render_priority = 0
+shader = ExtResource("1_ic73j")
+shader_parameter/sprite_texture = SubResource("CompressedTexture2D_qebm6")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/glowSize = 15.0
+shader_parameter/glowDensity = 6
+shader_parameter/glowRadialCoverage = 8
+shader_parameter/glowAngle = 0.49600002356
+shader_parameter/glowSharpness = 3.2150001527125
+shader_parameter/alphaThreshold = 0.0
+
+[node name="PunchRotateLeft" type="StaticBody3D" unique_id=1434024374 node_paths=PackedStringArray("sprite", "drag_component")]
+script = ExtResource("1_nd08f")
+sprite = NodePath("Sprite3D")
+drag_component = NodePath("DragAndDropComponent")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=120582309]
+shape = SubResource("BoxShape3D_gr77n")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1348125229]
+transform = Transform3D(0.5, 0, 0, 0, -1.2894859e-08, 0.5, 0, -0.295, -2.1855694e-08, 0, 0, 0)
+material_override = SubResource("ShaderMaterial_jq8eq")
+texture = ExtResource("2_nd08f")
+
+[node name="DragAndDropComponent" parent="." unique_id=765073431 node_paths=PackedStringArray("sprite_outline_component") instance=ExtResource("3_7gan7")]
+pickup_height = 0.05
+sprite_outline_component = NodePath("../SpriteOutlineComponent")
+
+[node name="SpriteOutlineComponent" parent="." unique_id=1057435061 instance=ExtResource("4_suy73")]
