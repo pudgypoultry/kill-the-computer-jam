@@ -7,9 +7,13 @@ class_name MonitorManager
 @export var switch_double_sfx : AudioStreamWAV
 @export var slots : Array[CardSlot]
 @export var screen_2 : Sprite3D
+@export var song_1 : AudioStreamOggVorbis
+@export var song_2 : AudioStreamOggVorbis
+@export var song_3 : AudioStreamOggVorbis
 
 @onready var toggle_left_highlight: Sprite3D = %ToggleLeftHighlight
 @onready var toggle_right_highlight: Sprite3D = %ToggleRightHighlight
+@onready var music_player : AudioStreamPlayer3D = %MusicPlayer
 
 var switch_flipped : bool = false
 var debug_timer = 0.0
