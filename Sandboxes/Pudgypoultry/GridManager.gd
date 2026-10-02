@@ -11,6 +11,7 @@ enum Direction {NORTH, EAST, SOUTH, WEST}
 #@export var width : int = 40
 @export var generating : bool = false
 @export var saving : bool = false
+@export var file_name : String = "TestGrid.tscn"
 
 @export_category("Plugging in Nodes")
 @export var cell_scene : PackedScene
@@ -53,7 +54,7 @@ func _late_ready():
 	camera.global_position = position_dict[current_position].global_position
 	player_marker.global_position = position_dict[current_position].global_position
 	if saving:
-		save_branch_as_scene(cell_folder, "Grids/TestGrid.tscn")
+		save_branch_as_scene(cell_folder, "Grids/" + file_name)
 
 
 func generate_grid() -> void:
