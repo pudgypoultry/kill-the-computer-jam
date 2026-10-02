@@ -19,3 +19,13 @@ func _ready() -> void:
 func execute() -> void:
 	if reactor == null:
 		reactor = BoardManager.reactor_manager
+
+
+func execute_a() -> void:
+	if reactor == null:
+		reactor = BoardManager.reactor_manager
+
+
+func execute_b() -> void:
+	if reactor == null:
+		reactor = BoardManager.reactor_manager

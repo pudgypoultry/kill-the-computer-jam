@@ -41,15 +41,15 @@ material = SubResource("StandardMaterial3D_rojf5")
 size = Vector3(1.5, 0.05, 0.6)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rojf5"]
-size = Vector3(2.5, 0.05, 3.5)
+size = Vector3(2.5, 0.05, 2)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qebm6"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_duclc"]
 load_path = "res://.godot/imported/PunchcardTest1.png-f16b4a629d2298b60f841c5b5cf70aad.s3tc.ctex"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5msbe"]
 render_priority = 0
 shader = ExtResource("2_td0uf")
-shader_parameter/sprite_texture = SubResource("CompressedTexture2D_qebm6")
+shader_parameter/sprite_texture = SubResource("CompressedTexture2D_duclc")
 shader_parameter/line_color = Color(1, 1, 1, 1)
 shader_parameter/glowSize = 15.0
 shader_parameter/glowDensity = 6
@@ -94,13 +94,16 @@ volumetric_fog_enabled = true
 volumetric_fog_albedo = Color(0.43, 0.43, 0.43, 1)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_w0dj5"]
-viewport_path = NodePath("ReactorView/FPSCamera")
+viewport_path = NodePath("ReactorView/GridCamera")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_duclc"]
-viewport_path = NodePath("ReactorView/GridCamera")
+viewport_path = NodePath("ReactorView/FPSCamera")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pxqgl"]
 size = Vector3(0.37805176, 0.9367139, 2.139956)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_10p01"]
+size = Vector3(3.41, 0.05, 3.5)
 
 [node name="MainScene" type="Node3D" unique_id=904660948]
 
@@ -207,6 +210,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92.5, 1.88, -24)
 [node name="TextureRect" parent="ReactorView/FPSCamera/CanvasLayer" parent_id_path=PackedInt32Array(212615922, 2136070968) index="0" unique_id=165340112]
 material = ExtResource("11_duclc")
 
+[node name="GridManager" parent="ReactorView/GridCamera" parent_id_path=PackedInt32Array(212615922, 134290074) index="0" unique_id=401646695]
+generating = null
+saving = null
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1762969380]
 environment = SubResource("Environment_vpxdg")
 
@@ -214,7 +221,7 @@ environment = SubResource("Environment_vpxdg")
 transform = Transform3D(0.99998707, 0.003685923, -0.0035099322, 0, 0.68960667, 0.7241841, 0.00508976, -0.72417474, 0.6895977, 0, 2.7550595, -6.472185)
 visible = false
 
-[node name="Monitor" type="Node3D" parent="." unique_id=1978282037 node_paths=PackedStringArray("switched_faceplate", "audio_player", "slots")]
+[node name="Monitor" type="Node3D" parent="." unique_id=1978282037 node_paths=PackedStringArray("switched_faceplate", "audio_player", "slots", "screen_2")]
 transform = Transform3D(-1.3584404e-08, 0, 0.31077492, 0, 0.31077492, 0, -0.31077492, 0, -1.3584404e-08, 0, 0.41272724, -1.6721406)
 script = ExtResource("11_w0dj5")
 switched_faceplate = NodePath("SwitchToggle")
@@ -222,6 +229,7 @@ audio_player = NodePath("ToggleSFX")
 switch_single_sfx = ExtResource("14_duclc")
 switch_double_sfx = ExtResource("15_q1446")
 slots = [NodePath("CardSlot1"), NodePath("CardSlot2")]
+screen_2 = NodePath("Monitor1")
 
 [node name="Monitor1" type="Sprite3D" parent="Monitor" unique_id=688936377]
 transform = Transform3D(1.8874475e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, 1.8874475e-07, 0.25383425, 1.6419681, -2.4417856)
@@ -266,7 +274,7 @@ eject_sfx = ExtResource("14_w0dj5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Monitor/CardSlot1" unique_id=1288313320]
 transform = Transform3D(1, 0, 0, 0, 1, 1.7763568e-15, 0, -1.7763568e-15, 1, 0, -0.19680452, 0)
-shape = SubResource("BoxShape3D_rojf5")
+shape = SubResource("BoxShape3D_10p01")
 
 [node name="Sprite3D" type="Sprite3D" parent="Monitor/CardSlot1" unique_id=1157961305]
 transform = Transform3D(0.5, 0, 0, 0, -2.1855694e-08, 0.5, 0, -0.5, -2.1855694e-08, 0, 0, 0)
@@ -289,13 +297,14 @@ script = ExtResource("8_qebm6")
 start_position = NodePath("StartPos")
 insert_position = NodePath("EndPos")
 expel_position = NodePath("StartPos")
+slot_a = false
 audio_player = NodePath("CardSFX")
 insert_sfx = ExtResource("13_1uf6b")
 eject_sfx = ExtResource("14_w0dj5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Monitor/CardSlot2" unique_id=835547709]
 transform = Transform3D(1, 0, 0, 0, 1, 1.7763568e-15, 0, -1.7763568e-15, 1, 0, -0.19680452, 0)
-shape = SubResource("BoxShape3D_rojf5")
+shape = SubResource("BoxShape3D_10p01")
 
 [node name="Sprite3D" type="Sprite3D" parent="Monitor/CardSlot2" unique_id=721778732]
 transform = Transform3D(0.5, 0, 0, 0, -2.1855694e-08, 0.5, 0, -0.5, -2.1855694e-08, 0, 0, 0)

@@ -4,5 +4,17 @@ func execute() -> void:
 	super()
 	print_debug("Moving Backward")
 	reactor.move_backward()
-	#var tween = get_tree().create_tween().bind_node(character)
-	#tween.tween_property(character, "global_position", character.global_position - character.basis.z * step_length, BoardManager.player_move_time)
+
+
+func execute_a() -> void:
+	super()
+	# Check for valid move
+	print_debug("Zooming Out")
+	reactor.zoom_out()
+
+
+func execute_b() -> void:
+	super()
+	# Check for valid move
+	print_debug("Moving Backward")
+	reactor.move_backward()

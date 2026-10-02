@@ -5,6 +5,7 @@ class_name CardSlot
 @export var insert_position : Node3D
 @export var expel_position : Node3D
 @export var single_mode : bool = true
+@export var slot_a : bool = true
 @export var audio_player : AudioStreamPlayer3D
 @export var insert_sfx : AudioStreamWAV
 @export var eject_sfx : AudioStreamWAV
@@ -33,7 +34,10 @@ func slot_card(card : PunchCard):
 	await tween.finished
 	# produce effect on screen
 	if single_mode:
-		card_slotted_single.emit(card.execute)
+		if slot_a:
+			card_slotted_single.emit(card.execute_a)
+		else:
+			card_slotted_single.emit(card.execute_b)
 		await get_tree().create_timer(BoardManager.player_move_time).timeout
 		eject_card()
 	else:

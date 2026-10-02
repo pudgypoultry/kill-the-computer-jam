@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dhb3rfbxv8xra" path="res://Scenes/ReactorArea/ReactorManager.gd" id="1_acc27"]
 [ext_resource type="Shader" uid="uid://8myhxj2c0ghq" path="res://Sandboxes/Pudgypoultry/Monochrome.gdshader" id="1_dbkhw"]
 [ext_resource type="PackedScene" uid="uid://duq477hnsw1wp" path="res://Sandboxes/Pudgypoultry/GridManager.tscn" id="3_5q44f"]
+[ext_resource type="PackedScene" uid="uid://dtf7t8rdoi3jd" path="res://Scenes/Terminal/Terminal.tscn" id="4_4gxma"]
 [ext_resource type="ArrayMesh" uid="uid://ohewximqt2ql" path="res://Assets/Models/RoomKit/Meshes/RoomKit_Floor.res" id="4_42u3o"]
 [ext_resource type="ArrayMesh" uid="uid://dumdvm4gy4q6q" path="res://Assets/Models/RoomKit/Meshes/RoomKit_HallwayWall.res" id="5_fv5fo"]
 [ext_resource type="ArrayMesh" uid="uid://d2otdcqf1tnx1" path="res://Assets/Models/RoomKit/Meshes/RoomKit_StraightWall.res" id="6_g0q32"]
@@ -32,10 +33,13 @@ shader_parameter/contrast = 0.37
 shader_parameter/pixel_colors = Color(0, 1, 0, 1)
 shader_parameter/background_color = Color(0, 0, 0, 1)
 
-[node name="ReactorView" type="Node3D" unique_id=212615922 node_paths=PackedStringArray("cam", "grid_manager")]
+[node name="ReactorView" type="Node3D" unique_id=212615922 node_paths=PackedStringArray("cam", "grid_manager", "terminal_manager", "terminal_subviewport", "grid_subviewport")]
 script = ExtResource("1_acc27")
 cam = NodePath("FPSCamera/Camera3D")
 grid_manager = NodePath("GridCamera/GridManager")
+terminal_manager = NodePath("Terminal/Terminal")
+terminal_subviewport = NodePath("Terminal")
+grid_subviewport = NodePath("GridCamera")
 
 [node name="FPSCamera" type="SubViewport" parent="." unique_id=726431392]
 handle_input_locally = false
@@ -66,6 +70,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2875755, 2.4958978, 2.62993
 size = Vector2i(240, 240)
 
 [node name="GridManager" parent="GridCamera" unique_id=401646695 instance=ExtResource("3_5q44f")]
+
+[node name="Terminal" type="SubViewport" parent="." unique_id=1191082865]
+size = Vector2i(240, 240)
+
+[node name="Terminal" parent="Terminal" unique_id=667416545 instance=ExtResource("4_4gxma")]
 
 [node name="RoomMeshes" type="Node3D" parent="." unique_id=705350806]
 
@@ -184,16 +193,16 @@ mesh = ExtResource("8_y5jv6")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
 mesh = ExtResource("8_y5jv6")
 
+[node name="RoomKitStraightWall3" type="MeshInstance3D" parent="RoomMeshes" unique_id=1713386422]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9, 0, -6)
+mesh = ExtResource("6_g0q32")
+
 [node name="RoomKitInteriorCorner4" type="MeshInstance3D" parent="RoomMeshes" unique_id=1669088561]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6, 0, -9)
 mesh = ExtResource("8_y5jv6")
 
 [node name="RoomKitStraightWall2" type="MeshInstance3D" parent="RoomMeshes" unique_id=875657702]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -3)
-mesh = ExtResource("6_g0q32")
-
-[node name="RoomKitStraightWall3" type="MeshInstance3D" parent="RoomMeshes" unique_id=1713386422]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9, 0, -6)
 mesh = ExtResource("6_g0q32")
 
 [node name="RoomKitStraightWall4" type="MeshInstance3D" parent="RoomMeshes" unique_id=1690774777]

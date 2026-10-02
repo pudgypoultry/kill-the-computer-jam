@@ -198,3 +198,11 @@ func get_forward_direction():
 			return Vector2(0, 1)
 		Direction.WEST:
 			return Vector2(-1, 0)
+
+
+func zoom_in():
+	camera.zoom *= 2.0
+
+
+func zoom_out():
+	camera.zoom *= 0.5
