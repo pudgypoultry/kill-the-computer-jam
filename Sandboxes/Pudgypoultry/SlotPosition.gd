@@ -21,13 +21,15 @@ func slot_card(card : PunchCard):
 	# move card to position slowly
 	current_card = card
 	original_rotation = card.global_rotation
-	card.global_position = start_position.global_position
-	card.global_rotation = global_rotation
 	card.is_slotted = true
 	BoardManager.player_actionable = false
 	current_card.sort_front = false
-	play_sfx(insert_sfx, 0.5)
 	var tween = get_tree().create_tween().bind_node(card)
+	tween.set_trans(Tween.TRANS_CUBIC)
+	tween.tween_property(card, "global_transform", start_position.global_transform, BoardManager.card_insert_time/4.0)
+	await tween.finished
+	play_sfx(insert_sfx, 0.5)
+	tween = get_tree().create_tween().bind_node(card)
 	tween.set_trans(Tween.TRANS_BACK)
 	tween.tween_property(card, "global_position", insert_position.global_position, BoardManager.card_insert_time)
 	# wait until that's done
@@ -57,10 +59,14 @@ func eject_card():
 	tween.set_trans(Tween.TRANS_BACK)
 	tween.tween_property(current_card, "global_position", expel_position.global_position, BoardManager.card_insert_time)
 	await tween.finished
-	current_card.global_position = current_card.original_position
-	current_card.global_rotation = original_rotation
+	tween = get_tree().create_tween().bind_node(current_card)
+	tween.set_trans(Tween.TRANS_CUBIC)
+	tween.set_parallel()
+	tween.tween_property(current_card, "global_rotation", original_rotation, BoardManager.card_insert_time/4.0)	
+	tween.tween_property(current_card, "global_position", current_card.original_position, BoardManager.card_insert_time/4.0)	
 	current_card.sort_front = true
 	current_card = null
+	await tween.finished
 	BoardManager.player_actionable = true
 
 

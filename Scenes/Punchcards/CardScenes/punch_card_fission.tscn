@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cied817m3svin"]
+
+[ext_resource type="Script" uid="uid://by4niajalghyy" path="res://Scenes/Punchcards/Rotate_Left/Punch_Rotate_Left.gd" id="1_ew81m"]
+[ext_resource type="Texture2D" uid="uid://dgi2orc14wawr" path="res://Assets/Overlays/Card_Fission.png" id="2_4ny8o"]
+[ext_resource type="PackedScene" uid="uid://dr8vwsmgcojh1" path="res://Components/DragAndDropComponent/DragAndDropComponent.tscn" id="3_6ijqn"]
+[ext_resource type="PackedScene" uid="uid://bqormgwvc5m8j" path="res://Components/SpriteOutlineComponent/SpriteOutlineComponent.tscn" id="4_aa4yj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rojf5"]
+size = Vector3(2.590805, 0.05, 3.4110146)
+
+[node name="PunchCardFission" type="StaticBody3D" unique_id=458594757 node_paths=PackedStringArray("sprite", "drag_component")]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.629815e-09, 0, -1.629815e-09, 0.07, 0, 0, 0)
+script = ExtResource("1_ew81m")
+sprite = NodePath("Sprite3D")
+drag_component = NodePath("DragAndDropComponent")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1898811177]
+shape = SubResource("BoxShape3D_rojf5")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=130706286]
+transform = Transform3D(0.35, 0, 0, 0, -1.5298985e-08, 0.35, 0, -0.35, -1.5298985e-08, 0, 0, 0)
+sorting_offset = 20.0
+shaded = true
+texture = ExtResource("2_4ny8o")
+
+[node name="DragAndDropComponent" parent="." unique_id=765073431 node_paths=PackedStringArray("sprite_outline_component") instance=ExtResource("3_6ijqn")]
+pickup_height = 0.05
+sprite_outline_component = NodePath("../SpriteOutlineComponent")
+
+[node name="SpriteOutlineComponent" parent="." unique_id=1057435061 instance=ExtResource("4_aa4yj")]

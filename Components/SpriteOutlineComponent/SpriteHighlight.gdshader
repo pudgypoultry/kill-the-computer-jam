@@ -1,5 +1,5 @@
 shader_type spatial;
-render_mode unshaded,blend_mix,depth_prepass_alpha,cull_disabled,specular_disabled;
+render_mode blend_mix,depth_prepass_alpha,cull_disabled,specular_disabled;
 uniform sampler2D sprite_texture : source_color, filter_linear;
 
 uniform vec4 line_color : source_color = vec4(1.0,1.0,1.0,1.0); // Glow or outline color
@@ -42,7 +42,7 @@ void fragment() {
 	
 	// Adds outline if this part of the image is transparent
 	if (ALPHA < alphaThreshold){
-		ALBEDO = line_color.rgb;
+		EMISSION = line_color.rgb;
 		ALPHA = alph;
 	}
 	

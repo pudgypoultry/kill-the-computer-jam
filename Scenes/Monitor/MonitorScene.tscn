@@ -21,7 +21,7 @@ viewport_path = NodePath("ReactorView/FPSCamera")
 size = Vector3(0.37805176, 0.9367139, 2.139956)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_10p01"]
-size = Vector3(3.41, 0.05, 3.5)
+size = Vector3(5.316194, 1.4041016, 5.238037)
 
 [node name="Monitor" type="Node3D" unique_id=1842833820 node_paths=PackedStringArray("switched_faceplate", "audio_player", "slots", "screen_2")]
 transform = Transform3D(-1.3584404e-08, 0, 0.31077492, 0, 0.31077492, 0, -0.31077492, 0, -1.3584404e-08, 0, 0, 0)
@@ -45,6 +45,7 @@ texture = SubResource("ViewportTexture_duclc")
 
 [node name="FacePlate" type="Sprite3D" parent="." unique_id=1537681281]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+shaded = true
 texture = ExtResource("4_ttdpg")
 
 [node name="ToggleLeftHighlight" type="Sprite3D" parent="FacePlate" unique_id=218055971]
@@ -90,7 +91,7 @@ insert_sfx = ExtResource("7_1vsec")
 eject_sfx = ExtResource("8_73dq0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CardSlot1" unique_id=2026080432]
-transform = Transform3D(1, 0, 0, 0, 1, 1.7763568e-15, 0, -1.7763568e-15, 1, 0, -0.19680452, 0)
+transform = Transform3D(1.0000004, 0, 0, 0, 0.8924636, -0.45111942, 0, 0.45111942, 0.8924636, 0.11803079, -0.8871741, -1.082334)
 shape = SubResource("BoxShape3D_10p01")
 
 [node name="Sprite3D" type="Sprite3D" parent="CardSlot1" unique_id=585905640]
@@ -120,7 +121,7 @@ insert_sfx = ExtResource("7_1vsec")
 eject_sfx = ExtResource("8_73dq0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CardSlot2" unique_id=1720713555]
-transform = Transform3D(1, 0, 0, 0, 1, 1.7763568e-15, 0, -1.7763568e-15, 1, 0, -0.19680452, 0)
+transform = Transform3D(1.0000004, 0, 0, 0, 0.89246345, -0.4511193, 0, 0.4511193, 0.89246345, 0.0030994415, -0.8986503, -1.0996644)
 shape = SubResource("BoxShape3D_10p01")
 
 [node name="Sprite3D" type="Sprite3D" parent="CardSlot2" unique_id=1500239645]
@@ -135,6 +136,22 @@ texture = ExtResource("9_8ti2q")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1920929e-07, -4.787747)
 
 [node name="CardSFX" type="AudioStreamPlayer3D" parent="CardSlot2" unique_id=807985177]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=957876266]
+transform = Transform3D(0.7567253, 0.4238052, -0.49775103, 0, 0.7613979, 0.6482849, 0.6537331, -0.49057353, 0.5761691, -7.8591614, 8.917223, 8.309725)
+light_color = Color(0.87, 0.9393333, 1, 1)
+light_energy = 6.0
+shadow_enabled = true
+shadow_bias = 0.01
+shadow_blur = 2.0
+spot_range = 17.411
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=954802813]
+transform = Transform3D(-1.9672215, -1.7630645, -1.8372918, -2.8324205e-09, 2.3217182, -2.227919, 2.5463774, -1.3620675, -1.4194127, -5.047192, -12.865162, -9.989176)
+light_color = Color(1, 0.675, 0.35000002, 1)
+light_energy = 2.5
+shadow_enabled = true
+spot_range = 13.58
 
 [connection signal="mouse_entered" from="ToggleArea" to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="ToggleArea" to="." method="_on_mouse_exited"]
