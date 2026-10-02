@@ -200,6 +200,14 @@ mesh = ExtResource("6_g0q32")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 42, 0, -33)
 mesh = ExtResource("7_jjjyx")
 
+[node name="RoomKitDoor17" type="MeshInstance3D" parent="RoomMeshes" unique_id=257538303]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 21, 0, -30)
+mesh = ExtResource("7_jjjyx")
+
+[node name="RoomKitDoor18" type="MeshInstance3D" parent="RoomMeshes" unique_id=1178842944]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 21, 0, -27)
+mesh = ExtResource("7_jjjyx")
+
 [node name="RoomKitDoor9" type="MeshInstance3D" parent="RoomMeshes" unique_id=1718480472]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 39, 0, -45)
 mesh = ExtResource("7_jjjyx")
@@ -601,7 +609,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, -39)
 mesh = ExtResource("4_42u3o")
 
 [node name="RoomKitFloor88" type="MeshInstance3D" parent="RoomMeshes" unique_id=2084309756]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, -42)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, -41.988495)
 mesh = ExtResource("4_42u3o")
 
 [node name="RoomKitFloor94" type="MeshInstance3D" parent="RoomMeshes" unique_id=1788202032]
@@ -688,6 +696,18 @@ mesh = ExtResource("4_42u3o")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -27)
 mesh = ExtResource("4_42u3o")
 
+[node name="RoomKitFloor149" type="MeshInstance3D" parent="RoomMeshes" unique_id=285021900]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -27)
+mesh = ExtResource("4_42u3o")
+
+[node name="RoomKitFloor152" type="MeshInstance3D" parent="RoomMeshes" unique_id=1197159762]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -27)
+mesh = ExtResource("4_42u3o")
+
+[node name="RoomKitFloor150" type="MeshInstance3D" parent="RoomMeshes" unique_id=795793754]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8457298, 0.04212758, 0.015535355)
+mesh = ExtResource("4_42u3o")
+
 [node name="RoomKitFloor117" type="MeshInstance3D" parent="RoomMeshes" unique_id=265484027]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -33.044)
 mesh = ExtResource("4_42u3o")
@@ -753,7 +773,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -27)
 mesh = ExtResource("4_42u3o")
 
 [node name="RoomKitFloor106" type="MeshInstance3D" parent="RoomMeshes" unique_id=353011013]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.01836, 0, -27)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, -27)
 mesh = ExtResource("4_42u3o")
 
 [node name="RoomKitFloor105" type="MeshInstance3D" parent="RoomMeshes" unique_id=731222326]
@@ -832,6 +852,14 @@ mesh = ExtResource("7_jjjyx")
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 27, 0, -18)
 mesh = ExtResource("7_jjjyx")
 
+[node name="RoomKitDoor15" type="MeshInstance3D" parent="RoomMeshes" unique_id=71216942]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9, 0, -6)
+mesh = ExtResource("7_jjjyx")
+
+[node name="RoomKitDoor16" type="MeshInstance3D" parent="RoomMeshes" unique_id=426446595]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -3)
+mesh = ExtResource("7_jjjyx")
+
 [node name="RoomKitStraightWall9" type="MeshInstance3D" parent="RoomMeshes" unique_id=854873048]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 27, 0, -9)
 mesh = ExtResource("6_g0q32")
@@ -846,6 +874,18 @@ mesh = ExtResource("6_g0q32")
 
 [node name="RoomKitFloor33" type="MeshInstance3D" parent="RoomMeshes" unique_id=1970376616]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -18)
+mesh = ExtResource("4_42u3o")
+
+[node name="RoomKitFloor147" type="MeshInstance3D" parent="RoomMeshes" unique_id=358784356]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -21.014875)
+mesh = ExtResource("4_42u3o")
+
+[node name="RoomKitFloor148" type="MeshInstance3D" parent="RoomMeshes" unique_id=495343395]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -24)
+mesh = ExtResource("4_42u3o")
+
+[node name="RoomKitFloor151" type="MeshInstance3D" parent="RoomMeshes" unique_id=1457917348]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8457298, 0.04212758, 0.015535355)
 mesh = ExtResource("4_42u3o")
 
 [node name="RoomKitFloor21" type="MeshInstance3D" parent="RoomMeshes" unique_id=123418527]
@@ -880,6 +920,22 @@ mesh = ExtResource("4_42u3o")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -3)
 mesh = ExtResource("4_42u3o")
 
+[node name="RoomKitDoor11" type="MeshInstance3D" parent="RoomMeshes" unique_id=766886542]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -6, 0, -6)
+mesh = ExtResource("7_jjjyx")
+
+[node name="RoomKitDoor13" type="MeshInstance3D" parent="RoomMeshes" unique_id=312141148]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -12, 0, -15.04)
+mesh = ExtResource("7_jjjyx")
+
+[node name="RoomKitDoor14" type="MeshInstance3D" parent="RoomMeshes" unique_id=1611608406]
+transform = Transform3D(0.04630431, 0, -0.99892735, 0, 1, 0, 0.99892735, 0, 0.04630431, -15, 0, -15.04)
+mesh = ExtResource("7_jjjyx")
+
+[node name="RoomKitDoor12" type="MeshInstance3D" parent="RoomMeshes" unique_id=2071868149]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -3)
+mesh = ExtResource("7_jjjyx")
+
 [node name="RoomKitFloor63" type="MeshInstance3D" parent="RoomMeshes" unique_id=2131462053]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -3)
 mesh = ExtResource("4_42u3o")
@@ -894,6 +950,42 @@ mesh = ExtResource("4_42u3o")
 
 [node name="RoomKitFloor67" type="MeshInstance3D" parent="RoomMeshes" unique_id=305147669]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -12.022516)
+mesh = ExtResource("4_42u3o")
+
+[node name="RoomKitFloor138" type="MeshInstance3D" parent="RoomMeshes" unique_id=1617233876]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -15.049744)
+mesh = ExtResource("4_42u3o")
+
+[node name="RoomKitFloor140" type="MeshInstance3D" parent="RoomMeshes" unique_id=1886584424]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.049341, 0, -15.049744)
+mesh = ExtResource("4_42u3o")
+
+[node name="RoomKitFloor139" type="MeshInstance3D" parent="RoomMeshes" unique_id=623753202]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -15.05)
+mesh = ExtResource("4_42u3o")
+
+[node name="RoomKitFloor143" type="MeshInstance3D" parent="RoomMeshes" unique_id=400083721]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -18.098438)
+mesh = ExtResource("4_42u3o")
+
+[node name="RoomKitFloor142" type="MeshInstance3D" parent="RoomMeshes" unique_id=435824209]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.049341, 0, -18.098183)
+mesh = ExtResource("4_42u3o")
+
+[node name="RoomKitFloor141" type="MeshInstance3D" parent="RoomMeshes" unique_id=537086152]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -18.098183)
+mesh = ExtResource("4_42u3o")
+
+[node name="RoomKitFloor146" type="MeshInstance3D" parent="RoomMeshes" unique_id=716009292]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -21)
+mesh = ExtResource("4_42u3o")
+
+[node name="RoomKitFloor145" type="MeshInstance3D" parent="RoomMeshes" unique_id=1289137841]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.049, 0, -21)
+mesh = ExtResource("4_42u3o")
+
+[node name="RoomKitFloor144" type="MeshInstance3D" parent="RoomMeshes" unique_id=1327727546]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -21)
 mesh = ExtResource("4_42u3o")
 
 [node name="RoomKitFloor66" type="MeshInstance3D" parent="RoomMeshes" unique_id=832184305]
