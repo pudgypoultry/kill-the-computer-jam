@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bqormgwvc5m8j" path="res://Components/SpriteOutlineComponent/SpriteOutlineComponent.tscn" id="4_0dkyw"]
 [ext_resource type="Script" uid="uid://by4niajalghyy" path="res://Scenes/Punchcards/Rotate_Left/Punch_Rotate_Left.gd" id="6_w0dj5"]
 [ext_resource type="Script" uid="uid://d00yrxpvcdaqk" path="res://Scenes/Punchcards/Rotate_Right/Punch_Rotate_Right.gd" id="8_41b3u"]
+[ext_resource type="PackedScene" uid="uid://cfn04g1k8k65p" path="res://Scenes/Monitor/mouse_cursor.tscn" id="10_tq65w"]
 [ext_resource type="Material" uid="uid://305nqsaantl3" path="res://Assets/Materials/crt_material.tres" id="11_duclc"]
 [ext_resource type="PackedScene" uid="uid://c82j06v17qfbp" path="res://Scenes/ReactorArea/ReactorView.tscn" id="12_qaeli"]
 [ext_resource type="PackedScene" uid="uid://df05gj1qx2fth" path="res://Scenes/Monitor/MonitorScene.tscn" id="12_tq65w"]
@@ -85,10 +86,10 @@ sdfgi_read_sky_light = false
 volumetric_fog_enabled = true
 volumetric_fog_albedo = Color(0.43, 0.43, 0.43, 1)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_qaeli"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_tq65w"]
 viewport_path = NodePath("../ReactorView/GridCamera")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_tq65w"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_cmfyp"]
 viewport_path = NodePath("../ReactorView/FPSCamera")
 
 [node name="MainScene" type="Node3D" unique_id=904660948]
@@ -182,6 +183,8 @@ sprite_outline_component = NodePath("../SpriteOutlineComponent")
 
 [node name="SpriteOutlineComponent" parent="PlayArea/PunchCard3" unique_id=1707183935 instance=ExtResource("4_0dkyw")]
 
+[node name="MouseCursor" parent="PlayArea" unique_id=1458504978 instance=ExtResource("10_tq65w")]
+
 [node name="ReactorView" parent="." unique_id=212615922 node_paths=PackedStringArray("card_slots") instance=ExtResource("12_qaeli")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.09114, 0, -34.631355)
 card_slots = [NodePath("../Monitor/CardSlot1"), NodePath("../Monitor/CardSlot2")]
@@ -211,10 +214,10 @@ visible = false
 transform = Transform3D(-1.3584403e-08, 0, 0.31077492, 0, 0.31077492, 0, -0.31077492, 0, -1.3584403e-08, 0, 0.41272724, -1.6721406)
 
 [node name="Monitor1" parent="Monitor" index="0" unique_id=55286909]
-texture = SubResource("ViewportTexture_qaeli")
+texture = SubResource("ViewportTexture_tq65w")
 
 [node name="Monitor2" parent="Monitor" index="1" unique_id=831061316]
-texture = SubResource("ViewportTexture_tq65w")
+texture = SubResource("ViewportTexture_cmfyp")
 
 [editable path="ReactorView"]
 [editable path="Monitor"]

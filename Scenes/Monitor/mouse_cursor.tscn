@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cfn04g1k8k65p"]
+
+[ext_resource type="Texture2D" uid="uid://c10yyuvduo8bc" path="res://Assets/Overlays/PointerCursor.tres" id="1_xdfmv"]
+[ext_resource type="Script" uid="uid://dcmt0475mkqke" path="res://Scenes/Monitor/mouse_cursor.gd" id="1_yv7b0"]
+[ext_resource type="Texture2D" uid="uid://jrqpi4smedvx" path="res://Assets/Overlays/HandCursor.tres" id="3_eq63g"]
+[ext_resource type="Texture2D" uid="uid://nk5samhy2t3j" path="res://Assets/Overlays/FistCursor.tres" id="4_6jh0r"]
+
+[node name="MouseCursor" type="CanvasLayer" unique_id=1458504978]
+layer = 100
+script = ExtResource("1_yv7b0")
+pointer_cursor = ExtResource("1_xdfmv")
+highlight_cursor = ExtResource("3_eq63g")
+grab_cursor = ExtResource("4_6jh0r")
+
+[node name="MousePosition" type="Node2D" parent="." unique_id=732829503]
+unique_name_in_owner = true
+
+[node name="MouseSprite" type="Sprite2D" parent="MousePosition" unique_id=1497383278]
+unique_name_in_owner = true
+texture_filter = 4
+texture_repeat = 1
+position = Vector2(48, 42)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_xdfmv")
