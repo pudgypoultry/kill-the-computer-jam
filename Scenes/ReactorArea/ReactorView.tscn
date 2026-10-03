@@ -18,13 +18,14 @@ shader_parameter/contrast = 0.37
 shader_parameter/pixel_colors = Color(0, 1, 0, 1)
 shader_parameter/background_color = Color(0, 0, 0, 1)
 
-[node name="ReactorView" type="Node3D" unique_id=212615922 node_paths=PackedStringArray("cam", "grid_manager", "terminal_manager", "terminal_subviewport", "grid_subviewport")]
+[node name="ReactorView" type="Node3D" unique_id=212615922 node_paths=PackedStringArray("cam", "grid_manager", "terminal_manager", "terminal_subviewport", "grid_subviewport", "skeleton_check_ray")]
 script = ExtResource("1_acc27")
 cam = NodePath("FPSCamera/Camera3D")
 grid_manager = NodePath("GridCamera/GridManager")
 terminal_manager = NodePath("Terminal/Terminal")
 terminal_subviewport = NodePath("Terminal")
 grid_subviewport = NodePath("GridCamera")
+skeleton_check_ray = NodePath("FPSCamera/Camera3D/RayCast3D")
 
 [node name="FPSCamera" type="SubViewport" parent="." unique_id=726431392]
 handle_input_locally = false
@@ -33,6 +34,10 @@ render_target_update_mode = 4
 [node name="Camera3D" type="Camera3D" parent="FPSCamera" unique_id=417143241]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 1.5, 10.5)
 current = true
+
+[node name="RayCast3D" type="RayCast3D" parent="FPSCamera/Camera3D" unique_id=1885323365]
+target_position = Vector3(0, 0, -3)
+collision_mask = 16
 
 [node name="CanvasLayer" type="CanvasLayer" parent="FPSCamera" unique_id=2136070968]
 

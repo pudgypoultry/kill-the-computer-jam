@@ -3,6 +3,7 @@ class_name ReactorManager
 
 @export_category("Game Rules")
 @export var valid_card_combos : Dictionary = {}
+@export var default_talk_message : Array[String] = [""]
 
 @export_category("Plugging in Nodes")
 @export var card_slots : Array[CardSlot]
@@ -12,6 +13,7 @@ class_name ReactorManager
 @export var terminal_manager : TerminalManager
 @export var terminal_subviewport: SubViewport
 @export var grid_subviewport: SubViewport
+@export var skeleton_check_ray : RayCast3D
 
 var current_cards_scratch : Array = []
 var current_position : Vector2i
@@ -20,6 +22,7 @@ var cam_tween : Tween
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	BoardManager.reactor_manager = self
+	BoardManager.fps_camera = cam
 	for slot in card_slots:
 		slot.card_slotted_single.connect(_handle_card_slotted_single)
 		slot.card_slotted_double.connect(_handle_card_slotted_double)
@@ -60,6 +63,8 @@ func is_valid_move(forward : bool) -> bool:
 
 
 func move_forward():
+	if BoardManager.camera_zoomed:
+		BoardManager.talking_zoom_out()
 	if is_valid_move(true):
 		grid_manager.move_forward()
 		cam_tween = get_tree().create_tween().bind_node(cam)
@@ -70,6 +75,8 @@ func move_forward():
 
 
 func move_backward():
+	if BoardManager.camera_zoomed:
+		BoardManager.talking_zoom_out()
 	if is_valid_move(false):
 		grid_manager.move_backward()
 		cam_tween = get_tree().create_tween().bind_node(cam)
@@ -79,6 +86,8 @@ func move_backward():
 
 
 func turn(dir : String):
+	if BoardManager.camera_zoomed:
+		BoardManager.talking_zoom_out()
 	grid_manager.turn(dir)
 	cam_tween = get_tree().create_tween().bind_node(cam)
 	match dir:
@@ -89,10 +98,14 @@ func turn(dir : String):
 
 
 func zoom_in():
+	if BoardManager.camera_zoomed:
+		BoardManager.talking_zoom_out()
 	grid_manager.zoom_in()
 
 
 func zoom_out():
+	if BoardManager.camera_zoomed:
+		BoardManager.talking_zoom_out()
 	grid_manager.zoom_out()
 
 
@@ -101,6 +114,8 @@ func print_to_terminal(new_message : Array[String]) -> void:
 
 
 func examine():
+	if BoardManager.camera_zoomed:
+		BoardManager.talking_zoom_out()
 	var current_cell = grid_manager.position_dict[current_position]
 	var current_direction : Vector2i = Vector2i.ZERO
 	if is_valid_move(true):
@@ -110,3 +125,17 @@ func examine():
 		print_to_terminal(examine_cell.examine)
 	else:
 		print_to_terminal(current_cell.examine)
+
+
+func talk():
+	var current_direction : Vector2i = Vector2i.ZERO
+	current_direction = grid_manager.get_forward_direction()
+	var target_position : Vector2i = current_position + current_direction
+	if grid_manager.position_dict[target_position].has_skeleton:
+		if skeleton_check_ray.is_colliding():
+			var skeleton = skeleton_check_ray.get_collider()
+			print_to_terminal(skeleton.talk_message)
+			BoardManager.talking_zoom_in(skeleton.zoom_position)
+	else:
+		print_to_terminal(default_talk_message)
+		

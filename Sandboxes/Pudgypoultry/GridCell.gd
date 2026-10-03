@@ -8,6 +8,7 @@ class_name GridCell
 @export var needs_grovel : bool = false
 @export var grid_position : Vector2i = Vector2i.ZERO
 @export var adjacencies : Array[GridCell]
+@export var has_skeleton : bool = false
 
 @export_category("Plugging in Nodes")
 @export var sprite : Sprite2D

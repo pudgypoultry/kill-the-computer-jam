@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cn2u4rnni6wix"]
+
+[ext_resource type="Script" uid="uid://kf7frgfs1knb" path="res://Scenes/Skeleton/Skeleton.gd" id="1_2tiie"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pxqgl"]
+size = Vector3(2, 3, 2)
+
+[node name="Skeleton" type="StaticBody3D" unique_id=1197911493]
+script = ExtResource("1_2tiie")
+talk_message = Array[String](["This is a message", "A message from a skeleton", "Spooky"])
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=458049956]
+shape = SubResource("BoxShape3D_pxqgl")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=969394686]
