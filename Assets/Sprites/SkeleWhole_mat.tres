@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cxkawv2iy55dl"]
+
+[ext_resource type="Shader" uid="uid://crhivxq72wqtv" path="res://Assets/Shaders/turnaround_sprite.gdshader" id="1_rbp8v"]
+[ext_resource type="Texture2D" uid="uid://b305ceq7856bd" path="res://Assets/Sprites/SkeleWhole_Turnaround_Emissive.tga" id="2_0hrv3"]
+[ext_resource type="Texture2D" uid="uid://66xqe0s7qam4" path="res://Assets/Sprites/SkeleWhole_Turnaround.tga" id="2_jeei2"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_rbp8v")
+shader_parameter/sprite_texture = ExtResource("2_jeei2")
+shader_parameter/sprite_emissive = ExtResource("2_0hrv3")
+shader_parameter/frames = 8.0
+shader_parameter/current_frame = 0.0
+shader_parameter/emissive_power = 4.1670001979325
