@@ -11,4 +11,4 @@ shader_parameter/sprite_texture = ExtResource("2_jeei2")
 shader_parameter/sprite_emissive = ExtResource("2_0hrv3")
 shader_parameter/frames = 8.0
 shader_parameter/current_frame = 0.0
-shader_parameter/emissive_power = 4.1670001979325
+shader_parameter/emissive_power = 1.0000000475

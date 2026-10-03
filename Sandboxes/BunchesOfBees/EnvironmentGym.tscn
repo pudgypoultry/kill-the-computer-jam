@@ -28,9 +28,12 @@
 [ext_resource type="PackedScene" uid="uid://de250sht73l6m" path="res://Scenes/Environment/DoorLight.tscn" id="27_lf2ej"]
 [ext_resource type="PackedScene" uid="uid://dcs4xpynd2u0v" path="res://Scenes/Environment/DoorLightFlicker.tscn" id="28_aa4my"]
 [ext_resource type="Material" uid="uid://cxkawv2iy55dl" path="res://Assets/Sprites/SkeleWhole_mat.tres" id="28_r8oan"]
+[ext_resource type="Texture2D" uid="uid://cl0mcl4ycq8wk" path="res://Assets/Decals/Textures/DropShadowDecal.tga" id="29_gcw8j"]
 [ext_resource type="PackedScene" uid="uid://b6lvgrqe058lm" path="res://Scenes/Environment/GrateLight.tscn" id="29_pmyuj"]
 [ext_resource type="PackedScene" uid="uid://bl4djye2ayi4v" path="res://Scenes/Environment/OverheadLightFlicker.tscn" id="30_5j5m2"]
+[ext_resource type="Material" uid="uid://tcrkdvo88gi2" path="res://Assets/Sprites/SkeleSkull_mat.tres" id="30_hkwcg"]
 [ext_resource type="PackedScene" uid="uid://dijockbfqnx7o" path="res://Scenes/Environment/GrateLightFlicker.tscn" id="30_r8oan"]
+[ext_resource type="Material" uid="uid://ce7nbiyri5ro6" path="res://Assets/Sprites/SkeleKneeling_mat.tres" id="31_0lvy0"]
 [ext_resource type="Texture2D" uid="uid://lul3fa2ox408" path="res://Assets/Models/Lights/Textures/DoorLight_albedo.tga" id="32_iyi63"]
 [ext_resource type="Texture2D" uid="uid://jclt6mil4ej7" path="res://Assets/Models/Lights/Textures/DoorLight_emissive.tga" id="33_cxqku"]
 [ext_resource type="Texture2D" uid="uid://bc2ojamkc13yv" path="res://Assets/Models/Lights/Textures/DoorLight_normal.tga" id="34_a08jn"]
@@ -58,12 +61,12 @@ volumetric_fog_albedo = Color(0.68, 0.63104, 0.5984, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_hjb8m"]
 size = Vector3(45, 2.5, 30)
 
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_hkwcg"]
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_tsvhq"]
 albedo_texture = ExtResource("32_iyi63")
 orm_texture = ExtResource("35_gcw8j")
 emission_enabled = true
 emission = Color(1, 0.84705883, 0.69411767, 1)
-emission_energy_multiplier = 3.0162222
+emission_energy_multiplier = 2.5
 emission_operator = 1
 emission_texture = ExtResource("33_cxqku")
 normal_enabled = true
@@ -221,6 +224,7 @@ texture_albedo = ExtResource("12_bia5g")
 texture_normal = ExtResource("13_33dek")
 texture_orm = ExtResource("14_gjo6u")
 upper_fade = 0.024740791
+cull_mask = 1048573
 
 [node name="Decal3" type="Decal" parent="TestRoom/Decals" unique_id=316627414]
 transform = Transform3D(1.3113416e-07, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, -1.3113416e-07, -5.7320566e-15, 9.313986, 1.0900586, -1.6044679)
@@ -247,13 +251,6 @@ upper_fade = 0.024740791
 
 [node name="Decal7" type="Decal" parent="TestRoom/Decals" unique_id=657295750]
 transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 3.5506115, -0.18450296, -11.501263)
-texture_albedo = ExtResource("12_bia5g")
-texture_normal = ExtResource("13_33dek")
-texture_orm = ExtResource("14_gjo6u")
-upper_fade = 0.024740791
-
-[node name="Decal8" type="Decal" parent="TestRoom/Decals" unique_id=59761259]
-transform = Transform3D(1.5419799, 0, -1.4148912, 0, 1, 0, 1.9327337, 0, 1.1288332, 0.5506115, -0.18450296, -14.501263)
 texture_albedo = ExtResource("12_bia5g")
 texture_normal = ExtResource("13_33dek")
 texture_orm = ExtResource("14_gjo6u")
@@ -646,7 +643,8 @@ cast_shadows = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 3, 42)
 
 [node name="Sprite3D" type="Sprite3D" parent="TestRoom" unique_id=2016463845]
-transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 1.2274702, 1.2075095, -2.6287966)
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 1.6454154, 1.1672198, -14.782594)
+layers = 2
 material_override = ExtResource("28_r8oan")
 cast_shadow = 0
 billboard = 1
@@ -654,6 +652,49 @@ shaded = true
 double_sided = false
 texture_filter = 0
 texture = SubResource("PlaceholderTexture2D_lfxu0")
+
+[node name="Decal" type="Decal" parent="TestRoom/Sprite3D" unique_id=1089765205]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.8598518, -0.055802345)
+texture_albedo = ExtResource("29_gcw8j")
+albedo_mix = 0.71
+upper_fade = 0.047050457
+cull_mask = 1048573
+
+[node name="Sprite3D2" type="Sprite3D" parent="TestRoom" unique_id=164387284]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 0.18431485, 1.1208761, -14.782594)
+layers = 2
+material_override = ExtResource("30_hkwcg")
+cast_shadow = 0
+billboard = 1
+shaded = true
+double_sided = false
+texture_filter = 0
+texture = SubResource("PlaceholderTexture2D_lfxu0")
+
+[node name="Decal" type="Decal" parent="TestRoom/Sprite3D2" unique_id=389540634]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.8598518, -0.055802345)
+texture_albedo = ExtResource("29_gcw8j")
+albedo_mix = 0.71
+upper_fade = 0.047050457
+cull_mask = 1048573
+
+[node name="Sprite3D3" type="Sprite3D" parent="TestRoom" unique_id=1542988046]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 3.123053, 1.1578203, -14.782594)
+layers = 2
+material_override = ExtResource("31_0lvy0")
+cast_shadow = 0
+billboard = 1
+shaded = true
+double_sided = false
+texture_filter = 0
+texture = SubResource("PlaceholderTexture2D_lfxu0")
+
+[node name="Decal" type="Decal" parent="TestRoom/Sprite3D3" unique_id=1990352572]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.8598518, -0.055802345)
+texture_albedo = ExtResource("29_gcw8j")
+albedo_mix = 0.71
+upper_fade = 0.047050457
+cull_mask = 1048573
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=473229825]
 environment = SubResource("Environment_lfxu0")
@@ -732,12 +773,16 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.47
 cast_shadows = true
 
 [node name="LightMesh" parent="OverheadLightFlicker2" index="0" unique_id=1584284493]
-surface_material_override/0 = SubResource("ORMMaterial3D_hkwcg")
+surface_material_override/0 = SubResource("ORMMaterial3D_tsvhq")
 
 [node name="Light" parent="OverheadLightFlicker2" index="1" unique_id=1977279119]
-light_energy = 0.6032444
+light_energy = 0.5
 shadow_enabled = true
 shadow_bias = 1.252
+
+[node name="DoorLight" parent="OverheadLightFlicker2" unique_id=1172140422 instance=ExtResource("27_lf2ej")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -0.026497364, -0.04428172, 9.040142)
+light_range = 24.355
 
 [node name="GrateLight" parent="." unique_id=2027193099 instance=ExtResource("29_pmyuj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 3, -4.5)

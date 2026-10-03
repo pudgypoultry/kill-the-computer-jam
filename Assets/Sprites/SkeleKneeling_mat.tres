@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://ce7nbiyri5ro6"]
+
+[ext_resource type="Shader" uid="uid://crhivxq72wqtv" path="res://Assets/Shaders/turnaround_sprite.gdshader" id="1_vgpnq"]
+[ext_resource type="Texture2D" uid="uid://bmixhafglk4kg" path="res://Assets/Sprites/SkeleKneeling_Turnarounds_Emissive.tga" id="2_vgpnq"]
+[ext_resource type="Texture2D" uid="uid://5y40asfepi1i" path="res://Assets/Sprites/SkeleKneeling_Turnarounds.tga" id="3_xdxuu"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_vgpnq")
+shader_parameter/sprite_texture = ExtResource("3_xdxuu")
+shader_parameter/sprite_emissive = ExtResource("2_vgpnq")
+shader_parameter/frames = 8.0
+shader_parameter/current_frame = 0.0
+shader_parameter/emissive_power = 1.0000000475
