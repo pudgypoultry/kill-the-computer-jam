@@ -34,6 +34,7 @@
 [ext_resource type="Material" uid="uid://tcrkdvo88gi2" path="res://Assets/Sprites/SkeleSkull_mat.tres" id="30_hkwcg"]
 [ext_resource type="PackedScene" uid="uid://dijockbfqnx7o" path="res://Scenes/Environment/GrateLightFlicker.tscn" id="30_r8oan"]
 [ext_resource type="Material" uid="uid://ce7nbiyri5ro6" path="res://Assets/Sprites/SkeleKneeling_mat.tres" id="31_0lvy0"]
+[ext_resource type="ArrayMesh" uid="uid://cwni785dsmd7e" path="res://Assets/Models/SetDec/Meshes/SteelDoor.res" id="32_hkwcg"]
 [ext_resource type="Texture2D" uid="uid://lul3fa2ox408" path="res://Assets/Models/Lights/Textures/DoorLight_albedo.tga" id="32_iyi63"]
 [ext_resource type="Texture2D" uid="uid://jclt6mil4ej7" path="res://Assets/Models/Lights/Textures/DoorLight_emissive.tga" id="33_cxqku"]
 [ext_resource type="Texture2D" uid="uid://bc2ojamkc13yv" path="res://Assets/Models/Lights/Textures/DoorLight_normal.tga" id="34_a08jn"]
@@ -66,7 +67,7 @@ albedo_texture = ExtResource("32_iyi63")
 orm_texture = ExtResource("35_gcw8j")
 emission_enabled = true
 emission = Color(1, 0.84705883, 0.69411767, 1)
-emission_energy_multiplier = 5.0
+emission_energy_multiplier = 2.7456918
 emission_operator = 1
 emission_texture = ExtResource("33_cxqku")
 normal_enabled = true
@@ -696,6 +697,10 @@ albedo_mix = 0.71
 upper_fade = 0.047050457
 cull_mask = 1048573
 
+[node name="SteelDoor" type="MeshInstance3D" parent="TestRoom" unique_id=678044605]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.017341912, 0, 0)
+mesh = ExtResource("32_hkwcg")
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=473229825]
 environment = SubResource("Environment_lfxu0")
 
@@ -760,8 +765,14 @@ light_colour = Color(0.9999997, 0.84763503, 0.69530445, 1)
 light_fog_amount = 5.0
 cast_shadows = false
 
+[node name="OverheadLight3" parent="." unique_id=852384030 instance=ExtResource("25_xwx3p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.432, 3, 6.049925)
+light_colour = Color(0.9999997, 0.84763503, 0.69530445, 1)
+light_fog_amount = 5.0
+cast_shadows = false
+
 [node name="OverheadLightFlicker" parent="." unique_id=1089264642 instance=ExtResource("30_5j5m2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.475144, 2.9943607, 4.7659445)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.475144, 2.9943607, 1.5044093)
 flicker_threshold = 0.7
 cast_shadows = true
 
@@ -776,7 +787,7 @@ cast_shadows = true
 surface_material_override/0 = SubResource("ORMMaterial3D_tsvhq")
 
 [node name="Light" parent="OverheadLightFlicker2" index="1" unique_id=1977279119]
-light_energy = 1.0
+light_energy = 0.5491383
 shadow_enabled = true
 shadow_bias = 1.252
 
@@ -822,7 +833,7 @@ upper_fade = 0.047050457
 cull_mask = 1048573
 
 [node name="Sprite3D2" type="Sprite3D" parent="." unique_id=1853815987]
-transform = Transform3D(0.28391042, 0.0007372151, -0.95885056, -0.011187557, 0.9999342, -0.0025437698, 0.95878553, 0.011449398, 0.2838999, -10.8036175, 1.1208761, 25.650284)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.8036175, 1.1208761, 25.650284)
 layers = 2
 material_override = ExtResource("30_hkwcg")
 cast_shadow = 0
@@ -840,7 +851,7 @@ upper_fade = 0.047050457
 cull_mask = 1048573
 
 [node name="Sprite3D3" type="Sprite3D" parent="." unique_id=211530009]
-transform = Transform3D(-0.7464984, 0, -0.66538715, 0, 1, 0, 0.66538715, 0, -0.7464984, -10.8036175, 1.1578203, 28.589024)
+transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, -10.8042755, 1.1535181, 28.588991)
 layers = 2
 material_override = ExtResource("31_0lvy0")
 cast_shadow = 0
@@ -856,5 +867,9 @@ texture_albedo = ExtResource("29_gcw8j")
 albedo_mix = 0.71
 upper_fade = 0.047050457
 cull_mask = 1048573
+
+[node name="SteelDoor" type="MeshInstance3D" parent="." unique_id=1439129331]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -12, 0, 30)
+mesh = ExtResource("32_hkwcg")
 
 [editable path="OverheadLightFlicker2"]

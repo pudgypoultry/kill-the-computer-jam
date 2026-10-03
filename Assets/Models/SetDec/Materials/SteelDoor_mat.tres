@@ -1,0 +1,11 @@
+[gd_resource type="ORMMaterial3D" format=3 uid="uid://ctali06tnxm28"]
+
+[ext_resource type="Texture2D" uid="uid://c0f7ctm31gqcv" path="res://Assets/Models/SetDec/Textures/SteelDoor_albedo.tga" id="1_uw0ti"]
+[ext_resource type="Texture2D" uid="uid://blb5cmc5qryve" path="res://Assets/Models/SetDec/Textures/SteelDoor_normal.tga" id="2_6rto1"]
+[ext_resource type="Texture2D" uid="uid://d18ob26s2p4ok" path="res://Assets/Models/SetDec/Textures/SteelDoor_mixmap.tga" id="3_jpfyl"]
+
+[resource]
+albedo_texture = ExtResource("1_uw0ti")
+orm_texture = ExtResource("3_jpfyl")
+normal_enabled = true
+normal_texture = ExtResource("2_6rto1")
