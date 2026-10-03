@@ -8,4 +8,5 @@ script = ExtResource("1_3o7j3")
 sprite = NodePath("Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=473202324]
+visible = false
 texture = ExtResource("2_pqucq")
