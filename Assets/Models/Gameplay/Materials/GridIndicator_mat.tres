@@ -1,0 +1,42 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bfgjc18hgraca"]
+
+[ext_resource type="Shader" uid="uid://31njckjlfvv7" path="res://Assets/Models/Gameplay/Shaders/emissive_light_pattern.gdshader" id="1_ob41t"]
+[ext_resource type="Texture2D" uid="uid://drfeywsvlufle" path="res://Assets/Models/Gameplay/Textures/Indicator_albedo.tga" id="2_gcfxg"]
+[ext_resource type="Texture2D" uid="uid://3jpc0vwo467j" path="res://Assets/Models/Gameplay/Textures/Indicator_emissive_mask.tga" id="3_p5onx"]
+[ext_resource type="Texture2D" uid="uid://d2ix5hfl5xrum" path="res://Assets/Models/Gameplay/Textures/Indicator_normal.tga" id="4_5ex25"]
+[ext_resource type="Texture2D" uid="uid://c7aybr2tmkqvy" path="res://Assets/Models/Gameplay/Textures/Indicator_mixmap.tga" id="5_wg2qk"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_ob41t")
+shader_parameter/albedo = ExtResource("2_gcfxg")
+shader_parameter/orm = ExtResource("5_wg2qk")
+shader_parameter/normal_map = ExtResource("4_5ex25")
+shader_parameter/emissive_mask = ExtResource("3_p5onx")
+shader_parameter/emissive_color = Color(1, 0, 0, 1)
+shader_parameter/emissive_strength = 10.000000475
+shader_parameter/grid_1_1 = 1.0
+shader_parameter/grid_2_1 = 0.0
+shader_parameter/grid_3_1 = 1.0
+shader_parameter/grid_4_1 = 0.0
+shader_parameter/grid_5_1 = 1.0
+shader_parameter/grid_1_2 = 0.0
+shader_parameter/grid_2_2 = 1.0
+shader_parameter/grid_3_2 = 0.0
+shader_parameter/grid_4_2 = 1.0
+shader_parameter/grid_5_2 = 0.0
+shader_parameter/grid_1_3 = 1.0
+shader_parameter/grid_2_3 = 0.0
+shader_parameter/grid_3_3 = 1.0
+shader_parameter/grid_4_3 = 0.0
+shader_parameter/grid_5_3 = 1.0
+shader_parameter/grid_1_4 = 0.0
+shader_parameter/grid_2_4 = 1.0
+shader_parameter/grid_3_4 = 0.0
+shader_parameter/grid_4_4 = 1.0
+shader_parameter/grid_5_4 = 0.0
+shader_parameter/grid_1_5 = 1.0
+shader_parameter/grid_2_5 = 0.0
+shader_parameter/grid_3_5 = 1.0
+shader_parameter/grid_4_5 = 0.0
+shader_parameter/grid_5_5 = 1.0

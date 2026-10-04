@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dcvbkc2njcps8"]
+
+[ext_resource type="Script" uid="uid://b50jrkv4cg1uo" path="res://Scenes/Gameplay/door_grid_indicator.gd" id="1_hlng3"]
+[ext_resource type="ArrayMesh" uid="uid://c728ivbnju0x2" path="res://Assets/Models/Gameplay/Meshes/DoorGridIndicator.res" id="2_a42rx"]
+
+[node name="DoorGridIndicator" type="Node3D" unique_id=788560802]
+script = ExtResource("1_hlng3")
+light_colour = Color(1, 0, 0, 1)
+
+[node name="GridMesh" type="MeshInstance3D" parent="." unique_id=75422273]
+unique_name_in_owner = true
+mesh = ExtResource("2_a42rx")
