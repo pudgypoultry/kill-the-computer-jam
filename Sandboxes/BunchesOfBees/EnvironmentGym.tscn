@@ -67,7 +67,7 @@ albedo_texture = ExtResource("32_iyi63")
 orm_texture = ExtResource("35_gcw8j")
 emission_enabled = true
 emission = Color(1, 0.84705883, 0.69411767, 1)
-emission_energy_multiplier = 2.7456918
+emission_energy_multiplier = 2.5
 emission_operator = 1
 emission_texture = ExtResource("33_cxqku")
 normal_enabled = true
@@ -698,7 +698,7 @@ upper_fade = 0.047050457
 cull_mask = 1048573
 
 [node name="SteelDoor" type="MeshInstance3D" parent="TestRoom" unique_id=678044605]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.017341912, 0, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
 mesh = ExtResource("32_hkwcg")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=473229825]
@@ -765,19 +765,10 @@ light_colour = Color(0.9999997, 0.84763503, 0.69530445, 1)
 light_fog_amount = 5.0
 cast_shadows = false
 
-[node name="OverheadLight3" parent="." unique_id=852384030 instance=ExtResource("25_xwx3p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.432, 3, 6.049925)
-light_colour = Color(0.9999997, 0.84763503, 0.69530445, 1)
-light_fog_amount = 5.0
-cast_shadows = false
-
 [node name="OverheadLightFlicker" parent="." unique_id=1089264642 instance=ExtResource("30_5j5m2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.475144, 2.9943607, 1.5044093)
 flicker_threshold = 0.7
 cast_shadows = true
-
-[node name="OverheadLight2" parent="." unique_id=663091930 instance=ExtResource("27_lf2ej")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.467709, 2.5612917, 0.12068534)
 
 [node name="OverheadLightFlicker2" parent="." unique_id=1034411495 instance=ExtResource("28_aa4my")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.4767139, 2.5718644, -0.15665177)
@@ -787,7 +778,7 @@ cast_shadows = true
 surface_material_override/0 = SubResource("ORMMaterial3D_tsvhq")
 
 [node name="Light" parent="OverheadLightFlicker2" index="1" unique_id=1977279119]
-light_energy = 0.5491383
+light_energy = 0.5
 shadow_enabled = true
 shadow_bias = 1.252
 

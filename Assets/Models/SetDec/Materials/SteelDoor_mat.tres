@@ -9,3 +9,5 @@ albedo_texture = ExtResource("1_uw0ti")
 orm_texture = ExtResource("3_jpfyl")
 normal_enabled = true
 normal_texture = ExtResource("2_6rto1")
+texture_filter = 0
+texture_repeat = false
