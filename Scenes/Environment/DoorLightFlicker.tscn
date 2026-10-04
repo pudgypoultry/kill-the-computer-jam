@@ -8,12 +8,12 @@
 [ext_resource type="Texture2D" uid="uid://bc2ojamkc13yv" path="res://Assets/Models/Lights/Textures/DoorLight_normal.tga" id="6_lwldc"]
 [ext_resource type="Texture2D" uid="uid://br4731k0sv05k" path="res://Assets/Models/Lights/Textures/DoorLight_mixmap.tga" id="7_o5e4u"]
 
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_m8y58"]
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_tu76f"]
 albedo_texture = ExtResource("4_tu76f")
 orm_texture = ExtResource("7_o5e4u")
 emission_enabled = true
 emission = Color(1, 0.84705883, 0.69411767, 1)
-emission_energy_multiplier = 4.4732084
+emission_energy_multiplier = 4.3055553
 emission_operator = 1
 emission_texture = ExtResource("5_au7m5")
 normal_enabled = true
@@ -28,13 +28,13 @@ metadata/_custom_type_script = "uid://rdqginq04xaj"
 [node name="LightMesh" type="MeshInstance3D" parent="." unique_id=1584284493]
 unique_name_in_owner = true
 mesh = ExtResource("3_au7m5")
-surface_material_override/0 = SubResource("ORMMaterial3D_m8y58")
+surface_material_override/0 = SubResource("ORMMaterial3D_tu76f")
 
 [node name="Light" type="SpotLight3D" parent="." unique_id=1977279119]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -0.19215298, 8.399273e-09)
+transform = Transform3D(1, 0, 0, 0, -0.973271, 0.22965966, 0, -0.22965966, -0.973271, 0, -0.042052582, 0.36177224)
 light_color = Color(1, 0.84705883, 0.69411767, 1)
-light_energy = 0.89464164
+light_energy = 0.8611111
 light_indirect_energy = 5.0
 light_volumetric_fog_energy = 5.0
 spot_angle = 80.0

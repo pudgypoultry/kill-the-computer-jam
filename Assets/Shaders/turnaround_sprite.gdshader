@@ -10,6 +10,7 @@ varying float frame;
 
 void vertex() {
 	mat4 inv_modelview = inverse(MODEL_MATRIX);
+	inv_modelview[3] = vec4(0.0, 0.0, 0.0, 1.0);
 	
 	// via https://godotshaders.com/shader/local-space-y-billboard-shader/
 	vec3 up_vec = MODEL_MATRIX[1].xyz;
@@ -21,7 +22,7 @@ void vertex() {
 	MODELVIEW_MATRIX = VIEW_MATRIX * mat4(ax, ay, az, MODEL_MATRIX[3]);
 	MODELVIEW_NORMAL_MATRIX = mat3(MODELVIEW_MATRIX);	
 	
-	vec3 test = normalize((inv_modelview * vec4(CAMERA_POSITION_WORLD, 1.0)).xyz);
+	vec3 test = normalize((inv_modelview * vec4(CAMERA_DIRECTION_WORLD, 1.0)).xyz);
 	float atan_val = (atan(test.x, test.z) + PI);
 	atan_val = mod(atan_val + PI/8.0 + PI, 2.0 * PI);
 	atan_val = fract(atan_val/(2.0 * PI));
