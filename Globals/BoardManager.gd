@@ -27,6 +27,7 @@ func switch_screen_to_terminal():
 
 
 func talking_zoom_in(zoom_position : Vector3):
+	switch_screen_to_terminal()
 	var tween = get_tree().create_tween().bind_node(fps_camera)
 	original_camera_position = fps_camera.global_position
 	tween.tween_property(fps_camera, "global_position", zoom_position, BoardManager.player_move_time)
@@ -35,6 +36,7 @@ func talking_zoom_in(zoom_position : Vector3):
 
 func talking_zoom_out():
 	if camera_zoomed:
+		switch_screen_to_grid()
 		var tween = get_tree().create_tween().bind_node(fps_camera)
 		tween.tween_property(fps_camera, "global_position", original_camera_position, BoardManager.player_move_time)
 		camera_zoomed = false

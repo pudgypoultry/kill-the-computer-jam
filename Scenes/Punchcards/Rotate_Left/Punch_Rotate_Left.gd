@@ -8,8 +8,8 @@ func execute() -> void:
 
 func execute_a() -> void:
 	super()
-	print("Rotating Left, but cooler")
-	reactor.turn("left")
+	reactor.talk()
+
 
 func execute_b() -> void:
 	super()

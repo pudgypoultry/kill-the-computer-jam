@@ -1,22 +1,23 @@
 [gd_scene format=3 uid="uid://c82j06v17qfbp"]
 
 [ext_resource type="Script" uid="uid://dhb3rfbxv8xra" path="res://Scenes/ReactorArea/ReactorManager.gd" id="1_acc27"]
-[ext_resource type="Shader" uid="uid://8myhxj2c0ghq" path="res://Sandboxes/Pudgypoultry/Monochrome.gdshader" id="1_dbkhw"]
+[ext_resource type="Material" uid="uid://305nqsaantl3" path="res://Assets/Materials/crt_material.tres" id="2_oglby"]
 [ext_resource type="PackedScene" uid="uid://duq477hnsw1wp" path="res://Sandboxes/Pudgypoultry/GridManager.tscn" id="3_5q44f"]
 [ext_resource type="PackedScene" uid="uid://dtf7t8rdoi3jd" path="res://Scenes/Terminal/Terminal.tscn" id="4_4gxma"]
+[ext_resource type="Shader" uid="uid://ntxjgq0i3c13" path="res://Assets/Shaders/crt.gdshader" id="5_42u3o"]
 [ext_resource type="PackedScene" uid="uid://bws36qtjwcoju" path="res://Scenes/ReactorArea/RoomLayout.tscn" id="5_oglby"]
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_5q44f"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_pxqgl"]
-shader = ExtResource("1_dbkhw")
-shader_parameter/tiledtexture = SubResource("NoiseTexture2D_5q44f")
-shader_parameter/opacity = 1.0
-shader_parameter/pixel_size = 0.01
-shader_parameter/greyscale = true
-shader_parameter/contrast = 0.37
-shader_parameter/pixel_colors = Color(0, 1, 0, 1)
-shader_parameter/background_color = Color(0, 0, 0, 1)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fv5fo"]
+shader = ExtResource("5_42u3o")
+shader_parameter/mask_type = 2
+shader_parameter/curve = 0.00400000019
+shader_parameter/sharpness = 0.6666667
+shader_parameter/color_offset = 0.0
+shader_parameter/mask_brightness = 1.0
+shader_parameter/scanline_brightness = 1.0
+shader_parameter/min_scanline_thickness = 0.5
+shader_parameter/aspect = 0.75
+shader_parameter/wobble_strength = 0.0
 
 [node name="ReactorView" type="Node3D" unique_id=212615922 node_paths=PackedStringArray("cam", "grid_manager", "terminal_manager", "terminal_subviewport", "grid_subviewport", "skeleton_check_ray")]
 script = ExtResource("1_acc27")
@@ -42,7 +43,7 @@ collision_mask = 16
 [node name="CanvasLayer" type="CanvasLayer" parent="FPSCamera" unique_id=2136070968]
 
 [node name="TextureRect" type="ColorRect" parent="FPSCamera/CanvasLayer" unique_id=165340112]
-material = SubResource("ShaderMaterial_pxqgl")
+material = ExtResource("2_oglby")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -65,5 +66,17 @@ size = Vector2i(240, 240)
 size = Vector2i(240, 240)
 
 [node name="Terminal" parent="Terminal" unique_id=667416545 instance=ExtResource("4_4gxma")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Terminal" unique_id=1316613880]
+
+[node name="TextureRect" type="ColorRect" parent="Terminal/CanvasLayer" unique_id=1377353945]
+visible = false
+material = SubResource("ShaderMaterial_fv5fo")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [node name="RoomMeshes" parent="." unique_id=360548649 instance=ExtResource("5_oglby")]

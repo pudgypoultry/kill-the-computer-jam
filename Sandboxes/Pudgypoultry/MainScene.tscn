@@ -7,7 +7,6 @@
 [ext_resource type="AudioStream" uid="uid://cgqm3lsrye1cf" path="res://Assets/Music/The Threshold (Ambience).ogg" id="9_3tf8q"]
 [ext_resource type="AudioStream" uid="uid://q2orkymwqrqe" path="res://Assets/Music/A Dim Radiance.ogg" id="10_qaeli"]
 [ext_resource type="PackedScene" uid="uid://cfn04g1k8k65p" path="res://Scenes/Monitor/mouse_cursor.tscn" id="10_tq65w"]
-[ext_resource type="Material" uid="uid://305nqsaantl3" path="res://Assets/Materials/crt_material.tres" id="11_duclc"]
 [ext_resource type="AudioStream" uid="uid://dyueb8i8cdh30" path="res://Assets/Music/The World to Come.ogg" id="11_tq65w"]
 [ext_resource type="PackedScene" uid="uid://c82j06v17qfbp" path="res://Scenes/ReactorArea/ReactorView.tscn" id="12_qaeli"]
 [ext_resource type="PackedScene" uid="uid://df05gj1qx2fth" path="res://Scenes/Monitor/MonitorScene.tscn" id="12_tq65w"]
@@ -41,10 +40,10 @@ albedo_color = Color(0, 0.21040133, 0.33125, 1)
 material = SubResource("StandardMaterial3D_rojf5")
 size = Vector3(1.5, 0.05, 0.6)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_3tf8q"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_qebm6"]
 viewport_path = NodePath("../ReactorView/GridCamera")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_qaeli"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_3tf8q"]
 viewport_path = NodePath("../ReactorView/FPSCamera")
 
 [node name="MainScene" type="Node3D" unique_id=904660948]
@@ -101,9 +100,6 @@ size = Vector2i(240, 240)
 [node name="Camera3D" parent="ReactorView/FPSCamera" index="0" unique_id=417143241]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92.5, 1.88, -24)
 
-[node name="TextureRect" parent="ReactorView/FPSCamera/CanvasLayer" parent_id_path=PackedInt32Array(212615922, 2136070968) index="0" unique_id=165340112]
-material = ExtResource("11_duclc")
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1762969380]
 environment = ExtResource("7_5msbe")
 
@@ -118,10 +114,10 @@ song_2 = ExtResource("10_qaeli")
 song_3 = ExtResource("11_tq65w")
 
 [node name="Monitor1" parent="Monitor" index="0" unique_id=55286909]
-texture = SubResource("ViewportTexture_3tf8q")
+texture = SubResource("ViewportTexture_qebm6")
 
 [node name="Monitor2" parent="Monitor" index="1" unique_id=831061316]
-texture = SubResource("ViewportTexture_qaeli")
+texture = SubResource("ViewportTexture_3tf8q")
 
 [editable path="ReactorView"]
 [editable path="Monitor"]

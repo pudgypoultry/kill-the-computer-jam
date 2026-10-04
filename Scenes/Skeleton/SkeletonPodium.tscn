@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dr7x71xqxmouy"]
+
+[ext_resource type="Script" uid="uid://kf7frgfs1knb" path="res://Scenes/Skeleton/Skeleton.gd" id="1_0djwq"]
+[ext_resource type="Shader" uid="uid://crhivxq72wqtv" path="res://Assets/Shaders/turnaround_sprite.gdshader" id="2_7x78t"]
+[ext_resource type="Texture2D" uid="uid://qce4mvbup6rm" path="res://Assets/Sprites/SkeleHead_Turnaround_Emissive.tga" id="3_e2b4i"]
+[ext_resource type="Texture2D" uid="uid://c7i80ku4pg0jh" path="res://Assets/Sprites/SkeleHead_Turnaround.tga" id="4_8wnws"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pxqgl"]
+size = Vector3(3, 3, 3)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4ey4b"]
+render_priority = 0
+shader = ExtResource("2_7x78t")
+shader_parameter/sprite_texture = ExtResource("4_8wnws")
+shader_parameter/sprite_emissive = ExtResource("3_e2b4i")
+shader_parameter/frames = 8.0
+shader_parameter/current_frame = 0.0
+shader_parameter/emissive_power = 1.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_pxqgl"]
+material = SubResource("ShaderMaterial_4ey4b")
+size = Vector2(1.5, 3)
+
+[node name="SkeletonPodium" type="StaticBody3D" unique_id=1197911493 node_paths=PackedStringArray("zoom_node")]
+collision_layer = 16
+collision_mask = 16
+script = ExtResource("1_0djwq")
+talk_message = Array[String](["I am a skeleton", "And I am on a podium"])
+zoom_node = NodePath("Marker3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=458049956]
+shape = SubResource("BoxShape3D_pxqgl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=532362104]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.42802548, 0)
+mesh = SubResource("QuadMesh_pxqgl")
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=1295833741]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.8421699)

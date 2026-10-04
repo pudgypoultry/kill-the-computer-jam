@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cuakh38bsxw5a"]
+
+[ext_resource type="Script" uid="uid://kf7frgfs1knb" path="res://Scenes/Skeleton/Skeleton.gd" id="1_rlnpb"]
+[ext_resource type="Shader" uid="uid://crhivxq72wqtv" path="res://Assets/Shaders/turnaround_sprite.gdshader" id="2_uia5q"]
+[ext_resource type="Texture2D" uid="uid://bmixhafglk4kg" path="res://Assets/Sprites/SkeleKneeling_Turnarounds_Emissive.tga" id="3_rlnpb"]
+[ext_resource type="Texture2D" uid="uid://5y40asfepi1i" path="res://Assets/Sprites/SkeleKneeling_Turnarounds.tga" id="4_uia5q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pxqgl"]
+size = Vector3(3, 3, 3)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jeye8"]
+render_priority = 0
+shader = ExtResource("2_uia5q")
+shader_parameter/sprite_texture = ExtResource("4_uia5q")
+shader_parameter/sprite_emissive = ExtResource("3_rlnpb")
+shader_parameter/frames = 8.0
+shader_parameter/current_frame = 0.0
+shader_parameter/emissive_power = 1.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_pxqgl"]
+material = SubResource("ShaderMaterial_jeye8")
+size = Vector2(1.5, 3)
+
+[node name="SkeletonKneel" type="StaticBody3D" unique_id=1197911493 node_paths=PackedStringArray("zoom_node")]
+collision_layer = 16
+collision_mask = 16
+script = ExtResource("1_rlnpb")
+talk_message = Array[String](["I am a skeleton", "And I am kneeling"])
+zoom_node = NodePath("Marker3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=458049956]
+shape = SubResource("BoxShape3D_pxqgl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=532362104]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.42802548, 0)
+mesh = SubResource("QuadMesh_pxqgl")
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=1776257748]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.18257129, 0.9655362)
