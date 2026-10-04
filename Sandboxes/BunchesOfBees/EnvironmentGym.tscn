@@ -70,7 +70,7 @@ albedo_texture = ExtResource("32_iyi63")
 orm_texture = ExtResource("35_gcw8j")
 emission_enabled = true
 emission = Color(1, 0.84705883, 0.69411767, 1)
-emission_energy_multiplier = 2.5
+emission_energy_multiplier = 5.0
 emission_operator = 1
 emission_texture = ExtResource("33_cxqku")
 normal_enabled = true
@@ -626,6 +626,11 @@ transform = Transform3D(-0.24828763, 1.0490732e-08, -8.7243494e-17, -1.4019355e-
 texture_albedo = ExtResource("22_s0gal")
 modulate = Color(0.66113925, 0.23678014, 0.067449965, 1)
 
+[node name="Decal8" type="Decal" parent="TestRoom/RoomKitWallHallwayEnd" unique_id=1729492430]
+transform = Transform3D(-0.24828763, 1.0490732e-08, -8.7243494e-17, -1.4019355e-23, -5.2453673e-09, -0.32473955, -2.1705993e-08, -0.12, 1.4194815e-08, 2.3485498, 1.5342113, 0.02631569)
+texture_albedo = ExtResource("22_s0gal")
+modulate = Color(0.66113925, 0.23678014, 0.067449965, 1)
+
 [node name="Decal4" type="Decal" parent="TestRoom/RoomKitWallHallwayEnd" unique_id=800846209]
 transform = Transform3D(-0.24828763, 1.0490732e-08, -8.7243494e-17, -1.4019355e-23, -5.2453673e-09, -0.32473955, -2.1705993e-08, -0.12, 1.4194815e-08, 1.5534244, 2.4887938, 0.02631569)
 texture_albedo = ExtResource("22_s0gal")
@@ -638,6 +643,11 @@ modulate = Color(0.66113925, 0.23678014, 0.067449965, 1)
 
 [node name="Decal5" type="Decal" parent="TestRoom/RoomKitWallHallwayEnd" unique_id=1959885159]
 transform = Transform3D(-0.24828763, 1.0490732e-08, -8.7243494e-17, -1.4019355e-23, -5.2453673e-09, -0.32473955, -2.1705993e-08, -0.12, 1.4194815e-08, 1.5534244, 1.8762784, 0.02631569)
+texture_albedo = ExtResource("23_dfrsk")
+modulate = Color(0.66113925, 0.23678014, 0.067449965, 1)
+
+[node name="Decal9" type="Decal" parent="TestRoom/RoomKitWallHallwayEnd" unique_id=1581545422]
+transform = Transform3D(-0.24828763, 1.0490732e-08, -8.7243494e-17, -1.4019355e-23, -5.2453673e-09, -0.32473955, -2.1705993e-08, -0.12, 1.4194815e-08, 0.69675505, 1.5615396, 0.02631569)
 texture_albedo = ExtResource("23_dfrsk")
 modulate = Color(0.66113925, 0.23678014, 0.067449965, 1)
 
@@ -817,7 +827,7 @@ surface_material_override/0 = SubResource("ORMMaterial3D_hkwcg")
 
 [node name="Light" parent="OverheadLightFlicker2" index="1" unique_id=1977279119]
 transform = Transform3D(1, -5.92338e-08, 8.275338e-08, -8.275339e-08, -0.9465884, 0.32244438, 5.9233788e-08, -0.32244438, -0.9465884, 0.08385301, -0.05252552, 0.29307598)
-light_energy = 0.5
+light_energy = 1.0
 shadow_enabled = true
 shadow_bias = 1.252
 
