@@ -63,8 +63,6 @@ func is_valid_move(forward : bool) -> bool:
 
 
 func move_forward():
-	if BoardManager.camera_zoomed:
-		BoardManager.talking_zoom_out()
 	if is_valid_move(true):
 		grid_manager.move_forward()
 		cam_tween = get_tree().create_tween().bind_node(cam)
@@ -75,8 +73,6 @@ func move_forward():
 
 
 func move_backward():
-	if BoardManager.camera_zoomed:
-		BoardManager.talking_zoom_out()
 	if is_valid_move(false):
 		grid_manager.move_backward()
 		cam_tween = get_tree().create_tween().bind_node(cam)
@@ -86,8 +82,6 @@ func move_backward():
 
 
 func turn(dir : String):
-	if BoardManager.camera_zoomed:
-		BoardManager.talking_zoom_out()
 	grid_manager.turn(dir)
 	cam_tween = get_tree().create_tween().bind_node(cam)
 	match dir:
@@ -98,14 +92,10 @@ func turn(dir : String):
 
 
 func zoom_in():
-	if BoardManager.camera_zoomed:
-		BoardManager.talking_zoom_out()
 	grid_manager.zoom_in()
 
 
 func zoom_out():
-	if BoardManager.camera_zoomed:
-		BoardManager.talking_zoom_out()
 	grid_manager.zoom_out()
 
 
@@ -114,8 +104,6 @@ func print_to_terminal(new_message : Array[String]) -> void:
 
 
 func examine():
-	if BoardManager.camera_zoomed:
-		BoardManager.talking_zoom_out()
 	var current_cell = grid_manager.position_dict[current_position]
 	var current_direction : Vector2i = Vector2i.ZERO
 	if is_valid_move(true):
