@@ -23,7 +23,10 @@
 [ext_resource type="Material" uid="uid://cmeskc4bdpys0" path="res://Assets/Models/RoomKit/Materials/Wall_mat.tres" id="20_eq286"]
 [ext_resource type="ArrayMesh" uid="uid://du2jgqb4yhs2f" path="res://Assets/Models/RoomKit/Meshes/RoomKit_DoorCornerL.res" id="20_xwx3p"]
 [ext_resource type="ArrayMesh" uid="uid://hb616xg5y0o6" path="res://Assets/Models/RoomKit/Meshes/RoomKit_DoorCornerR.res" id="21_caq0p"]
+[ext_resource type="Texture2D" uid="uid://dnk5sn15blr7m" path="res://Assets/Decals/Textures/PipDecal01.tga" id="22_s0gal"]
+[ext_resource type="Texture2D" uid="uid://dwp0ip0lr4vlo" path="res://Assets/Decals/Textures/PipDecal02.tga" id="23_dfrsk"]
 [ext_resource type="ArrayMesh" uid="uid://bminqihy1ij6p" path="res://Assets/Models/RoomKit/Meshes/RoomKit_GreebleWall.res" id="23_lf2ej"]
+[ext_resource type="Texture2D" uid="uid://m0mv6wiuw520" path="res://Assets/Decals/Textures/PipDecal03.tga" id="24_a4l8f"]
 [ext_resource type="PackedScene" uid="uid://774i3laiuwm3" path="res://Scenes/Environment/OverheadLight.tscn" id="25_xwx3p"]
 [ext_resource type="PackedScene" uid="uid://de250sht73l6m" path="res://Scenes/Environment/DoorLight.tscn" id="27_lf2ej"]
 [ext_resource type="PackedScene" uid="uid://dcs4xpynd2u0v" path="res://Scenes/Environment/DoorLightFlicker.tscn" id="28_aa4my"]
@@ -67,7 +70,7 @@ albedo_texture = ExtResource("32_iyi63")
 orm_texture = ExtResource("35_gcw8j")
 emission_enabled = true
 emission = Color(1, 0.84705883, 0.69411767, 1)
-emission_energy_multiplier = 5.0
+emission_energy_multiplier = 2.5
 emission_operator = 1
 emission_texture = ExtResource("33_cxqku")
 normal_enabled = true
@@ -618,6 +621,41 @@ surface_material_override/0 = ExtResource("20_eq286")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
 mesh = ExtResource("19_eq286")
 
+[node name="Decal" type="Decal" parent="TestRoom/RoomKitWallHallwayEnd" unique_id=1175241055]
+transform = Transform3D(-0.24828763, 1.0490732e-08, -8.7243494e-17, -1.4019355e-23, -5.2453673e-09, -0.32473955, -2.1705993e-08, -0.12, 1.4194815e-08, 1.5534244, 2.1761806, 0.02631569)
+texture_albedo = ExtResource("22_s0gal")
+modulate = Color(0.66113925, 0.23678014, 0.067449965, 1)
+
+[node name="Decal4" type="Decal" parent="TestRoom/RoomKitWallHallwayEnd" unique_id=800846209]
+transform = Transform3D(-0.24828763, 1.0490732e-08, -8.7243494e-17, -1.4019355e-23, -5.2453673e-09, -0.32473955, -2.1705993e-08, -0.12, 1.4194815e-08, 1.5534244, 2.4887938, 0.02631569)
+texture_albedo = ExtResource("22_s0gal")
+modulate = Color(0.66113925, 0.23678014, 0.067449965, 1)
+
+[node name="Decal7" type="Decal" parent="TestRoom/RoomKitWallHallwayEnd" unique_id=457703392]
+transform = Transform3D(-0.24828763, 1.0490732e-08, -8.7243494e-17, -1.4019355e-23, -5.2453673e-09, -0.32473955, -2.1705993e-08, -0.12, 1.4194815e-08, 1.5534244, 1.2428153, 0.02631569)
+texture_albedo = ExtResource("22_s0gal")
+modulate = Color(0.66113925, 0.23678014, 0.067449965, 1)
+
+[node name="Decal5" type="Decal" parent="TestRoom/RoomKitWallHallwayEnd" unique_id=1959885159]
+transform = Transform3D(-0.24828763, 1.0490732e-08, -8.7243494e-17, -1.4019355e-23, -5.2453673e-09, -0.32473955, -2.1705993e-08, -0.12, 1.4194815e-08, 1.5534244, 1.8762784, 0.02631569)
+texture_albedo = ExtResource("23_dfrsk")
+modulate = Color(0.66113925, 0.23678014, 0.067449965, 1)
+
+[node name="Decal6" type="Decal" parent="TestRoom/RoomKitWallHallwayEnd" unique_id=1578913166]
+transform = Transform3D(-0.24828763, 1.0490732e-08, -8.7243494e-17, -1.4019355e-23, -5.2453673e-09, -0.32473955, -2.1705993e-08, -0.12, 1.4194815e-08, 1.5534244, 1.5616368, 0.02631569)
+texture_albedo = ExtResource("24_a4l8f")
+modulate = Color(0.66113925, 0.23678014, 0.067449965, 1)
+
+[node name="Decal3" type="Decal" parent="TestRoom/RoomKitWallHallwayEnd" unique_id=1326071818]
+transform = Transform3D(-0.24828763, 1.0490732e-08, -8.7243494e-17, -1.4019355e-23, -5.2453673e-09, -0.32473955, -2.1705993e-08, -0.12, 1.4194815e-08, 1.1031919, 2.1761806, 0.02631569)
+texture_albedo = ExtResource("24_a4l8f")
+modulate = Color(0.66113925, 0.23678014, 0.067449965, 1)
+
+[node name="Decal2" type="Decal" parent="TestRoom/RoomKitWallHallwayEnd" unique_id=1507949233]
+transform = Transform3D(-0.24828763, 1.0490732e-08, -8.7243494e-17, -1.4019355e-23, -5.2453673e-09, -0.32473955, -2.1705993e-08, -0.12, 1.4194815e-08, 1.9410074, 2.1761806, 0.02631569)
+texture_albedo = ExtResource("23_dfrsk")
+modulate = Color(0.66113925, 0.23678014, 0.067449965, 1)
+
 [node name="LightBlocker" type="MeshInstance3D" parent="TestRoom" unique_id=520082399]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2168121, 16.229195, 1.901123)
 mesh = SubResource("BoxMesh_lfxu0")
@@ -760,7 +798,7 @@ transform = Transform3D(0.5581245, 0.687714, -0.46426997, 1.4901161e-08, 0.55952
 shadow_enabled = true
 
 [node name="OverheadLight" parent="." unique_id=1549800196 instance=ExtResource("25_xwx3p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.432, 3, 9.955)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.432, 3, 10.682258)
 light_colour = Color(0.9999997, 0.84763503, 0.69530445, 1)
 light_fog_amount = 5.0
 cast_shadows = false
@@ -779,7 +817,7 @@ surface_material_override/0 = SubResource("ORMMaterial3D_hkwcg")
 
 [node name="Light" parent="OverheadLightFlicker2" index="1" unique_id=1977279119]
 transform = Transform3D(1, -5.92338e-08, 8.275338e-08, -8.275339e-08, -0.9465884, 0.32244438, 5.9233788e-08, -0.32244438, -0.9465884, 0.08385301, -0.05252552, 0.29307598)
-light_energy = 1.0
+light_energy = 0.5
 shadow_enabled = true
 shadow_bias = 1.252
 
