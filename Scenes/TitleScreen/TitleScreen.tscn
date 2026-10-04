@@ -1,9 +1,266 @@
 [gd_scene format=3 uid="uid://dbxpkhsyt01o8"]
 
-[node name="TitleScreen" type="Control" unique_id=499759060]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+[ext_resource type="FontFile" uid="uid://bph2bivxha0mu" path="res://Assets/Fonts/VT323-Regular.ttf" id="1_f6ya5"]
+[ext_resource type="Script" uid="uid://dc27lavyfieaj" path="res://Scenes/TitleScreen/VolumeBar.gd" id="2_4lqrc"]
+[ext_resource type="Script" uid="uid://bkvqvjd1r4au8" path="res://Scenes/TitleScreen/MenuButton.gd" id="3_at0r8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rojf5"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pxqgl"]
+bg_color = Color(0.054711282, 0.75625, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hh20u"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ytoc7"]
+bg_color = Color(0.054711282, 0.75625, 0, 1)
+
+[node name="TitleScreen" type="MarginContainer" unique_id=985255105]
+custom_minimum_size = Vector2(240, 240)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -120.0
+offset_right = 120.0
+offset_bottom = 120.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1456443868]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Menu" type="VBoxContainer" parent="." unique_id=93327392]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Menu" unique_id=1055434299]
+custom_minimum_size = Vector2(190, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_colors/default_color = Color(0.054711282, 0.75625, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_f6ya5")
+text = "> Place of Honor
+
+
+"
+
+[node name="Start" type="Button" parent="Menu" unique_id=681723078]
+custom_minimum_size = Vector2(190, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.054711282, 0.75625, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_f6ya5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rojf5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pxqgl")
+text = "> Start"
+alignment = 0
+
+[node name="Settings" type="Button" parent="Menu" unique_id=1887479095 node_paths=PackedStringArray("scene_to_show", "scene_to_hide")]
+custom_minimum_size = Vector2(190, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.054711282, 0.75625, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_f6ya5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rojf5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pxqgl")
+text = "> Settings"
+alignment = 0
+script = ExtResource("3_at0r8")
+scene_to_show = NodePath("../../Settings")
+scene_to_hide = NodePath("..")
+
+[node name="Escape" type="Button" parent="Menu" unique_id=758012180]
+custom_minimum_size = Vector2(190, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.054711282, 0.75625, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_f6ya5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rojf5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pxqgl")
+text = "> Escape"
+alignment = 0
+
+[node name="Settings" type="VBoxContainer" parent="." unique_id=1186368129]
+visible = false
+layout_mode = 2
+alignment = 1
+
+[node name="MasterVolume" type="RichTextLabel" parent="Settings" unique_id=1256146537]
+custom_minimum_size = Vector2(190, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/default_color = Color(0.054711282, 0.75625, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_f6ya5")
+text = "> Master Volume"
+
+[node name="MasterBar" type="HBoxContainer" parent="Settings" unique_id=1395570349 node_paths=PackedStringArray("minus_button", "plus_button", "progress_bar")]
+layout_mode = 2
+alignment = 1
+script = ExtResource("2_4lqrc")
+minus_button = NodePath("-")
+plus_button = NodePath("+")
+progress_bar = NodePath("ProgressBar")
+audio_bus_name = "Master"
+
+[node name="-" type="Button" parent="Settings/MasterBar" unique_id=1075128061]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.054711282, 0.75625, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_f6ya5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rojf5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pxqgl")
+text = "-"
+alignment = 0
+
+[node name="ProgressBar" type="ProgressBar" parent="Settings/MasterBar" unique_id=1079562666]
+custom_minimum_size = Vector2(150, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_hh20u")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ytoc7")
+value = 100.0
+show_percentage = false
+
+[node name="+" type="Button" parent="Settings/MasterBar" unique_id=718853243]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.054711282, 0.75625, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_f6ya5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rojf5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pxqgl")
+text = "+"
+alignment = 0
+
+[node name="SFXVolume" type="RichTextLabel" parent="Settings" unique_id=634133282]
+custom_minimum_size = Vector2(190, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/default_color = Color(0.054711282, 0.75625, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_f6ya5")
+text = "> SFX Volume"
+
+[node name="SFXBar" type="HBoxContainer" parent="Settings" unique_id=945149818 node_paths=PackedStringArray("minus_button", "plus_button", "progress_bar")]
+layout_mode = 2
+alignment = 1
+script = ExtResource("2_4lqrc")
+minus_button = NodePath("-")
+plus_button = NodePath("+")
+progress_bar = NodePath("ProgressBar")
+audio_bus_name = "SFX"
+
+[node name="-" type="Button" parent="Settings/SFXBar" unique_id=1821291761]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.054711282, 0.75625, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_f6ya5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rojf5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pxqgl")
+text = "-"
+alignment = 0
+
+[node name="ProgressBar" type="ProgressBar" parent="Settings/SFXBar" unique_id=807639230]
+custom_minimum_size = Vector2(150, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_hh20u")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ytoc7")
+value = 100.0
+show_percentage = false
+
+[node name="+" type="Button" parent="Settings/SFXBar" unique_id=1479195761]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.054711282, 0.75625, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_f6ya5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rojf5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pxqgl")
+text = "+"
+alignment = 0
+
+[node name="Music Volume" type="RichTextLabel" parent="Settings" unique_id=1694784748]
+custom_minimum_size = Vector2(190, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/default_color = Color(0.054711282, 0.75625, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_f6ya5")
+text = "> Music Volume"
+
+[node name="MusicBar" type="HBoxContainer" parent="Settings" unique_id=1982915609 node_paths=PackedStringArray("minus_button", "plus_button", "progress_bar")]
+layout_mode = 2
+alignment = 1
+script = ExtResource("2_4lqrc")
+minus_button = NodePath("-")
+plus_button = NodePath("+")
+progress_bar = NodePath("ProgressBar")
+audio_bus_name = "Music"
+
+[node name="-" type="Button" parent="Settings/MusicBar" unique_id=313577969]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.054711282, 0.75625, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_f6ya5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rojf5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pxqgl")
+text = "-"
+alignment = 0
+
+[node name="ProgressBar" type="ProgressBar" parent="Settings/MusicBar" unique_id=631793266]
+custom_minimum_size = Vector2(150, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_hh20u")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ytoc7")
+value = 100.0
+show_percentage = false
+
+[node name="+" type="Button" parent="Settings/MusicBar" unique_id=1971006181]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.054711282, 0.75625, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_f6ya5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rojf5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pxqgl")
+text = "+"
+alignment = 0
+
+[node name="Back" type="Button" parent="Settings" unique_id=1614569478 node_paths=PackedStringArray("scene_to_show", "scene_to_hide")]
+custom_minimum_size = Vector2(190, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.054711282, 0.75625, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_f6ya5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rojf5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pxqgl")
+text = "> Back"
+alignment = 0
+script = ExtResource("3_at0r8")
+scene_to_show = NodePath("../../Menu")
+scene_to_hide = NodePath("..")
