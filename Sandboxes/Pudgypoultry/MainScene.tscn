@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://qug0b8wetea4" path="res://Scenes/Punchcards/CardScenes/punch_card_fallout.tscn" id="1_gsliy"]
 [ext_resource type="PackedScene" uid="uid://cied817m3svin" path="res://Scenes/Punchcards/CardScenes/punch_card_fission.tscn" id="2_5msbe"]
 [ext_resource type="PackedScene" uid="uid://deyytmftgimdu" path="res://Scenes/Punchcards/CardScenes/punch_card_fusion.tscn" id="3_sh0p1"]
+[ext_resource type="PackedScene" uid="uid://dd12tmva7loan" path="res://Scenes/Punchcards/CardScenes/punch_card_halo.tscn" id="4_3tf8q"]
 [ext_resource type="Environment" uid="uid://ccvtkoherrvxq" path="res://Assets/world_environment.tres" id="7_5msbe"]
 [ext_resource type="AudioStream" uid="uid://cgqm3lsrye1cf" path="res://Assets/Music/The Threshold (Ambience).ogg" id="9_3tf8q"]
 [ext_resource type="AudioStream" uid="uid://q2orkymwqrqe" path="res://Assets/Music/A Dim Radiance.ogg" id="10_qaeli"]
@@ -40,10 +41,10 @@ albedo_color = Color(0, 0.21040133, 0.33125, 1)
 material = SubResource("StandardMaterial3D_rojf5")
 size = Vector3(1.5, 0.05, 0.6)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_qebm6"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_qaeli"]
 viewport_path = NodePath("../ReactorView/GridCamera")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_3tf8q"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_tq65w"]
 viewport_path = NodePath("../ReactorView/FPSCamera")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lh8n2"]
@@ -119,6 +120,9 @@ transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.6298151e-09, 0, -1.6298151e-09, 0
 [node name="PunchCardFusion" parent="PlayArea" unique_id=331653166 instance=ExtResource("3_sh0p1")]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.6298151e-09, 0, -1.6298151e-09, 0.07, -0.5775201, 0.033325374, -0.14682117)
 
+[node name="PunchCardHalo" parent="PlayArea" unique_id=1383851893 instance=ExtResource("4_3tf8q")]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.6298161e-09, 0, -1.6298161e-09, 0.07, -0.6419789, 0.033325315, 0.27537838)
+
 [node name="MouseCursor" parent="PlayArea" unique_id=1458504978 instance=ExtResource("10_tq65w")]
 
 [node name="ReactorView" parent="." unique_id=212615922 node_paths=PackedStringArray("card_slots") instance=ExtResource("12_qaeli")]
@@ -147,10 +151,10 @@ song_2 = ExtResource("10_qaeli")
 song_3 = ExtResource("11_tq65w")
 
 [node name="Monitor1" parent="Monitor" index="0" unique_id=55286909]
-texture = SubResource("ViewportTexture_qebm6")
+texture = SubResource("ViewportTexture_qaeli")
 
 [node name="Monitor2" parent="Monitor" index="1" unique_id=831061316]
-texture = SubResource("ViewportTexture_3tf8q")
+texture = SubResource("ViewportTexture_tq65w")
 
 [node name="IndicatorProxy01" type="MeshInstance3D" parent="." unique_id=880533626]
 transform = Transform3D(2.9802322e-08, 0, -1, 0, 1, 0, 1, 0, 2.9802322e-08, 94.13165, 0, -33)

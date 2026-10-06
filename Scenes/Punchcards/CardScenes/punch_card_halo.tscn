@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dd12tmva7loan"]
+
+[ext_resource type="Script" uid="uid://y5jgghy7qleh" path="res://Scenes/Punchcards/Move_Backward/Punch_Move_Backward.gd" id="1_ixl5f"]
+[ext_resource type="Texture2D" uid="uid://dgupp1v5f118r" path="res://Assets/Overlays/Card_Halo.png" id="2_k0kxr"]
+[ext_resource type="PackedScene" uid="uid://dr8vwsmgcojh1" path="res://Components/DragAndDropComponent/DragAndDropComponent.tscn" id="3_tsayy"]
+[ext_resource type="PackedScene" uid="uid://bqormgwvc5m8j" path="res://Components/SpriteOutlineComponent/SpriteOutlineComponent.tscn" id="4_ni6y1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rojf5"]
+size = Vector3(2.590805, 0.05, 3.4110146)
+
+[node name="PunchCardHalo" type="StaticBody3D" unique_id=331653166 node_paths=PackedStringArray("sprite", "drag_component")]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.629815e-09, 0, -1.629815e-09, 0.07, 0, 0, 0)
+script = ExtResource("1_ixl5f")
+sprite = NodePath("Sprite3D")
+drag_component = NodePath("DragAndDropComponent")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=324627515]
+transform = Transform3D(1, 0, 0, 0, 1, 8.881784e-15, 0, -8.881784e-15, 1, 0.010261536, 0, 0)
+shape = SubResource("BoxShape3D_rojf5")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1098904968]
+transform = Transform3D(0.35, 0, 0, 0, -1.5298985e-08, 0.35, 0, -0.35, -1.5298985e-08, 0, 0, 0)
+sorting_offset = 20.0
+shaded = true
+texture = ExtResource("2_k0kxr")
+
+[node name="DragAndDropComponent" parent="." unique_id=765073431 node_paths=PackedStringArray("sprite_outline_component") instance=ExtResource("3_tsayy")]
+pickup_height = 0.05
+sprite_outline_component = NodePath("../SpriteOutlineComponent")
+
+[node name="SpriteOutlineComponent" parent="." unique_id=1057435061 instance=ExtResource("4_ni6y1")]

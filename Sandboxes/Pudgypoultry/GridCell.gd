@@ -28,7 +28,7 @@ func _ready() -> void:
 	if !active or hidden_room:
 		for img in get_children():
 			img.hide()
-	if has_skeleton:
+	if has_skeleton && !hidden_room:
 		skeleton_sprite.show()
 	if is_starting_position:
 		BoardManager.starting_position = grid_position
