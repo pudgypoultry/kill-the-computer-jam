@@ -70,6 +70,7 @@ func is_valid_move(forward : bool) -> bool:
 
 
 func move_forward():
+	BoardManager.switch_screen_to_grid()
 	if is_valid_move(true):
 		grid_manager.move_forward()
 		cam_tween = get_tree().create_tween().bind_node(cam)
@@ -80,6 +81,7 @@ func move_forward():
 
 
 func move_backward():
+	BoardManager.switch_screen_to_grid()
 	if is_valid_move(false):
 		grid_manager.move_backward()
 		cam_tween = get_tree().create_tween().bind_node(cam)
@@ -89,6 +91,7 @@ func move_backward():
 
 
 func turn(dir : String):
+	BoardManager.switch_screen_to_grid()
 	grid_manager.turn(dir)
 	cam_tween = get_tree().create_tween().bind_node(cam)
 	match dir:
@@ -99,10 +102,12 @@ func turn(dir : String):
 
 
 func zoom_in():
+	BoardManager.switch_screen_to_grid()
 	grid_manager.zoom_in()
 
 
 func zoom_out():
+	BoardManager.switch_screen_to_grid()
 	grid_manager.zoom_out()
 
 
