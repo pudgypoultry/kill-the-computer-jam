@@ -53,9 +53,11 @@ mouse_filter = 2
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1619386943]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4331083, 2.4958978, -2.5381794)
+visible = false
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1495194109]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2875755, 2.4958978, 2.6299314)
+visible = false
 
 [node name="GridCamera" type="SubViewport" parent="." unique_id=134290074]
 size = Vector2i(240, 240)

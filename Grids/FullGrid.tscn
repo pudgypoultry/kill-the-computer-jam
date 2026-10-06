@@ -6382,6 +6382,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="10_23" parent="." unique_id=1461785796 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1050, 2415)
+examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
 grid_position = Vector2i(10, 23)
 adjacencies = [NodePath("../10_22"), NodePath("../11_23"), NodePath("../10_24"), NodePath("../9_23")]
 
@@ -6390,6 +6391,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="11_23" parent="." unique_id=1941033836 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1155, 2415)
+examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
 grid_position = Vector2i(11, 23)
 adjacencies = [NodePath("../11_22"), NodePath("../12_23"), NodePath("../11_24"), NodePath("../10_23")]
 
@@ -6398,6 +6400,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="12_23" parent="." unique_id=1344317831 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1260, 2415)
+examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
 grid_position = Vector2i(12, 23)
 adjacencies = [NodePath("../12_22"), NodePath("../13_23"), NodePath("../12_24"), NodePath("../11_23")]
 
@@ -6406,6 +6409,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="13_23" parent="." unique_id=1443448338 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1365, 2415)
+examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
 grid_position = Vector2i(13, 23)
 adjacencies = [NodePath("../13_22"), NodePath("../14_23"), NodePath("../13_24"), NodePath("../12_23")]
 
@@ -6662,33 +6666,34 @@ texture = ExtResource("3_m5ja8")
 
 [node name="10_24" parent="." unique_id=1801775336 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1050, 2520)
+examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
 grid_position = Vector2i(10, 24)
 adjacencies = [NodePath("../10_23"), NodePath("../11_24"), NodePath("../10_25"), NodePath("../9_24")]
-has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="10_24" unique_id=1199821451]
 texture = ExtResource("3_m5ja8")
 
 [node name="11_24" parent="." unique_id=826111124 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1155, 2520)
+examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
 grid_position = Vector2i(11, 24)
 adjacencies = [NodePath("../11_23"), NodePath("../12_24"), NodePath("../11_25"), NodePath("../10_24")]
-has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="11_24" unique_id=1594617226]
 texture = ExtResource("3_m5ja8")
 
 [node name="12_24" parent="." unique_id=1775296023 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1260, 2520)
+examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
 grid_position = Vector2i(12, 24)
 adjacencies = [NodePath("../12_23"), NodePath("../13_24"), NodePath("../12_25"), NodePath("../11_24")]
-has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="12_24" unique_id=53633677]
 texture = ExtResource("3_m5ja8")
 
 [node name="13_24" parent="." unique_id=1296150892 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1365, 2520)
+examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
 grid_position = Vector2i(13, 24)
 adjacencies = [NodePath("../13_23"), NodePath("../14_24"), NodePath("../13_25"), NodePath("../12_24")]
 
