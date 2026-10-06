@@ -6157,14 +6157,13 @@ examine = Array[String](["MAIN CONTROL ROOM", "A hundred tiny lights blinking in
 grid_position = Vector2i(19, 22)
 adjacencies = [NodePath("../19_21"), NodePath("../20_22"), NodePath("../19_23"), NodePath("../18_22")]
 hidden_room = true
-is_starting_position = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="19_22" unique_id=1410190867]
 texture = ExtResource("3_m5ja8")
 
 [node name="20_22" parent="." unique_id=736576478 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(2100, 2310)
-examine = Array[String](["ST. JEANNE:", "\"What's up? Oh, hey, so funny story. They totally got the wrong corpse. I don't know what the hell I'm doing here, but I promise you, Saint I ain't.", "\"What's up? Oh, hey, so funny story. They totally got the wrong corpse. I don't know what the hell I'm doing here, but I promise you, Saint I ain't. They shoved this Apparatus on me and told me that, in the last moments that my consciousness still flickered, on its way to Ascend toward the Labyrinth, this doohickey would record what I was thinking about it, preserve it for the 'Glory of God' for 'All Eternity.' Ask me, that's all a load of bullwash and hogshit. I think right about now, I'm fading out, and that's about all there is to it. Oh, sure, some sap will get the shot to pilot my empty shell into the \"Temple\" to \"Glimpse God,\" but honey, the lights are all out. No one's home. You're all alone. Yeah, you, reading this right now, I'm talking to you. Whoever you think you're talking to, that's just the dying embers of a mind too mired in its own dogma to see one single thing straight, not even as they're shuffling off this old mortal coil. But me? I think I'm getting to the heart of, ain't I, even as I diminish. I'm freaking you out, ain't I, just a little bit? Good. Well. Here I go, I'm just about out of here. Good luck finding your God. I hope it's worth it. Bye forever. [..................] Oh.\" "])
+examine = Array[String](["ST. JEANNE:", "\"What's up? Oh, hey, so funny story. They totally got the wrong corpse. I don't know what the hell I'm doing here, but I promise you, Saint I ain't.\""])
 grid_position = Vector2i(20, 22)
 adjacencies = [NodePath("../20_21"), NodePath("../21_22"), NodePath("../20_23"), NodePath("../19_22")]
 hidden_room = true
