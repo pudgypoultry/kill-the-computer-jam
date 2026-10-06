@@ -4184,12 +4184,11 @@ texture = ExtResource("3_m5ja8")
 
 [node name="16_15" parent="." unique_id=1338978485 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1680, 1575)
-active = false
 grid_position = Vector2i(16, 15)
 adjacencies = [NodePath("../16_14"), NodePath("../17_15"), NodePath("../16_16"), NodePath("../15_15")]
+has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="16_15" unique_id=1467770054]
-visible = false
 texture = ExtResource("3_m5ja8")
 
 [node name="17_15" parent="." unique_id=1796986158 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
@@ -6511,12 +6510,11 @@ texture = ExtResource("3_m5ja8")
 
 [node name="24_23" parent="." unique_id=713098251 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(2520, 2415)
-active = false
 grid_position = Vector2i(24, 23)
 adjacencies = [NodePath("../24_22"), NodePath("../25_23"), NodePath("../24_24"), NodePath("../23_23")]
+has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="24_23" unique_id=1228298287]
-visible = false
 texture = ExtResource("3_m5ja8")
 
 [node name="25_23" parent="." unique_id=2095407291 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
@@ -6619,12 +6617,11 @@ texture = ExtResource("3_m5ja8")
 
 [node name="5_24" parent="." unique_id=1345185653 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(525, 2520)
-active = false
 grid_position = Vector2i(5, 24)
 adjacencies = [NodePath("../5_23"), NodePath("../6_24"), NodePath("../5_25"), NodePath("../4_24")]
+has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="5_24" unique_id=1355821611]
-visible = false
 texture = ExtResource("3_m5ja8")
 
 [node name="6_24" parent="." unique_id=37213815 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
@@ -7025,7 +7022,6 @@ has_skeleton = true
 sprite = NodePath("../4_0/Sprite2D2")
 
 [node name="Sprite2D2" type="Sprite2D" parent="19_25" unique_id=523212527]
-visible = false
 texture = ExtResource("3_m5ja8")
 
 [node name="20_25" parent="." unique_id=901559472 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
