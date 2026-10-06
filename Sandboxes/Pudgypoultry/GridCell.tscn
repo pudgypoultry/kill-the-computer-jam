@@ -2,11 +2,17 @@
 
 [ext_resource type="Script" uid="uid://wreh35xiuu1r" path="res://Sandboxes/Pudgypoultry/GridCell.gd" id="1_3o7j3"]
 [ext_resource type="Texture2D" uid="uid://cm05kjnbsoah3" path="res://Sandboxes/Pudgypoultry/CellOutline.png" id="2_pqucq"]
+[ext_resource type="Texture2D" uid="uid://bcl1u44bcafcc" path="res://Sandboxes/Pudgypoultry/SkeletonIcon.png" id="3_pqucq"]
 
-[node name="GridCell" type="Node2D" unique_id=938959335 node_paths=PackedStringArray("sprite")]
+[node name="GridCell" type="Node2D" unique_id=938959335 node_paths=PackedStringArray("sprite", "skeleton_sprite")]
 script = ExtResource("1_3o7j3")
 sprite = NodePath("Sprite2D")
+skeleton_sprite = NodePath("SkeletonSprite")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=473202324]
 visible = false
 texture = ExtResource("2_pqucq")
+
+[node name="SkeletonSprite" type="Sprite2D" parent="." unique_id=1007436750]
+visible = false
+texture = ExtResource("3_pqucq")
