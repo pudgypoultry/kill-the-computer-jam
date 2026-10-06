@@ -26,8 +26,15 @@ func _ready() -> void:
 	for slot in card_slots:
 		slot.card_slotted_single.connect(_handle_card_slotted_single)
 		slot.card_slotted_double.connect(_handle_card_slotted_double)
-	grid_manager.current_position = starting_position
-	current_position = starting_position
+	if BoardManager.starting_position != Vector2i(-1,-1):
+		var real_starting_position = BoardManager.starting_position - starting_position
+		cam.position.x += real_starting_position.x * BoardManager.step_length
+		cam.position.z += real_starting_position.y * BoardManager.step_length
+		grid_manager.current_position = BoardManager.starting_position
+		current_position = BoardManager.starting_position
+	else:
+		grid_manager.current_position = starting_position
+		current_position = starting_position
 
 
 func _handle_card_slotted_single(action : Callable):

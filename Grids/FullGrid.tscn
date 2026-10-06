@@ -5535,6 +5535,7 @@ texture = ExtResource("3_m5ja8")
 position = Vector2(1890, 2100)
 grid_position = Vector2i(18, 20)
 adjacencies = [NodePath("../18_19"), NodePath("../19_20"), NodePath("../18_21"), NodePath("../17_20")]
+hidden_room = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="18_20" unique_id=660025949]
 texture = ExtResource("3_m5ja8")
@@ -5543,6 +5544,7 @@ texture = ExtResource("3_m5ja8")
 position = Vector2(1995, 2100)
 grid_position = Vector2i(19, 20)
 adjacencies = [NodePath("../19_19"), NodePath("../20_20"), NodePath("../19_21"), NodePath("../18_20")]
+hidden_room = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="19_20" unique_id=562920801]
 texture = ExtResource("3_m5ja8")
@@ -5551,6 +5553,7 @@ texture = ExtResource("3_m5ja8")
 position = Vector2(2100, 2100)
 grid_position = Vector2i(20, 20)
 adjacencies = [NodePath("../20_19"), NodePath("../21_20"), NodePath("../20_21"), NodePath("../19_20")]
+hidden_room = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="20_20" unique_id=1019505778]
 texture = ExtResource("3_m5ja8")
@@ -5821,6 +5824,7 @@ texture = ExtResource("3_m5ja8")
 position = Vector2(1890, 2205)
 grid_position = Vector2i(18, 21)
 adjacencies = [NodePath("../18_20"), NodePath("../19_21"), NodePath("../18_22"), NodePath("../17_21")]
+hidden_room = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="18_21" unique_id=135619147]
 texture = ExtResource("3_m5ja8")
@@ -5829,6 +5833,7 @@ texture = ExtResource("3_m5ja8")
 position = Vector2(1995, 2205)
 grid_position = Vector2i(19, 21)
 adjacencies = [NodePath("../19_20"), NodePath("../20_21"), NodePath("../19_22"), NodePath("../18_21")]
+hidden_room = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="19_21" unique_id=925027853]
 texture = ExtResource("3_m5ja8")
@@ -5837,6 +5842,7 @@ texture = ExtResource("3_m5ja8")
 position = Vector2(2100, 2205)
 grid_position = Vector2i(20, 21)
 adjacencies = [NodePath("../20_20"), NodePath("../21_21"), NodePath("../20_22"), NodePath("../19_21")]
+hidden_room = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="20_21" unique_id=1788749470]
 texture = ExtResource("3_m5ja8")
@@ -6107,6 +6113,7 @@ texture = ExtResource("3_m5ja8")
 position = Vector2(1890, 2310)
 grid_position = Vector2i(18, 22)
 adjacencies = [NodePath("../18_21"), NodePath("../19_22"), NodePath("../18_23"), NodePath("../17_22")]
+hidden_room = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="18_22" unique_id=443151342]
 texture = ExtResource("3_m5ja8")
@@ -6115,6 +6122,7 @@ texture = ExtResource("3_m5ja8")
 position = Vector2(1995, 2310)
 grid_position = Vector2i(19, 22)
 adjacencies = [NodePath("../19_21"), NodePath("../20_22"), NodePath("../19_23"), NodePath("../18_22")]
+hidden_room = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="19_22" unique_id=1410190867]
 texture = ExtResource("3_m5ja8")
@@ -6123,6 +6131,7 @@ texture = ExtResource("3_m5ja8")
 position = Vector2(2100, 2310)
 grid_position = Vector2i(20, 22)
 adjacencies = [NodePath("../20_21"), NodePath("../21_22"), NodePath("../20_23"), NodePath("../19_22")]
+hidden_room = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="20_22" unique_id=63674651]
 texture = ExtResource("3_m5ja8")
@@ -6589,7 +6598,6 @@ texture = ExtResource("3_m5ja8")
 
 [node name="10_24" parent="." unique_id=1801775336 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1050, 2520)
-active = false
 grid_position = Vector2i(10, 24)
 adjacencies = [NodePath("../10_23"), NodePath("../11_24"), NodePath("../10_25"), NodePath("../9_24")]
 has_skeleton = true
@@ -6599,7 +6607,6 @@ texture = ExtResource("3_m5ja8")
 
 [node name="11_24" parent="." unique_id=826111124 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1155, 2520)
-active = false
 grid_position = Vector2i(11, 24)
 adjacencies = [NodePath("../11_23"), NodePath("../12_24"), NodePath("../11_25"), NodePath("../10_24")]
 has_skeleton = true
@@ -6609,7 +6616,6 @@ texture = ExtResource("3_m5ja8")
 
 [node name="12_24" parent="." unique_id=1775296023 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1260, 2520)
-active = false
 grid_position = Vector2i(12, 24)
 adjacencies = [NodePath("../12_23"), NodePath("../13_24"), NodePath("../12_25"), NodePath("../11_24")]
 has_skeleton = true
@@ -7459,6 +7465,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="11_27" parent="." unique_id=225045522 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1155, 2835)
+examine = Array[String](["We're no strangers to love you know the rules and so do I, a full commitment's what I'm thinking of"])
 grid_position = Vector2i(11, 27)
 adjacencies = [NodePath("../11_26"), NodePath("../12_27"), NodePath("../11_28"), NodePath("../10_27")]
 

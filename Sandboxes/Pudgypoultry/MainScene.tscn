@@ -40,10 +40,10 @@ albedo_color = Color(0, 0.21040133, 0.33125, 1)
 material = SubResource("StandardMaterial3D_rojf5")
 size = Vector3(1.5, 0.05, 0.6)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_1uf6b"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_qebm6"]
 viewport_path = NodePath("../ReactorView/GridCamera")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_w0dj5"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_3tf8q"]
 viewport_path = NodePath("../ReactorView/FPSCamera")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lh8n2"]
@@ -147,10 +147,10 @@ song_2 = ExtResource("10_qaeli")
 song_3 = ExtResource("11_tq65w")
 
 [node name="Monitor1" parent="Monitor" index="0" unique_id=55286909]
-texture = SubResource("ViewportTexture_1uf6b")
+texture = SubResource("ViewportTexture_qebm6")
 
 [node name="Monitor2" parent="Monitor" index="1" unique_id=831061316]
-texture = SubResource("ViewportTexture_w0dj5")
+texture = SubResource("ViewportTexture_3tf8q")
 
 [node name="IndicatorProxy01" type="MeshInstance3D" parent="." unique_id=880533626]
 transform = Transform3D(2.9802322e-08, 0, -1, 0, 1, 0, 1, 0, 2.9802322e-08, 94.13165, 0, -33)

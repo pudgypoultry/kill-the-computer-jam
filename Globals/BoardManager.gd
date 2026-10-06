@@ -17,6 +17,7 @@ var fps_camera : Node3D = null
 var camera_zoomed : bool = false
 var original_camera_position : Vector3 = Vector3.ZERO
 var global_cursor : MouseCursor = null
+var starting_position : Vector2i = Vector2i(-1,-1)
 
 
 func _process(delta : float):

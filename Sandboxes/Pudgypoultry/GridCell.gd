@@ -8,7 +8,9 @@ class_name GridCell
 @export var needs_grovel : bool = false
 @export var grid_position : Vector2i = Vector2i.ZERO
 @export var adjacencies : Array[GridCell]
+@export var hidden_room : bool = false
 @export var has_skeleton : bool = false
+@export var is_starting_position : bool = false
 
 @export_category("Plugging in Nodes")
 @export var sprite : Sprite2D
@@ -18,10 +20,11 @@ var grid_manager : GridManager = null
 
 
 func _ready() -> void:
-	if !active:
+	if !active or hidden_room:
 		for img in get_children():
 			img.hide()
-
+	if is_starting_position:
+		BoardManager.starting_position = grid_position
 
 func is_adjacent(pos : Vector2i):
 	if pos in grid_manager.position_dict.keys():
