@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dguog8w07hy5y"]
+
+[ext_resource type="Script" uid="uid://dfh3hqm01x2us" path="res://Scenes/Reactor/reactor_rods.gd" id="1_nhy71"]
+[ext_resource type="ArrayMesh" uid="uid://bdhbuw8val3bq" path="res://Assets/Models/Reactor/Meshes/ControlRod.res" id="1_pegb1"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_pegb1"]
+transform_format = 1
+use_custom_data = true
+mesh = ExtResource("1_pegb1")
+
+[node name="ReactorRods" type="MultiMeshInstance3D" unique_id=436975991]
+multimesh = SubResource("MultiMesh_pegb1")
+script = ExtResource("1_nhy71")
+mesh_width = 0.7
+metadata/_custom_type_script = "uid://dfh3hqm01x2us"

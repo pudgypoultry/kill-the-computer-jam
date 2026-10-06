@@ -1,0 +1,20 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dn4s6xl26jdma"]
+
+[ext_resource type="Shader" uid="uid://v5ti2xyipm2a" path="res://Assets/Models/Reactor/Materials/tiling_detail.gdshader" id="1_bu514"]
+[ext_resource type="Texture2D" uid="uid://234oao1etcql" path="res://Assets/Models/Reactor/Textures/ReactorHousing_albedo.tga" id="2_36lav"]
+[ext_resource type="Texture2D" uid="uid://bx4h4tmkyi3eu" path="res://Assets/Models/Reactor/Textures/ReactorHousing_normal.tga" id="3_vahb0"]
+[ext_resource type="Texture2D" uid="uid://dct4bp8vadjco" path="res://Assets/Models/Reactor/Textures/ReactorHousing_mixmap.tga" id="4_0bm2v"]
+[ext_resource type="Texture2D" uid="uid://cqssoooxbiwca" path="res://Assets/Models/Reactor/Textures/ReactorTiling_albedo_albedo.tga" id="5_5c15e"]
+[ext_resource type="Texture2D" uid="uid://qwoey2enwgri" path="res://Assets/Models/Reactor/Textures/ReactorTiling_albedo_normal.tga" id="6_wnefr"]
+[ext_resource type="Texture2D" uid="uid://2sd6hyjdihn6" path="res://Assets/Models/Reactor/Textures/ReactorTiling_albedo_mixmap.tga" id="7_0ayun"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_bu514")
+shader_parameter/albedo = ExtResource("2_36lav")
+shader_parameter/orm = ExtResource("4_0bm2v")
+shader_parameter/normal_map = ExtResource("3_vahb0")
+shader_parameter/tiling_albedo = ExtResource("5_5c15e")
+shader_parameter/tiling_orm = ExtResource("7_0ayun")
+shader_parameter/tiling_normal_map = ExtResource("6_wnefr")
+shader_parameter/tiling_amount = 4.000000142499999

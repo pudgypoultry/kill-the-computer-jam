@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://ocqyy3y2ucu8"]
+
+[ext_resource type="PackedScene" uid="uid://dguog8w07hy5y" path="res://Scenes/Reactor/ReactorRods.tscn" id="1_6x60j"]
+[ext_resource type="Script" uid="uid://bw06qicu63ipi" path="res://Scenes/Reactor/reactor.gd" id="1_ixt3g"]
+[ext_resource type="ArrayMesh" uid="uid://dsagxby2d5xqy" path="res://Assets/Models/Reactor/Meshes/ReactorFloor01.res" id="2_ixt3g"]
+[ext_resource type="Material" uid="uid://ckt2cj2h8x3d1" path="res://Assets/Models/Reactor/Materials/ControlRod_mat.tres" id="2_v5i4w"]
+[ext_resource type="Material" uid="uid://drsg6q6cbc6w1" path="res://Assets/Models/Reactor/Materials/ReactorGlow_mat.tres" id="3_u4eti"]
+[ext_resource type="ArrayMesh" uid="uid://c6o1ugqjpvjvj" path="res://Assets/Models/Reactor/Meshes/ReactorFloor02.res" id="3_v5i4w"]
+[ext_resource type="ArrayMesh" uid="uid://dppm0csjfwxq6" path="res://Assets/Models/Reactor/Meshes/ReactorFloor03.res" id="4_u4eti"]
+[ext_resource type="ArrayMesh" uid="uid://7ymmvvis00uq" path="res://Assets/Models/Reactor/Meshes/ReactorFloor04.res" id="5_308q4"]
+[ext_resource type="ArrayMesh" uid="uid://b7vuqgxfgq01a" path="res://Assets/Models/Reactor/Meshes/ReactorGlow.res" id="6_3qg5l"]
+[ext_resource type="ArrayMesh" uid="uid://ckktq5j02knjq" path="res://Assets/Models/Reactor/Meshes/ReactorShadowBlocker.res" id="7_0apso"]
+[ext_resource type="Material" uid="uid://b2k5uxfxw2ojq" path="res://Assets/Models/Reactor/Materials/ReactorShadowBlocker_mat.tres" id="8_fdmgl"]
+[ext_resource type="ArrayMesh" uid="uid://cbeb87eagvgqe" path="res://Assets/Models/Reactor/Meshes/ReactorHousingSegment.res" id="9_l2tw6"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_r6c0r"]
+material = ExtResource("8_fdmgl")
+size = Vector3(39, 21, 3)
+
+[node name="Reactor" type="Node3D" unique_id=56980223]
+script = ExtResource("1_ixt3g")
+rod_material = ExtResource("2_v5i4w")
+reactor_glow_material = ExtResource("3_u4eti")
+
+[node name="ReactorRods" parent="." unique_id=436975991 instance=ExtResource("1_6x60j")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -0.117058754, -15)
+gi_mode = 2
+diameter = 25.0
+mesh_width = 0.6
+
+[node name="ReactorFloor01" type="MeshInstance3D" parent="." unique_id=2060761837]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -15)
+mesh = ExtResource("2_ixt3g")
+
+[node name="ReactorFloor02" type="MeshInstance3D" parent="." unique_id=131017695]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -15)
+mesh = ExtResource("3_v5i4w")
+
+[node name="ReactorFloor03" type="MeshInstance3D" parent="." unique_id=280887470]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -15)
+mesh = ExtResource("4_u4eti")
+
+[node name="ReactorFloor04" type="MeshInstance3D" parent="." unique_id=276724897]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -15)
+mesh = ExtResource("5_308q4")
+
+[node name="ReactorGlow" type="MeshInstance3D" parent="." unique_id=1810369311]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -15)
+gi_mode = 2
+mesh = ExtResource("6_3qg5l")
+
+[node name="ReactorUnderLight" type="SpotLight3D" parent="." unique_id=463146241]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 15, -12, -15)
+light_color = Color(1, 0, 0, 1)
+light_energy = 8.0
+shadow_enabled = true
+shadow_blur = 2.0
+spot_range = 49.03
+spot_angle = 55.41
+
+[node name="ReactorAmbientLight" type="OmniLight3D" parent="." unique_id=1720096222]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 3, -15)
+light_color = Color(1, 0, 0, 1)
+light_energy = 5.0
+light_indirect_energy = 2.0
+light_volumetric_fog_energy = 0.0
+omni_range = 20.0
+
+[node name="ShadowBlockers" type="Node3D" parent="." unique_id=171672695]
+
+[node name="ReactorShadowBlocker" type="MeshInstance3D" parent="ShadowBlockers" unique_id=1465063121]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -15)
+mesh = ExtResource("7_0apso")
+
+[node name="RoomShadowBlocker01" type="MeshInstance3D" parent="ShadowBlockers" unique_id=1229247365]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -13, 1)
+mesh = SubResource("BoxMesh_r6c0r")
+
+[node name="RoomShadowBlocker04" type="MeshInstance3D" parent="ShadowBlockers" unique_id=1848476431]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -13, -35)
+mesh = SubResource("BoxMesh_r6c0r")
+
+[node name="RoomShadowBlocker02" type="MeshInstance3D" parent="ShadowBlockers" unique_id=1716910453]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 34, -13, -17)
+mesh = SubResource("BoxMesh_r6c0r")
+
+[node name="RoomShadowBlocker03" type="MeshInstance3D" parent="ShadowBlockers" unique_id=1144897011]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8, -13, -17)
+mesh = SubResource("BoxMesh_r6c0r")
+
+[node name="ReactorHousingSegment" type="MeshInstance3D" parent="ShadowBlockers" unique_id=1770997149]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -15)
+mesh = ExtResource("9_l2tw6")
+
+[node name="ReactorHousingSegment2" type="MeshInstance3D" parent="ShadowBlockers" unique_id=60652972]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 15, 0, -15)
+mesh = ExtResource("9_l2tw6")
+
+[node name="ReactorHousingSegment3" type="MeshInstance3D" parent="ShadowBlockers" unique_id=1281356620]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 15, 0, -15)
+mesh = ExtResource("9_l2tw6")
+
+[node name="ReactorHousingSegment4" type="MeshInstance3D" parent="ShadowBlockers" unique_id=681744633]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 15, 0, -15)
+mesh = ExtResource("9_l2tw6")
