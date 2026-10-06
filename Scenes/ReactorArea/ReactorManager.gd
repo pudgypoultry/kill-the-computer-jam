@@ -26,8 +26,15 @@ func _ready() -> void:
 	for slot in card_slots:
 		slot.card_slotted_single.connect(_handle_card_slotted_single)
 		slot.card_slotted_double.connect(_handle_card_slotted_double)
-	grid_manager.current_position = starting_position
-	current_position = starting_position
+	if BoardManager.starting_position != Vector2i(-1,-1):
+		var real_starting_position = BoardManager.starting_position - starting_position
+		cam.position.x += real_starting_position.x * BoardManager.step_length
+		cam.position.z += real_starting_position.y * BoardManager.step_length
+		grid_manager.current_position = BoardManager.starting_position
+		current_position = BoardManager.starting_position
+	else:
+		grid_manager.current_position = starting_position
+		current_position = starting_position
 
 
 func _handle_card_slotted_single(action : Callable):
@@ -57,12 +64,14 @@ func is_valid_move(forward : bool) -> bool:
 	var target_position : Vector2i = current_position + current_direction
 	print(target_position, current_direction)
 	if current_cell.is_adjacent(target_position):
-		if grid_manager.position_dict[target_position].active:
+		var target = grid_manager.position_dict[target_position]
+		if target.active && !target.is_locked:
 			return true
 	return false
 
 
 func move_forward():
+	BoardManager.switch_screen_to_grid()
 	if is_valid_move(true):
 		grid_manager.move_forward()
 		cam_tween = get_tree().create_tween().bind_node(cam)
@@ -73,6 +82,7 @@ func move_forward():
 
 
 func move_backward():
+	BoardManager.switch_screen_to_grid()
 	if is_valid_move(false):
 		grid_manager.move_backward()
 		cam_tween = get_tree().create_tween().bind_node(cam)
@@ -82,6 +92,7 @@ func move_backward():
 
 
 func turn(dir : String):
+	BoardManager.switch_screen_to_grid()
 	grid_manager.turn(dir)
 	cam_tween = get_tree().create_tween().bind_node(cam)
 	match dir:
@@ -92,10 +103,12 @@ func turn(dir : String):
 
 
 func zoom_in():
+	BoardManager.switch_screen_to_grid()
 	grid_manager.zoom_in()
 
 
 func zoom_out():
+	BoardManager.switch_screen_to_grid()
 	grid_manager.zoom_out()
 
 

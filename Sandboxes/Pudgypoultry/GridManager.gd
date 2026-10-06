@@ -29,6 +29,7 @@ var current_facing : Vector2i
 var player_tween : Tween
 var camera_tween : Tween
 var position_dict : Dictionary[Vector2i, GridCell] = {}
+var original_zoom : float
 
 
 # Called when the node enters the scene tree for the first time.
@@ -37,6 +38,7 @@ func _ready() -> void:
 	var probe_scene : GridCell = cell_scene.instantiate()
 	sprite_width = probe_scene.sprite.texture.get_width()
 	sprite_height = probe_scene.sprite.texture.get_height()
+	original_zoom = camera.zoom.x
 	probe_scene.queue_free()
 	if generating:
 		generate_grid()
@@ -202,8 +204,10 @@ func get_forward_direction():
 
 
 func zoom_in():
-	camera.zoom *= 2.0
+	if camera.zoom.x < original_zoom * 2:
+		camera.zoom *= 2.0
 
 
 func zoom_out():
-	camera.zoom *= 0.5
+	if camera.zoom.x > original_zoom / 4:
+		camera.zoom *= 0.5

@@ -6,7 +6,6 @@ func execute() -> void:
 	print_debug("Moving Forward")
 	reactor.move_forward()
 
-
 func execute_a() -> void:
 	super()
 	# Check for valid move
