@@ -15,7 +15,10 @@ class_name ReactorManager
 @export var grid_subviewport: SubViewport
 @export var skeleton_check_ray : RayCast3D
 @export var footstep_player : AudioStreamPlayer3D
+
 @export var footstep_sfx : Array[AudioStreamWAV]
+@export var turn_sfx : Array[AudioStreamWAV]
+@export var bonk_sfx : AudioStreamWAV
 
 var current_cards_scratch : Array = []
 var current_position : Vector2i
@@ -81,6 +84,17 @@ func move_forward():
 		cam_tween.tween_property(cam, "global_position", cam.global_position + dir, BoardManager.player_move_time)
 		current_position = grid_manager.current_position
 		play_footsteps()
+	else:
+		cam_tween = get_tree().create_tween().bind_node(cam)
+		var dir = -cam.basis.z * BoardManager.step_length
+		var cur_cam_position := cam.global_position
+		cam_tween.set_ease(Tween.EASE_IN)
+		cam_tween.set_trans(Tween.TRANS_CUBIC)
+		cam_tween.tween_property(cam, "global_position", cam.global_position + dir * 0.25, BoardManager.player_move_time * 0.5)
+		await cam_tween.finished
+		play_error_bonk()
+		cam_tween = get_tree().create_tween().bind_node(cam)
+		cam_tween.tween_property(cam, "global_position", cur_cam_position, BoardManager.player_move_time * 0.5)
 
 
 func move_backward():
@@ -92,6 +106,17 @@ func move_backward():
 		cam_tween.tween_property(cam, "global_position", cam.global_position + dir, BoardManager.player_move_time)
 		play_footsteps()
 		current_position = grid_manager.current_position
+	else:
+		cam_tween = get_tree().create_tween().bind_node(cam)
+		var dir = cam.basis.z * BoardManager.step_length
+		var cur_cam_position := cam.global_position
+		cam_tween.set_ease(Tween.EASE_IN)
+		cam_tween.set_trans(Tween.TRANS_CUBIC)
+		cam_tween.tween_property(cam, "global_position", cam.global_position + dir * 0.25, BoardManager.player_move_time * 0.5)
+		await cam_tween.finished
+		play_error_bonk()
+		cam_tween = get_tree().create_tween().bind_node(cam)
+		cam_tween.tween_property(cam, "global_position", cur_cam_position, BoardManager.player_move_time * 0.5)
 
 
 func turn(dir : String):
@@ -103,6 +128,8 @@ func turn(dir : String):
 			cam_tween.tween_property(cam, "rotation:y", cam.rotation.y + deg_to_rad(90.0), BoardManager.player_move_time)
 		"right":
 			cam_tween.tween_property(cam, "rotation:y", cam.rotation.y + deg_to_rad(-90.0), BoardManager.player_move_time)
+			
+	play_turn_sfx()
 
 
 func zoom_in():
@@ -154,7 +181,30 @@ func read_scripture(type : String):
 	BoardManager.switch_screen_to_terminal()
 	print_to_terminal(verse)
 
-
-func play_footsteps():
-	footstep_player.stream = footstep_sfx.pick_random()
+var _last_step_sound:int = 0
+func play_footsteps() -> void:
+	if footstep_sfx.is_empty():
+		return
+		
+	var footstep_sound := footstep_sfx[_last_step_sound]
+	footstep_player.stream = footstep_sound
 	footstep_player.play()
+	
+	_last_step_sound = (_last_step_sound + 1) % footstep_sfx.size()
+
+var _last_turn_sound:int = 0
+func play_turn_sfx() -> void:
+	if turn_sfx.is_empty():
+		return
+		
+	var turn_sound := turn_sfx[_last_turn_sound]
+	footstep_player.stream = turn_sound
+	footstep_player.play()
+	
+	_last_turn_sound = (_last_turn_sound + 1) % turn_sfx.size()
+
+func play_error_bonk() -> void:
+	if is_instance_valid(bonk_sfx):
+		footstep_player.stream = bonk_sfx
+		footstep_player.play()
+		
