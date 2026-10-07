@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://c82j06v17qfbp"]
 
 [ext_resource type="Script" uid="uid://dhb3rfbxv8xra" path="res://Scenes/ReactorArea/ReactorManager.gd" id="1_acc27"]
+[ext_resource type="AudioStream" uid="uid://c747i12ium4pv" path="res://Assets/SFX/Footsteps01.wav" id="2_g0q32"]
 [ext_resource type="Material" uid="uid://305nqsaantl3" path="res://Assets/Materials/crt_material.tres" id="2_oglby"]
+[ext_resource type="AudioStream" uid="uid://deq2k7nrovb6d" path="res://Assets/SFX/Footsteps02.wav" id="3_3cvd1"]
 [ext_resource type="PackedScene" uid="uid://duq477hnsw1wp" path="res://Sandboxes/Pudgypoultry/GridManager.tscn" id="3_5q44f"]
 [ext_resource type="PackedScene" uid="uid://dtf7t8rdoi3jd" path="res://Scenes/Terminal/Terminal.tscn" id="4_4gxma"]
 [ext_resource type="Shader" uid="uid://ntxjgq0i3c13" path="res://Assets/Shaders/crt.gdshader" id="5_42u3o"]
@@ -27,6 +29,7 @@ terminal_manager = NodePath("Terminal/Terminal")
 terminal_subviewport = NodePath("Terminal")
 grid_subviewport = NodePath("GridCamera")
 skeleton_check_ray = NodePath("FPSCamera/Camera3D/RayCast3D")
+footstep_sfx = Array[AudioStreamWAV]([ExtResource("2_g0q32"), ExtResource("3_3cvd1")])
 
 [node name="FPSCamera" type="SubViewport" parent="." unique_id=726431392]
 handle_input_locally = false

@@ -14,6 +14,8 @@ class_name ReactorManager
 @export var terminal_subviewport: SubViewport
 @export var grid_subviewport: SubViewport
 @export var skeleton_check_ray : RayCast3D
+@export var footstep_player : AudioStreamPlayer3D
+@export var footstep_sfx : Array[AudioStreamWAV]
 
 var current_cards_scratch : Array = []
 var current_position : Vector2i
@@ -78,7 +80,7 @@ func move_forward():
 		var dir = -cam.basis.z * BoardManager.step_length
 		cam_tween.tween_property(cam, "global_position", cam.global_position + dir, BoardManager.player_move_time)
 		current_position = grid_manager.current_position
-		print(current_position)
+		play_footsteps()
 
 
 func move_backward():
@@ -88,6 +90,7 @@ func move_backward():
 		cam_tween = get_tree().create_tween().bind_node(cam)
 		var dir = cam.basis.z * BoardManager.step_length
 		cam_tween.tween_property(cam, "global_position", cam.global_position + dir, BoardManager.player_move_time)
+		play_footsteps()
 		current_position = grid_manager.current_position
 
 
@@ -150,3 +153,8 @@ func read_scripture(type : String):
 			verse = [Scripture.random_hopeful()]
 	BoardManager.switch_screen_to_terminal()
 	print_to_terminal(verse)
+
+
+func play_footsteps():
+	footstep_player.stream = footstep_sfx.pick_random()
+	footstep_player.play()
