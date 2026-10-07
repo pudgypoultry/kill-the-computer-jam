@@ -65,7 +65,7 @@ func is_valid_move(forward : bool) -> bool:
 	print(target_position, current_direction)
 	if current_cell.is_adjacent(target_position):
 		var target = grid_manager.position_dict[target_position]
-		if target.active && !target.is_locked:
+		if target.active && !target.is_locked && !target.has_skeleton:
 			return true
 	return false
 
@@ -139,4 +139,14 @@ func talk():
 			BoardManager.talking_zoom_in(skeleton.zoom_position)
 	else:
 		print_to_terminal(default_talk_message)
-		
+
+
+func read_scripture(type : String):
+	var verse : Array[String] = [""]
+	match type:
+		"scary":
+			verse = [Scripture.random_scary()]
+		"hopeful":
+			verse = [Scripture.random_hopeful()]
+	BoardManager.switch_screen_to_terminal()
+	print_to_terminal(verse)

@@ -8,7 +8,7 @@ func execute() -> void:
 
 func execute_a() -> void:
 	super()
-	reactor.talk()
+	reactor.read_scripture("scary")
 
 
 func execute_b() -> void:

@@ -4,13 +4,14 @@ func execute() -> void:
 	super()
 	print_debug("Examining")
 
+
 func execute_a() -> void:
 	super()
 	print("Rotating Left")
-	reactor.turn("left")
+	reactor.talk()
 
 
 func execute_b() -> void:
 	super()
 	print("Rotating Left")
-	reactor.turn("left")
+	reactor.examine()

@@ -5,10 +5,11 @@ func execute() -> void:
 	print("Rotating Right")
 	reactor.turn("right")
 
+
 func execute_a() -> void:
 	super()
-	BoardManager.reactor_manager.examine()
-	BoardManager.switch_screen_to_terminal()
+	reactor.read_scripture("hopeful")
+
 
 func execute_b() -> void:
 	super()

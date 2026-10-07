@@ -18,12 +18,16 @@ var camera_zoomed : bool = false
 var original_camera_position : Vector3 = Vector3.ZERO
 var global_cursor : MouseCursor = null
 var starting_position : Vector2i = Vector2i(-1,-1)
+var cursor_hidden : bool = false
+var last_mouse_position : Vector2 = Vector2.ZERO
 
 
-func _process(delta : float):
+func _process(_delta : float):
 	if player_actionable:
 		if Input.is_action_just_pressed("interact") && camera_zoomed:
 			talking_zoom_out()
+	if cursor_hidden:
+		Input.warp_mouse(last_mouse_position)
 
 
 func switch_screen_to_grid():
@@ -43,6 +47,8 @@ func talking_zoom_in(zoom_position : Vector3):
 	original_camera_position = fps_camera.global_position
 	tween.tween_property(fps_camera, "global_position", zoom_position, BoardManager.player_move_time)
 	camera_zoomed = true
+	cursor_hidden = true
+	last_mouse_position = get_viewport().get_mouse_position()
 
 
 func talking_zoom_out():
@@ -52,3 +58,4 @@ func talking_zoom_out():
 		var tween = get_tree().create_tween().bind_node(fps_camera)
 		tween.tween_property(fps_camera, "global_position", original_camera_position, BoardManager.player_move_time)
 		camera_zoomed = false
+		cursor_hidden = false
