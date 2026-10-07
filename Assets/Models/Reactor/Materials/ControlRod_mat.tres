@@ -17,6 +17,6 @@ shader_parameter/albedo = ExtResource("2_lsfpl")
 shader_parameter/orm = ExtResource("4_o026y")
 shader_parameter/normal_map = ExtResource("3_pmelt")
 shader_parameter/noise_tex = SubResource("NoiseTexture2D_dtpk6")
-shader_parameter/wave_speed = 0.5950000282625
+shader_parameter/wave_time = 0.0
 shader_parameter/max_move = 100.0
 shader_parameter/chaos = 0.0
