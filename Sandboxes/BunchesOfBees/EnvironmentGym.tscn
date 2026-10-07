@@ -74,7 +74,7 @@ albedo_texture = ExtResource("32_iyi63")
 orm_texture = ExtResource("35_gcw8j")
 emission_enabled = true
 emission = Color(1, 0.84705883, 0.69411767, 1)
-emission_energy_multiplier = 5.0
+emission_energy_multiplier = 4.5794
 emission_operator = 1
 emission_texture = ExtResource("33_cxqku")
 normal_enabled = true
@@ -2294,7 +2294,7 @@ surface_material_override/0 = SubResource("ORMMaterial3D_gdd4p")
 
 [node name="Light" parent="OverheadLightFlicker2" index="1" unique_id=1977279119]
 transform = Transform3D(1, -5.92338e-08, 8.275338e-08, -8.275339e-08, -0.9465884, 0.32244438, 5.9233788e-08, -0.32244438, -0.9465884, 0.08385301, -0.05252552, 0.29307598)
-light_energy = 1.0
+light_energy = 0.91588
 shadow_enabled = true
 shadow_bias = 1.252
 

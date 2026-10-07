@@ -149,14 +149,14 @@ func move_backward():
 	camera_tween = get_tree().create_tween().bind_node(camera)
 	var backward = -get_forward_direction()
 	print("Moving in Direction:	", get_forward_direction())
-	var target_position = player_marker.global_position + (get_forward_direction() * sprite_width)
+	var target_position = player_marker.global_position + (backward * sprite_width)
 	if backward.x != 0:
 		target_position.x += grid_offset * backward.x
 	if backward.y != 0:
 		target_position.y += grid_offset * backward.y
 	player_tween.tween_property(player_marker, "global_position", target_position, BoardManager.player_move_time)
 	camera_tween.tween_property(camera, "global_position", target_position, BoardManager.player_move_time)
-	current_position = current_direction - get_forward_direction()
+	current_position = current_position - (get_forward_direction() as Vector2i)
 
 
 func turn(dir : String):

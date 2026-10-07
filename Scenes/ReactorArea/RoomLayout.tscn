@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://de6jykqg74cyx" path="res://Assets/Decals/Textures/PaintDamageDecal_01_albedo.tga" id="6_4tam1"]
 [ext_resource type="Texture2D" uid="uid://c4r46lowt0wx8" path="res://Assets/Decals/Textures/PaintDamageDecal_01_normal.tga" id="7_2cdcx"]
 [ext_resource type="Texture2D" uid="uid://44hsdqq07fnx" path="res://Assets/Decals/Textures/PaintDamageDecal_01_mixmap.tga" id="8_bs17m"]
+[ext_resource type="PackedScene" uid="uid://774i3laiuwm3" path="res://Scenes/Environment/OverheadLight.tscn" id="9_2cdcx"]
 [ext_resource type="Texture2D" uid="uid://cxqtcw85v2be4" path="res://Assets/Decals/Textures/Decals_Concrete_Damaged_albedo.tga" id="9_okt7d"]
 [ext_resource type="Texture2D" uid="uid://dy7ulxfp14y6c" path="res://Assets/Decals/Textures/Decals_Concrete_Damaged_normal.tga" id="10_pqaes"]
 [ext_resource type="Texture2D" uid="uid://c0r78romphfpk" path="res://Assets/Decals/Textures/Decals_Concrete_Damaged_mixmap.tga" id="11_hva2l"]
@@ -19,8 +20,23 @@
 [ext_resource type="ArrayMesh" uid="uid://xuvtlan5ebqt" path="res://Assets/Models/RoomKit/Meshes/RoomKit_ExteriorCorner.res" id="16_7solt"]
 [ext_resource type="ArrayMesh" uid="uid://cahmfk41j6p7p" path="res://Assets/Models/RoomKit/Meshes/RoomKit_DoorHallway.res" id="18_o11oa"]
 [ext_resource type="PackedScene" uid="uid://bgeonb4vuv10a" path="res://Scenes/Skeleton/SkeletonCoffin.tscn" id="19_4tam1"]
-[ext_resource type="PackedScene" uid="uid://cuakh38bsxw5a" path="res://Scenes/Skeleton/SkeletonKneel.tscn" id="20_2cdcx"]
+[ext_resource type="PackedScene" uid="uid://dcs4xpynd2u0v" path="res://Scenes/Environment/DoorLightFlicker.tscn" id="20_bs17m"]
 [ext_resource type="PackedScene" uid="uid://dr7x71xqxmouy" path="res://Scenes/Skeleton/SkeletonPodium.tscn" id="21_bs17m"]
+[ext_resource type="ArrayMesh" uid="uid://cwni785dsmd7e" path="res://Assets/Models/SetDec/Meshes/SteelDoor.res" id="23_bs17m"]
+
+[sub_resource type="Environment" id="Environment_4tam1"]
+background_mode = 1
+ambient_light_source = 2
+tonemap_mode = 4
+ssao_enabled = true
+ssao_intensity = 3.0
+ssao_light_affect = 0.5
+ssil_enabled = true
+sdfgi_enabled = true
+sdfgi_read_sky_light = false
+glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_albedo = Color(0.68, 0.63104, 0.5984, 1)
 
 [node name="RoomMeshes" type="Node3D" unique_id=360548649]
 
@@ -1433,18 +1449,83 @@ texture_albedo = ExtResource("6_4tam1")
 texture_normal = ExtResource("7_2cdcx")
 texture_orm = ExtResource("8_bs17m")
 
+[node name="Lights" type="Node3D" parent="." unique_id=1196548232]
+
+[node name="OverheadLight" parent="Lights" unique_id=957882005 instance=ExtResource("9_2cdcx")]
+transform = Transform3D(-1, 4.371139e-08, -4.3711385e-08, -4.371139e-08, -4.371139e-08, 1, 4.3711385e-08, 1, 4.3711392e-08, 1.55, 2.631, -0.18651721)
+light_colour = Color(0.9999997, 0.84763503, 0.69530445, 1)
+light_fog_amount = 5.0
+cast_shadows = false
+
+[node name="DoorLightFlicker" parent="Lights" unique_id=1972426774 instance=ExtResource("20_bs17m")]
+transform = Transform3D(1, -4.3711392e-08, 4.371139e-08, 4.3711395e-08, 1, 0, -4.371138e-08, 3.5527137e-15, 1, 1.5101151, 2.5841906, 0.08066967)
+flicker_rate_a = 0.84
+flicker_rate_b = 8.673
+flicker_threshold = 0.453
+flicker_adjust_speed = 2.1809999999999996
+flicker_low_amount = 0.409
+emissive_brightness = 2.792
+
+[node name="DoorLightFlicker2" parent="Lights" unique_id=265989576 instance=ExtResource("20_bs17m")]
+transform = Transform3D(-1, 4.3711392e-08, 4.371139e-08, 4.3711395e-08, 1, 0, -4.3711395e-08, 2.6865768e-16, -1, 1.5101151, 2.5841906, 11.901606)
+flicker_rate_a = 0.84
+flicker_rate_b = 8.673
+flicker_threshold = 0.453
+flicker_adjust_speed = 2.1809999999999996
+flicker_low_amount = 0.409
+emissive_brightness = 2.792
+
+[node name="OverheadLight2" parent="Lights" unique_id=480242353 instance=ExtResource("9_2cdcx")]
+transform = Transform3D(8.742278e-08, 1, 4.3711392e-08, -4.371139e-08, -4.371139e-08, 1, 1, -8.742278e-08, 4.3711385e-08, 8.806478, 2.5434504, -4.506154)
+light_colour = Color(0.9999997, 0.84763503, 0.69530445, 1)
+light_fog_amount = 5.0
+cast_shadows = false
+
+[node name="OverheadLight3" parent="Lights" unique_id=400416867 instance=ExtResource("9_2cdcx")]
+transform = Transform3D(1.9106855e-15, -1, -4.371139e-08, -4.371139e-08, -4.371139e-08, 1, -1, 0, -4.371139e-08, -5.8042865, 2.620934, -4.4842014)
+light_colour = Color(0.9999997, 0.84763503, 0.69530445, 1)
+light_fog_amount = 5.0
+cast_shadows = false
+
+[node name="OverheadLight6" parent="Lights" unique_id=344840315 instance=ExtResource("9_2cdcx")]
+transform = Transform3D(1, 4.371139e-08, 4.371139e-08, -4.371139e-08, 1, 0, -4.371139e-08, 0, 1, 1.55, 3.0154088, -4.3921986)
+light_colour = Color(0.9999997, 0.84763503, 0.69530445, 1)
+light_fog_amount = 5.0
+cast_shadows = false
+
 [node name="Skeletons" type="Node3D" parent="." unique_id=1562671743]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0)
 
 [node name="SkeletonCoffin" parent="Skeletons" unique_id=1197911493 instance=ExtResource("19_4tam1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3826284, -4)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -17, 1.3826284, -4.415737)
 
-[node name="SkeletonKneel" parent="Skeletons" unique_id=1513520567 instance=ExtResource("20_2cdcx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1.7667851, -4)
+[node name="SkeletonCoffin2" parent="Skeletons" unique_id=208339710 instance=ExtResource("19_4tam1")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 43, 1.3826284, -22.415737)
+
+[node name="SkeletonCoffin3" parent="Skeletons" unique_id=1126042396 instance=ExtResource("19_4tam1")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 49, 1.3826284, -22.415737)
 
 [node name="SkeletonPodium" parent="Skeletons" unique_id=2113007376 instance=ExtResource("21_bs17m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.7761173, -4)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 25, 1.776, -1.5)
+
+[node name="SkeletonPodium3" parent="Skeletons" unique_id=702942377 instance=ExtResource("21_bs17m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 1.776, -31.5)
+
+[node name="SkeletonPodium2" parent="Skeletons" unique_id=1481574537 instance=ExtResource("21_bs17m")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 40, 1.776, -7.5)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=645849406]
+environment = SubResource("Environment_4tam1")
+
+[node name="Doors" type="Node3D" parent="." unique_id=783565845]
+
+[node name="SteelDoor" type="MeshInstance3D" parent="Doors" unique_id=2129750079]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.18789625, 11.777333)
+mesh = ExtResource("23_bs17m")
 
 [editable path="Skeletons/SkeletonCoffin"]
-[editable path="Skeletons/SkeletonKneel"]
+[editable path="Skeletons/SkeletonCoffin2"]
+[editable path="Skeletons/SkeletonCoffin3"]
 [editable path="Skeletons/SkeletonPodium"]
+[editable path="Skeletons/SkeletonPodium3"]
+[editable path="Skeletons/SkeletonPodium2"]
