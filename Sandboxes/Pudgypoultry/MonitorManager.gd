@@ -43,12 +43,12 @@ func _ready() -> void:
 
 func _process(_delta : float):
 	var mouse_cursor = MouseCursor.get_global_cursor()
-	
 	if BoardManager.current_focus == self && Input.is_action_just_pressed("interact"):
 		flip_switch()
 		mouse_cursor.add_grab_target(self)
 	elif Input.is_action_just_released("interact") and mouse_cursor.has_grab_target(self):
 		mouse_cursor.remove_grab_target(self)
+
 
 func flip_switch():
 	if BoardManager.player_actionable:
@@ -83,11 +83,14 @@ func check_slots() -> int:
 			num_cards += 1
 	return num_cards
 
+
 func _on_mouse_entered() -> void:
 	is_focused = true
 
+
 func _on_mouse_exited() -> void:
 	is_focused = false
+
 
 func _update_highlight_state() -> void:
 	var mouse_cursor = MouseCursor.get_global_cursor()

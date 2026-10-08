@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://deyytmftgimdu" path="res://Scenes/Punchcards/CardScenes/punch_card_fusion.tscn" id="3_sh0p1"]
 [ext_resource type="PackedScene" uid="uid://dd12tmva7loan" path="res://Scenes/Punchcards/CardScenes/punch_card_halo.tscn" id="4_3tf8q"]
 [ext_resource type="PackedScene" uid="uid://nbibkmp3es04" path="res://Scenes/Punchcards/CardScenes/punch_card_cruciform.tscn" id="5_qaeli"]
+[ext_resource type="Script" uid="uid://y5jgghy7qleh" path="res://Scenes/Punchcards/Move_Backward/Punch_Move_Backward.gd" id="6_w0dj5"]
 [ext_resource type="Environment" uid="uid://ccvtkoherrvxq" path="res://Assets/world_environment.tres" id="7_5msbe"]
 [ext_resource type="AudioStream" uid="uid://dwj54u80iuo5a" path="res://Assets/SFX/FootstepsTurn01.wav" id="8_cmfyp"]
 [ext_resource type="AudioStream" uid="uid://lg8cmh75j17t" path="res://Assets/SFX/FootstepsTurn02.wav" id="9_1uf6b"]
@@ -38,17 +39,10 @@ size = Vector3(0.65384674, 0.05, 1.14516)
 [sub_resource type="BoxShape3D" id="BoxShape3D_q1446"]
 size = Vector3(0.2559204, 0.05, 1.14516)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rojf5"]
-albedo_color = Color(0, 0.21040133, 0.33125, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_t2s15"]
-material = SubResource("StandardMaterial3D_rojf5")
-size = Vector3(1.5, 0.05, 0.6)
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_qaeli"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_w0dj5"]
 viewport_path = NodePath("../ReactorView/GridCamera")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_tq65w"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_41b3u"]
 viewport_path = NodePath("../ReactorView/FPSCamera")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lh8n2"]
@@ -111,24 +105,26 @@ shape = SubResource("BoxShape3D_duclc")
 transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 1.7337243e-12, 0, -1.7337243e-12, 0.9999998, 0.7903626, 0, 0.14820853)
 shape = SubResource("BoxShape3D_q1446")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayArea" unique_id=1823532582]
-visible = false
-mesh = SubResource("BoxMesh_t2s15")
-
 [node name="PunchCardFallout" parent="PlayArea" unique_id=1384343053 instance=ExtResource("1_gsliy")]
 transform = Transform3D(0.07, 0, 0, 0, 0.06999999, 3.7252903e-09, 0, -3.7252903e-09, 0.06999999, -0.57123, 0.033325404, 0.13313943)
+card_name = "Fallout"
 
 [node name="PunchCardFission" parent="PlayArea" unique_id=458594757 instance=ExtResource("2_5msbe")]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.6298151e-09, 0, -1.6298151e-09, 0.07, -0.5869348, 0.033325404, 0.44776553)
+card_name = "Fission"
 
 [node name="PunchCardFusion" parent="PlayArea" unique_id=331653166 instance=ExtResource("3_sh0p1")]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.6298151e-09, 0, -1.6298151e-09, 0.07, -0.5775201, 0.033325374, -0.14682117)
+card_name = "Fusion"
 
 [node name="PunchCardHalo" parent="PlayArea" unique_id=1383851893 instance=ExtResource("4_3tf8q")]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.6298161e-09, 0, -1.6298161e-09, 0.07, -0.6419789, 0.033325315, 0.27537838)
+card_name = "Halo"
 
 [node name="PunchCardCruciform" parent="PlayArea" unique_id=1633542311 instance=ExtResource("5_qaeli")]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.6298155e-09, 0, -1.6298155e-09, 0.07, -0.7115568, 0.033325344, 0.024033025)
+script = ExtResource("6_w0dj5")
+card_name = "Cruciform"
 
 [node name="MouseCursor" parent="PlayArea" unique_id=1458504978 instance=ExtResource("10_tq65w")]
 
@@ -145,6 +141,7 @@ bonk_sfx = ExtResource("10_1uf6b")
 
 [node name="FPSCamera" parent="ReactorView" index="0" unique_id=726431392]
 screen_space_aa = 1
+audio_listener_enable_3d = false
 size = Vector2i(240, 240)
 
 [node name="Camera3D" parent="ReactorView/FPSCamera" index="0" unique_id=417143241]
@@ -164,10 +161,10 @@ song_2 = ExtResource("10_qaeli")
 song_3 = ExtResource("11_tq65w")
 
 [node name="Monitor1" parent="Monitor" index="0" unique_id=55286909]
-texture = SubResource("ViewportTexture_qaeli")
+texture = SubResource("ViewportTexture_w0dj5")
 
 [node name="Monitor2" parent="Monitor" index="1" unique_id=831061316]
-texture = SubResource("ViewportTexture_tq65w")
+texture = SubResource("ViewportTexture_41b3u")
 
 [node name="CardSFX" parent="Monitor/CardSlot1" parent_id_path=PackedInt32Array(1842833820, 1264573134) index="4" unique_id=1088956227]
 volume_db = -8.0
@@ -177,6 +174,7 @@ volume_db = -8.0
 
 [node name="IndicatorProxy01" type="MeshInstance3D" parent="." unique_id=880533626]
 transform = Transform3D(2.9802322e-08, 0, -1, 0, 1, 0, 1, 0, 2.9802322e-08, 94.13165, 0, -33)
+visible = false
 mesh = SubResource("ArrayMesh_cmfyp")
 
 [editable path="ReactorView"]

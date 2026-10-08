@@ -13,9 +13,9 @@ class_name CardSlot
 var current_card : PunchCard = null
 var original_rotation
 
-
 signal card_slotted_single(action : Callable)
 signal card_slotted_double(card_name : String)
+
 
 func slot_card(card : PunchCard):
 	# move card to position slowly
@@ -47,8 +47,10 @@ func slot_card(card : PunchCard):
 		card_slotted_double.emit(card.card_name)
 		BoardManager.player_actionable = true
 
+
 func has_card() -> bool:
 	return is_instance_valid(current_card)
+
 
 func eject_card():
 	current_card.visible = true

@@ -5,6 +5,7 @@ class_name GridIndicator
 
 var material:ShaderMaterial;
 
+@export var initial_pattern : String = "xoxox oxoxo xoxox oxoxo xoxox"
 @export var light_colour:Color:
 	set(value):
 		light_colour = value
@@ -59,6 +60,7 @@ func _ready() -> void:
 	if is_instance_valid(grid_mesh):
 		material = grid_mesh.get_active_material(0).duplicate() as ShaderMaterial
 		grid_mesh.material_override = material
+		set_light_pattern(initial_pattern)
 		_update_light_colour()		
 
 func _process(delta:float) -> void:
