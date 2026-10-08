@@ -7,11 +7,11 @@ func execute() -> void:
 
 func execute_a() -> void:
 	super()
-	print("Rotating Left")
-	reactor.talk()
+	print("Examining")
+	reactor.examine()
 
 
 func execute_b() -> void:
 	super()
-	print("Rotating Left")
-	reactor.examine()
+	print("Talking")
+	reactor.talk()
