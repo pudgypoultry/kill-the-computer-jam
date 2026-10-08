@@ -14,7 +14,7 @@ var current_card : PunchCard = null
 var original_rotation
 
 signal card_slotted_single(action : Callable)
-signal card_slotted_double(card_name : String)
+signal card_slotted_double(card_name : String, card_pattern : String)
 
 
 func slot_card(card : PunchCard):
@@ -44,7 +44,7 @@ func slot_card(card : PunchCard):
 		await get_tree().create_timer(BoardManager.player_move_time).timeout
 		eject_card()
 	else:
-		card_slotted_double.emit(card.card_name)
+		card_slotted_double.emit(card.light_string)
 		BoardManager.player_actionable = true
 
 

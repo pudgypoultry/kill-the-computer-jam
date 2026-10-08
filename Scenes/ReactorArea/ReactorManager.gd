@@ -48,22 +48,31 @@ func _handle_card_slotted_single(action : Callable):
 	action.call()
 
 
-func _handle_card_slotted_double(_card_name : String):
+func _handle_card_slotted_double(card_pattern : String):
+	var current_cell = grid_manager.position_dict[current_position]
 	for slot in card_slots:
 		if slot.has_card():
 			current_cards_scratch.append(slot.current_card.card_name)
+	if len(current_cards_scratch) == 1:
+		if current_cell.has_password:
+			var door : Door = door_check_ray.get_collider()
+			if not is_instance_valid(door):
+				push_error("Collided with a non-door in door ray check. Check layers plz!")
+				return
+			door.set_indicator(card_pattern)
 	if len(current_cards_scratch) == 2:
-		var current_cell = grid_manager.position_dict[current_position]
 		if current_cell.has_password:
 			current_cards_scratch.sort()
+			var door : Door = door_check_ray.get_collider()
+			if not is_instance_valid(door):
+				push_error("Collided with a non-door in door ray check. Check layers plz!")
+				return
+			door.add_to_indicator(card_pattern)
 			if current_cards_scratch == current_cell.password:
 				current_cell.unlock()
-				var door : Door = door_check_ray.get_collider()
-				print(door_check_ray.get_collider())
-				if not is_instance_valid(door):
-					push_error("Collided with a non-door in door ray check. Check layers plz!")
-					return
 				door.open_door()
+			else:
+				door.wrong_password()
 		for slot in card_slots:
 			if slot.has_card():
 				slot.eject_card()

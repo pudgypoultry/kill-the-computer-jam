@@ -5,6 +5,11 @@ extends Camera3D
 
 var tween : Tween
 
+
+func _ready():
+	BoardManager.main_camera = self
+
+
 func move_to_game():
 	tween = get_tree().create_tween().bind_node(self)
 	tween.tween_property(self, "global_position", game_position.global_position, 0.5)

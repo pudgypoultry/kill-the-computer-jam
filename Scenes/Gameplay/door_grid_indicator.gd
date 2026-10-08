@@ -6,6 +6,7 @@ class_name GridIndicator
 var material:ShaderMaterial;
 
 @export var initial_pattern : String = "xoxox oxoxo xoxox oxoxo xoxox"
+@export var correct_colour:Color
 @export var light_colour:Color:
 	set(value):
 		light_colour = value
@@ -22,6 +23,7 @@ var material:ShaderMaterial;
 
 var _blink_strength:float = 1.0
 var _blink_timer:float = 0.0
+var current_pattern : String = ""
 
 # Why did I make this zero based and the shader one based? I blame cold medication
 var parameter_lookup:Dictionary[Vector2i, String] = {
@@ -86,6 +88,7 @@ func _update_light_colour() -> void:
 
 # Example usage: set_light_pattern("ooxoo oxxxo ooxoo xoxox ooxoo")
 func set_light_pattern(pattern:String) -> void:
+	current_pattern = pattern
 	var x_count:int = 0
 	var y_count:int = 0
 	for i in pattern.length():
@@ -103,3 +106,6 @@ func set_light_pattern(pattern:String) -> void:
 			
 		if y_count >= 5:
 			break
+
+func correct_password():
+	light_colour = correct_colour

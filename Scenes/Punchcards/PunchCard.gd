@@ -1,7 +1,11 @@
 extends StaticBody3D
 class_name PunchCard
 
+@export_category("Game Rules")
 @export var pickup_height : float = 0.5
+@export var light_string : String = "ooooo ooooo ooooo ooooo ooooo"
+
+@export_category("Plugging in Nodes")
 @export var sprite : Sprite3D
 @export var card_name : String = "PunchCard"
 @export var drag_component : DragAndDropComponent

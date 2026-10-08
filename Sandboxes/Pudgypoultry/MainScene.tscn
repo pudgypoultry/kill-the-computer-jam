@@ -79,11 +79,13 @@ shadow_mesh = SubResource("ArrayMesh_jvvhu")
 
 [node name="MainScene" type="Node3D" unique_id=904660948]
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=552463633]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=552463633 node_paths=PackedStringArray("game_position", "menu_position")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.37406492, 0.5209035)
 environment = SubResource("Environment_sh0p1")
 current = true
 script = ExtResource("1_w0dj5")
+game_position = NodePath("../GameCameraPosition")
+menu_position = NodePath("../TitleScreenPosition")
 
 [node name="PlayArea" type="StaticBody3D" parent="." unique_id=1047502078]
 transform = Transform3D(3.2499998, 0, 0, 0, -1.42062e-07, -3.2499998, 0, 3.2499998, -1.42062e-07, -0.15979733, 0.86376643, -1.6787062)
@@ -108,22 +110,27 @@ shape = SubResource("BoxShape3D_q1446")
 
 [node name="PunchCardFallout" parent="PlayArea" unique_id=1384343053 instance=ExtResource("1_gsliy")]
 transform = Transform3D(0.07, 0, 0, 0, 0.06999999, 3.7252903e-09, 0, -3.7252903e-09, 0.06999999, -0.57123, 0.033325404, 0.13313943)
+light_string = "ooooo ooxoo ooooo xooox ooooo"
 card_name = "Fallout"
 
 [node name="PunchCardFission" parent="PlayArea" unique_id=458594757 instance=ExtResource("2_5msbe")]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.6298151e-09, 0, -1.6298151e-09, 0.07, -0.5869348, 0.033325404, 0.44776553)
+light_string = "ooooo oooxo oxxoo oooxo ooooo"
 card_name = "Fission"
 
 [node name="PunchCardFusion" parent="PlayArea" unique_id=331653166 instance=ExtResource("3_sh0p1")]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.6298151e-09, 0, -1.6298151e-09, 0.07, -0.5775201, 0.033325374, -0.14682117)
+light_string = "ooooo oxooo ooxxo oxooo ooooo"
 card_name = "Fusion"
 
 [node name="PunchCardHalo" parent="PlayArea" unique_id=1383851893 instance=ExtResource("4_3tf8q")]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.6298161e-09, 0, -1.6298161e-09, 0.07, -0.6419789, 0.033325315, 0.27537838)
+light_string = "ooxoo oxoxo oxoxo oxoxo ooxoo"
 card_name = "Halo"
 
 [node name="PunchCardCruciform" parent="PlayArea" unique_id=1633542311 instance=ExtResource("5_qaeli")]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.6298155e-09, 0, -1.6298155e-09, 0.07, -0.7115568, 0.033325344, 0.024033025)
+light_string = "ooxoo oxxxo ooxoo ooxoo ooxoo"
 card_name = "Cruciform"
 
 [node name="MouseCursor" parent="PlayArea" unique_id=1458504978 instance=ExtResource("10_tq65w")]
@@ -178,10 +185,10 @@ transform = Transform3D(2.9802322e-08, 0, -1, 0, 1, 0, 1, 0, 2.9802322e-08, 94.1
 visible = false
 mesh = SubResource("ArrayMesh_cmfyp")
 
-[node name="MainScreenPosition" type="Marker3D" parent="." unique_id=1222164297]
+[node name="TitleScreenPosition" type="Marker3D" parent="." unique_id=1222164297]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.76899165, 0.89896667, -0.53625983)
 
-[node name="CameraPosition" type="Marker3D" parent="." unique_id=429545565]
+[node name="GameCameraPosition" type="Marker3D" parent="." unique_id=429545565]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.37406492, 0.5209035)
 
 [editable path="ReactorView"]

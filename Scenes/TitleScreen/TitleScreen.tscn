@@ -41,7 +41,7 @@ layout_mode = 2
 size_flags_vertical = 4
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Menu" unique_id=1055434299]
-custom_minimum_size = Vector2(190, 60)
+custom_minimum_size = Vector2(190, 30)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
@@ -50,6 +50,7 @@ theme_override_fonts/normal_font = ExtResource("1_f6ya5")
 text = "> Place of Honor
 
 "
+scroll_active = false
 
 [node name="Start" type="Button" parent="Menu" unique_id=681723078]
 custom_minimum_size = Vector2(190, 20)
@@ -116,9 +117,7 @@ size_flags_vertical = 6
 theme_override_colors/default_color = Color(0.054711282, 0.75625, 0, 1)
 theme_override_fonts/normal_font = ExtResource("1_f6ya5")
 text = "
-> Kill the Computer Jam
-
-"
+> Kill the Computer Jam"
 
 [node name="Settings" type="VBoxContainer" parent="." unique_id=1186368129]
 visible = false
