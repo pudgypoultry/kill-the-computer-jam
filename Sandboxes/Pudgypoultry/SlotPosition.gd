@@ -18,7 +18,9 @@ signal card_slotted_double(card_name : String, card_pattern : String)
 
 
 func slot_card(card : PunchCard):
-	# move card to position slowly
+	if has_card():
+		card.global_position = card.original_position
+		return
 	current_card = card
 	original_rotation = card.global_rotation
 	card.is_slotted = true
