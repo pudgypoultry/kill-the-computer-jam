@@ -6760,6 +6760,7 @@ position = Vector2(1155, 2520)
 examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
 grid_position = Vector2i(11, 24)
 adjacencies = [NodePath("../11_23"), NodePath("../12_24"), NodePath("../11_25"), NodePath("../10_24")]
+is_starting_position = true
 has_card_unlock = true
 card_to_unlock = ExtResource("3_ro7hq")
 
@@ -6780,7 +6781,6 @@ position = Vector2(1365, 2520)
 examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
 grid_position = Vector2i(13, 24)
 adjacencies = [NodePath("../13_23"), NodePath("../14_24"), NodePath("../13_25"), NodePath("../12_24")]
-is_starting_position = true
 has_password = true
 password = Array[String](["Cruciform", "Fallout"])
 locked_position = NodePath("../14_24")

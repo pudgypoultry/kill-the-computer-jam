@@ -7,9 +7,9 @@ func execute() -> void:
 
 func execute_a() -> void:
 	super()
-	return
+	reactor.print_new_card(self)
 
 
 func execute_b() -> void:
 	super()
-	return
+	reactor.print_new_card(self)
