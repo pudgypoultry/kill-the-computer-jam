@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://co7ucwhfmcig8"]
+
+[ext_resource type="Script" uid="uid://clao7jrbppw6x" path="res://Scenes/Door/Door.gd" id="1_7flxd"]
+[ext_resource type="ArrayMesh" uid="uid://cwni785dsmd7e" path="res://Assets/Models/SetDec/Meshes/SteelDoor.res" id="2_a7yaw"]
+[ext_resource type="PackedScene" uid="uid://bdcb2du7s8so3" path="res://Scenes/Gameplay/WallGridIndicator.tscn" id="3_1if5g"]
+[ext_resource type="AudioStream" uid="uid://bpp7htnntex58" path="res://Assets/SFX/DoorOpen.wav" id="4_a7yaw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pxqgl"]
+size = Vector3(2, 3, 2)
+
+[node name="SteelDoor" type="StaticBody3D" unique_id=520848132 node_paths=PackedStringArray("indicator")]
+collision_layer = 32
+collision_mask = 32
+script = ExtResource("1_7flxd")
+indicator = NodePath("WallGridIndicator")
+
+[node name="SteelDoor" type="MeshInstance3D" parent="." unique_id=834412746]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.0053094625, 0, 0.0968039)
+mesh = ExtResource("2_a7yaw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=58531294]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4880406, 0.8661499, 0)
+shape = SubResource("BoxShape3D_pxqgl")
+
+[node name="WallGridIndicator" parent="." unique_id=788560802 instance=ExtResource("3_1if5g")]
+transform = Transform3D(0.7346051, 0, -1.7484555e-07, 0, 0.7346051, 0, 1.2844244e-07, 0, 1, 0.38365567, 0.42562193, -0.05044961)
+initial_pattern = "ooooo ooooo ooooo ooooo ooooo"
+correct_colour = Color(0, 0.91875, 0, 1)
+is_blinking = false
+is_on = true
+
+[node name="DoorAudioPlayer" type="AudioStreamPlayer3D" parent="." unique_id=104437212]
+unique_name_in_owner = true
+stream = ExtResource("4_a7yaw")

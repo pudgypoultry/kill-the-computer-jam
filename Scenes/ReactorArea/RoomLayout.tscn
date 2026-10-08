@@ -25,8 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://de250sht73l6m" path="res://Scenes/Environment/DoorLight.tscn" id="20_okt7d"]
 [ext_resource type="PackedScene" uid="uid://dr7x71xqxmouy" path="res://Scenes/Skeleton/SkeletonPodium.tscn" id="21_bs17m"]
 [ext_resource type="ArrayMesh" uid="uid://cwni785dsmd7e" path="res://Assets/Models/SetDec/Meshes/SteelDoor.res" id="23_bs17m"]
-[ext_resource type="PackedScene" uid="uid://bdcb2du7s8so3" path="res://Scenes/Gameplay/WallGridIndicator.tscn" id="26_hva2l"]
-[ext_resource type="Script" uid="uid://clao7jrbppw6x" path="res://Scenes/Door/Door.gd" id="26_slj7n"]
+[ext_resource type="PackedScene" uid="uid://co7ucwhfmcig8" path="res://Scenes/Door/steel_door.tscn" id="25_hva2l"]
 
 [sub_resource type="Environment" id="Environment_4tam1"]
 background_mode = 1
@@ -41,9 +40,6 @@ sdfgi_read_sky_light = false
 glow_enabled = true
 volumetric_fog_enabled = true
 volumetric_fog_albedo = Color(0.68, 0.63104, 0.5984, 1)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_pxqgl"]
-size = Vector3(2, 3, 2)
 
 [node name="RoomMeshes" type="Node3D" unique_id=360548649]
 
@@ -2042,26 +2038,7 @@ environment = SubResource("Environment_4tam1")
 
 [node name="Doors" type="Node3D" parent="." unique_id=783565845]
 
-[node name="SteelDoor2" type="StaticBody3D" parent="Doors" unique_id=105039064 node_paths=PackedStringArray("indicator")]
-collision_layer = 32
-collision_mask = 32
-script = ExtResource("26_slj7n")
-indicator = NodePath("WallGridIndicator2")
-
-[node name="SteelDoor2" type="MeshInstance3D" parent="Doors/SteelDoor2" unique_id=1881371932]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.0053094625, 0, 0.0968039)
-mesh = ExtResource("23_bs17m")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Doors/SteelDoor2" unique_id=627419123]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4880406, 0.8661499, 0)
-shape = SubResource("BoxShape3D_pxqgl")
-
-[node name="WallGridIndicator2" parent="Doors/SteelDoor2" unique_id=788560802 instance=ExtResource("26_hva2l")]
-transform = Transform3D(0.7346051, 0, -1.7484555e-07, 0, 0.7346051, 0, 1.2844244e-07, 0, 1, 0.38365567, 0.42562193, -0.05044961)
-initial_pattern = "ooooo ooooo ooooo ooooo ooooo"
-correct_colour = Color(0, 0.91875, 0, 1)
-is_blinking = false
-is_on = true
+[node name="SteelDoor2" parent="Doors" unique_id=520848132 instance=ExtResource("25_hva2l")]
 
 [node name="SteelDoor" type="MeshInstance3D" parent="Doors" unique_id=2129750079]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.18789625, 11.777333)
