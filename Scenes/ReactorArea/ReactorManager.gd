@@ -22,7 +22,7 @@ class_name ReactorManager
 @export var turn_sfx : Array[AudioStreamWAV]
 @export var bonk_sfx : AudioStreamWAV
 
-var current_cards_scratch : Array = []
+var _current_cards_scratch : Array = []
 var current_position : Vector2i
 var cam_tween : Tween
 
@@ -62,21 +62,21 @@ func _handle_card_slotted_double(card_pattern : String):
 	var current_cell = grid_manager.position_dict[current_position]
 	for slot in card_slots:
 		if slot.has_card():
-			current_cards_scratch.append(slot.current_card.card_name)
+			_current_cards_scratch.append(slot.current_card.card_name)
 			
 	if current_cell.has_password:
 		var door : Door = door_check_ray.get_collider()
 		if not is_instance_valid(door):
 			push_error("Collided with a non-door or nothing in door ray check!")
-			current_cards_scratch.clear()
+			_current_cards_scratch.clear()
 			return
 			
 		door.input_string(card_pattern)
 		
 		# two cards! Try the door
-		if len(current_cards_scratch) == 2:
-			current_cards_scratch.sort()
-			if current_cards_scratch == current_cell.password:
+		if len(_current_cards_scratch) == 2:
+			_current_cards_scratch.sort()
+			if _current_cards_scratch == current_cell.password:
 				current_cell.unlock()
 				door.open_door()
 			else:
@@ -85,7 +85,7 @@ func _handle_card_slotted_double(card_pattern : String):
 				if slot.has_card():
 					slot.eject_card()
 		
-	current_cards_scratch.clear()
+	_current_cards_scratch.clear()
 
 
 func is_valid_move(forward : bool) -> bool:
