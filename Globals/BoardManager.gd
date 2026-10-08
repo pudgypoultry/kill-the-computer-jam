@@ -45,6 +45,10 @@ func switch_screen_to_terminal():
 	terminal_screen.texture.viewport_path = reactor_manager.terminal_subviewport.get_path()
 
 
+func switch_screen_to_menu():
+	terminal_screen.texture.viewport_path = reactor_manager.menu_subviewport.get_path()
+
+
 func talking_zoom_in(zoom_position : Vector3):
 	if global_cursor == null:
 		global_cursor = MouseCursor._global_cursor

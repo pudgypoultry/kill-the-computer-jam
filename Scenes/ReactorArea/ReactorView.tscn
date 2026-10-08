@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dtf7t8rdoi3jd" path="res://Scenes/Terminal/Terminal.tscn" id="4_4gxma"]
 [ext_resource type="Shader" uid="uid://ntxjgq0i3c13" path="res://Assets/Shaders/crt.gdshader" id="5_42u3o"]
 [ext_resource type="PackedScene" uid="uid://bws36qtjwcoju" path="res://Scenes/ReactorArea/RoomLayout.tscn" id="5_oglby"]
+[ext_resource type="PackedScene" uid="uid://dbxpkhsyt01o8" path="res://Scenes/TitleScreen/TitleScreen.tscn" id="9_3cvd1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fv5fo"]
 shader = ExtResource("5_42u3o")
@@ -94,3 +95,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="RoomMeshes" parent="." unique_id=360548649 instance=ExtResource("5_oglby")]
+
+[node name="TitleScreen" type="SubViewport" parent="." unique_id=1003342931]
+
+[node name="TitleScreen" parent="TitleScreen" unique_id=985255105 instance=ExtResource("9_3cvd1")]

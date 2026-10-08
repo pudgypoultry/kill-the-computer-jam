@@ -13,6 +13,7 @@ class_name ReactorManager
 @export var terminal_manager : TerminalManager
 @export var terminal_subviewport: SubViewport
 @export var grid_subviewport: SubViewport
+@export var menu_subviewport: SubViewport
 @export var skeleton_check_ray : RayCast3D
 @export var door_check_ray : RayCast3D
 @export var footstep_player : AudioStreamPlayer3D
@@ -152,6 +153,7 @@ func zoom_out():
 
 
 func print_to_terminal(new_message : Array[String]) -> void:
+	BoardManager.switch_screen_to_terminal()
 	terminal_manager.new_message(new_message)
 
 
