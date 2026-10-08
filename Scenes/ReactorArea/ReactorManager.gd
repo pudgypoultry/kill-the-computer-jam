@@ -195,6 +195,13 @@ func talk():
 		print_to_terminal(default_talk_message)
 
 
+func print_new_card(blank_card : Node3D):
+	var current_cell = grid_manager.position_dict[current_position]
+	if current_cell.has_card_unlock:
+		var new_card = current_cell.card_to_unlock.instantiate()
+		blank_card.get_parent().add_child(new_card)
+		new_card.transform = blank_card.transform
+
 func read_scripture(type : String):
 	var verse : Array[String] = [""]
 	match type:

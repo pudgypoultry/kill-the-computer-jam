@@ -4,6 +4,7 @@ class_name Door
 @onready var door_audio_player: AudioStreamPlayer3D = %DoorAudioPlayer
 
 @export var indicator : GridIndicator
+@export var north_south : bool = false
 
 var tween : Tween
 
@@ -12,11 +13,18 @@ func open_door():
 	await get_tree().create_timer(1.0).timeout
 	door_audio_player.play()
 	tween = get_tree().create_tween().bind_node(self)
-	tween.tween_property(self, "position:z", position.z - 0.125, 0.5)
-	tween.tween_interval(0.25)
-	tween.set_trans(Tween.TRANS_CUBIC)
-	tween.set_ease(Tween.EASE_IN)
-	tween.tween_property(self, "position:x", position.x - 3.0, 1.0)
+	if north_south:
+		tween.tween_property(self, "position:z", position.x - 0.125, 0.5)
+		tween.tween_interval(0.25)
+		tween.set_trans(Tween.TRANS_CUBIC)
+		tween.set_ease(Tween.EASE_IN)
+		tween.tween_property(self, "position:x", position.z - 3.0, 1.0)
+	else:
+		tween.tween_property(self, "position:z", position.z - 0.125, 0.5)
+		tween.tween_interval(0.25)
+		tween.set_trans(Tween.TRANS_CUBIC)
+		tween.set_ease(Tween.EASE_IN)
+		tween.tween_property(self, "position:x", position.x - 3.0, 1.0)
 
 
 func wrong_password():
