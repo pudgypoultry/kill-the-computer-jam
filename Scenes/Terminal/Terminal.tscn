@@ -2,6 +2,16 @@
 
 [ext_resource type="Script" uid="uid://dmi7t2ij6ora1" path="res://Scenes/Terminal/TerminalManager.gd" id="1_mvo5j"]
 [ext_resource type="FontFile" uid="uid://bph2bivxha0mu" path="res://Assets/Fonts/VT323-Regular.ttf" id="2_y8grn"]
+[ext_resource type="AudioStream" uid="uid://bah15upf0ovc0" path="res://Assets/SFX/TextBeep01.wav" id="3_1aqqd"]
+[ext_resource type="AudioStream" uid="uid://cv31mqw7em87y" path="res://Assets/SFX/TextBeep02.wav" id="4_ryeh6"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_lfxu0"]
+playback_mode = 1
+random_pitch = 1.0594631
+random_volume_offset_db = 1.0
+streams_count = 2
+stream_0/stream = ExtResource("3_1aqqd")
+stream_1/stream = ExtResource("4_ryeh6")
 
 [node name="Terminal" type="MarginContainer" unique_id=667416545 node_paths=PackedStringArray("label")]
 custom_minimum_size = Vector2(240, 240)
@@ -15,6 +25,7 @@ offset_right = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_mvo5j")
+text_interval = 0.05
 label = NodePath("RichTextLabel")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1465120245]
@@ -31,3 +42,8 @@ theme_override_fonts/normal_font = ExtResource("2_y8grn")
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 scroll_active = false
 visible_characters_behavior = 1
+
+[node name="TextBeeps" type="AudioStreamPlayer" parent="." unique_id=1104451356]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamRandomizer_lfxu0")
+max_polyphony = 8

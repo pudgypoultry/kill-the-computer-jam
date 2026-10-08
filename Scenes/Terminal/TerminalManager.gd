@@ -1,18 +1,18 @@
 extends MarginContainer
 class_name TerminalManager
 
-@export var text_interval = 0.01
+@onready var text_beeps: AudioStreamPlayer = %TextBeeps
+
+@export var text_interval = 0.0
 @export var text_timer = 0.0
 
 @export var label : RichTextLabel
 
-var writing : bool = true
+var writing : bool = false
 var current_message : String = ">"
 
 func _ready() -> void:
 	label.visible_characters = 0
-	new_message([label.text, label.text])
-
 
 func _process(delta: float) -> void:
 	if writing:
@@ -20,6 +20,7 @@ func _process(delta: float) -> void:
 		if text_timer > text_interval:
 			text_timer = 0.0
 			label.visible_characters += 1
+			text_beeps.play()
 			if label.visible_characters > len(current_message):
 				writing = false
 

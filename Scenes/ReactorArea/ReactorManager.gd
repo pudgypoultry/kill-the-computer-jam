@@ -189,7 +189,6 @@ func talk():
 				push_error("Collided with a non-skeleton in skeleton ray check. Check layers plz!")
 				return
 				
-			skeleton.play_speech_audio()
 			await BoardManager.talking_zoom_in(skeleton.zoom_position)
 			print_to_terminal(skeleton.talk_message)
 	else:
