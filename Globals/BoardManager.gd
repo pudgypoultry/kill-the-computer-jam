@@ -25,7 +25,7 @@ var cursor_hidden : bool = false:
 		if value:
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 		else:
-			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+			Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 
 
 var last_mouse_position : Vector2 = Vector2.ZERO
