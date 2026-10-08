@@ -52,15 +52,9 @@ func _handle_card_slotted_double(_card_name : String):
 		if slot.has_card():
 			current_cards_scratch.append(slot.current_card.card_name)
 	if len(current_cards_scratch) == 2:
-		print(current_cards_scratch)
-		print("U N L O C K I N G")
-		# check dictionary if valid combo, if not, reject both cards
-		# if so, perform action
 		var current_cell = grid_manager.position_dict[current_position]
 		if current_cell.has_password:
 			current_cards_scratch.sort()
-			print("Current Cards:	", current_cards_scratch)
-			print("Needed Password:	", current_cell.password)
 			if current_cards_scratch == current_cell.password:
 				current_cell.unlock()
 				var door : Door = door_check_ray.get_collider()

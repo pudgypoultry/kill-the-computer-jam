@@ -2,7 +2,9 @@
 
 [ext_resource type="FontFile" uid="uid://bph2bivxha0mu" path="res://Assets/Fonts/VT323-Regular.ttf" id="1_f6ya5"]
 [ext_resource type="Script" uid="uid://dc27lavyfieaj" path="res://Scenes/TitleScreen/VolumeBar.gd" id="2_4lqrc"]
+[ext_resource type="Script" uid="uid://b4a3bhxm50njh" path="res://Scenes/TitleScreen/LoadButton.gd" id="2_bf2sq"]
 [ext_resource type="Script" uid="uid://bkvqvjd1r4au8" path="res://Scenes/TitleScreen/MenuButton.gd" id="3_at0r8"]
+[ext_resource type="Script" uid="uid://p6iehicpoiy0" path="res://Scenes/TitleScreen/QuitButton.gd" id="4_fkfbp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rojf5"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -47,7 +49,6 @@ theme_override_colors/default_color = Color(0.054711282, 0.75625, 0, 1)
 theme_override_fonts/normal_font = ExtResource("1_f6ya5")
 text = "> Place of Honor
 
-
 "
 
 [node name="Start" type="Button" parent="Menu" unique_id=681723078]
@@ -61,6 +62,8 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_rojf5")
 theme_override_styles/hover = SubResource("StyleBoxFlat_pxqgl")
 text = "> Start"
 alignment = 0
+script = ExtResource("2_bf2sq")
+nextScene = "res://Sandboxes/Pudgypoultry/MainScene.tscn"
 
 [node name="Settings" type="Button" parent="Menu" unique_id=1887479095 node_paths=PackedStringArray("scene_to_show", "scene_to_hide")]
 custom_minimum_size = Vector2(190, 20)
@@ -103,6 +106,19 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_rojf5")
 theme_override_styles/hover = SubResource("StyleBoxFlat_pxqgl")
 text = "> Escape"
 alignment = 0
+script = ExtResource("4_fkfbp")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Menu" unique_id=16344265]
+custom_minimum_size = Vector2(190, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_colors/default_color = Color(0.054711282, 0.75625, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_f6ya5")
+text = "
+> Kill the Computer Jam
+
+"
 
 [node name="Settings" type="VBoxContainer" parent="." unique_id=1186368129]
 visible = false
@@ -292,10 +308,18 @@ size_flags_horizontal = 4
 size_flags_vertical = 6
 theme_override_colors/default_color = Color(0.054711282, 0.75625, 0, 1)
 theme_override_fonts/normal_font = ExtResource("1_f6ya5")
-text = "> Place of Honor
+text = "> Game made by:
+>    1HandWill
+>    BunchesOfBees
+>    Pudgypoultry
 
+> Sprite outline - TerryTwo
+> CRT shader - Harrison Allen
+> Skeleton - Cory Johns
 
 "
+fit_content = true
+scroll_active = false
 
 [node name="Back" type="Button" parent="Credits" unique_id=1900289650 node_paths=PackedStringArray("scene_to_show", "scene_to_hide")]
 custom_minimum_size = Vector2(190, 20)
@@ -311,3 +335,6 @@ alignment = 0
 script = ExtResource("3_at0r8")
 scene_to_show = NodePath("../../Menu")
 scene_to_hide = NodePath("..")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=677465315]
+layout_mode = 2
