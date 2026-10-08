@@ -3,24 +3,39 @@ class_name GridIndicator
 
 @onready var grid_mesh: MeshInstance3D = %GridMesh
 
-var material:ShaderMaterial;
+enum IndicatorState {
+	IDLE,
+	INPUT,
+	CORRECT,
+	INCORRECT
+}
 
 @export var initial_pattern : String = "xoxox oxoxo xoxox oxoxo xoxox"
-@export var correct_colour:Color
-@export var light_colour:Color:
-	set(value):
-		light_colour = value
-		_update_light_colour()
+
+@export var input_colour:Color = Color.ROYAL_BLUE
+@export var correct_colour:Color = Color.GREEN
+@export var incorrect_colour:Color = Color.RED
 
 @export var blink_rate:float = 2.0
 @export var blink_bias:float = 0.5
-@export var is_blinking:bool = true:
+
+@export var indicator_state:IndicatorState = IndicatorState.IDLE:
+	set(value):
+		indicator_state = value
+		_update_indicator_state()
+
+var is_blinking:bool = true:
 	set(value):
 		is_blinking = value
 		_blink_timer = 0.0
 		
-@export var is_on:bool = false
+var is_on:bool = false
+var light_colour:Color:
+	set(value):
+		light_colour = value
+		_update_light_colour()
 
+var material:ShaderMaterial;
 var _blink_strength:float = 1.0
 var _blink_timer:float = 0.0
 var current_pattern : String = ""
@@ -107,5 +122,19 @@ func set_light_pattern(pattern:String) -> void:
 		if y_count >= 5:
 			break
 
-func correct_password():
-	light_colour = correct_colour
+func _update_indicator_state() -> void:
+	match indicator_state:
+		IndicatorState.IDLE:
+			is_on = false
+		IndicatorState.INPUT:
+			is_on = true
+			light_colour = input_colour
+			is_blinking = false
+		IndicatorState.CORRECT:
+			is_on = true
+			light_colour = correct_colour
+			is_blinking = false
+		IndicatorState.INCORRECT:
+			is_on = true
+			light_colour = incorrect_colour
+			is_blinking = true

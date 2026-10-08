@@ -15,7 +15,7 @@ var original_rotation
 
 signal card_slotted_single(action : Callable)
 signal card_slotted_double(card_name : String, card_pattern : String)
-
+signal card_ejected
 
 func slot_card(card : PunchCard):
 	if has_card():
@@ -55,6 +55,7 @@ func has_card() -> bool:
 
 
 func eject_card():
+	card_ejected.emit()
 	current_card.visible = true
 	current_card.is_slotted = false
 	var tween = get_tree().create_tween().bind_node(current_card)
@@ -72,7 +73,6 @@ func eject_card():
 	current_card = null
 	await tween.finished
 	BoardManager.player_actionable = true
-
 
 func play_sfx(sfx : AudioStreamWAV, await_time : float):
 	audio_player.stream = sfx

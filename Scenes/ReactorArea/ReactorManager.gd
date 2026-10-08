@@ -33,6 +33,7 @@ func _ready() -> void:
 	for slot in card_slots:
 		slot.card_slotted_single.connect(_handle_card_slotted_single)
 		slot.card_slotted_double.connect(_handle_card_slotted_double)
+		slot.card_ejected.connect(_handle_card_ejected)
 	if BoardManager.starting_position != Vector2i(-1,-1):
 		var real_starting_position = BoardManager.starting_position - starting_position
 		cam.position.x += real_starting_position.x * BoardManager.step_length
@@ -47,35 +48,41 @@ func _ready() -> void:
 func _handle_card_slotted_single(action : Callable):
 	action.call()
 
+func _handle_card_ejected() -> void:
+	var current_cell = grid_manager.position_dict[current_position]
+	if current_cell.has_password:
+		var door : Door = door_check_ray.get_collider()
+		if not is_instance_valid(door):
+			push_error("Collided with a non-door or nothing in door ray check!")
+			return
+		door.cancel_in_progress()
+	
 
 func _handle_card_slotted_double(card_pattern : String):
 	var current_cell = grid_manager.position_dict[current_position]
 	for slot in card_slots:
 		if slot.has_card():
 			current_cards_scratch.append(slot.current_card.card_name)
-	if len(current_cards_scratch) == 1:
-		if current_cell.has_password:
-			var door : Door = door_check_ray.get_collider()
-			if not is_instance_valid(door):
-				push_error("Collided with a non-door in door ray check. Check layers plz!")
-				return
-			door.set_indicator(card_pattern)
-	if len(current_cards_scratch) == 2:
-		if current_cell.has_password:
-			current_cards_scratch.sort()
-			var door : Door = door_check_ray.get_collider()
-			if not is_instance_valid(door):
-				push_error("Collided with a non-door in door ray check. Check layers plz!")
-				return
-			door.add_to_indicator(card_pattern)
+			
+	if current_cell.has_password:
+		var door : Door = door_check_ray.get_collider()
+		if not is_instance_valid(door):
+			push_error("Collided with a non-door or nothing in door ray check!")
+			current_cards_scratch.clear()
+			return
+			
+		door.input_string(card_pattern)
+		
+		# two cards! Try the door
+		if len(current_cards_scratch) == 2:
 			if current_cards_scratch == current_cell.password:
 				current_cell.unlock()
 				door.open_door()
 			else:
 				door.wrong_password()
-		for slot in card_slots:
-			if slot.has_card():
-				slot.eject_card()
+			for slot in card_slots:
+				if slot.has_card():
+					slot.eject_card()
 		
 	current_cards_scratch.clear()
 
