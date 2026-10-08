@@ -75,6 +75,7 @@ func _handle_card_slotted_double(card_pattern : String):
 		
 		# two cards! Try the door
 		if len(current_cards_scratch) == 2:
+			current_cards_scratch.sort()
 			if current_cards_scratch == current_cell.password:
 				current_cell.unlock()
 				door.open_door()

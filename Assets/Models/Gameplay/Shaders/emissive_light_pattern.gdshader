@@ -3,7 +3,7 @@ shader_type spatial;
 uniform sampler2D albedo : filter_nearest_mipmap, source_color;
 uniform sampler2D orm : filter_nearest_mipmap;
 uniform sampler2D normal_map : filter_nearest_mipmap;
-uniform sampler2D emissive_mask : filter_nearest_mipmap;
+uniform sampler2D emissive_mask : filter_nearest;
 
 uniform vec3 emissive_color : source_color;
 uniform float emissive_strength : hint_range(0.0, 20.0) = 5.0;

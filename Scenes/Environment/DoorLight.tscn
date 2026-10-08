@@ -32,7 +32,7 @@ surface_material_override/0 = SubResource("ORMMaterial3D_78paj")
 
 [node name="Light" type="SpotLight3D" parent="." unique_id=1977279119]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, -0.9638081, 0.2665969, 0, -0.2665969, -0.9638081, 0, -0.033821702, 0.36802188)
+transform = Transform3D(0.9916867, -0.114694655, -0.05833172, -0.016675578, -0.5640531, 0.8255701, -0.12759066, -0.8177342, -0.5612766, 0, -0.033821702, 0.36802188)
 light_color = Color(1, 0.84705883, 0.69411767, 1)
 light_indirect_energy = 5.0
 light_volumetric_fog_energy = 5.0
