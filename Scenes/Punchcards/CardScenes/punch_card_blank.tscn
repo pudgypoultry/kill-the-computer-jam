@@ -12,6 +12,7 @@ size = Vector3(2.590805, 0.05, 3.4110146)
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.629815e-09, 0, -1.629815e-09, 0.07, 0, 0, 0)
 script = ExtResource("1_7me5c")
 sprite = NodePath("Sprite3D")
+card_name = "Blank"
 drag_component = NodePath("DragAndDropComponent")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=324627515]

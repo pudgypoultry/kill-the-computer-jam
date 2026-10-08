@@ -7,3 +7,4 @@ func _ready() -> void:
 
 func _on_pressed() -> void:
 	BoardManager.main_camera.move_to_game()
+	text = "> Resume"

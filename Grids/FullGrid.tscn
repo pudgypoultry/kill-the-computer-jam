@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dtgb4jk7ogybv" path="res://Sandboxes/Pudgypoultry/GridCell.tscn" id="1_fh3vx"]
 [ext_resource type="Texture2D" uid="uid://dky4no5n28umf" path="res://Sandboxes/Pudgypoultry/DoorBar.png" id="3_8810x"]
 [ext_resource type="Texture2D" uid="uid://cm05kjnbsoah3" path="res://Sandboxes/Pudgypoultry/CellOutline.png" id="3_m5ja8"]
+[ext_resource type="PackedScene" uid="uid://deyytmftgimdu" path="res://Scenes/Punchcards/CardScenes/punch_card_fusion.tscn" id="3_ro7hq"]
 
 [node name="CellFolder" type="Node2D" unique_id=48513814]
 
@@ -6759,6 +6760,9 @@ position = Vector2(1155, 2520)
 examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
 grid_position = Vector2i(11, 24)
 adjacencies = [NodePath("../11_23"), NodePath("../12_24"), NodePath("../11_25"), NodePath("../10_24")]
+is_starting_position = true
+has_card_unlock = true
+card_to_unlock = ExtResource("3_ro7hq")
 
 [node name="Sprite2D2" type="Sprite2D" parent="11_24" unique_id=1594617226]
 texture = ExtResource("3_m5ja8")
@@ -6772,19 +6776,30 @@ adjacencies = [NodePath("../12_23"), NodePath("../13_24"), NodePath("../12_25"),
 [node name="Sprite2D2" type="Sprite2D" parent="12_24" unique_id=53633677]
 texture = ExtResource("3_m5ja8")
 
-[node name="13_24" parent="." unique_id=1296150892 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
+[node name="13_24" parent="." unique_id=1296150892 node_paths=PackedStringArray("adjacencies", "locked_position", "door_sprite") instance=ExtResource("1_fh3vx")]
 position = Vector2(1365, 2520)
 examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
 grid_position = Vector2i(13, 24)
 adjacencies = [NodePath("../13_23"), NodePath("../14_24"), NodePath("../13_25"), NodePath("../12_24")]
+has_password = true
+password = Array[String](["Cruciform", "Fallout"])
+locked_position = NodePath("../14_24")
+door_sprite = NodePath("Door")
 
 [node name="Sprite2D2" type="Sprite2D" parent="13_24" unique_id=1288450896]
 texture = ExtResource("3_m5ja8")
+
+[node name="Door" type="Sprite2D" parent="13_24" unique_id=1183693094]
+position = Vector2(53, 0)
+rotation = 1.5707964
+texture = ExtResource("3_8810x")
 
 [node name="14_24" parent="." unique_id=931596536 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1470, 2520)
 grid_position = Vector2i(14, 24)
 adjacencies = [NodePath("../14_23"), NodePath("../15_24"), NodePath("../14_25"), NodePath("../13_24")]
+is_locked = true
+password = Array[String](["Cruciform", "Fallout"])
 
 [node name="Sprite2D2" type="Sprite2D" parent="14_24" unique_id=796379241]
 texture = ExtResource("3_m5ja8")
@@ -7038,14 +7053,9 @@ position = Vector2(1155, 2625)
 examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
 grid_position = Vector2i(11, 25)
 adjacencies = [NodePath("../11_24"), NodePath("../12_25"), NodePath("../11_26"), NodePath("../10_25")]
-is_locked = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="11_25" unique_id=215466435]
 texture = ExtResource("3_m5ja8")
-
-[node name="Door" type="Sprite2D" parent="11_25" unique_id=1193462147]
-position = Vector2(0, 51)
-texture = ExtResource("3_8810x")
 
 [node name="12_25" parent="." unique_id=1548584541 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1260, 2625)
@@ -7337,15 +7347,12 @@ adjacencies = [NodePath("../10_25"), NodePath("../11_26"), NodePath("../10_27"),
 visible = false
 texture = ExtResource("3_m5ja8")
 
-[node name="11_26" parent="." unique_id=1830079791 node_paths=PackedStringArray("adjacencies", "locked_position", "door_sprite") instance=ExtResource("1_fh3vx")]
+[node name="11_26" parent="." unique_id=1830079791 node_paths=PackedStringArray("adjacencies", "locked_position") instance=ExtResource("1_fh3vx")]
 position = Vector2(1155, 2730)
 examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
 grid_position = Vector2i(11, 26)
 adjacencies = [NodePath("../11_25"), NodePath("../12_26"), NodePath("../11_27"), NodePath("../10_26")]
-has_password = true
-password = Array[String](["Cruciform", "Fallout"])
 locked_position = NodePath("../11_25")
-door_sprite = NodePath("../11_25/Door")
 
 [node name="Sprite2D2" type="Sprite2D" parent="11_26" unique_id=155723580]
 texture = ExtResource("3_m5ja8")
@@ -7943,7 +7950,6 @@ texture = ExtResource("3_m5ja8")
 position = Vector2(1155, 2940)
 grid_position = Vector2i(11, 28)
 adjacencies = [NodePath("../11_27"), NodePath("../12_28"), NodePath("../11_29"), NodePath("../10_28")]
-is_starting_position = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="11_28" unique_id=1462642904]
 texture = ExtResource("3_m5ja8")

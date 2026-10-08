@@ -202,6 +202,26 @@ func talk():
 		print_to_terminal(default_talk_message)
 
 
+func print_new_card(blank_card : PunchCard):
+	var current_cell = grid_manager.position_dict[current_position]
+	if current_cell.has_card_unlock:
+		var new_card : PunchCard = current_cell.card_to_unlock.instantiate()
+		var current_slot : CardSlot
+		for slot in card_slots:
+			if slot.has_card():
+				current_slot = slot
+		current_slot.current_card = new_card
+		blank_card.get_parent().add_child(new_card)
+		new_card.reactor = blank_card.reactor
+		new_card.parent_surface = blank_card.parent_surface
+		new_card.is_slotted = blank_card.is_slotted
+		new_card.original_position = blank_card.original_position
+		new_card.global_position = blank_card.global_position
+		new_card.global_rotation = blank_card.global_rotation
+		blank_card.queue_free()
+		current_cell.has_card_unlock = false
+
+
 func read_scripture(type : String):
 	var verse : Array[String] = [""]
 	match type:

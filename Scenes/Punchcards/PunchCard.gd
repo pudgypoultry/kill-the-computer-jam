@@ -28,7 +28,8 @@ var sort_front:bool = true:
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	parent_surface = get_parent()
+	if parent_surface == null:
+		parent_surface = get_parent()
 	sort_front = true
 
 

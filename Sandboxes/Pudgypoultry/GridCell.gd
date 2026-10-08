@@ -16,6 +16,8 @@ class_name GridCell
 @export var password : Array[String] = ["", ""]
 @export var locked_position : GridCell
 @export var door_sprite : Sprite2D
+@export var has_card_unlock : bool = false
+@export var card_to_unlock : PackedScene
 
 @export_category("Plugging in Nodes")
 @export var sprite : Sprite2D

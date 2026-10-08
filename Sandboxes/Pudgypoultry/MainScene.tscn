@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dd12tmva7loan" path="res://Scenes/Punchcards/CardScenes/punch_card_halo.tscn" id="4_3tf8q"]
 [ext_resource type="PackedScene" uid="uid://nbibkmp3es04" path="res://Scenes/Punchcards/CardScenes/punch_card_cruciform.tscn" id="5_qaeli"]
 [ext_resource type="Environment" uid="uid://ccvtkoherrvxq" path="res://Assets/world_environment.tres" id="7_5msbe"]
+[ext_resource type="PackedScene" uid="uid://dh0rk5hghkdu2" path="res://Scenes/Punchcards/CardScenes/punch_card_blank.tscn" id="7_41b3u"]
 [ext_resource type="AudioStream" uid="uid://dwj54u80iuo5a" path="res://Assets/SFX/FootstepsTurn01.wav" id="8_cmfyp"]
 [ext_resource type="AudioStream" uid="uid://lg8cmh75j17t" path="res://Assets/SFX/FootstepsTurn02.wav" id="9_1uf6b"]
 [ext_resource type="AudioStream" uid="uid://cgqm3lsrye1cf" path="res://Assets/Music/The Threshold (Ambience).ogg" id="9_3tf8q"]
@@ -39,10 +40,10 @@ size = Vector3(0.65384674, 0.05, 1.14516)
 [sub_resource type="BoxShape3D" id="BoxShape3D_q1446"]
 size = Vector3(0.2559204, 0.05, 1.14516)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_w0dj5"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_41b3u"]
 viewport_path = NodePath("../ReactorView/GridCamera")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_41b3u"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_hwvc8"]
 viewport_path = NodePath("../ReactorView/FPSCamera")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lh8n2"]
@@ -110,28 +111,21 @@ shape = SubResource("BoxShape3D_q1446")
 
 [node name="PunchCardFallout" parent="PlayArea" unique_id=1384343053 instance=ExtResource("1_gsliy")]
 transform = Transform3D(0.07, 0, 0, 0, 0.06999999, 3.7252903e-09, 0, -3.7252903e-09, 0.06999999, -0.57123, 0.033325404, 0.13313943)
-light_string = "ooooo ooxoo ooooo xooox ooooo"
-card_name = "Fallout"
 
 [node name="PunchCardFission" parent="PlayArea" unique_id=458594757 instance=ExtResource("2_5msbe")]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.6298151e-09, 0, -1.6298151e-09, 0.07, -0.5869348, 0.033325404, 0.44776553)
-light_string = "ooooo oooxo oxxoo oooxo ooooo"
-card_name = "Fission"
 
 [node name="PunchCardFusion" parent="PlayArea" unique_id=331653166 instance=ExtResource("3_sh0p1")]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.6298151e-09, 0, -1.6298151e-09, 0.07, -0.5775201, 0.033325374, -0.14682117)
-light_string = "ooooo oxooo ooxxo oxooo ooooo"
-card_name = "Fusion"
 
 [node name="PunchCardHalo" parent="PlayArea" unique_id=1383851893 instance=ExtResource("4_3tf8q")]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.6298161e-09, 0, -1.6298161e-09, 0.07, -0.6419789, 0.033325315, 0.27537838)
-light_string = "ooxoo oxoxo oxoxo oxoxo ooxoo"
-card_name = "Halo"
 
 [node name="PunchCardCruciform" parent="PlayArea" unique_id=1633542311 instance=ExtResource("5_qaeli")]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.6298155e-09, 0, -1.6298155e-09, 0.07, -0.7115568, 0.033325344, 0.024033025)
-light_string = "ooxoo oxxxo ooxoo ooxoo ooxoo"
-card_name = "Cruciform"
+
+[node name="PunchCardBlank" parent="PlayArea" unique_id=427510060 instance=ExtResource("7_41b3u")]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.6298155e-09, 0, -1.6298155e-09, 0.07, 0.13518476, 0.033325285, -0.20533204)
 
 [node name="MouseCursor" parent="PlayArea" unique_id=1458504978 instance=ExtResource("10_tq65w")]
 
@@ -168,10 +162,10 @@ song_2 = ExtResource("10_qaeli")
 song_3 = ExtResource("11_tq65w")
 
 [node name="Monitor1" parent="Monitor" index="0" unique_id=55286909]
-texture = SubResource("ViewportTexture_w0dj5")
+texture = SubResource("ViewportTexture_41b3u")
 
 [node name="Monitor2" parent="Monitor" index="1" unique_id=831061316]
-texture = SubResource("ViewportTexture_41b3u")
+texture = SubResource("ViewportTexture_hwvc8")
 
 [node name="CardSFX" parent="Monitor/CardSlot1" parent_id_path=PackedInt32Array(1842833820, 1264573134) index="4" unique_id=1088956227]
 volume_db = -8.0
