@@ -4,6 +4,8 @@
 [ext_resource type="Shader" uid="uid://crhivxq72wqtv" path="res://Assets/Shaders/turnaround_sprite.gdshader" id="2_uia5q"]
 [ext_resource type="Texture2D" uid="uid://bmixhafglk4kg" path="res://Assets/Sprites/SkeleKneeling_Turnarounds_Emissive.tga" id="3_rlnpb"]
 [ext_resource type="Texture2D" uid="uid://5y40asfepi1i" path="res://Assets/Sprites/SkeleKneeling_Turnarounds.tga" id="4_uia5q"]
+[ext_resource type="AudioStream" uid="uid://c0dgdn5fqa33d" path="res://Assets/SFX/MonkChant01.wav" id="5_jeye8"]
+[ext_resource type="AudioStream" uid="uid://bpcy8j7ilw86t" path="res://Assets/SFX/MonkChant02.wav" id="6_4x2nl"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pxqgl"]
 size = Vector3(3, 3, 3)
@@ -21,6 +23,11 @@ shader_parameter/emissive_power = 1.0
 material = SubResource("ShaderMaterial_jeye8")
 size = Vector2(1.5, 3)
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_jeye8"]
+streams_count = 2
+stream_0/stream = ExtResource("5_jeye8")
+stream_1/stream = ExtResource("6_4x2nl")
+
 [node name="SkeletonKneel" type="StaticBody3D" unique_id=1197911493 node_paths=PackedStringArray("zoom_node")]
 collision_layer = 16
 collision_mask = 16
@@ -37,3 +44,7 @@ mesh = SubResource("QuadMesh_pxqgl")
 
 [node name="Marker3D" type="Marker3D" parent="." unique_id=1776257748]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.18257129, 0.9655362)
+
+[node name="SkeletonAudio" type="AudioStreamPlayer3D" parent="." unique_id=2072565733]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamRandomizer_jeye8")

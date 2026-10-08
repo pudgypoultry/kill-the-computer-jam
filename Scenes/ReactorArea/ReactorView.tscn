@@ -33,6 +33,7 @@ footstep_sfx = Array[AudioStreamWAV]([ExtResource("2_g0q32"), ExtResource("3_3cv
 
 [node name="FPSCamera" type="SubViewport" parent="." unique_id=726431392]
 handle_input_locally = false
+audio_listener_enable_3d = true
 render_target_update_mode = 4
 
 [node name="Camera3D" type="Camera3D" parent="FPSCamera" unique_id=417143241]
@@ -42,6 +43,9 @@ current = true
 [node name="RayCast3D" type="RayCast3D" parent="FPSCamera/Camera3D" unique_id=1885323365]
 target_position = Vector3(0, 0, -3)
 collision_mask = 16
+
+[node name="AudioListener3D" type="AudioListener3D" parent="FPSCamera/Camera3D" unique_id=717798574]
+current = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="FPSCamera" unique_id=2136070968]
 

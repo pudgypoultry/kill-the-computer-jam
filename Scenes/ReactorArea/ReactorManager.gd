@@ -164,9 +164,14 @@ func talk():
 	var target_position : Vector2i = current_position + current_direction
 	if grid_manager.position_dict[target_position].has_skeleton:
 		if skeleton_check_ray.is_colliding():
-			var skeleton = skeleton_check_ray.get_collider()
+			var skeleton:Skeleton = skeleton_check_ray.get_collider()
+			if not is_instance_valid(skeleton):
+				push_error("Collided with a non-skeleton in skeleton ray check. Check layers plz!")
+				return
+				
+			skeleton.play_speech_audio()
+			await BoardManager.talking_zoom_in(skeleton.zoom_position)
 			print_to_terminal(skeleton.talk_message)
-			BoardManager.talking_zoom_in(skeleton.zoom_position)
 	else:
 		print_to_terminal(default_talk_message)
 

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://nbibkmp3es04"]
 
-[ext_resource type="Script" uid="uid://y5jgghy7qleh" path="res://Scenes/Punchcards/Move_Backward/Punch_Move_Backward.gd" id="1_22gcl"]
+[ext_resource type="Script" uid="uid://bbdxuhwahh12o" path="res://Scenes/Punchcards/Examine/Punch_Examine.gd" id="1_22gcl"]
 [ext_resource type="Texture2D" uid="uid://mit3xoj2e8v8" path="res://Assets/Overlays/Card_Cruciform.png" id="2_22gcl"]
 [ext_resource type="PackedScene" uid="uid://dr8vwsmgcojh1" path="res://Components/DragAndDropComponent/DragAndDropComponent.tscn" id="3_23k0y"]
 [ext_resource type="PackedScene" uid="uid://bqormgwvc5m8j" path="res://Components/SpriteOutlineComponent/SpriteOutlineComponent.tscn" id="4_trjxf"]
@@ -8,7 +8,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_rojf5"]
 size = Vector3(2.590805, 0.05, 3.4110146)
 
-[node name="PunchCardHalo" type="StaticBody3D" unique_id=331653166 node_paths=PackedStringArray("sprite", "drag_component")]
+[node name="PunchCardCruciform" type="StaticBody3D" unique_id=331653166 node_paths=PackedStringArray("sprite", "drag_component")]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.629815e-09, 0, -1.629815e-09, 0.07, 0, 0, 0)
 script = ExtResource("1_22gcl")
 sprite = NodePath("Sprite3D")
