@@ -53,9 +53,19 @@ func _process(_delta : float):
 func flip_switch():
 	if BoardManager.player_actionable:
 		if switch_flipped:
+			var card_slotted = false
 			for slot in slots:
 				if slot.has_card():
+					card_slotted = true
 					slot.eject_card()
+			if card_slotted:
+				var reactor = BoardManager.reactor_manager
+				reactor.current_cards_scratch.clear()
+				var door : Door = reactor.door_check_ray.get_collider()
+				if not is_instance_valid(door):
+					push_error("Collided with a non-door in door ray check. Check layers plz!")
+					return
+				door.wrong_password()
 			switch_flipped = false
 			switched_faceplate.hide()
 			play_sfx(switch_single_sfx)
