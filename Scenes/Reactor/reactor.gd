@@ -179,6 +179,9 @@ func _change_reactor_state(new_state:ReactorState) -> void:
 			_reactor_state_tween.tween_property(self, "_reactor_alarm_fade_amt", 1.0, state_change_time)
 
 func _change_reactor_panic_sound() -> void:
+	if not is_instance_valid(reactor_sound):
+		return
+	
 	var reactor_stream := reactor_sound.stream as AudioStreamSynchronized
 	if not is_instance_valid(reactor_stream):
 		push_error("Invalid reactor stream format")
@@ -197,4 +200,7 @@ func _change_reactor_panic_sound() -> void:
 	reactor_sound.volume_db = reactor_noise_volume_db
 
 func _change_reactor_alarm_fade() -> void:
+	if not is_instance_valid(reactor_alarm):
+		return
+		
 	reactor_alarm.volume_linear = sqrt(_reactor_alarm_fade_amt) * db_to_linear(reactor_alarm_volume_db)
