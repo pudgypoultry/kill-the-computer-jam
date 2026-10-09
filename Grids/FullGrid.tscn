@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://dky4no5n28umf" path="res://Sandboxes/Pudgypoultry/DoorBar.png" id="3_8810x"]
 [ext_resource type="Texture2D" uid="uid://cm05kjnbsoah3" path="res://Sandboxes/Pudgypoultry/CellOutline.png" id="3_m5ja8"]
 [ext_resource type="PackedScene" uid="uid://deyytmftgimdu" path="res://Scenes/Punchcards/CardScenes/punch_card_fusion.tscn" id="3_ro7hq"]
+[ext_resource type="Script" uid="uid://ooddp58ly0m7" path="res://Scenes/Gameplay/tiny_hint_image.gd" id="4_6rlwu"]
+[ext_resource type="Texture2D" uid="uid://bjc6gobfpkia7" path="res://Assets/Overlays/teeny_hint_image.png" id="4_dmper"]
 [ext_resource type="Script" uid="uid://b558xrlw1w04p" path="res://Sandboxes/Pudgypoultry/FirstDoorCell.gd" id="5_g4qh2"]
 
 [node name="CellFolder" type="Node2D" unique_id=48513814]
@@ -5784,6 +5786,7 @@ hidden_room = true
 has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="18_20" unique_id=660025949]
+visible = false
 texture = ExtResource("3_m5ja8")
 
 [node name="19_20" parent="." unique_id=634461043 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
@@ -5794,6 +5797,7 @@ adjacencies = [NodePath("../19_19"), NodePath("../20_20"), NodePath("../19_21"),
 hidden_room = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="19_20" unique_id=562920801]
+visible = false
 texture = ExtResource("3_m5ja8")
 
 [node name="20_20" parent="." unique_id=2046848298 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
@@ -5805,6 +5809,7 @@ hidden_room = true
 has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="20_20" unique_id=1019505778]
+visible = false
 texture = ExtResource("3_m5ja8")
 
 [node name="21_20" parent="." unique_id=201208957 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
@@ -6088,6 +6093,7 @@ adjacencies = [NodePath("../18_20"), NodePath("../19_21"), NodePath("../18_22"),
 hidden_room = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="18_21" unique_id=135619147]
+visible = false
 texture = ExtResource("3_m5ja8")
 
 [node name="19_21" parent="." unique_id=347706788 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
@@ -6098,6 +6104,7 @@ adjacencies = [NodePath("../19_20"), NodePath("../20_21"), NodePath("../19_22"),
 hidden_room = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="19_21" unique_id=925027853]
+visible = false
 texture = ExtResource("3_m5ja8")
 
 [node name="20_21" parent="." unique_id=389056656 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
@@ -6108,6 +6115,7 @@ adjacencies = [NodePath("../20_20"), NodePath("../21_21"), NodePath("../20_22"),
 hidden_room = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="20_21" unique_id=1788749470]
+visible = false
 texture = ExtResource("3_m5ja8")
 
 [node name="21_21" parent="." unique_id=1510957471 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
@@ -6385,6 +6393,7 @@ hidden_room = true
 has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="18_22" unique_id=443151342]
+visible = false
 texture = ExtResource("3_m5ja8")
 
 [node name="19_22" parent="." unique_id=635299478 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
@@ -6395,6 +6404,7 @@ adjacencies = [NodePath("../19_21"), NodePath("../20_22"), NodePath("../19_23"),
 hidden_room = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="19_22" unique_id=1410190867]
+visible = false
 texture = ExtResource("3_m5ja8")
 
 [node name="20_22" parent="." unique_id=736576478 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
@@ -6406,6 +6416,7 @@ hidden_room = true
 has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="20_22" unique_id=63674651]
+visible = false
 texture = ExtResource("3_m5ja8")
 
 [node name="21_22" parent="." unique_id=448291157 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
@@ -6594,6 +6605,13 @@ has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="9_23" unique_id=1461422962]
 texture = ExtResource("3_m5ja8")
+
+[node name="TinyMapImage" type="Sprite2D" parent="9_23" unique_id=1112896598]
+position = Vector2(0, -21)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_dmper")
+script = ExtResource("4_6rlwu")
+metadata/_custom_type_script = "uid://ooddp58ly0m7"
 
 [node name="10_23" parent="." unique_id=1461785796 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1050, 2415)
@@ -8402,6 +8420,7 @@ grid_position = Vector2i(11, 29)
 adjacencies = [NodePath("../11_28"), NodePath("../12_29"), NodePath("../10_29")]
 
 [node name="Sprite2D2" type="Sprite2D" parent="11_29" unique_id=1826103274]
+visible = false
 texture = ExtResource("3_m5ja8")
 
 [node name="12_29" parent="." unique_id=1507422186 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]

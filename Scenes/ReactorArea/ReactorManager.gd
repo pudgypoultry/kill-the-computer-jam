@@ -53,7 +53,7 @@ func _handle_card_ejected() -> void:
 	if current_cell.has_password:
 		var door : Door = door_check_ray.get_collider()
 		if not is_instance_valid(door):
-			push_error("Collided with a non-door or nothing in door ray check!")
+			# this isn't really an error! It just means you aren't facing a door
 			return
 		door.cancel_in_progress()
 	
@@ -67,7 +67,6 @@ func _handle_card_slotted_double(card_pattern : String):
 	if current_cell.has_password:
 		var door : Door = door_check_ray.get_collider()
 		if not is_instance_valid(door):
-			push_error("Collided with a non-door or nothing in door ray check!")
 			_current_cards_scratch.clear()
 			return
 			

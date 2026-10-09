@@ -1,15 +1,26 @@
+@tool
+
 extends Node2D
 class_name GridCell
 
 @export_category("Game Rules")
-@export var active : bool = true
+@export var active : bool = true:
+	set(value):
+		active = value
+		_update_active()
+		
 @export var examine : Array[String] = ["THIS", "IS", "A", "PLACE", "OF", "HONOR"]
 @export var needs_kneel : bool = false
 @export var needs_grovel : bool = false
 @export var grid_position : Vector2i = Vector2i.ZERO
 @export var adjacencies : Array[GridCell]
 @export var hidden_room : bool = false
-@export var has_skeleton : bool = false
+
+@export var has_skeleton : bool = false:
+	set(value):
+		has_skeleton = value
+		_update_active()
+
 @export var is_starting_position : bool = false
 @export var is_locked : bool = false
 @export var has_password : bool = false
@@ -25,14 +36,25 @@ class_name GridCell
 
 var grid_manager : GridManager = null
 
-
-func _ready() -> void:
+func _update_active() -> void:
 	if !active or hidden_room:
 		for img in get_children():
 			img.hide()
+	else:
+		for img in get_children():
+			# CW - hack
+			if not img is TinyMapImage:
+				img.show()
 	if has_skeleton && !hidden_room:
-		skeleton_sprite.show()
-	if is_starting_position:
+		if skeleton_sprite:
+			skeleton_sprite.show()
+	else:
+		if skeleton_sprite:
+			skeleton_sprite.hide()
+
+func _ready() -> void:
+	_update_active()
+	if is_starting_position and not Engine.is_editor_hint():
 		BoardManager.starting_position = grid_position
 	password.sort()
 

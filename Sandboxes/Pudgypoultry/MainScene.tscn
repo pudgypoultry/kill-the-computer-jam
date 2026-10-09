@@ -39,10 +39,10 @@ size = Vector3(0.65384674, 0.05, 1.14516)
 [sub_resource type="BoxShape3D" id="BoxShape3D_q1446"]
 size = Vector3(0.2559204, 0.05, 1.14516)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_41b3u"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_w0dj5"]
 viewport_path = NodePath("../ReactorView/GridCamera")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_hwvc8"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_41b3u"]
 viewport_path = NodePath("../ReactorView/FPSCamera")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lh8n2"]
@@ -158,10 +158,10 @@ song_2 = ExtResource("10_qaeli")
 song_3 = ExtResource("11_tq65w")
 
 [node name="Monitor1" parent="Monitor" index="0" unique_id=55286909]
-texture = SubResource("ViewportTexture_41b3u")
+texture = SubResource("ViewportTexture_w0dj5")
 
 [node name="Monitor2" parent="Monitor" index="1" unique_id=831061316]
-texture = SubResource("ViewportTexture_hwvc8")
+texture = SubResource("ViewportTexture_41b3u")
 
 [node name="CardSFX" parent="Monitor/CardSlot1" parent_id_path=PackedInt32Array(1842833820, 1264573134) index="4" unique_id=1088956227]
 volume_db = -8.0

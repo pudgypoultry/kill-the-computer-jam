@@ -10,6 +10,6 @@ shader_parameter/sharpness = 0.6666667
 shader_parameter/color_offset = 0.0
 shader_parameter/mask_brightness = 1.0
 shader_parameter/scanline_brightness = 1.0
-shader_parameter/min_scanline_thickness = 0.5
+shader_parameter/min_scanline_thickness = 0.300000002375
 shader_parameter/aspect = 0.75
 shader_parameter/wobble_strength = 0.0

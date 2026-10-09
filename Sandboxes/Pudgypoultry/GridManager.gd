@@ -31,6 +31,7 @@ var camera_tween : Tween
 var position_dict : Dictionary[Vector2i, GridCell] = {}
 var original_zoom : float
 
+signal zoom_change(zoom_level:int)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -53,11 +54,16 @@ func _ready() -> void:
 
 
 func _late_ready():
-	camera.global_position = position_dict[current_position].global_position
 	player_marker.global_position = position_dict[current_position].global_position
+	_position_camera()
 	if saving:
 		save_branch_as_scene(cell_folder, "Grids/" + file_name)
 
+func _process(_delta:float) -> void:
+	_position_camera()
+	
+func _position_camera() -> void:
+	camera.global_position = player_marker.global_position + player_marker.global_transform.basis_xform(Vector2.UP) * (sprite_width + grid_offset)
 
 func generate_grid() -> void:
 	# First pass to generate
@@ -131,7 +137,6 @@ func set_owner_recursive(node: Node, scene_root: Node) -> void:
 
 func move_forward():
 	player_tween = get_tree().create_tween().bind_node(player_marker)
-	camera_tween = get_tree().create_tween().bind_node(camera)
 	var forward = get_forward_direction()
 	print("Moving in Direction:	", get_forward_direction())
 	var target_position = player_marker.global_position + (get_forward_direction() * sprite_width)
@@ -140,13 +145,10 @@ func move_forward():
 	if forward.y != 0:
 		target_position.y += grid_offset * forward.y
 	player_tween.tween_property(player_marker, "global_position", target_position, BoardManager.player_move_time)
-	camera_tween.tween_property(camera, "global_position", target_position, BoardManager.player_move_time)
 	current_position = current_position + (get_forward_direction() as Vector2i)
-
 
 func move_backward():
 	player_tween = get_tree().create_tween().bind_node(player_marker)
-	camera_tween = get_tree().create_tween().bind_node(camera)
 	var backward = -get_forward_direction()
 	print("Moving in Direction:	", get_forward_direction())
 	var target_position = player_marker.global_position + (backward * sprite_width)
@@ -155,13 +157,11 @@ func move_backward():
 	if backward.y != 0:
 		target_position.y += grid_offset * backward.y
 	player_tween.tween_property(player_marker, "global_position", target_position, BoardManager.player_move_time)
-	camera_tween.tween_property(camera, "global_position", target_position, BoardManager.player_move_time)
 	current_position = current_position - (get_forward_direction() as Vector2i)
 
 
 func turn(dir : String):
 	player_tween = get_tree().create_tween().bind_node(player_marker)
-	#camera_tween = get_tree().create_tween().bind_node(camera)
 	print("====================")
 	print("Was facing:	", current_direction)
 	match dir:
@@ -202,12 +202,27 @@ func get_forward_direction():
 		Direction.WEST:
 			return Vector2(-1, 0)
 
+var _zoom_amt:int = 0
 
 func zoom_in():
-	if camera.zoom.x < original_zoom * 2:
-		camera.zoom *= 2.0
+	if _zoom_amt > 2:
+		return
 
+	if is_instance_valid(camera_tween) and camera_tween.is_running():
+		camera_tween.stop()
+		
+	_zoom_amt += 1
+	camera_tween = get_tree().create_tween()
+	camera_tween.set_trans(Tween.TRANS_CUBIC)
+	camera_tween.tween_property(camera, "zoom", original_zoom * pow(2.0, _zoom_amt as float) * Vector2.ONE, BoardManager.player_move_time)
+	zoom_change.emit(_zoom_amt)
 
 func zoom_out():
-	if camera.zoom.x > original_zoom / 4:
-		camera.zoom *= 0.5
+	if _zoom_amt < -2:
+		return
+
+	_zoom_amt -= 1
+	camera_tween = get_tree().create_tween()
+	camera_tween.set_trans(Tween.TRANS_CUBIC)
+	camera_tween.tween_property(camera, "zoom", original_zoom * pow(2.0, _zoom_amt as float) * Vector2.ONE, BoardManager.player_move_time)
+	zoom_change.emit(_zoom_amt)

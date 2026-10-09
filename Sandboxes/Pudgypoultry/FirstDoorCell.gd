@@ -1,3 +1,5 @@
+@tool
+
 extends GridCell
 
 @export var second_door_sprite : Sprite2D
