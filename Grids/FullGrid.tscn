@@ -2907,10 +2907,9 @@ texture = ExtResource("3_m5ja8")
 [node name="18_10" parent="." unique_id=1733735052 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1890, 1050)
 active = false
-examine = Array[String](["ST. STEPHEN the LOST", ""])
+examine = Array[String](["", ""])
 grid_position = Vector2i(18, 10)
 adjacencies = [NodePath("../18_9"), NodePath("../19_10"), NodePath("../18_11"), NodePath("../17_10")]
-has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="18_10" unique_id=1398190529]
 visible = false
@@ -3787,7 +3786,7 @@ texture = ExtResource("3_m5ja8")
 [node name="20_13" parent="." unique_id=965100561 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(2100, 1365)
 active = false
-examine = Array[String](["ST. GILES the HETERODOX", ""])
+examine = Array[String](["", ""])
 grid_position = Vector2i(20, 13)
 adjacencies = [NodePath("../20_12"), NodePath("../21_13"), NodePath("../20_14"), NodePath("../19_13")]
 has_skeleton = true
@@ -4055,9 +4054,10 @@ texture = ExtResource("3_m5ja8")
 
 [node name="19_14" parent="." unique_id=819237263 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1995, 1470)
-examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead; ;", "The rumbliThe floor beneath;", "Is that what it means to Ascend?"])
+examine = Array[String](["ST. BIBINIA, the BOOKWORM"])
 grid_position = Vector2i(19, 14)
 adjacencies = [NodePath("../19_13"), NodePath("../20_14"), NodePath("../19_15"), NodePath("../18_14")]
+has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="19_14" unique_id=253991166]
 texture = ExtResource("3_m5ja8")
@@ -4076,6 +4076,7 @@ position = Vector2(2205, 1470)
 examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead; ;", "The rumbliThe floor beneath;", "Is that what it means to Ascend?"])
 grid_position = Vector2i(21, 14)
 adjacencies = [NodePath("../21_13"), NodePath("../22_14"), NodePath("../21_15"), NodePath("../20_14")]
+has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="21_14" unique_id=1147168321]
 texture = ExtResource("3_m5ja8")
@@ -4343,6 +4344,7 @@ position = Vector2(2205, 1575)
 examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead; ;", "The rumbliThe floor beneath;", "Is that what it means to Ascend?"])
 grid_position = Vector2i(21, 15)
 adjacencies = [NodePath("../21_14"), NodePath("../22_15"), NodePath("../21_16"), NodePath("../20_15")]
+has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="21_15" unique_id=2000628422]
 texture = ExtResource("3_m5ja8")
@@ -4360,6 +4362,7 @@ texture = ExtResource("3_m5ja8")
 position = Vector2(2415, 1575)
 grid_position = Vector2i(23, 15)
 adjacencies = [NodePath("../23_14"), NodePath("../24_15"), NodePath("../23_16"), NodePath("../22_15")]
+has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="23_15" unique_id=1892614193]
 texture = ExtResource("3_m5ja8")
@@ -4378,7 +4381,6 @@ position = Vector2(2625, 1575)
 examine = Array[String](["TURBINE BUILDING", "You can hear the Turbines, before your Saint even enters. ", "God's heart beating. "])
 grid_position = Vector2i(25, 15)
 adjacencies = [NodePath("../25_14"), NodePath("../26_15"), NodePath("../25_16"), NodePath("../24_15")]
-is_starting_position = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="25_15" unique_id=1489155369]
 texture = ExtResource("3_m5ja8")
@@ -4394,6 +4396,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="27_15" parent="." unique_id=1008981421 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(2835, 1575)
+examine = Array[String](["ST. STEPHEN the LOST"])
 grid_position = Vector2i(27, 15)
 adjacencies = [NodePath("../27_14"), NodePath("../28_15"), NodePath("../27_16"), NodePath("../26_15")]
 has_skeleton = true
@@ -4622,6 +4625,7 @@ texture = ExtResource("3_m5ja8")
 position = Vector2(2415, 1680)
 grid_position = Vector2i(23, 16)
 adjacencies = [NodePath("../23_15"), NodePath("../24_16"), NodePath("../23_17"), NodePath("../22_16")]
+has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="23_16" unique_id=2083206433]
 texture = ExtResource("3_m5ja8")
@@ -4637,6 +4641,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="25_16" parent="." unique_id=1488774643 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(2625, 1680)
+examine = Array[String](["ST. GILES the HETERODOX"])
 grid_position = Vector2i(25, 16)
 adjacencies = [NodePath("../25_15"), NodePath("../26_16"), NodePath("../25_17"), NodePath("../24_16")]
 has_skeleton = true
@@ -6522,7 +6527,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="9_23" parent="." unique_id=1930429628 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(945, 2415)
-examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
+examine = Array[String](["ST. FELICITY the UNLUCKY"])
 grid_position = Vector2i(9, 23)
 adjacencies = [NodePath("../9_22"), NodePath("../10_23"), NodePath("../9_24"), NodePath("../8_23")]
 
@@ -6531,7 +6536,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="10_23" parent="." unique_id=1461785796 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1050, 2415)
-examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
+examine = Array[String](["SWITCH GEAR ROOM", "The grinding of unseen gears behind these  ", "Rotting Walls", "Reminds you of the vast and unknowable expanse of this place, ", "Of the mysteries of God's unceasing work"])
 grid_position = Vector2i(10, 23)
 adjacencies = [NodePath("../10_22"), NodePath("../11_23"), NodePath("../10_24"), NodePath("../9_23")]
 
@@ -6550,7 +6555,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="12_23" parent="." unique_id=1344317831 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1260, 2415)
-examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
+examine = Array[String](["SWITCH GEAR ROOM", "The grinding of unseen gears behind these  ", "Rotting Walls", "Reminds you of the vast and unknowable expanse of this place, ", "Of the mysteries of God's unceasing work"])
 grid_position = Vector2i(12, 23)
 adjacencies = [NodePath("../12_22"), NodePath("../13_23"), NodePath("../12_24"), NodePath("../11_23")]
 
@@ -6559,9 +6564,10 @@ texture = ExtResource("3_m5ja8")
 
 [node name="13_23" parent="." unique_id=1443448338 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1365, 2415)
-examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
+examine = Array[String](["ST. SHARBEL, the WAYFINDER", "She was once thought lost, wandering far through forests of corpse trees", "When she retrurned she requested to be interred with a compass", "That she might not lose her way on the path to God."])
 grid_position = Vector2i(13, 23)
 adjacencies = [NodePath("../13_22"), NodePath("../14_23"), NodePath("../13_24"), NodePath("../12_23")]
+has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="13_23" unique_id=1332790911]
 texture = ExtResource("3_m5ja8")
@@ -6812,7 +6818,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="9_24" parent="." unique_id=387688282 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(945, 2520)
-examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
+examine = Array[String](["SWITCH GEAR ROOM", "The grinding of unseen gears behind these  ", "Rotting Walls", "Reminds you of the vast and unknowable expanse of this place, ", "Of the mysteries of God's unceasing work"])
 grid_position = Vector2i(9, 24)
 adjacencies = [NodePath("../9_23"), NodePath("../10_24"), NodePath("../9_25"), NodePath("../8_24")]
 
@@ -6821,7 +6827,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="10_24" parent="." unique_id=1801775336 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1050, 2520)
-examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
+examine = Array[String](["SWITCH GEAR ROOM", "The grinding of unseen gears behind these  ", "Rotting Walls", "Reminds you of the vast and unknowable expanse of this place, ", "Of the mysteries of God's unceasing work"])
 grid_position = Vector2i(10, 24)
 adjacencies = [NodePath("../10_23"), NodePath("../11_24"), NodePath("../10_25"), NodePath("../9_24")]
 
@@ -6830,7 +6836,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="11_24" parent="." unique_id=826111124 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1155, 2520)
-examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
+examine = Array[String](["SWITCH GEAR ROOM", "The grinding of unseen gears behind these  ", "Rotting Walls", "Reminds you of the vast and unknowable expanse of this place, ", "Of the mysteries of God's unceasing work"])
 grid_position = Vector2i(11, 24)
 adjacencies = [NodePath("../11_23"), NodePath("../12_24"), NodePath("../11_25"), NodePath("../10_24")]
 is_starting_position = true
@@ -6842,7 +6848,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="12_24" parent="." unique_id=1775296023 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1260, 2520)
-examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
+examine = Array[String](["SWITCH GEAR ROOM", "The grinding of unseen gears behind these  ", "Rotting Walls", "Reminds you of the vast and unknowable expanse of this place, ", "Of the mysteries of God's unceasing work"])
 grid_position = Vector2i(12, 24)
 adjacencies = [NodePath("../12_23"), NodePath("../13_24"), NodePath("../12_25"), NodePath("../11_24")]
 
@@ -6851,7 +6857,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="13_24" parent="." unique_id=1296150892 node_paths=PackedStringArray("adjacencies", "locked_position", "door_sprite") instance=ExtResource("1_fh3vx")]
 position = Vector2(1365, 2520)
-examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
+examine = Array[String](["SWITCH GEAR ROOM", "The grinding of unseen gears behind these  ", "Rotting Walls", "Reminds you of the vast and unknowable expanse of this place, ", "Of the mysteries of God's unceasing work"])
 grid_position = Vector2i(13, 24)
 adjacencies = [NodePath("../13_23"), NodePath("../14_24"), NodePath("../13_25"), NodePath("../12_24")]
 has_password = true
@@ -6869,6 +6875,7 @@ texture = ExtResource("3_8810x")
 
 [node name="14_24" parent="." unique_id=931596536 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1470, 2520)
+examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
 grid_position = Vector2i(14, 24)
 adjacencies = [NodePath("../14_23"), NodePath("../15_24"), NodePath("../14_25"), NodePath("../13_24")]
 is_locked = true
@@ -6879,6 +6886,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="15_24" parent="." unique_id=1549002903 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1575, 2520)
+examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
 grid_position = Vector2i(15, 24)
 adjacencies = [NodePath("../15_23"), NodePath("../16_24"), NodePath("../15_25"), NodePath("../14_24")]
 
@@ -6887,6 +6895,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="16_24" parent="." unique_id=668235249 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1680, 2520)
+examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
 grid_position = Vector2i(16, 24)
 adjacencies = [NodePath("../16_23"), NodePath("../17_24"), NodePath("../16_25"), NodePath("../15_24")]
 
@@ -6895,6 +6904,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="17_24" parent="." unique_id=508177476 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1785, 2520)
+examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
 grid_position = Vector2i(17, 24)
 adjacencies = [NodePath("../17_23"), NodePath("../18_24"), NodePath("../17_25"), NodePath("../16_24")]
 
@@ -7104,7 +7114,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="9_25" parent="." unique_id=494727603 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(945, 2625)
-examine = Array[String](["ST. FELICITY the UNLUCKY", "The drip of unseen liquid. "])
+examine = Array[String](["SWITCH GEAR ROOM", "The grinding of unseen gears behind these  ", "Rotting Walls", "Reminds you of the vast and unknowable expanse of this place, ", "Of the mysteries of God's unceasing work"])
 grid_position = Vector2i(9, 25)
 adjacencies = [NodePath("../9_24"), NodePath("../10_25"), NodePath("../9_26"), NodePath("../8_25")]
 has_skeleton = true
@@ -7114,7 +7124,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="10_25" parent="." unique_id=1279758736 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1050, 2625)
-examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
+examine = Array[String](["SWITCH GEAR ROOM", "The grinding of unseen gears behind these  ", "Rotting Walls", "Reminds you of the vast and unknowable expanse of this place, ", "Of the mysteries of God's unceasing work"])
 grid_position = Vector2i(10, 25)
 adjacencies = [NodePath("../10_24"), NodePath("../11_25"), NodePath("../10_26"), NodePath("../9_25")]
 
@@ -7123,7 +7133,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="11_25" parent="." unique_id=1404643685 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1155, 2625)
-examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
+examine = Array[String](["SWITCH GEAR ROOM", "The grinding of unseen gears behind these  ", "Rotting Walls", "Reminds you of the vast and unknowable expanse of this place, ", "Of the mysteries of God's unceasing work"])
 grid_position = Vector2i(11, 25)
 adjacencies = [NodePath("../11_24"), NodePath("../12_25"), NodePath("../11_26"), NodePath("../10_25")]
 
@@ -7132,7 +7142,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="12_25" parent="." unique_id=1548584541 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1260, 2625)
-examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
+examine = Array[String](["SWITCH GEAR ROOM", "The grinding of unseen gears behind these  ", "Rotting Walls", "Reminds you of the vast and unknowable expanse of this place, ", "Of the mysteries of God's unceasing work"])
 grid_position = Vector2i(12, 25)
 adjacencies = [NodePath("../12_24"), NodePath("../13_25"), NodePath("../12_26"), NodePath("../11_25")]
 
@@ -7141,10 +7151,9 @@ texture = ExtResource("3_m5ja8")
 
 [node name="13_25" parent="." unique_id=1252191119 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1365, 2625)
-examine = Array[String](["ST. SHARBEL, the WAYFINDER", "She was once thought lost, wandering far through forests of corpse trees", "When she retrurned she requested to be interred with a compass", "That she might not lose her way on the path to God."])
+examine = Array[String](["SWITCH GEAR ROOM", "The grinding of unseen gears behind these  ", "Rotting Walls", "Reminds you of the vast and unknowable expanse of this place, ", "Of the mysteries of God's unceasing work"])
 grid_position = Vector2i(13, 25)
 adjacencies = [NodePath("../13_24"), NodePath("../14_25"), NodePath("../13_26"), NodePath("../12_25")]
-has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="13_25" unique_id=1551173770]
 texture = ExtResource("3_m5ja8")
