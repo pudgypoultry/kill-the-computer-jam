@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dky4no5n28umf" path="res://Sandboxes/Pudgypoultry/DoorBar.png" id="3_8810x"]
 [ext_resource type="Texture2D" uid="uid://cm05kjnbsoah3" path="res://Sandboxes/Pudgypoultry/CellOutline.png" id="3_m5ja8"]
 [ext_resource type="PackedScene" uid="uid://deyytmftgimdu" path="res://Scenes/Punchcards/CardScenes/punch_card_fusion.tscn" id="3_ro7hq"]
+[ext_resource type="Script" uid="uid://b558xrlw1w04p" path="res://Sandboxes/Pudgypoultry/FirstDoorCell.gd" id="5_g4qh2"]
 
 [node name="CellFolder" type="Node2D" unique_id=48513814]
 
@@ -4477,7 +4478,6 @@ texture = ExtResource("3_m5ja8")
 position = Vector2(630, 1680)
 grid_position = Vector2i(6, 16)
 adjacencies = [NodePath("../6_15"), NodePath("../7_16"), NodePath("../6_17"), NodePath("../5_16")]
-is_starting_position = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="6_16" unique_id=1651759201]
 texture = ExtResource("3_m5ja8")
@@ -6590,6 +6590,7 @@ position = Vector2(945, 2415)
 examine = Array[String](["ST. FELICITY the UNLUCKY"])
 grid_position = Vector2i(9, 23)
 adjacencies = [NodePath("../9_22"), NodePath("../10_23"), NodePath("../9_24"), NodePath("../8_23")]
+has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="9_23" unique_id=1461422962]
 texture = ExtResource("3_m5ja8")
@@ -6920,11 +6921,15 @@ adjacencies = [NodePath("../12_23"), NodePath("../13_24"), NodePath("../12_25"),
 [node name="Sprite2D2" type="Sprite2D" parent="12_24" unique_id=53633677]
 texture = ExtResource("3_m5ja8")
 
-[node name="13_24" parent="." unique_id=1296150892 node_paths=PackedStringArray("adjacencies", "locked_position", "door_sprite") instance=ExtResource("1_fh3vx")]
+[node name="13_24" parent="." unique_id=1296150892 node_paths=PackedStringArray("second_door_sprite", "second_locked_position", "adjacencies", "locked_position", "door_sprite") instance=ExtResource("1_fh3vx")]
 position = Vector2(1365, 2520)
+script = ExtResource("5_g4qh2")
+second_door_sprite = NodePath("../9_24/Door")
+second_locked_position = NodePath("../8_24")
 examine = Array[String](["SWITCH GEAR ROOM", "The grinding of unseen gears behind these  ", "Rotting Walls", "Reminds you of the vast and unknowable expanse of this place, ", "Of the mysteries of God's unceasing work"])
 grid_position = Vector2i(13, 24)
 adjacencies = [NodePath("../13_23"), NodePath("../14_24"), NodePath("../13_25"), NodePath("../12_24")]
+is_starting_position = true
 has_password = true
 password = Array[String](["Cruciform", "Fallout"])
 locked_position = NodePath("../14_24")
@@ -7182,7 +7187,6 @@ position = Vector2(945, 2625)
 examine = Array[String](["SWITCH GEAR ROOM", "The grinding of unseen gears behind these  ", "Rotting Walls", "Reminds you of the vast and unknowable expanse of this place, ", "Of the mysteries of God's unceasing work"])
 grid_position = Vector2i(9, 25)
 adjacencies = [NodePath("../9_24"), NodePath("../10_25"), NodePath("../9_26"), NodePath("../8_25")]
-has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="9_25" unique_id=1639785956]
 texture = ExtResource("3_m5ja8")
