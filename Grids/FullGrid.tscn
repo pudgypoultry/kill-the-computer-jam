@@ -2983,7 +2983,7 @@ texture = ExtResource("3_m5ja8")
 [node name="25_10" parent="." unique_id=1210917705 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(2625, 1050)
 active = false
-examine = Array[String](["ST. BIBINIA, the BOOKWORM ", "", ""])
+examine = Array[String](["", ""])
 grid_position = Vector2i(25, 10)
 adjacencies = [NodePath("../25_9"), NodePath("../26_10"), NodePath("../25_11"), NodePath("../24_10")]
 has_skeleton = true
@@ -3555,7 +3555,7 @@ texture = ExtResource("3_m5ja8")
 [node name="25_12" parent="." unique_id=532180530 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(2625, 1260)
 active = false
-examine = Array[String](["ST. APOLLONARIS the FUNCTIONAL", "Ironically, this Aparatus appears to be malfunctioning."])
+examine = Array[String](["", ""])
 grid_position = Vector2i(25, 12)
 adjacencies = [NodePath("../25_11"), NodePath("../26_12"), NodePath("../25_13"), NodePath("../24_12")]
 has_skeleton = true
@@ -4045,7 +4045,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="18_14" parent="." unique_id=1072558259 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1890, 1470)
-examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead; ;", "The rumbliThe floor beneath;", "Is that what it means to Ascend?"])
+examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead;", "The rumbling of the floor beneath;", "Is that what it means to Ascend?"])
 grid_position = Vector2i(18, 14)
 adjacencies = [NodePath("../18_13"), NodePath("../19_14"), NodePath("../18_15"), NodePath("../17_14")]
 
@@ -4064,7 +4064,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="20_14" parent="." unique_id=1489751757 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(2100, 1470)
-examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead; ;", "The rumbliThe floor beneath;", "Is that what it means to Ascend?"])
+examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead;", "The rumbling of the floor beneath;", "Is that what it means to Ascend?"])
 grid_position = Vector2i(20, 14)
 adjacencies = [NodePath("../20_13"), NodePath("../21_14"), NodePath("../20_15"), NodePath("../19_14")]
 
@@ -4073,7 +4073,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="21_14" parent="." unique_id=506830309 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(2205, 1470)
-examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead; ;", "The rumbliThe floor beneath;", "Is that what it means to Ascend?"])
+examine = Array[String](["ST. ZELIE the PALE ", ""])
 grid_position = Vector2i(21, 14)
 adjacencies = [NodePath("../21_13"), NodePath("../22_14"), NodePath("../21_15"), NodePath("../20_14")]
 has_skeleton = true
@@ -4083,7 +4083,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="22_14" parent="." unique_id=625994605 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(2310, 1470)
-examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead; ;", "The rumbliThe floor beneath;", "Is that what it means to Ascend?"])
+examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead;", "The rumbling of the floor beneath;", "Is that what it means to Ascend?"])
 grid_position = Vector2i(22, 14)
 adjacencies = [NodePath("../22_13"), NodePath("../23_14"), NodePath("../22_15"), NodePath("../21_14")]
 
@@ -4092,7 +4092,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="23_14" parent="." unique_id=1451745947 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(2415, 1470)
-examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead; ;", "The rumbliThe floor beneath;", "Is that what it means to Ascend?"])
+examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead;", "The rumbling of the floor beneath;", "Is that what it means to Ascend?"])
 grid_position = Vector2i(23, 14)
 adjacencies = [NodePath("../23_13"), NodePath("../24_14"), NodePath("../23_15"), NodePath("../22_14")]
 
@@ -4101,7 +4101,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="24_14" parent="." unique_id=1628696465 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(2520, 1470)
-examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead; ;", "The rumbliThe floor beneath;", "Is that what it means to Ascend?"])
+examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead;", "The rumbling of the floor beneath;", "Is that what it means to Ascend?"])
 grid_position = Vector2i(24, 14)
 adjacencies = [NodePath("../24_13"), NodePath("../25_14"), NodePath("../24_15"), NodePath("../23_14")]
 
@@ -4323,7 +4323,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="19_15" parent="." unique_id=1135638257 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1995, 1575)
-examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead; ;", "The rumbliThe floor beneath;", "Is that what it means to Ascend?"])
+examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead;", "The rumbling of the floor beneath;", "Is that what it means to Ascend?"])
 grid_position = Vector2i(19, 15)
 adjacencies = [NodePath("../19_14"), NodePath("../20_15"), NodePath("../19_16"), NodePath("../18_15")]
 
@@ -4332,7 +4332,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="20_15" parent="." unique_id=1155889273 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(2100, 1575)
-examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead; ;", "The rumbliThe floor beneath;", "Is that what it means to Ascend?"])
+examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead;", "The rumbling of the floor beneath;", "Is that what it means to Ascend?"])
 grid_position = Vector2i(20, 15)
 adjacencies = [NodePath("../20_14"), NodePath("../21_15"), NodePath("../20_16"), NodePath("../19_15")]
 
@@ -4341,7 +4341,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="21_15" parent="." unique_id=1424164731 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(2205, 1575)
-examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead; ;", "The rumbliThe floor beneath;", "Is that what it means to Ascend?"])
+examine = Array[String](["ST. HIPPO the APTLY NAMED"])
 grid_position = Vector2i(21, 15)
 adjacencies = [NodePath("../21_14"), NodePath("../22_15"), NodePath("../21_16"), NodePath("../20_15")]
 has_skeleton = true
@@ -4351,7 +4351,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="22_15" parent="." unique_id=1978866292 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(2310, 1575)
-examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead; ;", "The rumbliThe floor beneath;", "Is that what it means to Ascend?"])
+examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead;", "The rumbling of the floor beneath;", "Is that what it means to Ascend?"])
 grid_position = Vector2i(22, 15)
 adjacencies = [NodePath("../22_14"), NodePath("../23_15"), NodePath("../22_16"), NodePath("../21_15")]
 
@@ -4360,6 +4360,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="23_15" parent="." unique_id=1843193437 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(2415, 1575)
+examine = Array[String](["ST. APOLLONARIS the FUNCTIONAL", "Ironically, this Aparatus appears to be malfunctioning."])
 grid_position = Vector2i(23, 15)
 adjacencies = [NodePath("../23_14"), NodePath("../24_15"), NodePath("../23_16"), NodePath("../22_15")]
 has_skeleton = true
@@ -4369,7 +4370,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="24_15" parent="." unique_id=1400132448 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(2520, 1575)
-examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead; ;", "The rumbliThe floor beneath;", "Is that what it means to Ascend?"])
+examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead;", "The rumbling of the floor beneath;", "Is that what it means to Ascend?"])
 grid_position = Vector2i(24, 15)
 adjacencies = [NodePath("../24_14"), NodePath("../25_15"), NodePath("../24_16"), NodePath("../23_15")]
 
@@ -4587,7 +4588,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="19_16" parent="." unique_id=1665428537 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1995, 1680)
-examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead; ;", "The rumbliThe floor beneath;", "Is that what it means to Ascend?"])
+examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead;", "The rumbling of the floor beneath;", "Is that what it means to Ascend?"])
 grid_position = Vector2i(19, 16)
 adjacencies = [NodePath("../19_15"), NodePath("../20_16"), NodePath("../19_17"), NodePath("../18_16")]
 
@@ -4596,7 +4597,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="20_16" parent="." unique_id=416077949 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(2100, 1680)
-examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead; ;", "The rumbliThe floor beneath;", "Is that what it means to Ascend?"])
+examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead;", "The rumbling of the floor beneath;", "Is that what it means to Ascend?"])
 grid_position = Vector2i(20, 16)
 adjacencies = [NodePath("../20_15"), NodePath("../21_16"), NodePath("../20_17"), NodePath("../19_16")]
 
@@ -4605,7 +4606,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="21_16" parent="." unique_id=1566236586 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(2205, 1680)
-examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead; ;", "The rumbliThe floor beneath;", "Is that what it means to Ascend?"])
+examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead;", "The rumbling of the floor beneath;", "Is that what it means to Ascend?"])
 grid_position = Vector2i(21, 16)
 adjacencies = [NodePath("../21_15"), NodePath("../22_16"), NodePath("../21_17"), NodePath("../20_16")]
 
@@ -4614,7 +4615,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="22_16" parent="." unique_id=259846514 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(2310, 1680)
-examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead; ;", "The rumbliThe floor beneath;", "Is that what it means to Ascend?"])
+examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead;", "The rumbling of the floor beneath;", "Is that what it means to Ascend?"])
 grid_position = Vector2i(22, 16)
 adjacencies = [NodePath("../22_15"), NodePath("../23_16"), NodePath("../22_17"), NodePath("../21_16")]
 
@@ -4623,6 +4624,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="23_16" parent="." unique_id=1619628188 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(2415, 1680)
+examine = Array[String](["ST. SHARBEL, the WAYFINDER", "She was once thought lost, wandering far through forests of corpse trees", "When she retrurned she requested to be interred with a compass", "That she might not lose her way on the path to God."])
 grid_position = Vector2i(23, 16)
 adjacencies = [NodePath("../23_15"), NodePath("../24_16"), NodePath("../23_17"), NodePath("../22_16")]
 has_skeleton = true
@@ -4632,7 +4634,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="24_16" parent="." unique_id=1467315134 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(2520, 1680)
-examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead; ;", "The rumbliThe floor beneath;", "Is that what it means to Ascend?"])
+examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead;", "The rumbling of the floor beneath;", "Is that what it means to Ascend?"])
 grid_position = Vector2i(24, 16)
 adjacencies = [NodePath("../24_15"), NodePath("../25_16"), NodePath("../24_17"), NodePath("../23_16")]
 
@@ -5210,7 +5212,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="25_18" parent="." unique_id=1878024083 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(2625, 1890)
-examine = Array[String](["ST. ALPHONSO the HELPFUL", "", ""])
+examine = Array[String](["ST. ", "", ""])
 grid_position = Vector2i(25, 18)
 adjacencies = [NodePath("../25_17"), NodePath("../26_18"), NodePath("../25_19"), NodePath("../24_18")]
 has_skeleton = true
@@ -6564,7 +6566,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="13_23" parent="." unique_id=1443448338 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1365, 2415)
-examine = Array[String](["ST. SHARBEL, the WAYFINDER", "She was once thought lost, wandering far through forests of corpse trees", "When she retrurned she requested to be interred with a compass", "That she might not lose her way on the path to God."])
+examine = Array[String](["ST. ALPHONSO the HELPFUL", ""])
 grid_position = Vector2i(13, 23)
 adjacencies = [NodePath("../13_22"), NodePath("../14_23"), NodePath("../13_24"), NodePath("../12_23")]
 has_skeleton = true
@@ -6672,7 +6674,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="24_23" parent="." unique_id=713098251 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(2520, 2415)
-examine = Array[String](["ST. JANUARIUS the PROPHETIC", "IS"])
+examine = Array[String](["ST. JANUARIUS the PROPHETIC", ""])
 grid_position = Vector2i(24, 23)
 adjacencies = [NodePath("../24_22"), NodePath("../25_23"), NodePath("../24_24"), NodePath("../23_23")]
 has_skeleton = true
