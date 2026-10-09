@@ -7,8 +7,8 @@ uniform sampler2D normal_map: filter_nearest_mipmap;
 uniform sampler2D noise_tex;
 
 uniform float wave_time;
-uniform float max_move : hint_range(0.0, 5.0) = 1.25;
-uniform float chaos : hint_range(0.0, 5.0) = 5.0;
+uniform float max_move : hint_range(0.0, 5.0) = 1.0;
+uniform float chaos : hint_range(0.0, 5.0) = 1.0;
 
 void vertex() {
 	float noise_sample = texture(noise_tex, vec2(INSTANCE_CUSTOM.b / 2.0 * PI, INSTANCE_CUSTOM.a / 13.0)).r;

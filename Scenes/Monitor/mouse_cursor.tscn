@@ -4,6 +4,15 @@
 [ext_resource type="Script" uid="uid://dcmt0475mkqke" path="res://Scenes/Monitor/mouse_cursor.gd" id="1_yv7b0"]
 [ext_resource type="Texture2D" uid="uid://jrqpi4smedvx" path="res://Assets/Overlays/HandCursor.tres" id="3_eq63g"]
 [ext_resource type="Texture2D" uid="uid://nk5samhy2t3j" path="res://Assets/Overlays/FistCursor.tres" id="4_6jh0r"]
+[ext_resource type="AudioStream" uid="uid://c7od2optx8jga" path="res://Assets/SFX/MouseGrab.wav" id="5_6jh0r"]
+[ext_resource type="AudioStream" uid="uid://dy85yx4c3obiy" path="res://Assets/SFX/MouseHover01.wav" id="6_hcp87"]
+[ext_resource type="AudioStream" uid="uid://dkjiottwh75bi" path="res://Assets/SFX/MouseHover02.wav" id="7_b7pgw"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ka1op"]
+random_pitch = 1.0594631
+streams_count = 2
+stream_0/stream = ExtResource("6_hcp87")
+stream_1/stream = ExtResource("7_b7pgw")
 
 [node name="MouseCursor" type="CanvasLayer" unique_id=1458504978]
 layer = 100
@@ -22,3 +31,13 @@ texture_repeat = 1
 position = Vector2(48, 42)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_xdfmv")
+
+[node name="MouseGrabPlayer" type="AudioStreamPlayer" parent="." unique_id=1192898977]
+unique_name_in_owner = true
+stream = ExtResource("5_6jh0r")
+volume_db = -4.0
+
+[node name="MouseHoverPlayer" type="AudioStreamPlayer" parent="." unique_id=2098000554]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamRandomizer_ka1op")
+volume_db = -4.0

@@ -10,13 +10,35 @@ static var _global_cursor:MouseCursor
 @onready var mouse_position: Node2D = %MousePosition
 @onready var mouse_sprite: Sprite2D = %MouseSprite
 
+@onready var mouse_grab_player: AudioStreamPlayer = %MouseGrabPlayer
+@onready var mouse_hover_player: AudioStreamPlayer = %MouseHoverPlayer
+
+const _hover_machine_gun_delay:float = 0.25
+
+enum MouseState {
+	NORMAL,
+	HOVER,
+	GRAB
+}
+
+var _mouse_state:MouseState:
+	set(value):
+		_transition_mouse_state(_mouse_state, value)
+		_mouse_state = value
+		
 var _highlight_targets:Array[Object]
 var _grab_targets:Array[Object]
+var _hover_machine_gun_timer:Timer
 
 static func get_global_cursor() -> MouseCursor:
 	return _global_cursor
 
 func _ready() -> void:
+	_hover_machine_gun_timer = Timer.new()
+	_hover_machine_gun_timer.ignore_time_scale = true
+	_hover_machine_gun_timer.one_shot = true
+	add_child(_hover_machine_gun_timer)
+	
 	_global_cursor = self
 	
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
@@ -71,8 +93,30 @@ func _process(_delta: float) -> void:
 
 func _update_mouse_cursor() -> void:
 	if !_grab_targets.is_empty():
-		mouse_sprite.texture = grab_cursor
+		_mouse_state = MouseState.GRAB
 	elif !_highlight_targets.is_empty():
-		mouse_sprite.texture = highlight_cursor
+		_mouse_state = MouseState.HOVER
 	else:
-		mouse_sprite.texture = pointer_cursor
+		_mouse_state = MouseState.NORMAL
+
+func _transition_mouse_state(old_state:MouseState, new_state:MouseState) -> void:
+	if old_state == new_state:
+		return
+		
+	match new_state:
+		MouseState.NORMAL:
+			mouse_sprite.texture = pointer_cursor
+		MouseState.HOVER:
+			mouse_sprite.texture = highlight_cursor
+		MouseState.GRAB:
+			mouse_sprite.texture = grab_cursor
+	
+	if old_state == MouseState.NORMAL and new_state == MouseState.HOVER:
+		if not _hover_machine_gun_timer.is_stopped():
+			return
+			
+		mouse_hover_player.play()
+		
+		_hover_machine_gun_timer.start(_hover_machine_gun_delay)
+	elif new_state == MouseState.GRAB:
+		mouse_grab_player.play()
