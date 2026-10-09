@@ -186,6 +186,7 @@ func examine():
 
 
 func talk():
+	var current_cell = grid_manager.position_dict[current_position]
 	var current_direction : Vector2i = Vector2i.ZERO
 	current_direction = grid_manager.get_forward_direction()
 	var target_position : Vector2i = current_position + current_direction
@@ -196,30 +197,57 @@ func talk():
 				push_error("Collided with a non-skeleton in skeleton ray check. Check layers plz!")
 				return
 				
-			await BoardManager.talking_zoom_in(skeleton.zoom_position)
+			await BoardManager.talking_zoom_in(skeleton.zoom_node.global_transform)
 			print_to_terminal(skeleton.talk_message)
+			if current_cell.has_card_unlock:
+				print_new_card()
+				return
 	else:
 		print_to_terminal(default_talk_message)
 
 
-func print_new_card(blank_card : PunchCard):
+func print_new_card():
+	BoardManager.player_actionable = false
 	var current_cell = grid_manager.position_dict[current_position]
 	if current_cell.has_card_unlock:
+		var blank_card = BoardManager.blank_cards.pop_front()
+		var original_transform = blank_card.global_transform
 		var new_card : PunchCard = current_cell.card_to_unlock.instantiate()
 		var current_slot : CardSlot
 		for slot in card_slots:
-			if slot.has_card():
+			if !slot.has_card():
 				current_slot = slot
+		await get_tree().create_timer(1.0).timeout
+		var tween = get_tree().create_tween().bind_node(blank_card)
+		tween.set_trans(Tween.TRANS_CUBIC)
+		tween.tween_property(blank_card, "position:y", position.y + 0.033, 0.5)
+		await tween.finished
+		tween = get_tree().create_tween().bind_node(blank_card)
+		tween.set_trans(Tween.TRANS_BACK)
+		tween.tween_property(blank_card, "global_transform", current_slot.start_position.global_transform, 1.0)
+		await tween.finished
+		#tween = get_tree().create_tween().bind_node(blank_card)
+		#tween.set_trans(Tween.TRANS_BACK)
+		#tween.tween_property(blank_card, "global_position", current_slot.insert_position.global_position, BoardManager.card_insert_time)
+		#await tween.finished
+		await current_slot.slot_card(blank_card, false)
 		current_slot.current_card = new_card
 		blank_card.get_parent().add_child(new_card)
+		new_card.global_position = blank_card.global_position
 		new_card.reactor = blank_card.reactor
 		new_card.parent_surface = blank_card.parent_surface
 		new_card.is_slotted = blank_card.is_slotted
 		new_card.original_position = blank_card.original_position
-		new_card.global_position = blank_card.global_position - Vector3(0,0,1)
 		new_card.global_rotation = blank_card.global_rotation
-		blank_card.queue_free()
+		new_card.sort_front = blank_card.sort_front
 		current_cell.has_card_unlock = false
+		await current_slot.eject_card()
+		tween = get_tree().create_tween().bind_node(new_card)
+		tween.set_trans(Tween.TRANS_BACK)
+		tween.tween_property(new_card, "global_transform", original_transform, 0.5)
+		await tween.finished
+		blank_card.queue_free()
+	BoardManager.player_actionable = true
 
 
 func read_scripture(type : String):

@@ -11,13 +11,13 @@ class_name CardSlot
 @export var eject_sfx : AudioStreamWAV
 
 var current_card : PunchCard = null
-var original_rotation
+var original_rotation = null
 
 signal card_slotted_single(action : Callable)
 signal card_slotted_double(card_name : String, card_pattern : String)
 signal card_ejected
 
-func slot_card(card : PunchCard):
+func slot_card(card : PunchCard, perform_action : bool = true):
 	if has_card():
 		card.global_position = card.original_position
 		return
@@ -38,16 +38,17 @@ func slot_card(card : PunchCard):
 	await tween.finished
 	current_card.visible = false
 	# produce effect on screen
-	if single_mode:
-		if slot_a:
-			card_slotted_single.emit(card.execute_a)
+	if perform_action:
+		if single_mode:
+			if slot_a:
+				card_slotted_single.emit(card.execute_a)
+			else:
+				card_slotted_single.emit(card.execute_b)
+			await get_tree().create_timer(BoardManager.player_move_time).timeout
+			eject_card()
 		else:
-			card_slotted_single.emit(card.execute_b)
-		await get_tree().create_timer(BoardManager.player_move_time).timeout
-		eject_card()
-	else:
-		card_slotted_double.emit(card.light_string)
-		BoardManager.player_actionable = true
+			card_slotted_double.emit(card.light_string)
+			BoardManager.player_actionable = true
 
 
 func has_card() -> bool:
@@ -67,7 +68,8 @@ func eject_card():
 	tween = get_tree().create_tween().bind_node(current_card)
 	tween.set_trans(Tween.TRANS_CUBIC)
 	tween.set_parallel()
-	tween.tween_property(current_card, "global_rotation", original_rotation, BoardManager.card_insert_time/4.0)	
+	if original_rotation != null:
+		tween.tween_property(current_card, "global_rotation", original_rotation, BoardManager.card_insert_time/4.0)	
 	tween.tween_property(current_card, "global_position", current_card.original_position, BoardManager.card_insert_time/4.0)	
 	current_card.sort_front = true
 	current_card = null
