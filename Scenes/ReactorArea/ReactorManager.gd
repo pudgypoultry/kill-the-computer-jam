@@ -217,7 +217,7 @@ func print_new_card(blank_card : PunchCard):
 		new_card.parent_surface = blank_card.parent_surface
 		new_card.is_slotted = blank_card.is_slotted
 		new_card.original_position = blank_card.original_position
-		new_card.global_position = blank_card.global_position
+		new_card.global_position = blank_card.global_position - Vector3(0,0,1)
 		new_card.global_rotation = blank_card.global_rotation
 		blank_card.queue_free()
 		current_cell.has_card_unlock = false
