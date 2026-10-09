@@ -4378,6 +4378,7 @@ position = Vector2(2625, 1575)
 examine = Array[String](["TURBINE BUILDING", "You can hear the Turbines, before your Saint even enters. ", "God's heart beating. "])
 grid_position = Vector2i(25, 15)
 adjacencies = [NodePath("../25_14"), NodePath("../26_15"), NodePath("../25_16"), NodePath("../24_15")]
+is_starting_position = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="25_15" unique_id=1489155369]
 texture = ExtResource("3_m5ja8")
