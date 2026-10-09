@@ -240,6 +240,7 @@ func print_new_card():
 		new_card.is_slotted = blank_card.is_slotted
 		new_card.original_position = blank_card.original_position
 		new_card.global_rotation = blank_card.global_rotation
+		new_card.sort_front = blank_card.sort_front
 		current_cell.has_card_unlock = false
 		await current_slot.eject_card()
 		tween = get_tree().create_tween().bind_node(new_card)
