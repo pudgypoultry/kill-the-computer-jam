@@ -23,9 +23,12 @@
 [ext_resource type="PackedScene" uid="uid://bgeonb4vuv10a" path="res://Scenes/Skeleton/SkeletonCoffin.tscn" id="19_4tam1"]
 [ext_resource type="PackedScene" uid="uid://dcs4xpynd2u0v" path="res://Scenes/Environment/DoorLightFlicker.tscn" id="20_bs17m"]
 [ext_resource type="PackedScene" uid="uid://de250sht73l6m" path="res://Scenes/Environment/DoorLight.tscn" id="20_okt7d"]
+[ext_resource type="Material" uid="uid://cmeskc4bdpys0" path="res://Assets/Models/RoomKit/Materials/Wall_mat.tres" id="20_qam1a"]
+[ext_resource type="PackedScene" uid="uid://ocqyy3y2ucu8" path="res://Scenes/Reactor/Reactor.tscn" id="21_ar56e"]
 [ext_resource type="PackedScene" uid="uid://dr7x71xqxmouy" path="res://Scenes/Skeleton/SkeletonPodium.tscn" id="21_bs17m"]
 [ext_resource type="ArrayMesh" uid="uid://cwni785dsmd7e" path="res://Assets/Models/SetDec/Meshes/SteelDoor.res" id="23_bs17m"]
 [ext_resource type="PackedScene" uid="uid://co7ucwhfmcig8" path="res://Scenes/Door/steel_door.tscn" id="25_hva2l"]
+[ext_resource type="PackedScene" uid="uid://cuakh38bsxw5a" path="res://Scenes/Skeleton/SkeletonKneel.tscn" id="27_ar56e"]
 
 [sub_resource type="Environment" id="Environment_4tam1"]
 background_mode = 1
@@ -1576,6 +1579,1808 @@ mesh = ExtResource("18_o11oa")
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 48, 0, -24)
 mesh = ExtResource("4_o11oa")
 
+[node name="Reactor" type="Node3D" parent="Rooms" unique_id=585722236]
+
+[node name="RoomKitFloor15" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=974354098]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -24)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor16" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=811165114]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -24)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor17" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1840236561]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -24)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor18" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1204071850]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -24)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor19" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=666428428]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -24)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitStraightWall4" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1029342039]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -12, 0, -27)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall6" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=853180814]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -18, 0, -27)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall7" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1659955583]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -15, 0, -24)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall8" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1198337188]
+transform = Transform3D(-1, 0, -2.6226832e-07, 0, 1, 0, 2.6226832e-07, 0, -1, -12, 0, -27)
+mesh = ExtResource("3_r6i6q")
+
+[node name="Decal6" type="Decal" parent="Rooms/Reactor" unique_id=490742294]
+transform = Transform3D(1.9555966, 1.7573922e-07, -0.038218476, 0.04177503, -3.9967258e-08, 1.7891052, 3.420054e-07, -1.0000001, -7.8222115e-08, -10.950977, 3.4884925, -26.639265)
+texture_albedo = ExtResource("6_4tam1")
+texture_normal = ExtResource("7_2cdcx")
+texture_orm = ExtResource("8_bs17m")
+normal_fade = 0.516
+upper_fade = 0.024740791
+
+[node name="Decal7" type="Decal" parent="Rooms/Reactor" unique_id=166482746]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -11.4493885, -0.18450296, -29.501263)
+texture_albedo = ExtResource("9_okt7d")
+texture_normal = ExtResource("10_pqaes")
+texture_orm = ExtResource("11_hva2l")
+upper_fade = 0.024740791
+
+[node name="Decal9" type="Decal" parent="Rooms/Reactor" unique_id=1116251832]
+transform = Transform3D(1.3113416e-07, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, -1.3113416e-07, -5.7320566e-15, -5.686014, 1.0900586, -28.604467)
+texture_albedo = ExtResource("12_slj7n")
+texture_normal = ExtResource("13_qam1a")
+texture_orm = ExtResource("14_ar56e")
+upper_fade = 0.024740791
+
+[node name="Decal10" type="Decal" parent="Rooms/Reactor" unique_id=1671637942]
+transform = Transform3D(-0.78590345, 2.0187446e-07, -0.6183492, 0.6183492, 3.435293e-08, -0.78590345, -1.3741172e-07, -1, -1.51827e-07, -9.194864, 1.3488688, -26.488094)
+texture_albedo = ExtResource("6_4tam1")
+texture_normal = ExtResource("7_2cdcx")
+texture_orm = ExtResource("8_bs17m")
+normal_fade = 0.516
+upper_fade = 0.024740791
+
+[node name="RoomKitFloor21" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1154102205]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -27)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor23" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=844617606]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -27)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor25" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1599150160]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -30)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor26" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1341725141]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -30)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor28" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=745937450]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -30)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor29" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1185779854]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -30)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitDoor3" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1972855461]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -12, 0, -27)
+mesh = ExtResource("4_o11oa")
+
+[node name="RoomKitDoor4" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1654915900]
+transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, -15, 0, -27)
+mesh = ExtResource("4_o11oa")
+
+[node name="RoomKitInteriorCorner5" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=282907427]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 0, -27)
+mesh = ExtResource("5_mhh6y")
+
+[node name="RoomKitInteriorCorner6" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=927981600]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 0, -69)
+mesh = ExtResource("5_mhh6y")
+
+[node name="RoomKitInteriorCorner7" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1778792476]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -27)
+mesh = ExtResource("5_mhh6y")
+
+[node name="RoomKitInteriorCorner8" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2135446159]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -30, 0, -69)
+mesh = ExtResource("5_mhh6y")
+
+[node name="RoomKitStraightWall9" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1616239644]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -30)
+mesh = ExtResource("8_pqaes")
+
+[node name="RoomKitStraightWall10" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1186514616]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 0, -33)
+mesh = ExtResource("8_pqaes")
+
+[node name="RoomKitStraightWall11" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1352208129]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -12, 0, -69)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall12" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1051143909]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -15, 0, -69)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall13" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2114390116]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -18, 0, -69)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitCeiling26" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=299160412]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 9, -27)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling27" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=386340538]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 9, -27)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling33" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1705109449]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 9, -27)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling34" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=557605114]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 9, -27)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling29" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=938044269]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 9, -27)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling36" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1136188538]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 9, -30)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling37" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1158104189]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 9, -30)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling38" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1576300180]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 9, -30)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling39" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1087371999]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 9, -30)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling40" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=258254959]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 9, -30)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling41" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=473772296]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 9, -66)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling42" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2076945374]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 9, -66)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling43" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=96543377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 9, -66)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling44" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1050213024]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 9, -66)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall14" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=816685039]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9, 0, -27)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall15" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=573116393]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15, 0, -27)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitInteriorCorner9" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1800569516]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 3, -27)
+mesh = ExtResource("5_mhh6y")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitInteriorCorner10" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=94233574]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 3, -69)
+mesh = ExtResource("5_mhh6y")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitInteriorCorner11" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1464049165]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 3, -27)
+mesh = ExtResource("5_mhh6y")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitInteriorCorner12" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=303935687]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -30, 3, -69)
+mesh = ExtResource("5_mhh6y")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall16" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=863531600]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 3, -30)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall17" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1918462603]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 3, -33)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall18" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=111799245]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -12, 3, -69)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall42" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=280934414]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -9, 0, -69)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitCeiling56" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1298659496]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 9, -66)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall43" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1197912059]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -9, 3, -69)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall44" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=402795258]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -6, 0, -69)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall175" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=222900513]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -3, 9, -69)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall174" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1520507197]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -3, 6, -69)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall47" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=593394974]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -3, 3, -69)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall46" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1649106912]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -3, 0, -69)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitCeiling57" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=79639949]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 9, -66)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall45" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1802362125]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -6, 3, -69)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall50" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=732607798]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 0, -60)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall19" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=378497400]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -15, 3, -69)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall51" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=9934069]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 3, -60)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall20" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2123785036]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -18, 3, -69)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall36" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1799012491]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -21, 0, -69)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitCeiling53" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1594654232]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 9, -66)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall37" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=44614794]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -21, 3, -69)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall38" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1225585476]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -24, 0, -69)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitCeiling54" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1191164658]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 9, -66)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall39" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=543895918]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -24, 3, -69)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall40" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=246805139]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -27, 0, -69)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitCeiling55" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=100604004]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 9, -66)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling59" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=570661553]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 9, -66)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling60" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=783262330]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 9, -63)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling61" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=409682142]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 9, -63)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling62" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1406220089]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 9, -63)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling63" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2052945372]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 9, -63)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling64" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1000298397]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 9, -63)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling65" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=314296871]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 9, -63)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling67" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1828050908]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 9, -63)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling68" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1097711805]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 9, -63)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling69" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=563135728]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 9, -63)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling70" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1156069703]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 9, -63)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall41" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1642261159]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -27, 3, -69)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall48" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1509134144]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -30, 0, -57)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall49" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1887489761]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -30, 3, -57)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitInteriorCorner17" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1919254378]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 6, -69)
+mesh = ExtResource("5_mhh6y")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitInteriorCorner18" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2092771496]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -30, 6, -69)
+mesh = ExtResource("5_mhh6y")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall74" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=765460210]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -12, 6, -69)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall75" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1847311544]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -9, 6, -69)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall76" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1851726321]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -6, 6, -69)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall79" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=362735474]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -15, 6, -69)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall80" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=551732310]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -18, 6, -69)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall78" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=884661489]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 6, -60)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall81" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=392365163]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -21, 6, -69)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall82" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=346808007]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -24, 6, -69)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall83" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1849545044]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -27, 6, -69)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall84" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=689243235]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -30, 6, -57)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitInteriorCorner19" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1953580685]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 9, -69)
+mesh = ExtResource("5_mhh6y")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitInteriorCorner20" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1586289738]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -30, 9, -69)
+mesh = ExtResource("5_mhh6y")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall85" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2134728556]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -12, 9, -69)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall86" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1671038604]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -9, 9, -69)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall87" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=897124963]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -6, 9, -69)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall90" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1304758401]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -15, 9, -69)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall91" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=675571846]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -18, 9, -69)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall89" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=665485820]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 9, -60)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall92" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1562909158]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -21, 9, -69)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall93" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1625523072]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -24, 9, -69)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall94" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=950497070]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -27, 9, -69)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall95" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=197442478]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -30, 9, -57)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitCeiling71" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1656612545]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 9, -51)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling72" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=735331356]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 9, -51)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling73" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=459132929]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 9, -51)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling74" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1545644447]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 9, -51)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall96" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1342196360]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 0, -54)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitCeiling75" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=543923533]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 9, -51)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall97" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=159458539]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 3, -54)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitCeiling76" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=172610783]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 9, -51)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling78" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=465725780]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 9, -51)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling79" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=574294268]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 9, -51)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling80" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=4502014]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 9, -51)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling81" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1200083857]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 9, -51)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall98" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1109371346]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -30, 0, -51)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall99" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1170045842]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -30, 3, -51)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall101" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1783025589]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -30, 6, -51)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall103" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1080487981]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -30, 9, -51)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitCeiling82" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=798012249]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 9, -45)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling83" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1151856980]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 9, -45)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling84" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=435312416]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 9, -45)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall100" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1708410052]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 6, -54)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitCeiling85" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=335901592]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 9, -45)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling86" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1991715553]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 9, -45)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall104" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=44069729]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 0, -48)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall105" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=423314435]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 3, -48)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitCeiling87" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1600441371]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 9, -45)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall102" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1614952805]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 9, -54)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitCeiling89" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=809364954]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 9, -45)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling90" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=503582647]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 9, -45)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling91" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1734760165]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 9, -45)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling92" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=895036561]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 9, -45)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall106" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1556297617]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -30, 0, -45)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall107" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2060238275]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -30, 3, -45)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall109" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=788555844]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -30, 6, -45)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall111" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1384100908]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -30, 9, -45)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitCeiling93" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1379599845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 9, -39)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling94" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=638894372]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 9, -39)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling95" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=121097646]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 9, -39)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling96" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1537556557]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 9, -39)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall108" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1664001842]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 6, -48)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitCeiling97" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=249726447]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 9, -39)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall110" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1522671436]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 9, -48)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitCeiling98" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1700194057]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 9, -39)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling100" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=150903595]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 9, -39)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling101" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1765929143]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 9, -39)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling102" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=220796275]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 9, -39)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling103" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2023643016]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 9, -39)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall114" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=393836908]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -30, 0, -39)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall115" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1012450950]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -30, 3, -39)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall112" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=459345488]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 0, -42)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall117" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1989124965]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -30, 6, -39)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall113" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=511405093]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 3, -42)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall119" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2004449184]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -30, 9, -39)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitCeiling104" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=788986416]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 9, -33)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling105" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=724023481]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 9, -33)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling106" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1074747416]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 9, -33)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling107" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=281769080]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 9, -33)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling108" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=11689506]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 9, -33)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling109" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=485616949]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 9, -33)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling111" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1188587043]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 9, -33)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling112" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=855137131]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 9, -33)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling113" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=799650333]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 9, -33)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling114" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=215134950]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 9, -33)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall122" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1726304479]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -30, 0, -33)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall123" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1078964158]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -30, 3, -33)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall116" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1823230753]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 6, -42)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall125" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=886287813]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -30, 6, -33)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall127" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1306406763]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -30, 9, -33)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall118" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1353226691]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 9, -42)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall21" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=442758579]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9, 3, -27)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall120" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1375148337]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 0, -36)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitFloor42" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=497814752]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -30)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitCeiling49" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1759987236]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 9, -30)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall30" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=963141071]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6, 0, -27)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall121" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=958783387]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 3, -36)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall31" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1906815391]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6, 3, -27)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitFloor44" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=693811128]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -30)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitCeiling50" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2094533556]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 9, -30)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall32" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=180128302]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3, 0, -27)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall173" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=419591620]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 9, -27)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall172" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1992306570]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 6, -27)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall35" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=615855243]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 3, -27)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall34" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1320914660]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -27)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall33" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=958380034]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3, 3, -27)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitFloor46" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1787896445]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -30)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitStraightWall23" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=170921822]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -12, 3, -27)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall22" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=602224641]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15, 3, -27)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall124" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=456193827]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 6, -36)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitFloor35" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=861471882]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -27)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitStraightWall126" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=572748304]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 9, -36)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitFloor36" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1165551349]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -30)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitCeiling30" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=450892195]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 9, -27)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling46" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1990079881]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 9, -30)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall24" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1091699915]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -18, 0, -27)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall25" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1065576659]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -18, 3, -27)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitFloor38" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2079676161]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, -30)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitCeiling31" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=789005017]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 9, -27)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling47" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=390961193]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 9, -30)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall26" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=827792865]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -21, 0, -27)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall27" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1458784442]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -21, 3, -27)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitFloor39" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1722712282]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 0, -27)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor40" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=453749581]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 0, -30)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitCeiling32" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1194635107]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 9, -27)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling35" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2025149028]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 9, -27)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling51" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=422079012]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 9, -27)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitFloor45" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=968951096]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -27)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitCeiling48" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2085302359]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 9, -30)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall28" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1421817092]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -24, 0, -27)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall29" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=345351443]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -24, 3, -27)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitInteriorCorner13" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2138837644]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 6, -27)
+mesh = ExtResource("5_mhh6y")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitInteriorCorner14" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1758985096]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 6, -27)
+mesh = ExtResource("5_mhh6y")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall52" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1316804026]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 6, -30)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall54" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=271620952]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9, 6, -27)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall55" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=166099538]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6, 6, -27)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall56" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1753798179]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3, 6, -27)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall58" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=675533431]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -12, 6, -27)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall59" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1575598666]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15, 6, -27)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall60" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1234517377]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -18, 6, -27)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall61" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1566249427]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -21, 6, -27)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall62" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=985262440]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -24, 6, -27)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitInteriorCorner15" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1294849552]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 9, -27)
+mesh = ExtResource("5_mhh6y")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitInteriorCorner16" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1668093067]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 9, -27)
+mesh = ExtResource("5_mhh6y")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall63" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=698872513]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 9, -30)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall128" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=591495063]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -36)
+mesh = ExtResource("8_pqaes")
+
+[node name="RoomKitCeiling45" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1881187371]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 9, -36)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling115" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2120342093]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 9, -36)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling116" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1875325053]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 9, -36)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling117" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=567955185]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 9, -36)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall53" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=977042670]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 6, -33)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitCeiling118" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1966008564]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 9, -36)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall130" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=601589114]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 3, -36)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitCeiling119" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1527758304]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 9, -36)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling120" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1022115469]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 9, -36)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling122" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1705502109]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 9, -36)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling123" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1681357769]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 9, -36)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling124" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1433088174]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 9, -36)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall132" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=380089519]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 6, -36)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall134" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=864949261]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 9, -36)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall136" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1648426684]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -42)
+mesh = ExtResource("8_pqaes")
+
+[node name="RoomKitCeiling125" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=152107940]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 9, -42)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall64" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=110550207]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 9, -33)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitCeiling126" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1187524286]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 9, -42)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling127" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=158574420]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 9, -42)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling180" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=56655941]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -60)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling179" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=834838198]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -57)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling178" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2087927573]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -54)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling177" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2067728663]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -48)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling143" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=143062373]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -42)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling132" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=288884519]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -36)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling121" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=424681721]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -27)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling110" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=69192487]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -33)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling99" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2058724067]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -39)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling88" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1207021755]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -45)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling77" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2021662081]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -51)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling66" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=930819419]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -63)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling58" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1761543063]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -66)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling52" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1976359577]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -30)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling128" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1186738681]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 9, -42)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling129" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=223554763]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 9, -42)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall138" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=894117082]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 3, -42)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall129" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=777699932]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 0, -39)
+mesh = ExtResource("8_pqaes")
+
+[node name="RoomKitCeiling130" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1561464014]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 9, -42)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling131" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=666744288]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 9, -42)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling133" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=278050966]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 9, -42)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling134" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2115118990]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 9, -42)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling135" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1035255396]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 9, -42)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall140" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=125367202]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 6, -42)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall131" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=75144579]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 3, -39)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall142" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1035347720]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 9, -42)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall144" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=556313125]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -48)
+mesh = ExtResource("8_pqaes")
+
+[node name="RoomKitCeiling136" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1070511487]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 9, -48)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall137" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=434640404]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 0, -45)
+mesh = ExtResource("8_pqaes")
+
+[node name="RoomKitCeiling137" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2003338669]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 9, -48)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling138" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1222593911]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 9, -48)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall133" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1041542301]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 6, -39)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitCeiling139" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1543039029]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 9, -48)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling140" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1483462121]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 9, -48)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall146" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=132914023]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 3, -48)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitCeiling141" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1226903487]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 9, -48)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall135" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=952595079]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 9, -39)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall139" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=963277213]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 3, -45)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitCeiling142" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1197911391]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 9, -48)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling144" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1684795636]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 9, -48)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling145" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2029838542]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 9, -48)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall145" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=81842378]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 0, -51)
+mesh = ExtResource("8_pqaes")
+
+[node name="RoomKitCeiling146" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=698538084]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 9, -48)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall148" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1389481937]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 6, -48)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall150" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1125972683]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 9, -48)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall152" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=239478342]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -54)
+mesh = ExtResource("8_pqaes")
+
+[node name="RoomKitStraightWall141" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1773567241]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 6, -45)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitCeiling147" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=759448483]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 9, -54)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling148" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1286861887]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 9, -54)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall147" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1569027473]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 3, -51)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitCeiling149" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=333301895]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 9, -54)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling150" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2017601733]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 9, -54)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall143" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=871350937]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 9, -45)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitCeiling151" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=394816829]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 9, -54)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall154" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1227382047]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 3, -54)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall149" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1470952399]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 6, -51)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitCeiling152" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1445006088]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 9, -54)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling153" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=230178604]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 9, -54)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling155" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=630719295]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 9, -54)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling157" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=999812281]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 9, -54)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling158" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=665878747]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 9, -54)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling154" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1163328537]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 9, -57)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling156" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=88534266]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 9, -57)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall153" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1751039288]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 0, -57)
+mesh = ExtResource("8_pqaes")
+
+[node name="RoomKitStraightWall151" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=423945646]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 9, -51)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitCeiling159" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=406855630]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 9, -57)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling160" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1757728075]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 9, -57)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling161" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1303116116]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 9, -57)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling162" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1150343950]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 9, -57)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling163" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=22466615]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 9, -57)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling164" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1282465567]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 9, -57)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling165" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1149206442]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 9, -57)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling166" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1247823858]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 9, -57)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall155" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1442378637]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 3, -57)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitCeiling167" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1515392471]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 9, -60)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling168" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1626216468]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 9, -60)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling169" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=583694990]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 9, -60)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling170" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=305636840]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 9, -60)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling171" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1332583359]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 9, -60)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling172" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=612432576]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 9, -60)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling173" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2137017159]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 9, -60)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling174" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=555875472]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 9, -60)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling175" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1226432559]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 9, -60)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling176" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=495377930]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 9, -60)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitStraightWall156" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=723252933]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 6, -54)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall158" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=909122569]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 9, -54)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall57" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=65111890]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -30, 0, -63)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall68" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=42751146]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -30, 3, -63)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall88" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=337348847]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -30, 6, -63)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall160" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2068388752]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -30, 9, -63)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall161" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1687127543]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -60)
+mesh = ExtResource("8_pqaes")
+
+[node name="RoomKitStraightWall162" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=614835216]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 3, -60)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall163" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1098590465]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 6, -60)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall164" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=654616322]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 9, -60)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall65" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1934475961]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9, 9, -27)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall66" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1411760952]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6, 9, -27)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall67" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=21505300]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3, 9, -27)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall77" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1507659236]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 0, -66)
+mesh = ExtResource("3_r6i6q")
+
+[node name="RoomKitStraightWall69" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=655665005]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -12, 9, -27)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall70" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1496037820]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15, 9, -27)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall165" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=325058262]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 3, -66)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall168" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=618135740]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 0, -63)
+mesh = ExtResource("8_pqaes")
+
+[node name="RoomKitStraightWall71" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=131767262]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -18, 9, -27)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall157" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1414524661]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 6, -57)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall72" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1896813999]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -21, 9, -27)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall166" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1316564533]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 6, -66)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall169" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=367280370]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 3, -63)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall73" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1198055760]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -24, 9, -27)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitStraightWall167" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1272398241]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 9, -66)
+mesh = ExtResource("3_r6i6q")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitFloor30" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=148468826]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -24)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitStraightWall170" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=601298131]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 6, -63)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitFloor31" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1005198334]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -24)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitStraightWall171" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1621845577]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 9, -63)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitFloor32" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2076810064]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -24)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor34" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1867534955]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -24)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor47" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1129793059]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -27)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor51" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=172118989]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -27)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor52" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1832625321]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -30)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor53" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2087366337]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -30)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitStraightWall159" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1760455691]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 9, -57)
+mesh = ExtResource("8_pqaes")
+surface_material_override/0 = ExtResource("20_qam1a")
+
+[node name="RoomKitFloor54" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1771334680]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -30)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor55" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=669436505]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -30)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor56" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1383282434]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -27)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor57" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=777396823]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -30)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor58" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1478531262]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -27)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor59" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1359030972]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -30)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor61" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=773163242]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -30)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor63" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1917355168]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -30)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor64" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1158458162]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, -27)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor65" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=380805634]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, -30)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor67" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1237370773]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 0, -30)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor73" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=144088754]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -33)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor74" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1931896357]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -33)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor76" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=627880230]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -33)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor77" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=385706355]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -33)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor78" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1021666962]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -36)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor79" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2450154]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -36)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor80" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=803172334]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -36)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor81" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2113149779]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -36)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor82" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1614931665]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -33)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor83" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=2055976793]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -36)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor84" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1443486871]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -33)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor85" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=70577662]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -36)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor86" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=905406484]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -33)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor87" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=161629522]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -36)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor95" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1529969890]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -36)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor94" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1384077331]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -33)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor68" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1720389697]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -27)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor49" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1632692510]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -30)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor88" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=335882594]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -33)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor89" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1305525835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -36)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor90" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1666369855]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, -33)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor91" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1555848183]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, -36)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor92" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1787147203]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 0, -33)
+mesh = ExtResource("1_bripf")
+
+[node name="RoomKitFloor93" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1073773403]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 0, -36)
+mesh = ExtResource("1_bripf")
+
+[node name="DoorLight" parent="Rooms/Reactor" unique_id=957882005 instance=ExtResource("20_okt7d")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -15.026497, -0.04428172, -9.936438)
+light_range = 24.355
+cast_shadows = true
+
+[node name="Reactor" parent="Rooms/Reactor" unique_id=56980223 instance=ExtResource("21_ar56e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.723207, 0, -39)
+
 [node name="Decals" type="Node3D" parent="." unique_id=340129131]
 
 [node name="Decal" type="Decal" parent="Decals" unique_id=204643328]
@@ -1622,7 +3427,7 @@ flicker_adjust_speed = 2.1809999999999996
 flicker_low_amount = 0.409
 emissive_brightness = 2.792
 
-[node name="DoorLight" parent="Lights" unique_id=957882005 instance=ExtResource("20_okt7d")]
+[node name="DoorLight" parent="Lights" unique_id=1783106199 instance=ExtResource("20_okt7d")]
 transform = Transform3D(7.54979e-08, -1.6580906e-15, 1, 4.3711395e-08, 1, -1.6420281e-15, -1, 4.3711395e-08, 7.54979e-08, -5.8858843, 2.5841906, -4.5010996)
 
 [node name="DoorLightFlicker5" parent="Lights" unique_id=2117864310 instance=ExtResource("20_bs17m")]
@@ -1747,6 +3552,74 @@ talk_message = Array[String](["ST. JANUARIUS", "\"There will come an ever cold W
 [node name="SkeletonCoffin9" parent="Skeletons" unique_id=1988752239 instance=ExtResource("19_4tam1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.62, 2, -10.75)
 talk_message = Array[String](["ST. JEANNE", "\"What's up? Oh, hey, so funny story. They totally got the wrong corpse. I don't know what the hell I'm doing here, but I promise you, Saint I ain't. They shoved this Apparatus on me and told me that, in the last moments that my consciousness still flickered, on its way to Ascend toward the Labyrinth, this doohickey would record what I was thinking about it, preserve it for the 'Glory of God' for 'All Eternity.' Ask me, that's all a load of bullwash and hogshit. I think right about now, I'm fading out, and that's about all there is to it. Oh, sure, some sap will get the shot to pilot my empty shell into the \"Temple\" to \"Glimpse God,\" but honey, the lights are all out. No one's home. You're all alone. Yeah, you, reading this right now, I'm talking to you. Whoever you think you're talking to, that's just the dying embers of a mind too mired in its own dogma to see one single thing straight, not even as they're shuffling off this old mortal coil. But me? I think I'm getting to the heart of, ain't I, even as I diminish. I'm freaking you out, ain't I, just a little bit? Good. Well. Here I go, I'm just about out of here. Good luck finding your God. I hope it's worth it. Bye forever. [..................] Oh.\" "])
+
+[node name="ReactorSkeletons" type="Node3D" parent="Skeletons" unique_id=355379130]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -14, 1.7406497, -33)
+
+[node name="Row1" type="Node3D" parent="Skeletons/ReactorSkeletons" unique_id=1035826052]
+
+[node name="SkeletonKneel" parent="Skeletons/ReactorSkeletons/Row1" unique_id=865415345 instance=ExtResource("27_ar56e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.000001, 0, -3.9999924)
+
+[node name="SkeletonKneel6" parent="Skeletons/ReactorSkeletons/Row1" unique_id=1066754175 instance=ExtResource("27_ar56e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -3.9999943)
+
+[node name="SkeletonKneel7" parent="Skeletons/ReactorSkeletons/Row1" unique_id=575704170 instance=ExtResource("27_ar56e")]
+transform = Transform3D(0.81915206, 0, 0.57357645, 0, 1, 0, -0.57357645, 0, 0.81915206, -8, 0, -2)
+
+[node name="SkeletonKneel2" parent="Skeletons/ReactorSkeletons/Row1" unique_id=521287315 instance=ExtResource("27_ar56e")]
+transform = Transform3D(0.819152, 0, -0.5735764, 0, 1, 0, 0.5735764, 0, 0.819152, 6.000001, 0, -3.9999886)
+
+[node name="SkeletonKneel8" parent="Skeletons/ReactorSkeletons/Row1" unique_id=434689549 instance=ExtResource("27_ar56e")]
+transform = Transform3D(0.819152, 0, 0.5735764, 0, 1, 0, -0.5735764, 0, 0.819152, -6, 0, -4)
+
+[node name="SkeletonKneel3" parent="Skeletons/ReactorSkeletons/Row1" unique_id=2010790129 instance=ExtResource("27_ar56e")]
+transform = Transform3D(0.819152, 0, -0.5735764, 0, 1, 0, 0.5735764, 0, 0.819152, 8.000001, 0, -1.9999771)
+
+[node name="SkeletonKneel4" parent="Skeletons/ReactorSkeletons/Row1" unique_id=1806225684 instance=ExtResource("27_ar56e")]
+transform = Transform3D(0.819152, 0, -0.5735764, 0, 1, 0, 0.5735764, 0, 0.819152, 9.999999, 0, 3.0517578e-05)
+
+[node name="SkeletonKneel9" parent="Skeletons/ReactorSkeletons/Row1" unique_id=1755505475 instance=ExtResource("27_ar56e")]
+transform = Transform3D(0.819152, 0, 0.5735764, 0, 1, 0, -0.5735764, 0, 0.819152, -10, 0, 0)
+
+[node name="SkeletonKneel5" parent="Skeletons/ReactorSkeletons/Row1" unique_id=1081759671 instance=ExtResource("27_ar56e")]
+transform = Transform3D(0.4226183, 0, -0.90630794, 0, 1, 0, 0.90630794, 0, 0.4226183, 11.999999, 0, 2.000042)
+
+[node name="SkeletonKneel10" parent="Skeletons/ReactorSkeletons/Row1" unique_id=1143602970 instance=ExtResource("27_ar56e")]
+transform = Transform3D(0.4226183, 0, 0.90630794, 0, 1, 0, -0.90630794, 0, 0.4226183, -12, 0, 2)
+
+[node name="Row2" type="Node3D" parent="Skeletons/ReactorSkeletons" unique_id=1285870298]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.536743e-07, 0, 7)
+
+[node name="SkeletonKneel" parent="Skeletons/ReactorSkeletons/Row2" unique_id=785901744 instance=ExtResource("27_ar56e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.000001, 0, -3.9999924)
+
+[node name="SkeletonKneel6" parent="Skeletons/ReactorSkeletons/Row2" unique_id=1573982930 instance=ExtResource("27_ar56e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -3.9999943)
+
+[node name="SkeletonKneel7" parent="Skeletons/ReactorSkeletons/Row2" unique_id=280461849 instance=ExtResource("27_ar56e")]
+transform = Transform3D(0.81915206, 0, 0.57357645, 0, 1, 0, -0.57357645, 0, 0.81915206, -8, 0, -2)
+
+[node name="SkeletonKneel2" parent="Skeletons/ReactorSkeletons/Row2" unique_id=685064254 instance=ExtResource("27_ar56e")]
+transform = Transform3D(0.819152, 0, -0.5735764, 0, 1, 0, 0.5735764, 0, 0.819152, 6.000001, 0, -3.9999886)
+
+[node name="SkeletonKneel8" parent="Skeletons/ReactorSkeletons/Row2" unique_id=510744765 instance=ExtResource("27_ar56e")]
+transform = Transform3D(0.819152, 0, 0.5735764, 0, 1, 0, -0.5735764, 0, 0.819152, -6, 0, -4)
+
+[node name="SkeletonKneel3" parent="Skeletons/ReactorSkeletons/Row2" unique_id=1535567981 instance=ExtResource("27_ar56e")]
+transform = Transform3D(0.819152, 0, -0.5735764, 0, 1, 0, 0.5735764, 0, 0.819152, 8.000001, 0, -1.9999771)
+
+[node name="SkeletonKneel4" parent="Skeletons/ReactorSkeletons/Row2" unique_id=297404969 instance=ExtResource("27_ar56e")]
+transform = Transform3D(0.819152, 0, -0.5735764, 0, 1, 0, 0.5735764, 0, 0.819152, 9.999999, 0, 3.0517578e-05)
+
+[node name="SkeletonKneel9" parent="Skeletons/ReactorSkeletons/Row2" unique_id=713648366 instance=ExtResource("27_ar56e")]
+transform = Transform3D(0.819152, 0, 0.5735764, 0, 1, 0, -0.5735764, 0, 0.819152, -10, 0, 0)
+
+[node name="SkeletonKneel5" parent="Skeletons/ReactorSkeletons/Row2" unique_id=1938281454 instance=ExtResource("27_ar56e")]
+transform = Transform3D(0.4226183, 0, -0.90630794, 0, 1, 0, 0.90630794, 0, 0.4226183, 11.999999, 0, 2.000042)
+
+[node name="SkeletonKneel10" parent="Skeletons/ReactorSkeletons/Row2" unique_id=978925843 instance=ExtResource("27_ar56e")]
+transform = Transform3D(0.4226183, 0, 0.90630794, 0, 1, 0, -0.90630794, 0, 0.4226183, -12, 0, 2)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=645849406]
 environment = SubResource("Environment_4tam1")
