@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://deyytmftgimdu" path="res://Scenes/Punchcards/CardScenes/punch_card_fusion.tscn" id="3_ro7hq"]
 [ext_resource type="Script" uid="uid://ooddp58ly0m7" path="res://Scenes/Gameplay/tiny_hint_image.gd" id="4_6rlwu"]
 [ext_resource type="Texture2D" uid="uid://bjc6gobfpkia7" path="res://Assets/Overlays/teeny_hint_image.png" id="4_dmper"]
-[ext_resource type="Script" uid="uid://b558xrlw1w04p" path="res://Sandboxes/Pudgypoultry/FirstDoorCell.gd" id="5_g4qh2"]
+[ext_resource type="Script" uid="uid://b558xrlw1w04p" path="res://Sandboxes/Pudgypoultry/TwoDoorCell.gd" id="5_g4qh2"]
 
 [node name="CellFolder" type="Node2D" unique_id=48513814]
 
