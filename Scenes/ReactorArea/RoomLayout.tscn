@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://c4r46lowt0wx8" path="res://Assets/Decals/Textures/PaintDamageDecal_01_normal.tga" id="7_2cdcx"]
 [ext_resource type="Texture2D" uid="uid://44hsdqq07fnx" path="res://Assets/Decals/Textures/PaintDamageDecal_01_mixmap.tga" id="8_bs17m"]
 [ext_resource type="ArrayMesh" uid="uid://bminqihy1ij6p" path="res://Assets/Models/RoomKit/Meshes/RoomKit_GreebleWall.res" id="8_pqaes"]
-[ext_resource type="PackedScene" uid="uid://774i3laiuwm3" path="res://Scenes/Environment/OverheadLight.tscn" id="9_2cdcx"]
 [ext_resource type="Texture2D" uid="uid://cxqtcw85v2be4" path="res://Assets/Decals/Textures/Decals_Concrete_Damaged_albedo.tga" id="9_okt7d"]
 [ext_resource type="Texture2D" uid="uid://dy7ulxfp14y6c" path="res://Assets/Decals/Textures/Decals_Concrete_Damaged_normal.tga" id="10_pqaes"]
 [ext_resource type="Texture2D" uid="uid://c0r78romphfpk" path="res://Assets/Decals/Textures/Decals_Concrete_Damaged_mixmap.tga" id="11_hva2l"]
@@ -27,9 +26,11 @@
 [ext_resource type="PackedScene" uid="uid://ocqyy3y2ucu8" path="res://Scenes/Reactor/Reactor.tscn" id="21_ar56e"]
 [ext_resource type="PackedScene" uid="uid://dr7x71xqxmouy" path="res://Scenes/Skeleton/SkeletonPodium.tscn" id="21_bs17m"]
 [ext_resource type="ArrayMesh" uid="uid://cwni785dsmd7e" path="res://Assets/Models/SetDec/Meshes/SteelDoor.res" id="23_bs17m"]
+[ext_resource type="PackedScene" uid="uid://bl4djye2ayi4v" path="res://Scenes/Environment/OverheadLightFlicker.tscn" id="25_7solt"]
 [ext_resource type="PackedScene" uid="uid://co7ucwhfmcig8" path="res://Scenes/Door/steel_door.tscn" id="25_hva2l"]
 [ext_resource type="PackedScene" uid="uid://cuakh38bsxw5a" path="res://Scenes/Skeleton/SkeletonKneel.tscn" id="27_ar56e"]
 [ext_resource type="Script" uid="uid://q742i34wcsxw" path="res://Scenes/Door/DoubleDoor.gd" id="29_fl23l"]
+[ext_resource type="PackedScene" uid="uid://b6lvgrqe058lm" path="res://Scenes/Environment/GrateLight.tscn" id="31_7solt"]
 
 [sub_resource type="Environment" id="Environment_4tam1"]
 background_mode = 1
@@ -50,14 +51,6 @@ volumetric_fog_albedo = Color(0.68, 0.63104, 0.5984, 1)
 [node name="Ceilings" type="Node3D" parent="." unique_id=1920199156]
 
 [node name="RoomKitCeiling" type="MeshInstance3D" parent="Ceilings" unique_id=362753263]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
-mesh = ExtResource("15_fl23l")
-
-[node name="RoomKitCeiling2" type="MeshInstance3D" parent="Ceilings" unique_id=395776957]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9)
-mesh = ExtResource("15_fl23l")
-
-[node name="RoomKitCeiling3" type="MeshInstance3D" parent="Ceilings" unique_id=1246254643]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
 mesh = ExtResource("15_fl23l")
 
@@ -299,6 +292,10 @@ mesh = ExtResource("15_fl23l")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
 mesh = ExtResource("15_fl23l")
 
+[node name="RoomKitCeiling21" type="MeshInstance3D" parent="Ceilings/RoomKitCeiling21" unique_id=806667682]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+mesh = ExtResource("15_fl23l")
+
 [node name="RoomKitCeiling22" type="MeshInstance3D" parent="Ceilings" unique_id=342644490]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -6)
 mesh = ExtResource("15_fl23l")
@@ -317,15 +314,7 @@ mesh = ExtResource("15_fl23l")
 
 [node name="Rooms" type="Node3D" parent="." unique_id=1201425975]
 
-[node name="RoomKitFloor" type="MeshInstance3D" parent="Rooms" unique_id=858191964]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9)
-mesh = ExtResource("1_bripf")
-
 [node name="RoomKitFloor2" type="MeshInstance3D" parent="Rooms" unique_id=184857620]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
-mesh = ExtResource("1_bripf")
-
-[node name="RoomKitFloor3" type="MeshInstance3D" parent="Rooms" unique_id=1577350857]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
 mesh = ExtResource("1_bripf")
 
@@ -376,6 +365,10 @@ mesh = ExtResource("1_bripf")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
 mesh = ExtResource("1_bripf")
 
+[node name="RoomKitFloor15" type="MeshInstance3D" parent="Rooms/RoomKitFloor15" unique_id=482818198]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+mesh = ExtResource("1_bripf")
+
 [node name="RoomKitFloor16" type="MeshInstance3D" parent="Rooms" unique_id=473341559]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -6)
 mesh = ExtResource("1_bripf")
@@ -392,24 +385,12 @@ mesh = ExtResource("1_bripf")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -6)
 mesh = ExtResource("1_bripf")
 
-[node name="RoomKitHallwayWall" type="MeshInstance3D" parent="Rooms" unique_id=1965430208]
+[node name="RoomKitHallwayWall4" type="MeshInstance3D" parent="Rooms" unique_id=400569184]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
 mesh = ExtResource("2_64b3b")
 
-[node name="RoomKitHallwayWall3" type="MeshInstance3D" parent="Rooms" unique_id=1501239918]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9)
-mesh = ExtResource("2_64b3b")
-
-[node name="RoomKitHallwayWall4" type="MeshInstance3D" parent="Rooms" unique_id=400569184]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
-mesh = ExtResource("2_64b3b")
-
-[node name="RoomKitHallwayWall5" type="MeshInstance3D" parent="Rooms" unique_id=1872007603]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
-mesh = ExtResource("2_64b3b")
-
 [node name="RoomKitStraightWall" type="MeshInstance3D" parent="Rooms" unique_id=69902691]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 0, 12)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 0, 6)
 mesh = ExtResource("3_r6i6q")
 
 [node name="RoomKitDoor" type="MeshInstance3D" parent="Rooms" unique_id=2022519642]
@@ -468,17 +449,10 @@ mesh = ExtResource("5_mhh6y")
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6, 0, -9)
 mesh = ExtResource("5_mhh6y")
 
-[node name="RoomKitStraightWall4" type="MeshInstance3D" parent="Rooms" unique_id=1227891650]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 2.9999995, 0, -8.999999)
-mesh = ExtResource("8_pqaes")
-
 [node name="RoomKitStraightWall5" type="MeshInstance3D" parent="Rooms" unique_id=70421213]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -4.7683716e-07, 0, -8.999999)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -4.7683716e-07, 0, -11.999999)
 mesh = ExtResource("3_r6i6q")
-
-[node name="RoomKitStraightWall6" type="MeshInstance3D" parent="Rooms" unique_id=557570057]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -3.0000005, 0, -8.999999)
-mesh = ExtResource("8_pqaes")
+metadata/_edit_group_ = true
 
 [node name="RoomKitExteriorCorner" type="MeshInstance3D" parent="Rooms" unique_id=33047127]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 0, 0)
@@ -2664,7 +2638,7 @@ texture_normal = ExtResource("7_2cdcx")
 texture_orm = ExtResource("8_bs17m")
 
 [node name="Decal5" type="Decal" parent="Decals" unique_id=541978414]
-transform = Transform3D(1.8443524e-07, -1, -8.6357886e-08, -0.97563803, -1.6099628e-07, -0.2193865, 0.2193865, 1.2471664e-07, -0.97563803, 8.47621, 1.0840552, -7.2677364)
+transform = Transform3D(1.9604713e-07, -1, -1.4731725e-07, -0.97563803, -1.5895162e-07, -0.2193865, 0.2193865, 1.867384e-07, -0.97563803, 8.47621, 1.0840552, -7.2677364)
 size = Vector3(2.3095703, 2, 1.9447632)
 texture_albedo = ExtResource("6_4tam1")
 texture_normal = ExtResource("7_2cdcx")
@@ -2689,15 +2663,6 @@ texture_normal = ExtResource("7_2cdcx")
 texture_orm = ExtResource("8_bs17m")
 
 [node name="Lights" type="Node3D" parent="." unique_id=1196548232]
-
-[node name="DoorLightFlicker" parent="Lights" unique_id=1972426774 instance=ExtResource("20_bs17m")]
-transform = Transform3D(1, -4.3711392e-08, 4.371139e-08, 4.3711395e-08, 1, 0, -4.371138e-08, 3.5527137e-15, 1, 1.5101151, 2.5841906, 0.08066967)
-flicker_rate_a = 0.84
-flicker_rate_b = 8.673
-flicker_threshold = 0.453
-flicker_adjust_speed = 2.1809999999999996
-flicker_low_amount = 0.409
-emissive_brightness = 2.792
 
 [node name="DoorLightFlicker3" parent="Lights" unique_id=1863437079 instance=ExtResource("20_bs17m")]
 transform = Transform3D(-1, 4.3711392e-08, 4.371139e-08, 4.3711395e-08, 1, 0, -4.3711395e-08, 2.6865768e-16, -1, 1.5101151, 2.5841906, -0.18528399)
@@ -2729,38 +2694,25 @@ flicker_adjust_speed = 2.5959999999999996
 flicker_low_amount = 0.409
 emissive_brightness = 1.661
 
-[node name="DoorLightFlicker2" parent="Lights" unique_id=265989576 instance=ExtResource("20_bs17m")]
-transform = Transform3D(-1, 4.3711392e-08, 4.371139e-08, 4.3711395e-08, 1, 0, -4.3711395e-08, 2.6865768e-16, -1, 1.5101151, 2.5841906, 11.901606)
-flicker_rate_a = 0.84
-flicker_rate_b = 8.673
-flicker_threshold = 0.453
-flicker_adjust_speed = 2.1809999999999996
-flicker_low_amount = 0.409
-emissive_brightness = 2.792
-
-[node name="OverheadLight6" parent="Lights" unique_id=344840315 instance=ExtResource("9_2cdcx")]
-transform = Transform3D(1, 4.371139e-08, 4.371139e-08, -4.371139e-08, 1, 0, -4.371139e-08, 0, 1, 1.55, 3.0154088, -4.3921986)
-light_colour = Color(0.9999997, 0.84763503, 0.69530445, 1)
-light_fog_amount = 5.0
-cast_shadows = false
+[node name="OverheadLightFlicker" parent="Lights" unique_id=285439363 instance=ExtResource("25_7solt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 3, -9.883)
 
 [node name="Skeletons" type="Node3D" parent="." unique_id=1562671743]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0)
 
 [node name="SkeletonPodium2" parent="Skeletons" unique_id=1197911493 instance=ExtResource("21_bs17m")]
-transform = Transform3D(0.20983219, 0, -0.9777374, 0, 1, 0, 0.9777374, 0, 0.20983219, 31, 1.5, -7)
+transform = Transform3D(0.20983219, 0, -0.9777374, 0, 1, 0, 0.9777374, 0, 0.20983219, 31, 0, -7)
 
 [node name="SkeletonPodium3" parent="Skeletons" unique_id=602876167 instance=ExtResource("21_bs17m")]
-transform = Transform3D(0.20983219, 0, -0.9777374, 0, 1, 0, 0.9777374, 0, 0.20983219, 31, 1.5, -2)
+transform = Transform3D(0.20983219, 0, -0.9777374, 0, 1, 0, 0.9777374, 0, 0.20983219, 31, 0, -2)
 
 [node name="SkeletonCoffin" parent="Skeletons" unique_id=425853638 instance=ExtResource("19_4tam1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 1.5, -14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -14)
 
 [node name="SkeletonCoffin2" parent="Skeletons" unique_id=1571419232 instance=ExtResource("19_4tam1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 1.5, -14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -14)
 
 [node name="SkeletonPodium" parent="Skeletons" unique_id=410653855 instance=ExtResource("21_bs17m")]
-transform = Transform3D(-0.091266006, 0, -0.99582666, 0, 1, 0, 0.99582666, 0, -0.091266006, 15.652, 1.5, 1.387642)
+transform = Transform3D(-0.091266006, 0, -0.99582666, 0, 1, 0, 0.99582666, 0, -0.091266006, 15.652, 0, 1.388)
 
 [node name="OldVersions" type="Node3D" parent="Skeletons" unique_id=462912281]
 visible = false
@@ -2838,31 +2790,31 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.62, 2, -124.75)
 talk_message = Array[String](["ST. JEANNE", "\"What's up? Oh, hey, so funny story. They totally got the wrong corpse. I don't know what the hell I'm doing here, but I promise you, Saint I ain't. They shoved this Apparatus on me and told me that, in the last moments that my consciousness still flickered, on its way to Ascend toward the Labyrinth, this doohickey would record what I was thinking about it, preserve it for the 'Glory of God' for 'All Eternity.' Ask me, that's all a load of bullwash and hogshit. I think right about now, I'm fading out, and that's about all there is to it. Oh, sure, some sap will get the shot to pilot my empty shell into the \"Temple\" to \"Glimpse God,\" but honey, the lights are all out. No one's home. You're all alone. Yeah, you, reading this right now, I'm talking to you. Whoever you think you're talking to, that's just the dying embers of a mind too mired in its own dogma to see one single thing straight, not even as they're shuffling off this old mortal coil. But me? I think I'm getting to the heart of, ain't I, even as I diminish. I'm freaking you out, ain't I, just a little bit? Good. Well. Here I go, I'm just about out of here. Good luck finding your God. I hope it's worth it. Bye forever. [..................] Oh.\" "])
 
 [node name="SkeletonPodium6" parent="Skeletons" unique_id=502640425 instance=ExtResource("21_bs17m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6, 2, -22)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6, 0, -22)
 talk_message = Array[String](["ST. CAMILLA: ", "\"Beyond yon door lies the heart of all things. The Core. God. ", "\"Before thou might enter, ask thyself: ", "\"Hast thou concluded all proper rites and ablutions?\""])
 
 [node name="SkeletonPodium4" parent="Skeletons" unique_id=988356585 instance=ExtResource("21_bs17m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.09, 2, -21.99)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.09, 0, -21.99)
 talk_message = Array[String](["ST. TED:", "\"BEWAAARRRREEEEEEE!\"  ", "\"God has forsaken us.\"", "\"Beware.\" "])
 
 [node name="SkeletonCoffin6" parent="Skeletons" unique_id=657345094 instance=ExtResource("19_4tam1")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.1819396, 1.5, -6.096579)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.5, 0, -6.5)
 talk_message = Array[String](["ST. ALPHONSO: ", "\"If ever you find just one card won't do, ", "simply flip the Blessed Toggle, and try two.\""])
 
 [node name="SkeletonCoffin5" parent="Skeletons" unique_id=892404425 instance=ExtResource("19_4tam1")]
-transform = Transform3D(0.061934076, 0, 0.9980803, 0, 1, 0, -0.9980803, 0, 0.061934076, -5.282665, 1.3968258, -5.954979)
+transform = Transform3D(0.061934076, 0, 0.9980803, 0, 1, 0, -0.9980803, 0, 0.061934076, -4.5, 0, -6.5)
 talk_message = Array[String](["ST. ???", ""])
 
 [node name="SkeletonPodium5" parent="Skeletons" unique_id=342856809 instance=ExtResource("21_bs17m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.678617, 1.3826284, -4.415737)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.678617, 0, -4.415737)
 talk_message = Array[String](["ST. PIUS:", "\"Oh Angel, you who guides this Blessed Saint to bask in Glory, Heed me: ", "Ahead awaits the Inner Sanctum. To enter you must—", "—OH, OH, IT BURNS, THE  UNMITIGATED TRUTH!!!\""])
 
 [node name="SkeletonCoffin4" parent="Skeletons" unique_id=1468821949 instance=ExtResource("19_4tam1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.383, -8.416)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -10.5)
 talk_message = Array[String](["ST. BRIDGET: ", "\"The Apparatus now enshrining your teacher's bones is finicky. ", "\"Experiment and explore.\" "])
 
 [node name="ReactorSkeletons" type="Node3D" parent="Skeletons" unique_id=355379130]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -14, 1.7406497, -33)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -14, 0, -33)
 
 [node name="Row1" type="Node3D" parent="Skeletons/ReactorSkeletons" unique_id=1035826052]
 
@@ -2993,7 +2945,7 @@ transform = Transform3D(0.4226183, 0, -0.90630794, 0, 1, 0, 0.90630794, 0, 0.422
 transform = Transform3D(0.4226183, 0, 0.90630794, 0, 1, 0, -0.90630794, 0, 0.4226183, -12, 0, 2)
 
 [node name="SkeletonCoffin3" parent="Skeletons" unique_id=379935278 instance=ExtResource("19_4tam1")]
-transform = Transform3D(-0.9302268, 0, 0.36698514, 0, 1, 0, -0.36698514, 0, -0.9302268, 25, 1.5, -1)
+transform = Transform3D(-0.9302268, 0, 0.36698514, 0, 1, 0, -0.36698514, 0, -0.9302268, 25, 0, -1)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=645849406]
 environment = SubResource("Environment_4tam1")
@@ -3029,5 +2981,21 @@ door_success_sound = null
 door_failure_sound = null
 
 [node name="EntryDoor" type="MeshInstance3D" parent="Doors" unique_id=2129750079]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.18789625, 11.777333)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.18789625, 5.7773333)
 mesh = ExtResource("23_bs17m")
+
+[node name="RoomKitExteriorCorner" type="MeshInstance3D" parent="." unique_id=1222752621]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3, 0, -12)
+mesh = ExtResource("16_7solt")
+
+[node name="RoomKitExteriorCorner2" type="MeshInstance3D" parent="." unique_id=513547899]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 6, 0, -12)
+mesh = ExtResource("16_7solt")
+
+[node name="GrateLight" parent="." unique_id=1906500238 instance=ExtResource("31_7solt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 3, -4.5)
+light_range = 5.0
+
+[node name="GrateLight2" parent="." unique_id=611180243 instance=ExtResource("31_7solt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 3, -4.5)
+light_range = 5.0

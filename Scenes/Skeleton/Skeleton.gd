@@ -10,6 +10,3 @@ var zoom_position : Vector3 = Vector3.ZERO
 
 func _ready() -> void:
 	zoom_position = zoom_node.global_position
-
-func play_speech_audio() -> void:
-	skeleton_audio.play()
