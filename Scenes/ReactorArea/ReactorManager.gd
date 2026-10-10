@@ -115,6 +115,7 @@ func move_forward():
 		await cam_tween.finished
 		if slam_check_ray.is_colliding():
 			var door : Door = slam_check_ray.get_collider()
+			print(door)
 			if door.is_open && door.can_slam:
 				door.close_door()
 	else:

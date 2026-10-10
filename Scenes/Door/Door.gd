@@ -16,16 +16,17 @@ var tween : Tween
 
 var is_open:bool = false
 var has_slammed:bool = false
+var original_position : Vector3
 
 func open_door():
 	is_open = true
-	
-	await get_tree().create_timer(1.0).timeout
+	original_position = door_holder.position
 	indicator.indicator_state = GridIndicator.IndicatorState.CORRECT
 	door_speaker_player.stream = door_success_sound
 	door_speaker_player.play()
 	await get_tree().create_timer(1.0).timeout
 	door_open_player.play()
+	await get_tree().create_timer(1.0).timeout
 	tween = get_tree().create_tween().bind_node(door_holder)
 	tween.tween_property(door_holder, "position", position - transform.basis.z * 0.125, 0.5)
 	tween.tween_interval(0.25)
@@ -38,18 +39,7 @@ func close_door():
 	if !has_slammed:
 		is_open = false
 		has_slammed = true
-		tween = get_tree().create_tween().bind_node(door_holder)
-		tween.set_trans(Tween.TRANS_CUBIC)
-		tween.set_ease(Tween.EASE_IN)
-		tween.tween_property(door_holder, "position", position + transform.basis.x * 3.0, 1.0)
-		await get_tree().create_timer(1.0).timeout
-		door_open_player.play()
-		tween.tween_property(door_holder, "position", position + transform.basis.z * 0.125, 0.5)
-		tween.tween_interval(0.25)
-		tween.set_trans(Tween.TRANS_CUBIC)
-		tween.set_ease(Tween.EASE_IN)
-		tween.tween_property(door_holder, "position", position + transform.basis.x * 3.0, 1.0)
-		await get_tree().create_timer(1.0).timeout
+		door_holder.position = original_position
 
 
 
