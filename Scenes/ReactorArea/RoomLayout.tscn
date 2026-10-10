@@ -2699,11 +2699,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 3, -9.883)
 
 [node name="Skeletons" type="Node3D" parent="." unique_id=1562671743]
 
-[node name="SkeletonF" parent="Skeletons" unique_id=1197911493 instance=ExtResource("21_bs17m")]
-transform = Transform3D(0.20983219, 0, -0.9777374, 0, 1, 0, 0.9777374, 0, 0.20983219, 31, 0, -7)
+[node name="SkeletonA" parent="Skeletons" unique_id=892404425 instance=ExtResource("19_4tam1")]
+transform = Transform3D(0.061934084, 0, 0.9980803, 0, 1, 0, -0.9980803, 0, 0.061934084, -4.5, 0, -6.5)
+talk_message = Array[String](["\"The answer you seek is written on my face for all to see. ", "Look closely and ye shall find.\""])
 
-[node name="SkeletonG" parent="Skeletons" unique_id=602876167 instance=ExtResource("21_bs17m")]
-transform = Transform3D(0.20983219, 0, -0.9777374, 0, 1, 0, 0.9777374, 0, 0.20983219, 31, 0, -2)
+[node name="SkeletonB" parent="Skeletons" unique_id=1468821949 instance=ExtResource("19_4tam1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -10.5)
+talk_message = Array[String](["\"As Saint Ex taught you, it is fission and fusion together that govern all things. ", "Fusion is the righteous path; sometimes two may proceed where one cannot.\""])
+
+[node name="SkeletonC" parent="Skeletons" unique_id=657345094 instance=ExtResource("19_4tam1")]
+transform = Transform3D(-4.4703484e-08, 0, -1, 0, 1, 0, 1, 0, -4.4703484e-08, 7.499998, 0, -6.4999995)
+talk_message = Array[String](["\"You inhabit your former mentor well, initiate.", "Fission is the sinistral path—the division of the atom, which brought woe until the world, is not to be trifled with.", "Yet, only by fission and fusion together can one tread the pathway to the Holiest of Holies.\""])
 
 [node name="SkeletonD" parent="Skeletons" unique_id=425853638 instance=ExtResource("19_4tam1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -14)
@@ -2711,9 +2717,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -14)
 [node name="SkeletonE" parent="Skeletons" unique_id=1571419232 instance=ExtResource("19_4tam1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -14)
 
-[node name="SkeletonH" parent="Skeletons" unique_id=410653855 instance=ExtResource("21_bs17m")]
+[node name="SkeletonF" parent="Skeletons" unique_id=1197911493 instance=ExtResource("21_bs17m")]
+transform = Transform3D(0.20983219, 0, -0.9777374, 0, 1, 0, 0.9777374, 0, 0.20983219, 31, 0, -7)
+
+[node name="SkeletonG" parent="Skeletons" unique_id=602876167 instance=ExtResource("21_bs17m")]
+transform = Transform3D(0.20983219, 0, -0.9777374, 0, 1, 0, 0.9777374, 0, 0.20983219, 31, 0, -2)
+
+[node name="SkeletonH" parent="Skeletons" unique_id=379935278 instance=ExtResource("19_4tam1")]
+transform = Transform3D(-0.9302268, 0, 0.36698514, 0, 1, 0, -0.36698514, 0, -0.9302268, 25, 0, -1)
+
+[node name="SkeletonI" parent="Skeletons" unique_id=410653855 instance=ExtResource("21_bs17m")]
 transform = Transform3D(-0.091266006, 0, -0.99582666, 0, 1, 0, 0.99582666, 0, -0.091266006, 15.652, 0, 1.388)
 talk_message = Array[String](["\"I have read the ancient texts. I have suffered through scripture. I have annotated the Apocrypha. ", "My conclusion? ", "Perhaps this is blasphemy, but I wonder: Instead of all this, our vast task of eternal preservation.", "Mightn't we simply have chosen not to create it at all? God?\" "])
+
+[node name="SkeletonJ" parent="Skeletons" unique_id=342856809 instance=ExtResource("21_bs17m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.678617, 0, -4.415737)
+talk_message = Array[String](["ST. PIUS:", "\"Oh Angel, you who guides this Blessed Saint to bask in Glory, Heed me: ", "Ahead awaits the Inner Sanctum. To enter you must—", "—OH, OH, IT BURNS, THE  UNMITIGATED TRUTH!!!\""])
+
+[node name="SkeletonK" parent="Skeletons" unique_id=988356585 instance=ExtResource("21_bs17m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.09, 0, -21.99)
+talk_message = Array[String](["\"Before you enter, and gaze upon Glory, consider: ", "If instead the world as written no longer suits you, ", "If all must burn and begin anew, ", "take the leftward Path toward Fallout.\""])
+
+[node name="SkeletonL" parent="Skeletons" unique_id=502640425 instance=ExtResource("21_bs17m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6, 0, -22)
+talk_message = Array[String](["\"Before you enter, and gaze upon Glory, consider: ", "Should you wish to preserve this present cycle, ", "To join in the company of Saints, our divine Halo.", "Take the rightward Path.\""])
 
 [node name="OldVersions" type="Node3D" parent="Skeletons" unique_id=462912281]
 visible = false
@@ -2789,30 +2816,6 @@ talk_message = Array[String](["ST. JANUARIUS", "\"There will come an ever cold W
 [node name="SkeletonCoffin9" parent="Skeletons/OldVersions" unique_id=1988752239 instance=ExtResource("19_4tam1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.62, 2, -124.75)
 talk_message = Array[String](["ST. JEANNE", "\"What's up? Oh, hey, so funny story. They totally got the wrong corpse. I don't know what the hell I'm doing here, but I promise you, Saint I ain't. They shoved this Apparatus on me and told me that, in the last moments that my consciousness still flickered, on its way to Ascend toward the Labyrinth, this doohickey would record what I was thinking about it, preserve it for the 'Glory of God' for 'All Eternity.' Ask me, that's all a load of bullwash and hogshit. I think right about now, I'm fading out, and that's about all there is to it. Oh, sure, some sap will get the shot to pilot my empty shell into the \"Temple\" to \"Glimpse God,\" but honey, the lights are all out. No one's home. You're all alone. Yeah, you, reading this right now, I'm talking to you. Whoever you think you're talking to, that's just the dying embers of a mind too mired in its own dogma to see one single thing straight, not even as they're shuffling off this old mortal coil. But me? I think I'm getting to the heart of, ain't I, even as I diminish. I'm freaking you out, ain't I, just a little bit? Good. Well. Here I go, I'm just about out of here. Good luck finding your God. I hope it's worth it. Bye forever. [..................] Oh.\" "])
-
-[node name="SkeletonPodium6" parent="Skeletons" unique_id=502640425 instance=ExtResource("21_bs17m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6, 0, -22)
-talk_message = Array[String](["\"Before you enter, and gaze upon Glory, consider: ", "Should you wish to preserve this present cycle, ", "To join in the company of Saints, our divine Halo.", "Take the rightward Path.\""])
-
-[node name="SkeletonPodium4" parent="Skeletons" unique_id=988356585 instance=ExtResource("21_bs17m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.09, 0, -21.99)
-talk_message = Array[String](["\"Before you enter, and gaze upon Glory, consider: ", "If instead the world as written no longer suits you, ", "If all must burn and begin anew, ", "take the leftward Path toward Fallout.\""])
-
-[node name="SkeletonC" parent="Skeletons" unique_id=657345094 instance=ExtResource("19_4tam1")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.5, 0, -6.5)
-talk_message = Array[String](["\"You inhabit your former mentor well, initiate.", "Fission is the sinistral path—the division of the atom, which brought woe until the world, is not to be trifled with.", "Yet, only by fission and fusion together can one tread the pathway to the Holiest of Holies.\""])
-
-[node name="SkeletonA" parent="Skeletons" unique_id=892404425 instance=ExtResource("19_4tam1")]
-transform = Transform3D(0.061934076, 0, 0.9980803, 0, 1, 0, -0.9980803, 0, 0.061934076, -4.5, 0, -6.5)
-talk_message = Array[String](["\"The answer you seek is written on my face for all to see. ", "Look closely and ye shall find.\""])
-
-[node name="SkeletonPodium5" parent="Skeletons" unique_id=342856809 instance=ExtResource("21_bs17m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.678617, 0, -4.415737)
-talk_message = Array[String](["ST. PIUS:", "\"Oh Angel, you who guides this Blessed Saint to bask in Glory, Heed me: ", "Ahead awaits the Inner Sanctum. To enter you must—", "—OH, OH, IT BURNS, THE  UNMITIGATED TRUTH!!!\""])
-
-[node name="SkeletonB" parent="Skeletons" unique_id=1468821949 instance=ExtResource("19_4tam1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -10.5)
-talk_message = Array[String](["\"As Saint Ex taught you, it is fission and fusion together that govern all things. ", "Fusion is the righteous path; sometimes two may proceed where one cannot.\""])
 
 [node name="ReactorSkeletons" type="Node3D" parent="Skeletons" unique_id=355379130]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -14, 0, -33)
@@ -2944,9 +2947,6 @@ transform = Transform3D(0.4226183, 0, -0.90630794, 0, 1, 0, 0.90630794, 0, 0.422
 
 [node name="SkeletonKneel10" parent="Skeletons/ReactorSkeletons/Row4" unique_id=2071890708 instance=ExtResource("27_ar56e")]
 transform = Transform3D(0.4226183, 0, 0.90630794, 0, 1, 0, -0.90630794, 0, 0.4226183, -12, 0, 2)
-
-[node name="TheUnnamedSkeleton" parent="Skeletons" unique_id=379935278 instance=ExtResource("19_4tam1")]
-transform = Transform3D(-0.9302268, 0, 0.36698514, 0, 1, 0, -0.36698514, 0, -0.9302268, 25, 0, -1)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=645849406]
 environment = SubResource("Environment_4tam1")
