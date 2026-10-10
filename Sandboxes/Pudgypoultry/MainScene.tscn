@@ -142,6 +142,9 @@ size = Vector2i(240, 240)
 [node name="Camera3D" parent="ReactorView/FPSCamera" index="0" unique_id=417143241]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.5, 1.5, -19.5)
 
+[node name="GridManager" parent="ReactorView/GridCamera" parent_id_path=PackedInt32Array(212615922, 134290074) index="0" unique_id=401646695]
+file_name = "FullGridCopy.tscn"
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1762969380]
 environment = ExtResource("7_5msbe")
 

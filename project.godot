@@ -65,7 +65,6 @@ interact={
 3d_physics/layer_2="Table"
 3d_physics/layer_3="Slot"
 3d_physics/layer_5="SpookySkeleton"
-3d_physics/layer_6="Doors"
 
 [physics]
 
