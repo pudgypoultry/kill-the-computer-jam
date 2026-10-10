@@ -819,7 +819,7 @@ mesh = ExtResource("3_r6i6q")
 transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, -12, 0, -2.999999)
 mesh = ExtResource("3_r6i6q")
 
-[node name="RoomKitHallwayEnd85" type="MeshInstance3D" parent="Rooms" unique_id=641675699]
+[node name="SkeletonI" type="MeshInstance3D" parent="Rooms" unique_id=641675699]
 transform = Transform3D(-4.3711395e-08, 0, -1, 0, 1, 0, 1, 0, -4.3711395e-08, -18, 0, -5.999999)
 mesh = ExtResource("5_r6i6q")
 
@@ -2699,19 +2699,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 3, -9.883)
 
 [node name="Skeletons" type="Node3D" parent="." unique_id=1562671743]
 
-[node name="SkeletonPodium2" parent="Skeletons" unique_id=1197911493 instance=ExtResource("21_bs17m")]
+[node name="SkeletonF" parent="Skeletons" unique_id=1197911493 instance=ExtResource("21_bs17m")]
 transform = Transform3D(0.20983219, 0, -0.9777374, 0, 1, 0, 0.9777374, 0, 0.20983219, 31, 0, -7)
 
-[node name="SkeletonPodium3" parent="Skeletons" unique_id=602876167 instance=ExtResource("21_bs17m")]
+[node name="SkeletonG" parent="Skeletons" unique_id=602876167 instance=ExtResource("21_bs17m")]
 transform = Transform3D(0.20983219, 0, -0.9777374, 0, 1, 0, 0.9777374, 0, 0.20983219, 31, 0, -2)
 
-[node name="SkeletonCoffin" parent="Skeletons" unique_id=425853638 instance=ExtResource("19_4tam1")]
+[node name="SkeletonD" parent="Skeletons" unique_id=425853638 instance=ExtResource("19_4tam1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -14)
 
-[node name="SkeletonCoffin2" parent="Skeletons" unique_id=1571419232 instance=ExtResource("19_4tam1")]
+[node name="SkeletonE" parent="Skeletons" unique_id=1571419232 instance=ExtResource("19_4tam1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -14)
 
-[node name="SkeletonPodium" parent="Skeletons" unique_id=410653855 instance=ExtResource("21_bs17m")]
+[node name="SkeletonH" parent="Skeletons" unique_id=410653855 instance=ExtResource("21_bs17m")]
 transform = Transform3D(-0.091266006, 0, -0.99582666, 0, 1, 0, 0.99582666, 0, -0.091266006, 15.652, 0, 1.388)
 
 [node name="OldVersions" type="Node3D" parent="Skeletons" unique_id=462912281]
@@ -2797,11 +2797,11 @@ talk_message = Array[String](["ST. CAMILLA: ", "\"Beyond yon door lies the heart
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.09, 0, -21.99)
 talk_message = Array[String](["ST. TED:", "\"BEWAAARRRREEEEEEE!\"  ", "\"God has forsaken us.\"", "\"Beware.\" "])
 
-[node name="SkeletonCoffin6" parent="Skeletons" unique_id=657345094 instance=ExtResource("19_4tam1")]
+[node name="SkeletonC" parent="Skeletons" unique_id=657345094 instance=ExtResource("19_4tam1")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.5, 0, -6.5)
 talk_message = Array[String](["ST. ALPHONSO: ", "\"If ever you find just one card won't do, ", "simply flip the Blessed Toggle, and try two.\""])
 
-[node name="SkeletonCoffin5" parent="Skeletons" unique_id=892404425 instance=ExtResource("19_4tam1")]
+[node name="SkeletonA" parent="Skeletons" unique_id=892404425 instance=ExtResource("19_4tam1")]
 transform = Transform3D(0.061934076, 0, 0.9980803, 0, 1, 0, -0.9980803, 0, 0.061934076, -4.5, 0, -6.5)
 talk_message = Array[String](["ST. ???", ""])
 
@@ -2809,7 +2809,7 @@ talk_message = Array[String](["ST. ???", ""])
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.678617, 0, -4.415737)
 talk_message = Array[String](["ST. PIUS:", "\"Oh Angel, you who guides this Blessed Saint to bask in Glory, Heed me: ", "Ahead awaits the Inner Sanctum. To enter you must—", "—OH, OH, IT BURNS, THE  UNMITIGATED TRUTH!!!\""])
 
-[node name="SkeletonCoffin4" parent="Skeletons" unique_id=1468821949 instance=ExtResource("19_4tam1")]
+[node name="SkeletonB" parent="Skeletons" unique_id=1468821949 instance=ExtResource("19_4tam1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -10.5)
 talk_message = Array[String](["ST. BRIDGET: ", "\"The Apparatus now enshrining your teacher's bones is finicky. ", "\"Experiment and explore.\" "])
 
@@ -2944,7 +2944,7 @@ transform = Transform3D(0.4226183, 0, -0.90630794, 0, 1, 0, 0.90630794, 0, 0.422
 [node name="SkeletonKneel10" parent="Skeletons/ReactorSkeletons/Row4" unique_id=2071890708 instance=ExtResource("27_ar56e")]
 transform = Transform3D(0.4226183, 0, 0.90630794, 0, 1, 0, -0.90630794, 0, 0.4226183, -12, 0, 2)
 
-[node name="SkeletonCoffin3" parent="Skeletons" unique_id=379935278 instance=ExtResource("19_4tam1")]
+[node name="TheUnnamedSkeleton" parent="Skeletons" unique_id=379935278 instance=ExtResource("19_4tam1")]
 transform = Transform3D(-0.9302268, 0, 0.36698514, 0, 1, 0, -0.36698514, 0, -0.9302268, 25, 0, -1)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=645849406]
