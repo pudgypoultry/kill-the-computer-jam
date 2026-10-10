@@ -175,11 +175,10 @@ func print_to_terminal(new_message : Array[String]) -> void:
 
 func examine():
 	var current_cell = grid_manager.position_dict[current_position]
-	var current_direction : Vector2i = Vector2i.ZERO
-	if is_valid_move(true):
-		current_direction = grid_manager.get_forward_direction()
-		var target_position : Vector2i = current_position + current_direction
-		var examine_cell = grid_manager.position_dict[target_position]
+	var current_direction = grid_manager.get_forward_direction()
+	var target_position : Vector2i = current_position + (current_direction as Vector2i)
+	var examine_cell = grid_manager.position_dict[target_position]
+	if is_valid_move(true) or examine_cell.has_skeleton:
 		print_to_terminal(examine_cell.examine)
 	else:
 		print_to_terminal(current_cell.examine)
