@@ -10271,7 +10271,7 @@ texture = ExtResource("3_07650")
 
 [node name="16_25" parent="." unique_id=2103776982 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(1680, 2625)
-examine = Array[String](["ST. JEANNE the GLORIOUS", "She was a true Saint, in life and in death, but...", "Wait, that voice emerging from the Apparatus...", "That can't be Jeanne's voice, can it?"])
+examine = Array[String](["ST. BIBINIA the BOOKWORM", "She was a true Saint, in life and in death.", "Even in her blashphemy, she glimpsed fragments of truth. "])
 grid_position = Vector2i(16, 25)
 adjacencies = [NodePath("../16_24"), NodePath("../17_25"), NodePath("../16_26"), NodePath("../15_25")]
 hidden_room = true

@@ -273,7 +273,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -18)
 mesh = ExtResource("15_fl23l")
 
 [node name="RoomKitCeiling151" type="MeshInstance3D" parent="Ceilings" unique_id=1041226128]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -15)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.003849, -0.0015361309, -15.000046)
 mesh = ExtResource("15_fl23l")
 
 [node name="RoomKitCeiling34" type="MeshInstance3D" parent="Ceilings" unique_id=346265943]
@@ -2713,6 +2713,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -14)
 
 [node name="SkeletonH" parent="Skeletons" unique_id=410653855 instance=ExtResource("21_bs17m")]
 transform = Transform3D(-0.091266006, 0, -0.99582666, 0, 1, 0, 0.99582666, 0, -0.091266006, 15.652, 0, 1.388)
+talk_message = Array[String](["\"I have read the ancient texts. I have suffered through scripture. I have annotated the Apocrypha. ", "My conclusion? ", "Perhaps this is blasphemy, but I wonder: Instead of all this, our vast task of eternal preservation.", "Mightn't we simply have chosen not to create it at all? God?\" "])
 
 [node name="OldVersions" type="Node3D" parent="Skeletons" unique_id=462912281]
 visible = false
@@ -2791,19 +2792,19 @@ talk_message = Array[String](["ST. JEANNE", "\"What's up? Oh, hey, so funny stor
 
 [node name="SkeletonPodium6" parent="Skeletons" unique_id=502640425 instance=ExtResource("21_bs17m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6, 0, -22)
-talk_message = Array[String](["ST. CAMILLA: ", "\"Beyond yon door lies the heart of all things. The Core. God. ", "\"Before thou might enter, ask thyself: ", "\"Hast thou concluded all proper rites and ablutions?\""])
+talk_message = Array[String](["\"Before you enter, and gaze upon Glory, consider: ", "Should you wish to preserve this present cycle, ", "To join in the company of Saints, our divine Halo.", "Take the rightward Path.\""])
 
 [node name="SkeletonPodium4" parent="Skeletons" unique_id=988356585 instance=ExtResource("21_bs17m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.09, 0, -21.99)
-talk_message = Array[String](["ST. TED:", "\"BEWAAARRRREEEEEEE!\"  ", "\"God has forsaken us.\"", "\"Beware.\" "])
+talk_message = Array[String](["\"Before you enter, and gaze upon Glory, consider: ", "If instead the world as written no longer suits you, ", "If all must burn and begin anew, ", "take the leftward Path toward Fallout.\""])
 
 [node name="SkeletonC" parent="Skeletons" unique_id=657345094 instance=ExtResource("19_4tam1")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.5, 0, -6.5)
-talk_message = Array[String](["ST. ALPHONSO: ", "\"If ever you find just one card won't do, ", "simply flip the Blessed Toggle, and try two.\""])
+talk_message = Array[String](["\"You inhabit your former mentor well, initiate.", "Fission is the sinistral path—the division of the atom, which brought woe until the world, is not to be trifled with.", "Yet, only by fission and fusion together can one tread the pathway to the Holiest of Holies.\""])
 
 [node name="SkeletonA" parent="Skeletons" unique_id=892404425 instance=ExtResource("19_4tam1")]
 transform = Transform3D(0.061934076, 0, 0.9980803, 0, 1, 0, -0.9980803, 0, 0.061934076, -4.5, 0, -6.5)
-talk_message = Array[String](["ST. ???", ""])
+talk_message = Array[String](["\"The answer you seek is written on my face for all to see. ", "Look closely and ye shall find.\""])
 
 [node name="SkeletonPodium5" parent="Skeletons" unique_id=342856809 instance=ExtResource("21_bs17m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.678617, 0, -4.415737)
@@ -2811,7 +2812,7 @@ talk_message = Array[String](["ST. PIUS:", "\"Oh Angel, you who guides this Bles
 
 [node name="SkeletonB" parent="Skeletons" unique_id=1468821949 instance=ExtResource("19_4tam1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -10.5)
-talk_message = Array[String](["ST. BRIDGET: ", "\"The Apparatus now enshrining your teacher's bones is finicky. ", "\"Experiment and explore.\" "])
+talk_message = Array[String](["\"As Saint Ex taught you, it is fission and fusion together that govern all things. ", "Fusion is the righteous path; sometimes two may proceed where one cannot.\""])
 
 [node name="ReactorSkeletons" type="Node3D" parent="Skeletons" unique_id=355379130]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -14, 0, -33)
