@@ -2992,6 +2992,9 @@ transform = Transform3D(0.4226183, 0, -0.90630794, 0, 1, 0, 0.90630794, 0, 0.422
 [node name="SkeletonKneel10" parent="Skeletons/ReactorSkeletons/Row4" unique_id=2071890708 instance=ExtResource("27_ar56e")]
 transform = Transform3D(0.4226183, 0, 0.90630794, 0, 1, 0, -0.90630794, 0, 0.4226183, -12, 0, 2)
 
+[node name="SkeletonCoffin3" parent="Skeletons" unique_id=379935278 instance=ExtResource("19_4tam1")]
+transform = Transform3D(-0.9302268, 0, 0.36698514, 0, 1, 0, -0.36698514, 0, -0.9302268, 25, 1.5, -1)
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=645849406]
 environment = SubResource("Environment_4tam1")
 
