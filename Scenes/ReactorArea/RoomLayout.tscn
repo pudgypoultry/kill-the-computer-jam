@@ -2749,18 +2749,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0)
 
 [node name="SkeletonPodium2" parent="Skeletons" unique_id=1197911493 instance=ExtResource("21_bs17m")]
 transform = Transform3D(0.20983219, 0, -0.9777374, 0, 1, 0, 0.9777374, 0, 0.20983219, 31, 1.5, -7)
+talk_message = Array[String](["\"Permit that I might interpret the true meaning of your Holy Commands:", "\"The Right Hand path is Fusion.", "\"The Left Hand path is Fission.\""])
 
 [node name="SkeletonPodium3" parent="Skeletons" unique_id=602876167 instance=ExtResource("21_bs17m")]
 transform = Transform3D(0.20983219, 0, -0.9777374, 0, 1, 0, 0.9777374, 0, 0.20983219, 31, 1.5, -2)
+talk_message = Array[String](["\"Permit that I might interpret the true meaning of your Holy Commands:", "\"Fallout moves us forward.", "\"The Halo moves us back.\""])
 
 [node name="SkeletonCoffin" parent="Skeletons" unique_id=425853638 instance=ExtResource("19_4tam1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 1.5, -14)
+talk_message = Array[String](["\"The atom is the smallest of seeds, yet its might can render a mountain down to cinders.", "\"Halo grants the power to see both large small.\"", ""])
 
 [node name="SkeletonCoffin2" parent="Skeletons" unique_id=1571419232 instance=ExtResource("19_4tam1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 1.5, -14)
+talk_message = Array[String](["\"The Halo is a shockwave—the very breath of God in the Atom that makes mockery of our fragile work.", "\"To proceed, one must look outside of the box.\""])
 
 [node name="SkeletonPodium" parent="Skeletons" unique_id=410653855 instance=ExtResource("21_bs17m")]
 transform = Transform3D(-0.091266006, 0, -0.99582666, 0, 1, 0, 0.99582666, 0, -0.091266006, 15.652, 1.5, 1.387642)
+talk_message = Array[String](["\"The atom is the smallest of seeds, yet its might can render a mountain down to cinders.", "\"The Halo grants the power to see both large and small", ""])
 
 [node name="OldVersions" type="Node3D" parent="Skeletons" unique_id=462912281]
 visible = false
@@ -2839,11 +2844,11 @@ talk_message = Array[String](["ST. JEANNE", "\"What's up? Oh, hey, so funny stor
 
 [node name="SkeletonPodium6" parent="Skeletons" unique_id=502640425 instance=ExtResource("21_bs17m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6, 2, -22)
-talk_message = Array[String](["ST. CAMILLA: ", "\"Beyond yon door lies the heart of all things. The Core. God. ", "\"Before thou might enter, ask thyself: ", "\"Hast thou concluded all proper rites and ablutions?\""])
+talk_message = Array[String](["\"Before thou enter, to gaze upon Glory, know this: ", "\"Shouldst thou wish to preserve this present cycle, ", "To join in the company of Saints, our divine Halo", "Take the rightward Path. "])
 
 [node name="SkeletonPodium4" parent="Skeletons" unique_id=988356585 instance=ExtResource("21_bs17m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.09, 2, -21.99)
-talk_message = Array[String](["ST. TED:", "\"BEWAAARRRREEEEEEE!\"  ", "\"God has forsaken us.\"", "\"Beware.\" "])
+talk_message = Array[String](["\"Before thou enter, to gaze upon Glory, know this: ", "\"If instead the world as written no longer suits you, ", "\"If all must burn and begin anew, ", "Take the leftward Path toward Fallout. "])
 
 [node name="SkeletonCoffin6" parent="Skeletons" unique_id=657345094 instance=ExtResource("19_4tam1")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.1819396, 1.5, -6.096579)
@@ -2994,6 +2999,7 @@ transform = Transform3D(0.4226183, 0, 0.90630794, 0, 1, 0, -0.90630794, 0, 0.422
 
 [node name="SkeletonCoffin3" parent="Skeletons" unique_id=379935278 instance=ExtResource("19_4tam1")]
 transform = Transform3D(-0.9302268, 0, 0.36698514, 0, 1, 0, -0.36698514, 0, -0.9302268, 25, 1.5, -1)
+talk_message = Array[String](["Permit that I might interpret the true meaning of your Holy Commands:", "It is through the Cruciform that we speak with and understand the world.  "])
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=645849406]
 environment = SubResource("Environment_4tam1")
