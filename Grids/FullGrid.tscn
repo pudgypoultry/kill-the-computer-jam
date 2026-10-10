@@ -4296,7 +4296,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="16_15" parent="." unique_id=1338978485 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1680, 1575)
-examine = Array[String](["ST. CHRYSANTHEMUM the FLOWERING", "You always hated his riddles. "])
+examine = Array[String](["ST. CHRYSANTHEMUM the FLOWERING", "You always hated her riddles. "])
 grid_position = Vector2i(16, 15)
 adjacencies = [NodePath("../16_14"), NodePath("../17_15"), NodePath("../16_16"), NodePath("../15_15")]
 has_skeleton = true
@@ -6921,7 +6921,7 @@ texture = ExtResource("3_m5ja8")
 
 [node name="11_24" parent="." unique_id=826111124 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_fh3vx")]
 position = Vector2(1155, 2520)
-examine = Array[String](["SWITCH GEAR ROOM", "The grinding of unseen gears behind these  ", "Rotting Walls", "Reminds you of the vast and unknowable expanse of this place, ", "Of the mysteries of God's unceasing work"])
+examine = Array[String](["SWITCH GEAR ROOM", "The grinding of unseen gears behind these rotting walls ", "Reminds you of the vast and unknowable expanse of this place, ", "Of the mysteries of God's unceasing work"])
 grid_position = Vector2i(11, 24)
 adjacencies = [NodePath("../11_23"), NodePath("../12_24"), NodePath("../11_25"), NodePath("../10_24")]
 has_card_unlock = true
