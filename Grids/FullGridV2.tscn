@@ -7348,12 +7348,10 @@ texture = ExtResource("3_07650")
 
 [node name="17_18" parent="." unique_id=1470726509 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(1785, 1890)
-active = false
 grid_position = Vector2i(17, 18)
 adjacencies = [NodePath("../17_17"), NodePath("../18_18"), NodePath("../17_19"), NodePath("../16_18")]
 
 [node name="Sprite2D2" type="Sprite2D" parent="17_18" unique_id=231587559]
-visible = false
 texture = ExtResource("2_lgriu")
 
 [node name="SkeletonSprite2" type="Sprite2D" parent="17_18" unique_id=909949032]
@@ -8504,16 +8502,14 @@ texture = ExtResource("3_07650")
 
 [node name="11_21" parent="." unique_id=593297637 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(1155, 2205)
-active = false
 grid_position = Vector2i(11, 21)
 adjacencies = [NodePath("../11_20"), NodePath("../12_21"), NodePath("../11_22"), NodePath("../10_21")]
+has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="11_21" unique_id=618739368]
-visible = false
 texture = ExtResource("2_lgriu")
 
 [node name="SkeletonSprite2" type="Sprite2D" parent="11_21" unique_id=654921103]
-visible = false
 texture = ExtResource("3_07650")
 
 [node name="12_21" parent="." unique_id=46959922 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
@@ -8919,12 +8915,12 @@ texture = ExtResource("3_07650")
 position = Vector2(1155, 2310)
 grid_position = Vector2i(11, 22)
 adjacencies = [NodePath("../11_21"), NodePath("../12_22"), NodePath("../11_23"), NodePath("../10_22")]
-has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="11_22" unique_id=2000342424]
 texture = ExtResource("2_lgriu")
 
 [node name="SkeletonSprite2" type="Sprite2D" parent="11_22" unique_id=1940140669]
+visible = false
 texture = ExtResource("3_07650")
 
 [node name="12_22" parent="." unique_id=1485983552 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
@@ -9419,7 +9415,6 @@ locked_position = NodePath("../16_23")
 door_sprite = NodePath("Door")
 
 [node name="Sprite2D2" type="Sprite2D" parent="17_23" unique_id=1161364792]
-visible = false
 texture = ExtResource("2_lgriu")
 
 [node name="SkeletonSprite2" type="Sprite2D" parent="17_23" unique_id=2129345320]
@@ -9795,6 +9790,7 @@ texture = ExtResource("3_07650")
 position = Vector2(1575, 2520)
 grid_position = Vector2i(15, 24)
 adjacencies = [NodePath("../15_23"), NodePath("../16_24"), NodePath("../15_25"), NodePath("../14_24")]
+hidden_room = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="15_24" unique_id=2053034231]
 texture = ExtResource("2_lgriu")
@@ -10151,6 +10147,7 @@ texture = ExtResource("3_07650")
 position = Vector2(1155, 2625)
 grid_position = Vector2i(11, 25)
 adjacencies = [NodePath("../11_24"), NodePath("../12_25"), NodePath("../11_26"), NodePath("../10_25")]
+is_starting_position = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="11_25" unique_id=528474306]
 texture = ExtResource("2_lgriu")
@@ -10205,6 +10202,7 @@ texture = ExtResource("3_07650")
 position = Vector2(1575, 2625)
 grid_position = Vector2i(15, 25)
 adjacencies = [NodePath("../15_24"), NodePath("../16_25"), NodePath("../15_26"), NodePath("../14_25")]
+hidden_room = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="15_25" unique_id=791029168]
 texture = ExtResource("2_lgriu")
@@ -10217,6 +10215,7 @@ texture = ExtResource("3_07650")
 position = Vector2(1680, 2625)
 grid_position = Vector2i(16, 25)
 adjacencies = [NodePath("../16_24"), NodePath("../17_25"), NodePath("../16_26"), NodePath("../15_25")]
+hidden_room = true
 has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="16_25" unique_id=2072952889]
@@ -10564,7 +10563,6 @@ texture = ExtResource("3_07650")
 position = Vector2(1155, 2730)
 grid_position = Vector2i(11, 26)
 adjacencies = [NodePath("../11_25"), NodePath("../12_26"), NodePath("../11_27"), NodePath("../10_26")]
-is_starting_position = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="11_26" unique_id=1815935639]
 texture = ExtResource("2_lgriu")

@@ -205,7 +205,7 @@ func get_forward_direction():
 var _zoom_amt:int = 0
 
 func zoom_in():
-	if _zoom_amt > 2:
+	if _zoom_amt >= 3:
 		return
 
 	if is_instance_valid(camera_tween) and camera_tween.is_running():
@@ -218,7 +218,7 @@ func zoom_in():
 	zoom_change.emit(_zoom_amt)
 
 func zoom_out():
-	if _zoom_amt < -2:
+	if _zoom_amt <= -1:
 		return
 
 	_zoom_amt -= 1
