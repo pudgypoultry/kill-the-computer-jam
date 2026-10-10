@@ -16,6 +16,7 @@ class_name ReactorManager
 @export var menu_subviewport: SubViewport
 @export var skeleton_check_ray : RayCast3D
 @export var door_check_ray : RayCast3D
+@export var slam_check_ray : RayCast3D
 @export var footstep_player : AudioStreamPlayer3D
 
 @export var footstep_sfx : Array[AudioStreamWAV]
@@ -37,7 +38,8 @@ func _ready() -> void:
 	if BoardManager.starting_position != Vector2i(-1,-1):
 		var real_starting_position = BoardManager.starting_position - starting_position
 		cam.position.x += real_starting_position.x * BoardManager.step_length
-		cam.position.z += real_starting_position.y * BoardManager.step_length
+		# AT - Not sure why but using the new grid needed an offset of -0.5 on the z-axis
+		cam.position.z += real_starting_position.y * BoardManager.step_length - 0.5
 		grid_manager.current_position = BoardManager.starting_position
 		current_position = BoardManager.starting_position
 	else:
@@ -110,6 +112,11 @@ func move_forward():
 		cam_tween.tween_property(cam, "global_position", cam.global_position + dir, BoardManager.player_move_time)
 		current_position = grid_manager.current_position
 		play_footsteps()
+		await cam_tween.finished
+		if slam_check_ray.is_colliding():
+			var door : Door = slam_check_ray.get_collider()
+			if door.is_open && door.can_slam:
+				door.close_door()
 	else:
 		cam_tween = get_tree().create_tween().bind_node(cam)
 		var dir = -cam.basis.z * BoardManager.step_length

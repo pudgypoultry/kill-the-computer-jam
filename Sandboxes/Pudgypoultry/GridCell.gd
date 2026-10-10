@@ -37,6 +37,7 @@ class_name GridCell
 var grid_manager : GridManager = null
 
 func _update_active() -> void:
+	print(name + ":" + str(grid_position))
 	if !active or hidden_room:
 		for img in get_children():
 			img.hide()
@@ -45,6 +46,12 @@ func _update_active() -> void:
 			# CW - hack
 			if not img is TinyMapImage:
 				img.show()
+			# AT- also a hack, can explain but is dumb
+			if img.name == "Sprite2D2" or img.name == "SkeletonSprite2":
+				img.hide()
+	if hidden_room:
+		for child in get_children():
+			child.hide()
 	if has_skeleton && !hidden_room:
 		if skeleton_sprite:
 			skeleton_sprite.show()
@@ -53,6 +60,7 @@ func _update_active() -> void:
 			skeleton_sprite.hide()
 
 func _ready() -> void:
+	print(sprite)
 	_update_active()
 	if is_starting_position and not Engine.is_editor_hint():
 		BoardManager.starting_position = grid_position

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cpthijnejcx2a" path="res://Sandboxes/Pudgypoultry/GridManager.gd" id="1_t5r65"]
 [ext_resource type="PackedScene" uid="uid://dtgb4jk7ogybv" path="res://Sandboxes/Pudgypoultry/GridCell.tscn" id="2_d15gf"]
 [ext_resource type="Texture2D" uid="uid://c1xbkcf5185cq" path="res://Sandboxes/Pudgypoultry/PlayerMarker.png" id="3_2jinv"]
-[ext_resource type="PackedScene" uid="uid://s5vmwoh0glbl" path="res://Grids/FullGrid.tscn" id="3_86yd3"]
+[ext_resource type="PackedScene" uid="uid://bnrjivsa32dc7" path="res://Grids/FullGridV2.tscn" id="3_86yd3"]
 [ext_resource type="Material" uid="uid://305nqsaantl3" path="res://Assets/Materials/crt_material.tres" id="3_gkgv3"]
 
 [node name="GridManager" type="Node2D" unique_id=401646695 node_paths=PackedStringArray("cell_folder", "player_marker", "camera")]

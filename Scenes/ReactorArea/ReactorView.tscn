@@ -22,15 +22,17 @@ shader_parameter/min_scanline_thickness = 0.5
 shader_parameter/aspect = 0.75
 shader_parameter/wobble_strength = 0.0
 
-[node name="ReactorView" type="Node3D" unique_id=212615922 node_paths=PackedStringArray("cam", "grid_manager", "terminal_manager", "terminal_subviewport", "grid_subviewport", "skeleton_check_ray", "door_check_ray")]
+[node name="ReactorView" type="Node3D" unique_id=212615922 node_paths=PackedStringArray("cam", "grid_manager", "terminal_manager", "terminal_subviewport", "grid_subviewport", "skeleton_check_ray", "door_check_ray", "slam_check_ray")]
 script = ExtResource("1_acc27")
 cam = NodePath("FPSCamera/Camera3D")
 grid_manager = NodePath("GridCamera/GridManager")
+starting_position = Vector2i(11, 26)
 terminal_manager = NodePath("Terminal/Terminal")
 terminal_subviewport = NodePath("Terminal")
 grid_subviewport = NodePath("GridCamera")
 skeleton_check_ray = NodePath("FPSCamera/Camera3D/SkeletonCheckRay")
 door_check_ray = NodePath("FPSCamera/Camera3D/DoorCheckRay")
+slam_check_ray = NodePath("FPSCamera/Camera3D/SlamCheckRay")
 footstep_sfx = Array[AudioStreamWAV]([ExtResource("2_g0q32"), ExtResource("3_3cvd1")])
 
 [node name="FPSCamera" type="SubViewport" parent="." unique_id=726431392]
@@ -48,6 +50,10 @@ collision_mask = 16
 
 [node name="DoorCheckRay" type="RayCast3D" parent="FPSCamera/Camera3D" unique_id=4391016]
 target_position = Vector3(0, 0, -3)
+collision_mask = 32
+
+[node name="SlamCheckRay" type="RayCast3D" parent="FPSCamera/Camera3D" unique_id=69734299]
+target_position = Vector3(0, 0, 3)
 collision_mask = 32
 
 [node name="AudioListener3D" type="AudioListener3D" parent="FPSCamera/Camera3D" unique_id=717798574]
