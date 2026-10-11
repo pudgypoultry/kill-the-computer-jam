@@ -215,6 +215,7 @@ func talk():
 
 func print_new_card():
 	BoardManager.player_actionable = false
+	BoardManager.cursor_hidden = true
 	var current_cell = grid_manager.position_dict[current_position]
 	if current_cell.has_card_unlock:
 		var blank_card = BoardManager.blank_cards.pop_front()
@@ -257,6 +258,7 @@ func print_new_card():
 		await tween.finished
 		blank_card.queue_free()
 	BoardManager.player_actionable = true
+	BoardManager.cursor_hidden = false
 
 func insert_blank_card() -> void:
 	print_to_terminal(blank_card_text)
