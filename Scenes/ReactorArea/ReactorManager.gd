@@ -21,6 +21,7 @@ class_name ReactorManager
 @export var skeleton_check_ray : RayCast3D
 @export var door_check_ray : RayCast3D
 @export var slam_check_ray : RayCast3D
+@export var reactor_door_check_ray : RayCast3D
 @export var footstep_player : AudioStreamPlayer3D
 
 @export var footstep_sfx : Array[AudioStreamWAV]
@@ -134,6 +135,9 @@ func move_forward():
 				door.close_door()
 		if grid_manager.position_dict[current_position].can_slam:
 			grid_manager.position_dict[current_position].slam()
+		if reactor_door_check_ray.is_colliding():
+			var door : ReactorEntranceDoor = reactor_door_check_ray.get_collider()
+			door.open_to_reactor()
 	else:
 		cam_tween = get_tree().create_tween().bind_node(cam)
 		var dir = -cam.basis.z * BoardManager.step_length
