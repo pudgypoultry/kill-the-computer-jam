@@ -47,7 +47,7 @@ func _process(delta: float) -> void:
 			if label.visible_characters >= len(current_message):
 				label.visible_characters = -1
 				writing = false
-	else:
+	elif BoardManager.exclusive_text_mode:
 		blink_timer -= delta
 		if blink_timer < 0.0:
 			blink_timer += blink_delay

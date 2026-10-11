@@ -3236,30 +3236,18 @@ environment = SubResource("Environment_4tam1")
 [node name="FirstDoor" parent="Doors" unique_id=520848132 instance=ExtResource("25_hva2l")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.115509, 0, -6)
 can_slam = true
-door_entry_sound = null
-door_success_sound = null
-door_failure_sound = null
 
 [node name="ZoomOutDoor" parent="Doors" unique_id=1073256528 instance=ExtResource("25_hva2l")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 24.115509, 0, -12)
-door_entry_sound = null
-door_success_sound = null
-door_failure_sound = null
 
 [node name="BlockingDoorEntryway" parent="Doors" unique_id=1267413610 instance=ExtResource("25_hva2l")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5.884491, 0, -6)
-door_entry_sound = null
-door_success_sound = null
-door_failure_sound = null
 
 [node name="DoubleAndZoomInDoor" parent="Doors" unique_id=1958122532 node_paths=PackedStringArray("other_door") instance=ExtResource("25_hva2l")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 17.875544, 0, -3)
 script = ExtResource("29_fl23l")
 other_door = NodePath("../BlockingDoorEntryway")
 time_offset = 0.0
-door_entry_sound = null
-door_success_sound = null
-door_failure_sound = null
 
 [node name="EntryDoor" type="MeshInstance3D" parent="Doors" unique_id=2129750079]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.18789625, 5.7773333)

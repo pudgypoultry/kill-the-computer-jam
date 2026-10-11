@@ -5,6 +5,9 @@ class_name ReactorManager
 @export var valid_card_combos : Dictionary = {}
 @export var default_talk_message : Array[String] = ["Through the Apparatus, you call out into the haze. Nobody answers."]
 @export var blank_card_text : Array[String] = ["ERROR 994: NO CARD DATA"]
+@export var default_double_card_text : Array[String] = ["ERROR 721: RECEIVER NOT DETECTED"]
+@export var insert_a_text : Array[String] = ["INFO: PLEASE INSERT CARD INTO SLOT A"]
+@export var insert_b_text : Array[String] = ["INFO: PLEASE INSERT CARD INTO SLOT B"]
 
 @export_category("Plugging in Nodes")
 @export var card_slots : Array[CardSlot]
@@ -47,7 +50,6 @@ func _ready() -> void:
 		grid_manager.current_position = starting_position
 		current_position = starting_position
 
-
 func _handle_card_slotted_single(action : Callable):
 	action.call()
 
@@ -66,9 +68,10 @@ func _handle_card_slotted_double(card_pattern : String):
 	for slot in card_slots:
 		if slot.has_card():
 			_current_cards_scratch.append(slot.current_card.card_name)
-			
+
+	var door : Door			
 	if current_cell.has_password:
-		var door : Door = door_check_ray.get_collider()
+		door = door_check_ray.get_collider()
 		if not is_instance_valid(door):
 			_current_cards_scratch.clear()
 			return
@@ -84,10 +87,19 @@ func _handle_card_slotted_double(card_pattern : String):
 			else:
 				door.wrong_password()
 
-	if len(_current_cards_scratch) == 2:
+	if len(_current_cards_scratch) == 1:
+		BoardManager.begin_background_text_display()
+		if card_slots[0].has_card():
+			terminal_manager.new_message(insert_b_text)
+		else:
+			terminal_manager.new_message(insert_a_text)
+	elif len(_current_cards_scratch) == 2:
 		for slot in card_slots:
 			if slot.has_card():
 				slot.eject_card()
+		
+		if not door:
+			print_to_terminal(default_double_card_text)		
 		
 	_current_cards_scratch.clear()
 

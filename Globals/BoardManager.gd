@@ -32,7 +32,7 @@ var starting_position : Vector2i = Vector2i(-1,-1)
 var main_camera : Node3D
 var blank_cards : Array = []
 
-var is_in_text_mode:bool = false
+var exclusive_text_mode:bool = false
 
 var cursor_hidden : bool = false:
 	set(value):
@@ -46,7 +46,7 @@ var cursor_hidden : bool = false:
 
 
 func _process(_delta : float):
-	if not is_in_text_mode:
+	if not exclusive_text_mode:
 		return
 	
 	if Input.is_action_just_pressed("interact"):
@@ -69,12 +69,18 @@ func switch_screen_to_menu():
 
 var _text_blocker:Node
 
+func begin_background_text_display() -> void:
+	_switch_screen_to_terminal()
+
+func end_background_text_display() -> void:
+	_switch_screen_to_grid()
+
 func begin_text_mode(should_zoom:bool, zoom_position : Transform3D):
-	if is_in_text_mode:
+	if exclusive_text_mode:
 		push_error("Text mode entered recursively. This is unsupported and very bad things are likely to happen.")
 		return
 		
-	is_in_text_mode = true
+	exclusive_text_mode = true
 	_text_blocker = add_player_actionable_blocker(self)
 	cursor_hidden = true
 	
@@ -88,7 +94,7 @@ func begin_text_mode(should_zoom:bool, zoom_position : Transform3D):
 	_switch_screen_to_terminal()
 
 func end_text_mode():
-	is_in_text_mode = false
+	exclusive_text_mode = false
 	
 	_switch_screen_to_grid()
 

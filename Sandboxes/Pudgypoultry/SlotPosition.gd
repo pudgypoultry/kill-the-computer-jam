@@ -62,6 +62,9 @@ func has_card() -> bool:
 
 
 func eject_card():
+	if not single_mode:
+		BoardManager.end_background_text_display()
+		
 	card_ejected.emit()
 	current_card.visible = true
 	current_card.is_slotted = false
