@@ -50,7 +50,8 @@ func _hide_outline_internal():
 	var shader_material : ShaderMaterial = actor_reference.material_override
 	shader_material.set_shader_parameter("alphaThreshold", 0.0)
 	var mouse_cursor = MouseCursor.get_global_cursor()
-	mouse_cursor.remove_highlight_target(self)
+	if mouse_cursor.has_highlight_target(self):
+		mouse_cursor.remove_highlight_target(self)
 
 func _on_player_control_changed(value:bool) -> void:
 	if not value:
