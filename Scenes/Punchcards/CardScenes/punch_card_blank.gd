@@ -12,9 +12,9 @@ func execute() -> void:
 
 func execute_a() -> void:
 	super()
-	BoardManager.reactor_manager.insert_blank_card()
+	reactor.insert_blank_card()
 
 
 func execute_b() -> void:
 	super()
-	BoardManager.reactor_manager.insert_blank_card()
+	reactor.insert_blank_card()
