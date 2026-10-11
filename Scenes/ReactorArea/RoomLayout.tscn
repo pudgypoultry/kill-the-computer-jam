@@ -2780,13 +2780,6 @@ texture_albedo = ExtResource("6_4tam1")
 texture_normal = ExtResource("7_2cdcx")
 texture_orm = ExtResource("8_bs17m")
 
-[node name="Decal5" type="Decal" parent="DecalsHallway/DecalsSet2" unique_id=342125995]
-transform = Transform3D(0.35347277, 0.6123724, 0.70714724, 0.8497324, 0.105915934, -0.51646554, -0.3911675, 0.78344226, -0.4829143, 2.6606486, 1.9203987, -5.402345)
-size = Vector3(2.3095703, 2, 1.9447632)
-texture_albedo = ExtResource("6_4tam1")
-texture_normal = ExtResource("7_2cdcx")
-texture_orm = ExtResource("8_bs17m")
-
 [node name="Decal4" type="Decal" parent="DecalsHallway/DecalsSet2" unique_id=2102767107]
 transform = Transform3D(-0.49999994, -3.2350684e-08, 0.86602545, 0.6409431, 0.6724998, 0.37004867, -0.58240193, 0.74009734, -0.33624986, 7.6834736, -0.13251555, -4.156449)
 texture_albedo = ExtResource("9_okt7d")
@@ -2897,8 +2890,27 @@ flicker_adjust_speed = 2.1809999999999996
 flicker_low_amount = 0.409
 emissive_brightness = 2.792
 
+[node name="DoorLightFlicker4" parent="Lights" unique_id=1972426774 instance=ExtResource("20_bs17m")]
+transform = Transform3D(-1, 4.3711392e-08, 4.371139e-08, 4.3711395e-08, 1, 0, -4.3711395e-08, 2.6865768e-16, -1, 1.5101151, 2.5841906, -0.18528399)
+flicker_rate_a = 0.84
+flicker_rate_b = 8.673
+flicker_threshold = 0.453
+flicker_adjust_speed = 2.1809999999999996
+flicker_low_amount = 0.409
+emissive_brightness = 2.792
+
 [node name="DoorLight" parent="Lights" unique_id=1783106199 instance=ExtResource("20_okt7d")]
 transform = Transform3D(7.54979e-08, -1.6580906e-15, 1, 4.3711395e-08, 1, -1.6420281e-15, -1, 4.3711395e-08, 7.54979e-08, -5.8858843, 2.5841906, -4.5010996)
+
+[node name="DoorLight2" parent="Lights" unique_id=9718719 instance=ExtResource("20_okt7d")]
+transform = Transform3D(1, -4.3711395e-08, -1.1920929e-07, 4.3711395e-08, 1, -1.6420281e-15, 1.1920929e-07, -3.5687764e-15, 1, 1.5101151, 2.5841906, 0.1807014)
+emissive_brightness = 0.0
+light_brightness = 0.0
+
+[node name="DoorLight3" parent="Lights" unique_id=226207165 instance=ExtResource("20_okt7d")]
+transform = Transform3D(-1, 4.3711395e-08, 2.0663207e-07, 4.3711395e-08, 1, -1.6420282e-15, -2.0663207e-07, 7.390147e-15, -1, 1.5101151, 2.5841906, 5.814593)
+emissive_brightness = 0.0
+light_brightness = 0.0
 
 [node name="DoorLightFlicker5" parent="Lights" unique_id=2117864310 instance=ExtResource("20_bs17m")]
 transform = Transform3D(-1.7484555e-07, 6.0007147e-15, -1, 4.3711395e-08, 1, 0, 1, -4.3711392e-08, -1.7484555e-07, 8.832676, 2.5841906, -4.5010996)
@@ -2909,6 +2921,16 @@ flicker_adjust_speed = 2.1809999999999996
 flicker_low_amount = 0.409
 emissive_brightness = 2.792
 
+[node name="DoorLightFlicker8" parent="Lights" unique_id=1718025407 instance=ExtResource("20_bs17m")]
+transform = Transform3D(-1.7484555e-07, 6.0007147e-15, -1, 4.3711395e-08, 1, 0, 1, -4.3711392e-08, -1.7484555e-07, 17.746195, 2.5841906, -4.5010996)
+flicker_rate_a = 0.84
+flicker_rate_b = 5.845
+flicker_threshold = 0.453
+flicker_adjust_speed = 2.1809999999999996
+flicker_high_amount = 0.703
+flicker_low_amount = 0.21
+emissive_brightness = 3.394
+
 [node name="DoorLightFlicker6" parent="Lights" unique_id=1283726207 instance=ExtResource("20_bs17m")]
 transform = Transform3D(8.742278e-08, -2.1793434e-15, 1, 4.3711395e-08, 1, 0, -1, 4.3711392e-08, 8.742278e-08, 9.154701, 2.5841906, -4.5010996)
 flicker_rate_a = 2.063
@@ -2917,6 +2939,16 @@ flicker_threshold = 0.783
 flicker_adjust_speed = 2.5959999999999996
 flicker_low_amount = 0.409
 emissive_brightness = 1.661
+
+[node name="DoorLightFlicker7" parent="Lights" unique_id=752826532 instance=ExtResource("20_bs17m")]
+transform = Transform3D(8.742278e-08, -2.1793434e-15, 1, 4.3711395e-08, 1, 0, -1, 4.3711392e-08, 8.742278e-08, 18.154701, 2.5841906, -4.5010996)
+flicker_rate_a = 2.063
+flicker_rate_b = 5.389
+flicker_threshold = 0.403
+flicker_adjust_speed = 0.954
+flicker_high_amount = 0.317
+flicker_low_amount = 0.188
+emissive_brightness = 3.979
 
 [node name="OverheadLightFlicker" parent="Lights" unique_id=285439363 instance=ExtResource("25_7solt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 3, -9.883)
