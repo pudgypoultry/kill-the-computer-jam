@@ -12,9 +12,9 @@ func execute() -> void:
 
 func execute_a() -> void:
 	super()
-	reactor.print_new_card()
+	return
 
 
 func execute_b() -> void:
 	super()
-	reactor.print_new_card()
+	return
