@@ -10,11 +10,10 @@ class_name GridCell
 		_update_active()
 		
 @export var examine : Array[String] = ["THIS", "IS", "A", "PLACE", "OF", "HONOR"]
-@export var needs_kneel : bool = false
-@export var needs_grovel : bool = false
 @export var grid_position : Vector2i = Vector2i.ZERO
 @export var adjacencies : Array[GridCell]
 @export var hidden_room : bool = false
+
 
 @export var has_skeleton : bool = false:
 	set(value):
@@ -22,13 +21,21 @@ class_name GridCell
 		_update_active()
 
 @export var is_starting_position : bool = false
+
+@export_category("Door Locking")
 @export var is_locked : bool = false
 @export var has_password : bool = false
 @export var password : Array[String] = ["", ""]
 @export var locked_position : GridCell
 @export var door_sprite : Sprite2D
+
+@export_category("Card Printing")
 @export var has_card_unlock : bool = false
 @export var card_to_unlock : PackedScene
+
+@export_category("Slamming")
+@export var can_slam : bool = false
+@export var slam_cell : GridCell = null
 
 @export_category("Plugging in Nodes")
 @export var sprite : Sprite2D
@@ -46,7 +53,7 @@ func _update_active() -> void:
 			# CW - hack
 			if not img is TinyMapImage:
 				img.show()
-			# AT- also a hack, can explain but is dumb
+			# AT - also a hack, can explain but is dumb
 			if img.name == "Sprite2D2" or img.name == "SkeletonSprite2":
 				img.hide()
 	if hidden_room:
@@ -87,3 +94,9 @@ func unlock():
 	locked_position.is_locked = false
 	door_sprite.hide()
 	# play door animation
+
+
+func slam():
+	slam_cell.is_locked = true
+	door_sprite.show()
+	can_slam = false
