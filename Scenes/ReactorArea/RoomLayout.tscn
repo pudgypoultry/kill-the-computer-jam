@@ -26,8 +26,11 @@
 [ext_resource type="PackedScene" uid="uid://ocqyy3y2ucu8" path="res://Scenes/Reactor/Reactor.tscn" id="21_ar56e"]
 [ext_resource type="PackedScene" uid="uid://dr7x71xqxmouy" path="res://Scenes/Skeleton/SkeletonPodium.tscn" id="21_bs17m"]
 [ext_resource type="ArrayMesh" uid="uid://cwni785dsmd7e" path="res://Assets/Models/SetDec/Meshes/SteelDoor.res" id="23_bs17m"]
+[ext_resource type="Texture2D" uid="uid://dnk5sn15blr7m" path="res://Assets/Decals/Textures/PipDecal01.tga" id="23_d2t3s"]
+[ext_resource type="Texture2D" uid="uid://dwp0ip0lr4vlo" path="res://Assets/Decals/Textures/PipDecal02.tga" id="24_e14fn"]
 [ext_resource type="PackedScene" uid="uid://bl4djye2ayi4v" path="res://Scenes/Environment/OverheadLightFlicker.tscn" id="25_7solt"]
 [ext_resource type="PackedScene" uid="uid://co7ucwhfmcig8" path="res://Scenes/Door/steel_door.tscn" id="25_hva2l"]
+[ext_resource type="Texture2D" uid="uid://m0mv6wiuw520" path="res://Assets/Decals/Textures/PipDecal03.tga" id="25_y81hs"]
 [ext_resource type="PackedScene" uid="uid://cuakh38bsxw5a" path="res://Scenes/Skeleton/SkeletonKneel.tscn" id="27_ar56e"]
 [ext_resource type="Script" uid="uid://q742i34wcsxw" path="res://Scenes/Door/DoubleDoor.gd" id="29_fl23l"]
 [ext_resource type="PackedScene" uid="uid://b6lvgrqe058lm" path="res://Scenes/Environment/GrateLight.tscn" id="31_7solt"]
@@ -864,36 +867,6 @@ mesh = ExtResource("3_r6i6q")
 [node name="RoomKitStraightWall8" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1198337188]
 transform = Transform3D(-1, 0, -2.6226832e-07, 0, 1, 0, 2.6226832e-07, 0, -1, -12, 0, -27)
 mesh = ExtResource("3_r6i6q")
-
-[node name="Decal6" type="Decal" parent="Rooms/Reactor" unique_id=490742294]
-transform = Transform3D(1.9555966, 1.7573922e-07, -0.038218476, 0.04177503, -3.9967258e-08, 1.7891052, 3.420054e-07, -1.0000001, -7.8222115e-08, -10.950977, 3.4884925, -26.639265)
-texture_albedo = ExtResource("6_4tam1")
-texture_normal = ExtResource("7_2cdcx")
-texture_orm = ExtResource("8_bs17m")
-normal_fade = 0.516
-upper_fade = 0.024740791
-
-[node name="Decal7" type="Decal" parent="Rooms/Reactor" unique_id=166482746]
-transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -11.4493885, -0.18450296, -29.501263)
-texture_albedo = ExtResource("9_okt7d")
-texture_normal = ExtResource("10_pqaes")
-texture_orm = ExtResource("11_hva2l")
-upper_fade = 0.024740791
-
-[node name="Decal9" type="Decal" parent="Rooms/Reactor" unique_id=1116251832]
-transform = Transform3D(1.3113416e-07, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, -1.3113416e-07, -5.7320566e-15, -5.686014, 1.0900586, -28.604467)
-texture_albedo = ExtResource("12_slj7n")
-texture_normal = ExtResource("13_qam1a")
-texture_orm = ExtResource("14_ar56e")
-upper_fade = 0.024740791
-
-[node name="Decal10" type="Decal" parent="Rooms/Reactor" unique_id=1671637942]
-transform = Transform3D(-0.78590345, 2.0187446e-07, -0.6183492, 0.6183492, 3.435293e-08, -0.78590345, -1.3741172e-07, -1, -1.51827e-07, -9.194864, 1.3488688, -26.488094)
-texture_albedo = ExtResource("6_4tam1")
-texture_normal = ExtResource("7_2cdcx")
-texture_orm = ExtResource("8_bs17m")
-normal_fade = 0.516
-upper_fade = 0.024740791
 
 [node name="RoomKitFloor21" type="MeshInstance3D" parent="Rooms/Reactor" unique_id=1154102205]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -27)
@@ -2699,6 +2672,68 @@ texture_albedo = ExtResource("6_4tam1")
 texture_normal = ExtResource("7_2cdcx")
 texture_orm = ExtResource("8_bs17m")
 
+[node name="MainRoomHintDecals" type="Node3D" parent="." unique_id=1778899688]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.875351, 1.9043472, -0.12184715)
+
+[node name="Decal" type="Decal" parent="MainRoomHintDecals" unique_id=850852946]
+transform = Transform3D(0.29999998, 0, 0, 0, -1.3113416e-08, 0.29999998, 0, -0.29999998, -1.3113416e-08, 0, 0.41743588, 0)
+texture_albedo = ExtResource("23_d2t3s")
+texture_normal = ExtResource("7_2cdcx")
+texture_orm = ExtResource("8_bs17m")
+modulate = Color(0.64705884, 0.05882353, 0, 1)
+albedo_mix = 0.86
+
+[node name="Decal2" type="Decal" parent="MainRoomHintDecals" unique_id=186410886]
+transform = Transform3D(0.29999998, 0, 0, 0, -1.3113416e-08, 0.29999998, 0, -0.29999998, -1.3113416e-08, 0.75716066, -0.47954, 0)
+texture_albedo = ExtResource("24_e14fn")
+texture_normal = ExtResource("7_2cdcx")
+texture_orm = ExtResource("8_bs17m")
+modulate = Color(0.64705884, 0.05882353, 0, 1)
+albedo_mix = 0.86
+
+[node name="Decal3" type="Decal" parent="MainRoomHintDecals" unique_id=438171470]
+transform = Transform3D(0.29999998, 0, 0, 0, -1.3113416e-08, 0.29999998, 0, -0.29999998, -1.3113416e-08, -0.851799, -0.4998703, 0)
+texture_albedo = ExtResource("25_y81hs")
+texture_normal = ExtResource("7_2cdcx")
+texture_orm = ExtResource("8_bs17m")
+modulate = Color(0.64705884, 0.05882353, 0, 1)
+albedo_mix = 0.86
+
+[node name="MainRoomHintDecals2" type="Node3D" parent="." unique_id=1714152450]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.923215, 1.9043472, -0.12184715)
+
+[node name="Decal" type="Decal" parent="MainRoomHintDecals2" unique_id=1360472496]
+transform = Transform3D(0.29999998, 0, 0, 0, -1.3113416e-08, 0.29999998, 0, -0.29999998, -1.3113416e-08, -0.77966356, 0.41743588, 0)
+texture_albedo = ExtResource("23_d2t3s")
+texture_normal = ExtResource("7_2cdcx")
+texture_orm = ExtResource("8_bs17m")
+modulate = Color(0.64705884, 0.05882353, 0, 1)
+albedo_mix = 0.86
+
+[node name="Decal2" type="Decal" parent="MainRoomHintDecals2" unique_id=1216060062]
+transform = Transform3D(-0.29999998, -1.1464111e-15, 2.6226832e-08, -2.6226832e-08, 1.3113415e-08, -0.29999998, 0, -0.29999998, -1.3113415e-08, -0.2892294, -0.057010055, 0)
+texture_albedo = ExtResource("24_e14fn")
+texture_normal = ExtResource("7_2cdcx")
+texture_orm = ExtResource("8_bs17m")
+modulate = Color(0.64705884, 0.05882353, 0, 1)
+albedo_mix = 0.86
+
+[node name="Decal3" type="Decal" parent="MainRoomHintDecals2" unique_id=1371588314]
+transform = Transform3D(0.29999998, 0, 0, 0, -1.3113416e-08, 0.29999998, 0, -0.29999998, -1.3113416e-08, -0.851799, -0.4998703, 0)
+texture_albedo = ExtResource("25_y81hs")
+texture_normal = ExtResource("7_2cdcx")
+texture_orm = ExtResource("8_bs17m")
+modulate = Color(0.64705884, 0.05882353, 0, 1)
+albedo_mix = 0.86
+
+[node name="Decal4" type="Decal" parent="MainRoomHintDecals2" unique_id=779799590]
+transform = Transform3D(-0.29999998, -1.1464111e-15, 2.6226832e-08, -2.6226832e-08, 1.3113415e-08, -0.29999998, 0, -0.29999998, -1.3113415e-08, 0.3373816, -0.058921695, 0)
+texture_albedo = ExtResource("25_y81hs")
+texture_normal = ExtResource("7_2cdcx")
+texture_orm = ExtResource("8_bs17m")
+modulate = Color(0.64705884, 0.05882353, 0, 1)
+albedo_mix = 0.86
+
 [node name="DecalsHallway" type="Node3D" parent="." unique_id=722417648]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.096142, 0, -1.8386679)
 
@@ -2767,6 +2802,86 @@ texture_orm = ExtResource("14_ar56e")
 
 [node name="Decal2" type="Decal" parent="DecalsHallway/DecalsSet2" unique_id=4828041]
 transform = Transform3D(-0.527606, 0.5497184, 0.67057186, -0.79769206, 1.5531637e-07, -0.6276244, -0.33991796, -0.85324955, 0.4320255, -1.7494742, 1.9028916, -1.989953)
+texture_albedo = ExtResource("6_4tam1")
+texture_normal = ExtResource("7_2cdcx")
+texture_orm = ExtResource("8_bs17m")
+
+[node name="DecalsBackRoom" type="Node3D" parent="." unique_id=308323068]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.827698, 0, -2.201726)
+
+[node name="Decals" type="Node3D" parent="DecalsBackRoom" unique_id=706037295]
+
+[node name="Decal" type="Decal" parent="DecalsBackRoom/Decals" unique_id=890278525]
+transform = Transform3D(0.799267, -0.6009761, -2.6269502e-08, 1.5533464e-15, -4.371139e-08, 1, -0.6009761, -0.799267, -3.493707e-08, 3.3945274, 1.157596, 4.570771)
+texture_albedo = ExtResource("6_4tam1")
+texture_normal = ExtResource("7_2cdcx")
+texture_orm = ExtResource("8_bs17m")
+
+[node name="Decal5" type="Decal" parent="DecalsBackRoom/Decals" unique_id=1067930237]
+transform = Transform3D(-0.019667752, -0.23781352, 0.9711116, -0.99528486, 0.096929245, 0.003579475, -0.09498038, -0.96646243, -0.23859864, 2.187809, 1.510082, -7.2677364)
+size = Vector3(2.3095703, 2, 1.9447632)
+texture_albedo = ExtResource("6_4tam1")
+texture_normal = ExtResource("7_2cdcx")
+texture_orm = ExtResource("8_bs17m")
+
+[node name="Decal4" type="Decal" parent="DecalsBackRoom/Decals" unique_id=820824282]
+transform = Transform3D(-1.5582176, 0, -1.5346452, 0, 1.8249998, 0, 0.9500433, 0, -2.5170548, 1.921978, 0.4641353, -0.9408412)
+size = Vector3(2.880371, 0.59869385, 2)
+texture_albedo = ExtResource("9_okt7d")
+texture_normal = ExtResource("10_pqaes")
+texture_orm = ExtResource("11_hva2l")
+
+[node name="Decal6" type="Decal" parent="DecalsBackRoom/Decals" unique_id=1133811140]
+transform = Transform3D(1.0036535, 0, 0.5997078, 0, 1.07, 0, -0.37091753, 0, 1.6227294, 1.2636814, 0.53416586, -4.7783475)
+size = Vector3(2.880371, 1.1795654, 2)
+texture_albedo = ExtResource("9_okt7d")
+texture_normal = ExtResource("10_pqaes")
+texture_orm = ExtResource("11_hva2l")
+
+[node name="Decal3" type="Decal" parent="DecalsBackRoom/Decals" unique_id=422181563]
+transform = Transform3D(-0.38777727, -0.603929, 0.26475334, -0.59736955, -1.0796738e-07, -0.2705345, 0.29382542, -0.79703796, -0.20060799, 4.8619804, 1.3716979, -6.1997747)
+texture_albedo = ExtResource("12_slj7n")
+texture_normal = ExtResource("13_qam1a")
+texture_orm = ExtResource("14_ar56e")
+
+[node name="Decal2" type="Decal" parent="DecalsBackRoom/Decals" unique_id=2004099473]
+transform = Transform3D(-0.0003702077, -1.5931697, -0.076391906, -1.5949814, 2.3167935e-07, 0.0077247024, -0.007715825, 0.07639286, -1.593151, 5.06316, 1.5723454, -1.9012961)
+texture_albedo = ExtResource("6_4tam1")
+texture_normal = ExtResource("7_2cdcx")
+texture_orm = ExtResource("8_bs17m")
+
+[node name="DecalsSet2" type="Node3D" parent="DecalsBackRoom" unique_id=919910746]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="Decal" type="Decal" parent="DecalsBackRoom/DecalsSet2" unique_id=1056232420]
+transform = Transform3D(1.8982257, -0.11946882, 0.45924404, 0.9956686, 0.22776552, -0.8755413, -1.9029781e-07, 0.95986944, 0.26491463, 5.8978834, 1.5711632, -2.2804317)
+size = Vector3(2, 2, 2.3876953)
+texture_albedo = ExtResource("6_4tam1")
+texture_normal = ExtResource("7_2cdcx")
+texture_orm = ExtResource("8_bs17m")
+
+[node name="Decal5" type="Decal" parent="DecalsBackRoom/DecalsSet2" unique_id=1075933644]
+transform = Transform3D(0.35347277, 0.6123724, 0.70714724, 0.8497324, 0.105915934, -0.51646554, -0.3911675, 0.78344226, -0.4829143, 2.6606486, 1.9203987, -5.402345)
+size = Vector3(2.3095703, 2, 1.9447632)
+texture_albedo = ExtResource("6_4tam1")
+texture_normal = ExtResource("7_2cdcx")
+texture_orm = ExtResource("8_bs17m")
+
+[node name="Decal4" type="Decal" parent="DecalsBackRoom/DecalsSet2" unique_id=52146015]
+transform = Transform3D(-0.49999994, -3.2350684e-08, 0.86602545, 0.6409431, 0.6724998, 0.37004867, -0.58240193, 0.74009734, -0.33624986, 7.6834736, -0.13251555, -4.156449)
+texture_albedo = ExtResource("9_okt7d")
+texture_normal = ExtResource("10_pqaes")
+texture_orm = ExtResource("11_hva2l")
+
+[node name="Decal3" type="Decal" parent="DecalsBackRoom/DecalsSet2" unique_id=1094696265]
+transform = Transform3D(-0.5863216, -0.6084834, -2.6597656e-08, 0, -3.6936125e-08, 0.845, -0.6084834, 0.5863216, 2.5628932e-08, 9.856461, 1.0663087, -1.4728374)
+size = Vector3(2, 1.9521484, 2)
+texture_albedo = ExtResource("12_slj7n")
+texture_normal = ExtResource("13_qam1a")
+texture_orm = ExtResource("14_ar56e")
+
+[node name="Decal2" type="Decal" parent="DecalsBackRoom/DecalsSet2" unique_id=2112498621]
+transform = Transform3D(-0.527606, 0.5497184, 0.67057186, -0.79769206, 1.5531637e-07, -0.6276244, -0.33991796, -0.85324955, 0.4320255, -1.7494743, 1.075999, 0.3268757)
 texture_albedo = ExtResource("6_4tam1")
 texture_normal = ExtResource("7_2cdcx")
 texture_orm = ExtResource("8_bs17m")
