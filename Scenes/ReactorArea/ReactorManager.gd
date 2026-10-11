@@ -4,7 +4,7 @@ class_name ReactorManager
 @export_category("Game Rules")
 @export var valid_card_combos : Dictionary = {}
 @export var default_talk_message : Array[String] = ["Through the Apparatus, you call out into the haze. Nobody answers."]
-@export var blank_card_text : Array[String] = ["ERROR 994: NO DATA"]
+@export var blank_card_text : Array[String] = ["ERROR 994: NO CARD DATA"]
 
 @export_category("Plugging in Nodes")
 @export var card_slots : Array[CardSlot]
@@ -192,11 +192,6 @@ func examine():
 		print_to_terminal(examine_cell.examine)
 	else:
 		print_to_terminal(current_cell.examine)
-
-
-func show_blank_punchcard_error():
-	print_to_terminal(["ERROR", "This card has yet to receive its function."])
-
 
 func talk():
 	var current_cell = grid_manager.position_dict[current_position]
