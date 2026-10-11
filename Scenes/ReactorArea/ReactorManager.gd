@@ -3,7 +3,7 @@ class_name ReactorManager
 
 @export_category("Game Rules")
 @export var valid_card_combos : Dictionary = {}
-@export var default_talk_message : Array[String] = [""]
+@export var default_talk_message : Array[String] = ["Through the Apparatus, you call out into the haze. Nobody answers."]
 
 @export_category("Plugging in Nodes")
 @export var card_slots : Array[CardSlot]
@@ -104,7 +104,6 @@ func is_valid_move(forward : bool) -> bool:
 
 
 func move_forward():
-	BoardManager.switch_screen_to_grid()
 	if is_valid_move(true):
 		grid_manager.move_forward()
 		cam_tween = get_tree().create_tween().bind_node(cam)
@@ -134,7 +133,6 @@ func move_forward():
 
 
 func move_backward():
-	BoardManager.switch_screen_to_grid()
 	if is_valid_move(false):
 		grid_manager.move_backward()
 		cam_tween = get_tree().create_tween().bind_node(cam)
@@ -158,7 +156,6 @@ func move_backward():
 
 
 func turn(dir : String):
-	BoardManager.switch_screen_to_grid()
 	grid_manager.turn(dir)
 	cam_tween = get_tree().create_tween().bind_node(cam)
 	match dir:
@@ -171,17 +168,15 @@ func turn(dir : String):
 
 
 func zoom_in():
-	BoardManager.switch_screen_to_grid()
 	grid_manager.zoom_in()
 
 
 func zoom_out():
-	BoardManager.switch_screen_to_grid()
 	grid_manager.zoom_out()
 
 
-func print_to_terminal(new_message : Array[String]) -> void:
-	BoardManager.switch_screen_to_terminal()
+func print_to_terminal(new_message : Array[String], should_zoom:bool = false, zoom_transform:Transform3D = Transform3D.IDENTITY) -> void:
+	await BoardManager.begin_text_mode(should_zoom, zoom_transform)
 	terminal_manager.new_message(new_message)
 
 
@@ -208,9 +203,9 @@ func talk():
 				push_error("Collided with a non-skeleton in skeleton ray check. Check layers plz!")
 				return
 				
-			await BoardManager.talking_zoom_in(skeleton.zoom_node.global_transform)
-			print_to_terminal(skeleton.talk_message)
+			await print_to_terminal(skeleton.talk_message, true, skeleton.zoom_node.global_transform)
 			if current_cell.has_card_unlock:
+				await BoardManager.done_talking
 				print_new_card()
 				return
 	else:
@@ -228,7 +223,6 @@ func print_new_card():
 		for slot in card_slots:
 			if !slot.has_card():
 				current_slot = slot
-		await get_tree().create_timer(1.0).timeout
 		var tween = get_tree().create_tween().bind_node(blank_card)
 		tween.set_trans(Tween.TRANS_CUBIC)
 		tween.tween_property(blank_card, "position:y", position.y + 0.033, 0.5)
@@ -252,6 +246,9 @@ func print_new_card():
 		new_card.global_rotation = blank_card.global_rotation
 		new_card.sort_front = blank_card.sort_front
 		current_cell.has_card_unlock = false
+		if current_slot.audio_player.playing:
+			await current_slot.audio_player.finished
+		await current_slot.punch_card()
 		await current_slot.eject_card()
 		tween = get_tree().create_tween().bind_node(new_card)
 		tween.set_trans(Tween.TRANS_BACK)
@@ -268,7 +265,6 @@ func read_scripture(type : String):
 			verse = [Scripture.random_scary()]
 		"hopeful":
 			verse = [Scripture.random_hopeful()]
-	BoardManager.switch_screen_to_terminal()
 	print_to_terminal(verse)
 
 var _last_step_sound:int = 0

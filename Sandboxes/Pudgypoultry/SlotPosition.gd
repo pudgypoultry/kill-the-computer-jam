@@ -9,6 +9,7 @@ class_name CardSlot
 @export var audio_player : AudioStreamPlayer3D
 @export var insert_sfx : AudioStreamWAV
 @export var eject_sfx : AudioStreamWAV
+@export var card_punch_sfx : AudioStreamWAV
 
 var current_card : PunchCard = null
 var original_rotation = null
@@ -76,7 +77,15 @@ func eject_card():
 	await tween.finished
 	BoardManager.player_actionable = true
 
-func play_sfx(sfx : AudioStreamWAV, await_time : float):
+func punch_card() -> void:
+	await play_sfx_await(card_punch_sfx)
+
+func play_sfx(sfx : AudioStreamWAV, pre_await_time : float):
 	audio_player.stream = sfx
-	await get_tree().create_timer(await_time).timeout
+	await get_tree().create_timer(pre_await_time).timeout
 	audio_player.play()
+
+func play_sfx_await(sfx : AudioStreamWAV):
+	audio_player.stream = sfx
+	audio_player.play()
+	await audio_player.finished

@@ -25,7 +25,7 @@ offset_right = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_mvo5j")
-text_interval = 0.05
+text_interval = 0.025
 label = NodePath("RichTextLabel")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1465120245]
