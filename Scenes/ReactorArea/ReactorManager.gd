@@ -191,6 +191,10 @@ func examine():
 		print_to_terminal(current_cell.examine)
 
 
+func show_blank_punchcard_error():
+	print_to_terminal(["ERROR", "This card has yet to receive its function."])
+
+
 func talk():
 	var current_cell = grid_manager.position_dict[current_position]
 	var current_direction : Vector2i = Vector2i.ZERO

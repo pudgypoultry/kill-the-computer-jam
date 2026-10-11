@@ -12,9 +12,9 @@ func execute() -> void:
 
 func execute_a() -> void:
 	super()
-	return
+	reactor.show_blank_punchcard_error()
 
 
 func execute_b() -> void:
 	super()
-	return
+	reactor.show_blank_punchcard_error()
