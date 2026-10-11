@@ -9,9 +9,11 @@ class_name TerminalManager
 @export var label : RichTextLabel
 
 var writing : bool = false
+
 var current_message : String = ">"
 
 func _ready() -> void:
+	BoardManager.terminal_manager = self
 	label.visible_characters = 0
 
 func _process(delta: float) -> void:
@@ -37,5 +39,5 @@ func construct_message(message : Array[String]) -> String:
 	var return_string = ""
 	for line in message:
 		return_string += ">" + line
-		return_string += "\n\n"
+		return_string += "\n"
 	return return_string

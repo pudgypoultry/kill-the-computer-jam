@@ -12,6 +12,7 @@ var game_active : bool = false
 var last_pickup_position : Vector3 = Vector3.ZERO
 var player_actionable = true
 var reactor_manager : ReactorManager = null
+var terminal_manager : TerminalManager = null
 var terminal_screen : Sprite3D = null
 var fps_camera : Node3D = null
 var camera_zoomed : bool = false
@@ -36,7 +37,14 @@ var last_mouse_position : Vector2 = Vector2.ZERO
 func _process(_delta : float):
 	if player_actionable:
 		if Input.is_action_just_pressed("interact") && camera_zoomed:
-			talking_zoom_out()
+			if terminal_manager.writing:
+				terminal_manager.label.visible_characters = -1
+				terminal_manager.writing = false
+			else:
+				talking_zoom_out()
+		elif Input.is_action_just_pressed("interact") && terminal_manager.writing:
+			terminal_manager.label.visible_characters = -1
+			terminal_manager.writing = false
 
 
 func switch_screen_to_grid():
