@@ -2662,6 +2662,41 @@ texture_albedo = ExtResource("6_4tam1")
 texture_normal = ExtResource("7_2cdcx")
 texture_orm = ExtResource("8_bs17m")
 
+[node name="DecalsSet2" type="Node3D" parent="." unique_id=2070751684]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="Decal" type="Decal" parent="DecalsSet2" unique_id=13085455]
+transform = Transform3D(1, 1.3113416e-07, -4.371138e-08, -1.3113416e-07, 1, 0, 4.371138e-08, 5.732056e-15, 1, 6.951585, 0.3280673, -3.0660555)
+texture_albedo = ExtResource("6_4tam1")
+texture_normal = ExtResource("7_2cdcx")
+texture_orm = ExtResource("8_bs17m")
+
+[node name="Decal5" type="Decal" parent="DecalsSet2" unique_id=1526973034]
+transform = Transform3D(0.35347277, 0.6123724, 0.70714724, 0.8497324, 0.105915934, -0.51646554, -0.3911675, 0.78344226, -0.4829143, 2.6606486, 1.9203987, -5.402345)
+size = Vector3(2.3095703, 2, 1.9447632)
+texture_albedo = ExtResource("6_4tam1")
+texture_normal = ExtResource("7_2cdcx")
+texture_orm = ExtResource("8_bs17m")
+
+[node name="Decal4" type="Decal" parent="DecalsSet2" unique_id=179105399]
+transform = Transform3D(-0.49999994, -3.2350684e-08, 0.86602545, 0.6409431, 0.6724998, 0.37004867, -0.58240193, 0.74009734, -0.33624986, 7.6834736, -0.13251555, -4.156449)
+texture_albedo = ExtResource("9_okt7d")
+texture_normal = ExtResource("10_pqaes")
+texture_orm = ExtResource("11_hva2l")
+
+[node name="Decal3" type="Decal" parent="DecalsSet2" unique_id=1378986010]
+transform = Transform3D(1.3113416e-07, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, -1.3113416e-07, -5.7320566e-15, 9.567475, 1.8997476, -2.5650687)
+size = Vector3(2, 1.9521484, 2)
+texture_albedo = ExtResource("12_slj7n")
+texture_normal = ExtResource("13_qam1a")
+texture_orm = ExtResource("14_ar56e")
+
+[node name="Decal2" type="Decal" parent="DecalsSet2" unique_id=2072107941]
+transform = Transform3D(-0.7859034, 2.656717e-07, -0.6183494, 0.5433879, 0.4772426, -0.69062966, 0.29510245, -0.8787718, -0.37506667, 5.8051357, 2.6505785, -3.3229725)
+texture_albedo = ExtResource("6_4tam1")
+texture_normal = ExtResource("7_2cdcx")
+texture_orm = ExtResource("8_bs17m")
+
 [node name="Lights" type="Node3D" parent="." unique_id=1196548232]
 
 [node name="DoorLightFlicker3" parent="Lights" unique_id=1863437079 instance=ExtResource("20_bs17m")]
