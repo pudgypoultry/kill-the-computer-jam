@@ -118,6 +118,8 @@ func move_forward():
 			print(door)
 			if door.is_open && door.can_slam:
 				door.close_door()
+		if grid_manager.position_dict[current_position].can_slam:
+			grid_manager.position_dict[current_position].slam()
 	else:
 		cam_tween = get_tree().create_tween().bind_node(cam)
 		var dir = -cam.basis.z * BoardManager.step_length
@@ -140,6 +142,8 @@ func move_backward():
 		cam_tween.tween_property(cam, "global_position", cam.global_position + dir, BoardManager.player_move_time)
 		play_footsteps()
 		current_position = grid_manager.current_position
+		if grid_manager.position_dict[current_position].can_slam:
+			grid_manager.position_dict[current_position].slam()
 	else:
 		cam_tween = get_tree().create_tween().bind_node(cam)
 		var dir = cam.basis.z * BoardManager.step_length
