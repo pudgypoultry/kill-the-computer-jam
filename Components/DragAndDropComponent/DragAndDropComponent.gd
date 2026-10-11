@@ -35,14 +35,7 @@ var is_being_dragged : bool = false:
 		else:
 			mouse_cursor.remove_grab_target(self)
 		
-var hovering : bool = false:
-	set(value):
-		hovering = value
-		var mouse_cursor = MouseCursor.get_global_cursor()
-		if value:
-			mouse_cursor.add_highlight_target(self)
-		else:
-			mouse_cursor.remove_highlight_target(self)
+var hovering : bool = false
 
 func _ready() -> void:
 	actor_reference = get_parent()

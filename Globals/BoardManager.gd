@@ -1,5 +1,7 @@
 extends Node
 
+signal player_control_changed(value:bool)
+
 # General game parameters
 @export var board_height : float = 0.15
 @export var player_move_time : float = 0.5
@@ -10,7 +12,12 @@ var current_focus : Node3D
 var last_focus : Node3D
 var game_active : bool = false
 var last_pickup_position : Vector3 = Vector3.ZERO
-var player_actionable = true
+
+var player_actionable = true:
+	set(value):
+		player_actionable = value
+		player_control_changed.emit(value)
+			
 var reactor_manager : ReactorManager = null
 var terminal_manager : TerminalManager = null
 var terminal_screen : Sprite3D = null
@@ -35,17 +42,15 @@ var last_mouse_position : Vector2 = Vector2.ZERO
 
 
 func _process(_delta : float):
-	if player_actionable:
-		if Input.is_action_just_pressed("interact") && camera_zoomed:
-			if terminal_manager.writing:
-				terminal_manager.label.visible_characters = -1
-				terminal_manager.writing = false
-			else:
-				talking_zoom_out()
-		elif Input.is_action_just_pressed("interact") && terminal_manager.writing:
+	if Input.is_action_just_pressed("interact") && camera_zoomed:
+		if terminal_manager.writing:
 			terminal_manager.label.visible_characters = -1
 			terminal_manager.writing = false
-
+		else:
+			talking_zoom_out()
+	elif Input.is_action_just_pressed("interact") && terminal_manager.writing:
+		terminal_manager.label.visible_characters = -1
+		terminal_manager.writing = false
 
 func switch_screen_to_grid():
 	terminal_screen.texture.viewport_path = reactor_manager.grid_subviewport.get_path()
