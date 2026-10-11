@@ -83,9 +83,11 @@ func _handle_card_slotted_double(card_pattern : String):
 				door.open_door()
 			else:
 				door.wrong_password()
-			for slot in card_slots:
-				if slot.has_card():
-					slot.eject_card()
+
+	if len(_current_cards_scratch) == 2:
+		for slot in card_slots:
+			if slot.has_card():
+				slot.eject_card()
 		
 	_current_cards_scratch.clear()
 
@@ -214,7 +216,7 @@ func talk():
 
 
 func print_new_card():
-	BoardManager.player_actionable = false
+	var blocker = BoardManager.add_player_actionable_blocker(self)
 	BoardManager.cursor_hidden = true
 	var current_cell = grid_manager.position_dict[current_position]
 	if current_cell.has_card_unlock:
@@ -257,7 +259,7 @@ func print_new_card():
 		tween.tween_property(new_card, "global_transform", original_transform, 0.5)
 		await tween.finished
 		blank_card.queue_free()
-	BoardManager.player_actionable = true
+	BoardManager.remove_player_actionable_blocker(blocker)
 	BoardManager.cursor_hidden = false
 
 func insert_blank_card() -> void:

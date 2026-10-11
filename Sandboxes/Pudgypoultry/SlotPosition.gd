@@ -25,7 +25,7 @@ func slot_card(card : PunchCard, perform_action : bool = true):
 	current_card = card
 	original_rotation = card.global_rotation
 	card.is_slotted = true
-	BoardManager.player_actionable = false
+	var blocker = BoardManager.add_player_actionable_blocker(self)
 	current_card.sort_front = false
 	var tween = get_tree().create_tween().bind_node(card)
 	tween.set_trans(Tween.TRANS_CUBIC)
@@ -48,8 +48,13 @@ func slot_card(card : PunchCard, perform_action : bool = true):
 			await get_tree().create_timer(BoardManager.player_move_time).timeout
 			eject_card()
 		else:
+			if audio_player.playing:
+				# CW: polish tweak. This triggers execution and ejection on double card insert that
+				# interrupts the audio player, so we just wait
+				await audio_player.finished
 			card_slotted_double.emit(card.light_string)
-			BoardManager.player_actionable = true
+	
+	BoardManager.remove_player_actionable_blocker(blocker)
 
 
 func has_card() -> bool:
@@ -61,7 +66,7 @@ func eject_card():
 	current_card.visible = true
 	current_card.is_slotted = false
 	var tween = get_tree().create_tween().bind_node(current_card)
-	BoardManager.player_actionable = false
+	var blocker = BoardManager.add_player_actionable_blocker(self)
 	play_sfx(eject_sfx, 0.0)
 	tween.set_trans(Tween.TRANS_BACK)
 	tween.tween_property(current_card, "global_position", expel_position.global_position, BoardManager.card_insert_time)
@@ -75,7 +80,7 @@ func eject_card():
 	current_card.sort_front = true
 	current_card = null
 	await tween.finished
-	BoardManager.player_actionable = true
+	BoardManager.remove_player_actionable_blocker(blocker)
 
 func punch_card() -> void:
 	await play_sfx_await(card_punch_sfx)

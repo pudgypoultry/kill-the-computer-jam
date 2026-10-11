@@ -19,27 +19,22 @@ var switch_flipped : bool = false
 var debug_timer = 0.0
 var debug_interval = 1.0
 
+var _should_show_left_highlight:bool = false
+var _should_show_right_highlight:bool = false
+
 var is_focused:bool = false:
 	set(value):
 		if value == is_focused:
 			return
 			
 		is_focused = value
-		var mouse_cursor = MouseCursor.get_global_cursor()
-		if value:
-			if BoardManager.player_actionable:
-				BoardManager.current_focus = self
-				mouse_cursor.add_highlight_target(self)
-		elif BoardManager.current_focus == self:
-				BoardManager.current_focus = null
-				mouse_cursor.remove_highlight_target(self)
 		
 		_update_highlight_state()
 			
 
 func _ready() -> void:
 	BoardManager.terminal_screen = screen_2
-
+	BoardManager.player_control_changed.connect(_on_player_control_changed)
 
 func _process(_delta : float):
 	var mouse_cursor = MouseCursor.get_global_cursor()
@@ -96,11 +91,32 @@ func _update_highlight_state() -> void:
 	var mouse_cursor = MouseCursor.get_global_cursor()
 	if is_focused and (not mouse_cursor.is_grabbing() or mouse_cursor.has_grab_target(self)):
 		if switch_flipped:
-			toggle_left_highlight.visible = false
-			toggle_right_highlight.visible = true
+			_should_show_left_highlight = false
+			_should_show_right_highlight = true
 		else:
-			toggle_left_highlight.visible = true
-			toggle_right_highlight.visible = false
+			_should_show_left_highlight = true
+			_should_show_right_highlight = false
 	else:
-		toggle_left_highlight.visible = false
-		toggle_right_highlight.visible = false
+		_should_show_left_highlight = false
+		_should_show_right_highlight = false
+		
+	_update_highlight_visuals()
+
+func _update_highlight_visuals() -> void:
+	var mouse_cursor = MouseCursor.get_global_cursor()
+	
+	toggle_left_highlight.visible = _should_show_left_highlight if BoardManager.player_actionable else false
+	toggle_right_highlight.visible = _should_show_right_highlight if BoardManager.player_actionable else false
+	
+	var is_highlighted:bool = toggle_left_highlight.visible or toggle_right_highlight.visible
+
+	if is_highlighted:	
+		BoardManager.current_focus = self
+		if not mouse_cursor.has_highlight_target(self):
+			mouse_cursor.add_highlight_target(self)
+	else:
+		if mouse_cursor.has_highlight_target(self):
+			mouse_cursor.remove_highlight_target(self)
+
+func _on_player_control_changed(value:bool) -> void:
+	_update_highlight_visuals()

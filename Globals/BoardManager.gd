@@ -14,10 +14,13 @@ var last_focus : Node3D
 var game_active : bool = false
 var last_pickup_position : Vector3 = Vector3.ZERO
 
-var player_actionable = true:
-	set(value):
-		player_actionable = value
-		player_control_changed.emit(value)
+var _player_actionable_blockers:Array[Node]
+
+var player_actionable:
+	get():
+		#player_actionable = value
+		#player_control_changed.emit(value)
+		return _player_actionable_blockers.is_empty()
 			
 var reactor_manager : ReactorManager = null
 var terminal_manager : TerminalManager = null
@@ -64,10 +67,15 @@ func _switch_screen_to_terminal():
 func switch_screen_to_menu():
 	terminal_screen.texture.viewport_path = reactor_manager.menu_subviewport.get_path()
 
+var _text_blocker:Node
 
 func begin_text_mode(should_zoom:bool, zoom_position : Transform3D):
+	if is_in_text_mode:
+		push_error("Text mode entered recursively. This is unsupported and very bad things are likely to happen.")
+		return
+		
 	is_in_text_mode = true
-
+	_text_blocker = add_player_actionable_blocker(self)
 	cursor_hidden = true
 	
 	if should_zoom:
@@ -92,3 +100,30 @@ func end_text_mode():
 		
 	cursor_hidden = false
 	done_talking.emit()
+	
+	# CW: hack to avoid a mouse click that ends text mode also being eaten by a card or the faceplate switch unintentionally
+	await get_tree().process_frame
+	remove_player_actionable_blocker(_text_blocker)	
+	_text_blocker = null
+
+func add_player_actionable_blocker(to_parent:Node) -> Node:
+	var new_blocker = Node.new()
+	to_parent.add_child(new_blocker)
+	var blocking_changed:bool = _player_actionable_blockers.is_empty()
+	_player_actionable_blockers.push_back(new_blocker)
+	
+	if blocking_changed:
+		player_control_changed.emit(false)
+	
+	return new_blocker
+		
+func remove_player_actionable_blocker(blocker:Node) -> void:
+	if _player_actionable_blockers.has(blocker):
+		var blocker_parent = blocker.get_parent()
+		if is_instance_valid(blocker_parent):
+			blocker_parent.remove_child(blocker)
+		_player_actionable_blockers.erase(blocker)		
+		blocker.queue_free()
+		
+		if _player_actionable_blockers.is_empty():
+			player_control_changed.emit(true)
