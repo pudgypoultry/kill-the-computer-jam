@@ -2811,7 +2811,7 @@ texture_normal = ExtResource("7_2cdcx")
 texture_orm = ExtResource("8_bs17m")
 
 [node name="Decal5" type="Decal" parent="DecalsBackRoom/Decals" unique_id=1067930237]
-transform = Transform3D(-0.019667752, -0.23781352, 0.9711116, -0.99528486, 0.096929245, 0.003579475, -0.09498038, -0.96646243, -0.23859864, 2.187809, 1.510082, -7.2677364)
+transform = Transform3D(0.01640364, 0.20457786, -0.97871274, -0.995285, 0.09692926, 0.0035794766, 0.09559819, 0.97403955, 0.20520331, 2.187809, 1.510082, -7.2677364)
 size = Vector3(2.3095703, 2, 1.9447632)
 texture_albedo = ExtResource("6_4tam1")
 texture_normal = ExtResource("7_2cdcx")
@@ -2832,7 +2832,7 @@ texture_normal = ExtResource("10_pqaes")
 texture_orm = ExtResource("11_hva2l")
 
 [node name="Decal3" type="Decal" parent="DecalsBackRoom/Decals" unique_id=422181563]
-transform = Transform3D(-0.38777727, -0.603929, 0.26475334, -0.59736955, -1.0796738e-07, -0.2705345, 0.29382542, -0.79703796, -0.20060799, 4.8619804, 1.3716979, -6.1997747)
+transform = Transform3D(0.35259742, -0.68903375, -0.24073431, -0.5973695, -1.4971944e-07, -0.27053446, 0.3352307, 0.72472906, -0.22887747, 4.8619804, 1.3716979, -6.1997747)
 texture_albedo = ExtResource("12_slj7n")
 texture_normal = ExtResource("13_qam1a")
 texture_orm = ExtResource("14_ar56e")
@@ -2912,6 +2912,9 @@ transform = Transform3D(-1, 4.3711395e-08, 2.0663207e-07, 4.3711395e-08, 1, -1.6
 emissive_brightness = 0.0
 light_brightness = 0.0
 
+[node name="DoorLight4" parent="Lights" unique_id=1913492963 instance=ExtResource("20_okt7d")]
+transform = Transform3D(-1.6292068e-07, 5.479463e-15, -1, 4.3711395e-08, 1, -1.6420276e-15, 1, -4.3711395e-08, -1.6292068e-07, 23.746193, 2.5841906, -10.5011)
+
 [node name="DoorLightFlicker5" parent="Lights" unique_id=2117864310 instance=ExtResource("20_bs17m")]
 transform = Transform3D(-1.7484555e-07, 6.0007147e-15, -1, 4.3711395e-08, 1, 0, 1, -4.3711392e-08, -1.7484555e-07, 8.832676, 2.5841906, -4.5010996)
 flicker_rate_a = 0.84
@@ -2950,8 +2953,29 @@ flicker_high_amount = 0.317
 flicker_low_amount = 0.188
 emissive_brightness = 3.979
 
+[node name="DoorLightFlicker9" parent="Lights" unique_id=845852255 instance=ExtResource("20_bs17m")]
+transform = Transform3D(2.6226832e-07, -9.822086e-15, 1, 4.3711395e-08, 1, 0, -1, 4.3711392e-08, 2.6226832e-07, 24.1547, 2.5841906, -10.5011)
+flicker_rate_a = 0.84
+flicker_rate_b = 5.845
+flicker_threshold = 0.453
+flicker_adjust_speed = 2.1809999999999996
+flicker_high_amount = 0.703
+flicker_low_amount = 0.21
+emissive_brightness = 3.394
+
 [node name="OverheadLightFlicker" parent="Lights" unique_id=285439363 instance=ExtResource("25_7solt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 3, -9.883)
+
+[node name="OverheadLightFlicker2" parent="Lights" unique_id=181940529 instance=ExtResource("25_7solt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.981588, 3, -13.02704)
+flicker_rate_a = 0.0
+flicker_rate_b = 0.0
+
+[node name="OverheadLightFlicker3" parent="Lights" unique_id=182989517 instance=ExtResource("25_7solt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.981588, 3, -13.02704)
+flicker_rate_a = 0.0
+flicker_rate_b = 2.931
+flicker_threshold = 0.658
 
 [node name="Skeletons" type="Node3D" parent="." unique_id=1562671743]
 
@@ -2968,10 +2992,10 @@ transform = Transform3D(-4.4703484e-08, 0, -1, 0, 1, 0, 1, 0, -4.4703484e-08, 7.
 talk_message = Array[String](["\"You inhabit your former mentor well, initiate.", "Fission is the sinistral path—the division of the atom, which brought woe until the world, is not to be trifled with.", "Yet, only by fission and fusion together can one tread the pathway to the Holiest of Holies.\""])
 
 [node name="SkeletonD" parent="Skeletons" unique_id=425853638 instance=ExtResource("19_4tam1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.885406, 0, -14)
 
 [node name="SkeletonE" parent="Skeletons" unique_id=1571419232 instance=ExtResource("19_4tam1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.052174, 0, -14)
 
 [node name="SkeletonF" parent="Skeletons" unique_id=1197911493 instance=ExtResource("21_bs17m")]
 transform = Transform3D(0.20983219, 0, -0.9777374, 0, 1, 0, 0.9777374, 0, 0.20983219, 31, 0, -7)
