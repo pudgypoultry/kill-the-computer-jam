@@ -9354,6 +9354,7 @@ position = Vector2(945, 2415)
 examine = Array[String](["SWITCH GEAR ROOM", "The grinding of unseen gears behind these rotting walls ", "Reminds you of the vast and unknowable expanse of this place, ", "Of the mysteries of God's unceasing work"])
 grid_position = Vector2i(9, 23)
 adjacencies = [NodePath("../9_22"), NodePath("../10_23"), NodePath("../9_24"), NodePath("../8_23")]
+password = Array[String](["Halo", "Fallout"])
 
 [node name="Sprite2D2" type="Sprite2D" parent="9_23" unique_id=1975180370]
 texture = ExtResource("2_lgriu")
@@ -9486,7 +9487,7 @@ third_locked_position = NodePath("../8_23")
 grid_position = Vector2i(17, 23)
 adjacencies = [NodePath("../17_22"), NodePath("../18_23"), NodePath("../17_24"), NodePath("../16_23")]
 has_password = true
-password = Array[String](["Fallout", "Halo"])
+password = Array[String](["Cruciform", "Fission"])
 locked_position = NodePath("../16_23")
 door_sprite = NodePath("Door")
 
@@ -9902,15 +9903,14 @@ texture = ExtResource("3_07650")
 [node name="17_24" parent="." unique_id=1464939331 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(1785, 2520)
 active = false
+examine = Array[String](["ST CRISPIN", "", ""])
 grid_position = Vector2i(17, 24)
 adjacencies = [NodePath("../17_23"), NodePath("../18_24"), NodePath("../17_25"), NodePath("../16_24")]
 
 [node name="Sprite2D2" type="Sprite2D" parent="17_24" unique_id=944595919]
-visible = false
 texture = ExtResource("2_lgriu")
 
 [node name="SkeletonSprite2" type="Sprite2D" parent="17_24" unique_id=633802056]
-visible = false
 texture = ExtResource("3_07650")
 
 [node name="18_24" parent="." unique_id=1498175512 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]

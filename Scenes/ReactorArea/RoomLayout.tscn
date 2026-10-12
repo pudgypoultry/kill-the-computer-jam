@@ -3054,8 +3054,8 @@ transform = Transform3D(-0.091266006, 0, -0.99582666, 0, 1, 0, 0.99582666, 0, -0
 talk_message = Array[String](["\"I have read the ancient texts. I have suffered through scripture. I have annotated the Apocrypha. ", "My conclusion? ", "I wonder: instead of all this, our vast task of eternal preservation.", "Mightn't we simply have chosen not to create it at all? God?\" "])
 
 [node name="SkeletonK" parent="Skeletons" unique_id=342856809 instance=ExtResource("21_bs17m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.678617, 0, -4.415737)
-talk_message = Array[String](["", "", ""])
+transform = Transform3D(0.14695807, 0, 0.9891427, 0, 1, 0, -0.9891427, 0, 0.14695807, -17.678617, 0, -4.415737)
+talk_message = Array[String](["\"Someday you too will receive the gift of the apparatus.", "Reunited with your erstwhile mentor here in supplication before the light of God that melts both flesh and organs.", "You too will be Commanded into the Core.\""])
 
 [node name="SkeletonL" parent="Skeletons" unique_id=988356585 instance=ExtResource("21_bs17m")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16.5, 0, -10.5)
@@ -3282,6 +3282,9 @@ environment = SubResource("Environment_4tam1")
 [node name="FirstDoor" parent="Doors" unique_id=520848132 instance=ExtResource("25_hva2l")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.115509, 0, -6)
 can_slam = true
+
+[node name="DoorGridIndicator" parent="Doors/FirstDoor/DoorHolder" parent_id_path=PackedInt32Array(520848132, 36920210) index="0" unique_id=788560802]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.076348305)
 
 [node name="ZoomOutDoor" parent="Doors" unique_id=1073256528 instance=ExtResource("25_hva2l")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 24.115509, 0, -12)
