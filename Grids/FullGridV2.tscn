@@ -10303,7 +10303,6 @@ examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The 
 grid_position = Vector2i(11, 25)
 adjacencies = [NodePath("../11_24"), NodePath("../12_25"), NodePath("../11_26"), NodePath("../10_25")]
 is_starting_position = true
-has_password = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="11_25" unique_id=528474306]
 texture = ExtResource("2_lgriu")
