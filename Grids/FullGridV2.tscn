@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bcl1u44bcafcc" path="res://Sandboxes/Pudgypoultry/SkeletonIcon.png" id="3_07650"]
 [ext_resource type="Texture2D" uid="uid://dky4no5n28umf" path="res://Sandboxes/Pudgypoultry/DoorBar.png" id="4_vs6s3"]
 [ext_resource type="PackedScene" uid="uid://deyytmftgimdu" path="res://Scenes/Punchcards/CardScenes/punch_card_fusion.tscn" id="5_dj0i0"]
+[ext_resource type="PackedScene" uid="uid://dd12tmva7loan" path="res://Scenes/Punchcards/CardScenes/punch_card_halo.tscn" id="5_lgriu"]
 [ext_resource type="PackedScene" uid="uid://cied817m3svin" path="res://Scenes/Punchcards/CardScenes/punch_card_fission.tscn" id="6_g8bva"]
 [ext_resource type="Script" uid="uid://b558xrlw1w04p" path="res://Sandboxes/Pudgypoultry/TwoDoorCell.gd" id="7_kh7ha"]
 [ext_resource type="Texture2D" uid="uid://bjc6gobfpkia7" path="res://Assets/Overlays/teeny_hint_image.png" id="8_rfrf6"]
@@ -3375,7 +3376,9 @@ visible = false
 texture = ExtResource("3_07650")
 
 [node name="17_8" parent="." unique_id=1628087745 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
+visible = false
 position = Vector2(1785, 840)
+active = false
 grid_position = Vector2i(17, 8)
 adjacencies = [NodePath("../17_7"), NodePath("../18_8"), NodePath("../17_9"), NodePath("../16_8")]
 is_locked = true
@@ -3769,11 +3772,13 @@ texture = ExtResource("3_07650")
 
 [node name="17_9" parent="." unique_id=1513936782 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(1785, 945)
+active = false
 grid_position = Vector2i(17, 9)
 adjacencies = [NodePath("../17_8"), NodePath("../18_9"), NodePath("../17_10"), NodePath("../16_9")]
 is_locked = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="17_9" unique_id=871542577]
+visible = false
 texture = ExtResource("2_lgriu")
 
 [node name="SkeletonSprite2" type="Sprite2D" parent="17_9" unique_id=295217820]
@@ -4162,11 +4167,13 @@ texture = ExtResource("3_07650")
 
 [node name="17_10" parent="." unique_id=1157996895 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(1785, 1050)
+active = false
 grid_position = Vector2i(17, 10)
 adjacencies = [NodePath("../17_9"), NodePath("../18_10"), NodePath("../17_11"), NodePath("../16_10")]
 is_locked = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="17_10" unique_id=672185882]
+visible = false
 texture = ExtResource("2_lgriu")
 
 [node name="SkeletonSprite2" type="Sprite2D" parent="17_10" unique_id=318890130]
@@ -4555,11 +4562,13 @@ texture = ExtResource("3_07650")
 
 [node name="17_11" parent="." unique_id=2069654494 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(1785, 1155)
+active = false
 grid_position = Vector2i(17, 11)
 adjacencies = [NodePath("../17_10"), NodePath("../18_11"), NodePath("../17_12"), NodePath("../16_11")]
 is_locked = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="17_11" unique_id=94911737]
+visible = false
 texture = ExtResource("2_lgriu")
 
 [node name="SkeletonSprite2" type="Sprite2D" parent="17_11" unique_id=869802968]
@@ -4948,11 +4957,13 @@ texture = ExtResource("3_07650")
 
 [node name="17_12" parent="." unique_id=1137380117 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(1785, 1260)
+active = false
 grid_position = Vector2i(17, 12)
 adjacencies = [NodePath("../17_11"), NodePath("../18_12"), NodePath("../17_13"), NodePath("../16_12")]
 is_locked = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="17_12" unique_id=625672166]
+visible = false
 texture = ExtResource("2_lgriu")
 
 [node name="SkeletonSprite2" type="Sprite2D" parent="17_12" unique_id=70682013]
@@ -5341,11 +5352,13 @@ texture = ExtResource("3_07650")
 
 [node name="17_13" parent="." unique_id=973018296 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(1785, 1365)
+active = false
 grid_position = Vector2i(17, 13)
 adjacencies = [NodePath("../17_12"), NodePath("../18_13"), NodePath("../17_14"), NodePath("../16_13")]
 is_locked = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="17_13" unique_id=762722033]
+visible = false
 texture = ExtResource("2_lgriu")
 
 [node name="SkeletonSprite2" type="Sprite2D" parent="17_13" unique_id=1776859307]
@@ -5734,11 +5747,13 @@ texture = ExtResource("3_07650")
 
 [node name="17_14" parent="." unique_id=1852078106 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(1785, 1470)
+active = false
 grid_position = Vector2i(17, 14)
 adjacencies = [NodePath("../17_13"), NodePath("../18_14"), NodePath("../17_15"), NodePath("../16_14")]
 is_locked = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="17_14" unique_id=1033202232]
+visible = false
 texture = ExtResource("2_lgriu")
 
 [node name="SkeletonSprite2" type="Sprite2D" parent="17_14" unique_id=435036201]
@@ -6125,11 +6140,13 @@ texture = ExtResource("3_07650")
 
 [node name="17_15" parent="." unique_id=132953974 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(1785, 1575)
+active = false
 grid_position = Vector2i(17, 15)
 adjacencies = [NodePath("../17_14"), NodePath("../18_15"), NodePath("../17_16"), NodePath("../16_15")]
 is_locked = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="17_15" unique_id=1000405103]
+visible = false
 texture = ExtResource("2_lgriu")
 
 [node name="SkeletonSprite2" type="Sprite2D" parent="17_15" unique_id=1961764484]
@@ -6511,7 +6528,9 @@ visible = false
 texture = ExtResource("3_07650")
 
 [node name="17_16" parent="." unique_id=1055594075 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
+visible = false
 position = Vector2(1785, 1680)
+active = false
 grid_position = Vector2i(17, 16)
 adjacencies = [NodePath("../17_15"), NodePath("../18_16"), NodePath("../17_17"), NodePath("../16_16")]
 is_locked = true
@@ -7340,11 +7359,13 @@ texture = ExtResource("3_07650")
 
 [node name="17_18" parent="." unique_id=1470726509 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(1785, 1890)
+active = false
 grid_position = Vector2i(17, 18)
 adjacencies = [NodePath("../17_17"), NodePath("../18_18"), NodePath("../17_19"), NodePath("../16_18")]
 is_locked = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="17_18" unique_id=231587559]
+visible = false
 texture = ExtResource("2_lgriu")
 
 [node name="SkeletonSprite2" type="Sprite2D" parent="17_18" unique_id=909949032]
@@ -8169,6 +8190,7 @@ texture = ExtResource("3_07650")
 [node name="16_20" parent="." unique_id=179299713 instance=ExtResource("1_t47qh")]
 position = Vector2(1680, 2100)
 examine = Array[String](["ST.  CAMILLA the POET", "You recall her poetry spoke of God as if she'd seen it. ", "You realize now that perhaps she had. "])
+grid_position = Vector2i(16, 20)
 has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="16_20" unique_id=446928490]
@@ -8178,7 +8200,9 @@ texture = ExtResource("2_lgriu")
 texture = ExtResource("3_07650")
 
 [node name="17_20" parent="." unique_id=1158141867 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
+visible = false
 position = Vector2(1785, 2100)
+active = false
 examine = Array[String](["TURBINE BUILDING", "You can hear the Turbines, before your Saint even enters. ", "God's heart beating. "])
 grid_position = Vector2i(17, 20)
 adjacencies = [NodePath("../17_19"), NodePath("../18_20"), NodePath("../17_21"), NodePath("../16_20")]
@@ -8579,6 +8603,8 @@ position = Vector2(1680, 2205)
 examine = Array[String](["TURBINE BUILDING", "You can hear the Turbines, before your Saint even enters. ", "God's heart beating. "])
 grid_position = Vector2i(16, 21)
 adjacencies = [NodePath("../16_20"), NodePath("../17_21"), NodePath("../16_22"), NodePath("../15_21")]
+has_card_unlock = true
+card_to_unlock = ExtResource("5_lgriu")
 
 [node name="Sprite2D2" type="Sprite2D" parent="16_21" unique_id=1943326179]
 texture = ExtResource("2_lgriu")
@@ -8993,6 +9019,7 @@ position = Vector2(1575, 2310)
 examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
 grid_position = Vector2i(15, 22)
 adjacencies = [NodePath("../15_21"), NodePath("../16_22"), NodePath("../15_23"), NodePath("../14_22")]
+is_starting_position = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="15_22" unique_id=89766867]
 texture = ExtResource("2_lgriu")
@@ -10207,7 +10234,6 @@ position = Vector2(1155, 2625)
 examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
 grid_position = Vector2i(11, 25)
 adjacencies = [NodePath("../11_24"), NodePath("../12_25"), NodePath("../11_26"), NodePath("../10_25")]
-is_starting_position = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="11_25" unique_id=528474306]
 texture = ExtResource("2_lgriu")

@@ -3,8 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://qug0b8wetea4" path="res://Scenes/Punchcards/CardScenes/punch_card_fallout.tscn" id="1_gsliy"]
 [ext_resource type="Script" uid="uid://c42y8abk50bqv" path="res://Sandboxes/Pudgypoultry/MainCamera.gd" id="1_w0dj5"]
 [ext_resource type="PackedScene" uid="uid://nbibkmp3es04" path="res://Scenes/Punchcards/CardScenes/punch_card_cruciform.tscn" id="5_qaeli"]
+[ext_resource type="PackedScene" uid="uid://cied817m3svin" path="res://Scenes/Punchcards/CardScenes/punch_card_fission.tscn" id="6_w0dj5"]
 [ext_resource type="Environment" uid="uid://ccvtkoherrvxq" path="res://Assets/world_environment.tres" id="7_5msbe"]
 [ext_resource type="PackedScene" uid="uid://dh0rk5hghkdu2" path="res://Scenes/Punchcards/CardScenes/punch_card_blank.tscn" id="7_41b3u"]
+[ext_resource type="PackedScene" uid="uid://deyytmftgimdu" path="res://Scenes/Punchcards/CardScenes/punch_card_fusion.tscn" id="7_hwvc8"]
 [ext_resource type="AudioStream" uid="uid://dwj54u80iuo5a" path="res://Assets/SFX/FootstepsTurn01.wav" id="8_cmfyp"]
 [ext_resource type="AudioStream" uid="uid://lg8cmh75j17t" path="res://Assets/SFX/FootstepsTurn02.wav" id="9_1uf6b"]
 [ext_resource type="AudioStream" uid="uid://cgqm3lsrye1cf" path="res://Assets/Music/The Threshold (Ambience).ogg" id="9_3tf8q"]
@@ -122,6 +124,12 @@ transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.6298165e-09, 0, -1.6298165e-09, 0
 
 [node name="PunchCardBlank3" parent="PlayArea" unique_id=233967122 instance=ExtResource("7_41b3u")]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.6298174e-09, 0, -1.6298174e-09, 0.07, 0.795536, 0.032999933, 0.45)
+
+[node name="PunchCardFission" parent="PlayArea" unique_id=458594757 instance=ExtResource("6_w0dj5")]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.7763568e-15, 0, -1.7763568e-15, 0.07, -0.5492522, 0.042679876, 0.39117888)
+
+[node name="PunchCardFusion" parent="PlayArea" unique_id=635817491 instance=ExtResource("7_hwvc8")]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.110223e-15, 0, -1.110223e-15, 0.07, -0.2774803, 0.024082273, 0.29178706)
 
 [node name="MouseCursor" parent="PlayArea" unique_id=1458504978 instance=ExtResource("10_tq65w")]
 

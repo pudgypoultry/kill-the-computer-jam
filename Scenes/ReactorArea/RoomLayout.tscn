@@ -41,6 +41,7 @@
 [ext_resource type="PackedScene" uid="uid://dq0kdmegn3eg7" path="res://Scenes/Door/reactor_door.tscn" id="34_hfl70"]
 [ext_resource type="PackedScene" uid="uid://sfj87uifaxon" path="res://Scenes/Door/open_door.tscn" id="34_snsdr"]
 [ext_resource type="ArrayMesh" uid="uid://c5m2ajlu28h0j" path="res://Assets/Models/RoomKit/Meshes/RoomKit_WallNub.res" id="36_y81hs"]
+[ext_resource type="PackedScene" uid="uid://dijockbfqnx7o" path="res://Scenes/Environment/GrateLightFlicker.tscn" id="42_iubb8"]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_y8adh"]
 albedo_texture = ExtResource("27_y8adh")
@@ -606,6 +607,10 @@ mesh = ExtResource("1_bripf")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -12)
 mesh = ExtResource("1_bripf")
 
+[node name="RoomKitFloor47" type="MeshInstance3D" parent="Rooms" unique_id=416240858]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -15)
+mesh = ExtResource("1_bripf")
+
 [node name="RoomKitFloor33" type="MeshInstance3D" parent="Rooms" unique_id=1702622899]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -12)
 mesh = ExtResource("1_bripf")
@@ -748,7 +753,7 @@ transform = Transform3D(-1, 0, -2.0663205e-07, 0, 1, 0, 2.0663205e-07, 0, -1, 33
 mesh = ExtResource("5_mhh6y")
 
 [node name="RoomKitInteriorCorner34" type="MeshInstance3D" parent="Rooms" unique_id=432785086]
-transform = Transform3D(-1, 0, -2.0663205e-07, 0, 1, 0, 2.0663205e-07, 0, -1, 24.001, 0, -15)
+transform = Transform3D(-1, 0, -2.0663205e-07, 0, 1, 0, 2.0663205e-07, 0, -1, 24, 0, -15)
 mesh = ExtResource("5_mhh6y")
 
 [node name="RoomKitInteriorCorner35" type="MeshInstance3D" parent="Rooms" unique_id=1486060063]
@@ -758,10 +763,6 @@ mesh = ExtResource("5_mhh6y")
 [node name="RoomKitInteriorCorner36" type="MeshInstance3D" parent="Rooms" unique_id=1830438531]
 transform = Transform3D(2.5034345e-07, 0, -1, 0, 1, 0, 1, 0, 2.5034345e-07, 12, 0, -11.999999)
 mesh = ExtResource("5_mhh6y")
-
-[node name="RoomKitStraightWall36" type="MeshInstance3D" parent="Rooms" unique_id=838597335]
-transform = Transform3D(2.5034345e-07, 0, -1, 0, 1, 0, 1, 0, 2.5034345e-07, 18, 0, -14.999999)
-mesh = ExtResource("3_r6i6q")
 
 [node name="RoomKitStraightWall37" type="MeshInstance3D" parent="Rooms" unique_id=1400285257]
 transform = Transform3D(2.5034345e-07, 0, -1, 0, 1, 0, 1, 0, 2.5034345e-07, 18, 0, -5.999999)
@@ -3000,17 +3001,6 @@ emissive_brightness = 3.394
 [node name="OverheadLightFlicker" parent="Lights" unique_id=285439363 instance=ExtResource("25_7solt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 3, -9.883)
 
-[node name="OverheadLightFlicker2" parent="Lights" unique_id=181940529 instance=ExtResource("25_7solt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.981588, 3, -13.02704)
-flicker_rate_a = 0.0
-flicker_rate_b = 0.0
-
-[node name="OverheadLightFlicker3" parent="Lights" unique_id=182989517 instance=ExtResource("25_7solt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.981588, 3, -13.02704)
-flicker_rate_a = 0.0
-flicker_rate_b = 2.931
-flicker_threshold = 0.658
-
 [node name="Skeletons" type="Node3D" parent="." unique_id=1562671743]
 
 [node name="SkeletonA" parent="Skeletons" unique_id=892404425 instance=ExtResource("19_4tam1")]
@@ -3026,10 +3016,12 @@ transform = Transform3D(-4.4703484e-08, 0, -1, 0, 1, 0, 1, 0, -4.4703484e-08, 7.
 talk_message = Array[String](["Fission is the sinistral path—the division of the atom, which brought woe until the world, is not to be trifled with.", "Yet, only by fission and fusion together can one tread the pathway to the Holiest of Holies.\"", "For you, the curse of Fission."])
 
 [node name="SkeletonD" parent="Skeletons" unique_id=425853638 instance=ExtResource("19_4tam1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.885406, 0, -14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 0, -13.5)
+talk_message = Array[String](["The atom is the smallest of seeds, yet its might can render a mountain down to cinders.", "Halo grants the power to see both the very large and the very small, the world of the atom and the world beyond.", "Receive now the boon of Halo."])
 
 [node name="SkeletonE" parent="Skeletons" unique_id=1571419232 instance=ExtResource("19_4tam1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.052174, 0, -14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 0, -13.5)
+talk_message = Array[String](["Halo is also a shockwave—the very breath of the God in the Atom that makes a mockery of the fragile works of man.", "The tunnels beyond here have collapsed, but this too is a sign. Know that God is everywhere."])
 
 [node name="SkeletonF" parent="Skeletons" unique_id=1197911493 instance=ExtResource("21_bs17m")]
 transform = Transform3D(0.20983219, 0, -0.9777374, 0, 1, 0, 0.9777374, 0, 0.20983219, 31, 0, -7)
@@ -3262,6 +3254,9 @@ transform = Transform3D(0.4226183, 0, -0.90630794, 0, 1, 0, 0.90630794, 0, 0.422
 [node name="SkeletonKneel10" parent="Skeletons/ReactorSkeletons/Row4" unique_id=2071890708 instance=ExtResource("27_ar56e")]
 transform = Transform3D(0.4226183, 0, 0.90630794, 0, 1, 0, -0.90630794, 0, 0.4226183, -12, 0, -1)
 
+[node name="OverheadLightFlicker" parent="Skeletons" unique_id=285578281 instance=ExtResource("25_7solt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 3, -9)
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=645849406]
 environment = SubResource("Environment_4tam1")
 
@@ -3337,6 +3332,16 @@ mesh = ExtResource("36_y81hs")
 [node name="RoomKitWallNub2" type="MeshInstance3D" parent="." unique_id=639664009]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -18, 0, -9)
 mesh = ExtResource("36_y81hs")
+
+[node name="RoomKitDoor2" type="MeshInstance3D" parent="." unique_id=214831596]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 18, 0, -15)
+mesh = ExtResource("4_o11oa")
+
+[node name="GrateLight3" parent="." unique_id=146381566 instance=ExtResource("31_7solt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 3, -12)
+
+[node name="GrateLightFlicker" parent="." unique_id=1052821185 instance=ExtResource("42_iubb8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 3, -12)
 
 [editable path="Lights/DoorLight7"]
 [editable path="Lights/DoorLight6"]
