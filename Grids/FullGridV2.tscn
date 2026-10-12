@@ -8444,7 +8444,6 @@ position = Vector2(630, 2205)
 examine = Array[String](["CORE NARTHEX", "God awaits. ", "Just past this door. ", "What shall become of us?"])
 grid_position = Vector2i(6, 21)
 adjacencies = [NodePath("../6_20"), NodePath("../7_21"), NodePath("../6_22"), NodePath("../5_21")]
-is_starting_position = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="6_21" unique_id=1431681243]
 texture = ExtResource("2_lgriu")
@@ -10208,6 +10207,7 @@ position = Vector2(1155, 2625)
 examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
 grid_position = Vector2i(11, 25)
 adjacencies = [NodePath("../11_24"), NodePath("../12_25"), NodePath("../11_26"), NodePath("../10_25")]
+is_starting_position = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="11_25" unique_id=528474306]
 texture = ExtResource("2_lgriu")

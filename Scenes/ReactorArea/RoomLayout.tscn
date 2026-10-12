@@ -42,7 +42,7 @@
 [ext_resource type="PackedScene" uid="uid://sfj87uifaxon" path="res://Scenes/Door/open_door.tscn" id="34_snsdr"]
 [ext_resource type="ArrayMesh" uid="uid://c5m2ajlu28h0j" path="res://Assets/Models/RoomKit/Meshes/RoomKit_WallNub.res" id="36_y81hs"]
 
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_j22xj"]
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_y8adh"]
 albedo_texture = ExtResource("27_y8adh")
 orm_texture = ExtResource("30_ilmkx")
 emission_enabled = true
@@ -53,7 +53,7 @@ emission_texture = ExtResource("28_iubb8")
 normal_enabled = true
 normal_texture = ExtResource("29_11c1r")
 
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_odaac"]
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_iubb8"]
 albedo_texture = ExtResource("27_y8adh")
 orm_texture = ExtResource("30_ilmkx")
 emission_enabled = true
@@ -2912,7 +2912,7 @@ transform = Transform3D(-1, 4.3711395e-08, 3.1786513e-08, 4.3711395e-08, 1, -1.6
 
 [node name="LightMesh" parent="Lights/DoorLight7" index="0" unique_id=1584284493]
 gi_mode = 2
-surface_material_override/0 = SubResource("ORMMaterial3D_j22xj")
+surface_material_override/0 = SubResource("ORMMaterial3D_y8adh")
 
 [node name="Light" parent="Lights/DoorLight7" index="1" unique_id=1977279119]
 light_bake_mode = 2
@@ -2922,7 +2922,7 @@ transform = Transform3D(1, -4.3711395e-08, -1.1920929e-07, 4.3711395e-08, 1, -1.
 
 [node name="LightMesh" parent="Lights/DoorLight6" index="0" unique_id=1584284493]
 gi_mode = 2
-surface_material_override/0 = SubResource("ORMMaterial3D_odaac")
+surface_material_override/0 = SubResource("ORMMaterial3D_iubb8")
 
 [node name="Light" parent="Lights/DoorLight6" index="1" unique_id=1977279119]
 light_bake_mode = 2
@@ -3014,16 +3014,16 @@ flicker_threshold = 0.658
 [node name="Skeletons" type="Node3D" parent="." unique_id=1562671743]
 
 [node name="SkeletonA" parent="Skeletons" unique_id=892404425 instance=ExtResource("19_4tam1")]
-transform = Transform3D(0.061934084, 0, 0.9980803, 0, 1, 0, -0.9980803, 0, 0.061934084, -4.5, 0, -7.1344647)
+transform = Transform3D(0.061934084, 0, 0.9980803, 0, 1, 0, -0.9980803, 0, 0.061934084, -4.5, 0, -7.5)
 talk_message = Array[String](["\"The answer you seek is written on my face for all to see. ", "Look closely and ye shall find.\""])
 
 [node name="SkeletonB" parent="Skeletons" unique_id=1468821949 instance=ExtResource("19_4tam1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -10.5)
-talk_message = Array[String](["\"As Saint Ex taught you, it is fission and fusion together that govern all things. ", "Fusion is the righteous path; sometimes two may proceed where one cannot.\""])
+talk_message = Array[String](["\"As Saint Ex taught you, it is fission and fusion together that govern all things. ", "Fusion is the righteous path; sometimes two may proceed where one cannot.\"", "For you, the blessing of Fusion."])
 
 [node name="SkeletonC" parent="Skeletons" unique_id=657345094 instance=ExtResource("19_4tam1")]
-transform = Transform3D(-4.4703484e-08, 0, -1, 0, 1, 0, 1, 0, -4.4703484e-08, 7.499998, 0, -7.1344643)
-talk_message = Array[String](["\"You inhabit your former mentor well, initiate.", "Fission is the sinistral path—the division of the atom, which brought woe until the world, is not to be trifled with.", "Yet, only by fission and fusion together can one tread the pathway to the Holiest of Holies.\""])
+transform = Transform3D(-4.4703484e-08, 0, -1, 0, 1, 0, 1, 0, -4.4703484e-08, 7.5, 0, -7.5)
+talk_message = Array[String](["Fission is the sinistral path—the division of the atom, which brought woe until the world, is not to be trifled with.", "Yet, only by fission and fusion together can one tread the pathway to the Holiest of Holies.\"", "For you, the curse of Fission."])
 
 [node name="SkeletonD" parent="Skeletons" unique_id=425853638 instance=ExtResource("19_4tam1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.885406, 0, -14)
