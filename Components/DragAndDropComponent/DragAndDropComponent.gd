@@ -108,7 +108,12 @@ func drag(delta):
 func drop():
 	# check if position is allowed
 	if !is_valid_drop():
-		actor_reference.global_position = original_position
+		var blocker := BoardManager.add_player_actionable_blocker(self)
+		var tween = get_tree().create_tween()
+		tween.set_trans(Tween.TRANS_CUBIC)
+		tween.tween_property(actor_reference, "global_position", original_position, 0.25)
+		await tween.finished
+		BoardManager.remove_player_actionable_blocker(blocker)
 		just_dropped()
 		return
 	# find drop position

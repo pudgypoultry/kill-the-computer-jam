@@ -89,6 +89,7 @@ func _handle_card_slotted_double(card_pattern : String):
 					BoardManager.make_switch_go_off()
 				elif _current_cards_scratch == current_cell.wrong_password:
 					reactor_panel.open_wrong(cam)
+					BoardManager.make_switch_go_off()
 				else:
 					reactor_panel.wrong_password()
 	elif current_cell.has_password:
