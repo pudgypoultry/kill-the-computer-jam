@@ -9088,12 +9088,11 @@ texture = ExtResource("3_07650")
 
 [node name="20_22" parent="." unique_id=1589995795 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(2100, 2310)
-active = false
+examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead;", "The rumbling of the floor beneath;", "Is that what it means to Ascend?"])
 grid_position = Vector2i(20, 22)
 adjacencies = [NodePath("../20_21"), NodePath("../21_22"), NodePath("../20_23"), NodePath("../19_22")]
 
 [node name="Sprite2D2" type="Sprite2D" parent="20_22" unique_id=1538404628]
-visible = false
 texture = ExtResource("2_lgriu")
 
 [node name="SkeletonSprite2" type="Sprite2D" parent="20_22" unique_id=1094989094]
@@ -9102,16 +9101,15 @@ texture = ExtResource("3_07650")
 
 [node name="21_22" parent="." unique_id=94183495 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(2205, 2310)
-active = false
+examine = Array[String](["ST TITUS the CRYPTIC ", "You always hated his riddles. "])
 grid_position = Vector2i(21, 22)
 adjacencies = [NodePath("../21_21"), NodePath("../22_22"), NodePath("../21_23"), NodePath("../20_22")]
+has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="21_22" unique_id=1439317606]
-visible = false
 texture = ExtResource("2_lgriu")
 
 [node name="SkeletonSprite2" type="Sprite2D" parent="21_22" unique_id=1693680178]
-visible = false
 texture = ExtResource("3_07650")
 
 [node name="22_22" parent="." unique_id=1805853438 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
@@ -9547,12 +9545,12 @@ position = Vector2(2205, 2415)
 examine = Array[String](["ST TITUS the CRYPTIC ", "You always hated his riddles. "])
 grid_position = Vector2i(21, 23)
 adjacencies = [NodePath("../21_22"), NodePath("../22_23"), NodePath("../21_24"), NodePath("../20_23")]
-has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="21_23" unique_id=1974870072]
 texture = ExtResource("2_lgriu")
 
 [node name="SkeletonSprite2" type="Sprite2D" parent="21_23" unique_id=1139311350]
+visible = false
 texture = ExtResource("3_07650")
 
 [node name="22_23" parent="." unique_id=228640530 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
@@ -9902,10 +9900,10 @@ texture = ExtResource("3_07650")
 
 [node name="17_24" parent="." unique_id=1464939331 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(1785, 2520)
-active = false
 examine = Array[String](["ST CRISPIN", "", ""])
 grid_position = Vector2i(17, 24)
 adjacencies = [NodePath("../17_23"), NodePath("../18_24"), NodePath("../17_25"), NodePath("../16_24")]
+has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="17_24" unique_id=944595919]
 texture = ExtResource("2_lgriu")
@@ -9932,12 +9930,12 @@ position = Vector2(1995, 2520)
 examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead;", "The rumbling of the floor beneath;", "Is that what it means to Ascend?"])
 grid_position = Vector2i(19, 24)
 adjacencies = [NodePath("../19_23"), NodePath("../20_24"), NodePath("../19_25"), NodePath("../18_24")]
+has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="19_24" unique_id=517457864]
 texture = ExtResource("2_lgriu")
 
 [node name="SkeletonSprite2" type="Sprite2D" parent="19_24" unique_id=1455897568]
-visible = false
 texture = ExtResource("3_07650")
 
 [node name="20_24" parent="." unique_id=935385122 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
@@ -9958,13 +9956,18 @@ position = Vector2(2205, 2520)
 examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead;", "The rumbling of the floor beneath;", "Is that what it means to Ascend?"])
 grid_position = Vector2i(21, 24)
 adjacencies = [NodePath("../21_23"), NodePath("../22_24"), NodePath("../21_25"), NodePath("../20_24")]
+has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="21_24" unique_id=1461303540]
 texture = ExtResource("2_lgriu")
 
 [node name="SkeletonSprite2" type="Sprite2D" parent="21_24" unique_id=1131505322]
-visible = false
 texture = ExtResource("3_07650")
+
+[node name="TeenyHintImage" type="Sprite2D" parent="21_24" unique_id=1405637793]
+position = Vector2(0, -22)
+texture = ExtResource("8_rfrf6")
+script = ExtResource("9_nsygj")
 
 [node name="22_24" parent="." unique_id=900036831 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(2310, 2520)
@@ -10346,11 +10349,13 @@ texture = ExtResource("3_07650")
 
 [node name="19_25" parent="." unique_id=2031972557 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(1995, 2625)
+active = false
 examine = Array[String](["ST HIPPO the APTLY NAMED", "He was never fond of his own designation, but it always made you smile, fondly"])
 grid_position = Vector2i(19, 25)
 adjacencies = [NodePath("../19_24"), NodePath("../20_25"), NodePath("../19_26"), NodePath("../18_25")]
 
 [node name="Sprite2D2" type="Sprite2D" parent="19_25" unique_id=873413289]
+visible = false
 texture = ExtResource("2_lgriu")
 
 [node name="SkeletonSprite2" type="Sprite2D" parent="19_25" unique_id=121742409]
@@ -10358,15 +10363,18 @@ visible = false
 texture = ExtResource("3_07650")
 
 [node name="SkeletonSprite3" type="Sprite2D" parent="19_25" unique_id=586728386]
+visible = false
 texture = ExtResource("3_07650")
 
 [node name="20_25" parent="." unique_id=3523964 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(2100, 2625)
+active = false
 examine = Array[String](["TURBINE ROOM", "You can hardly hear the sound of the Saint's footsteps over the rush and whir of the Turbines. ", "The holy water spinning through pipes overhead;", "The rumbling of the floor beneath;", "Is that what it means to Ascend?"])
 grid_position = Vector2i(20, 25)
 adjacencies = [NodePath("../20_24"), NodePath("../21_25"), NodePath("../20_26"), NodePath("../19_25")]
 
 [node name="Sprite2D2" type="Sprite2D" parent="20_25" unique_id=623968121]
+visible = false
 texture = ExtResource("2_lgriu")
 
 [node name="SkeletonSprite2" type="Sprite2D" parent="20_25" unique_id=1736641279]
@@ -10375,21 +10383,18 @@ texture = ExtResource("3_07650")
 
 [node name="21_25" parent="." unique_id=169375955 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(2205, 2625)
+active = false
 examine = Array[String](["ST SHARBEL, the WAYFINDER", "She was once thought lost, wandering far through forests of corpse trees", "When she retrurned she requested to be interred with a compass", "That she might not lose her way on the path to God."])
 grid_position = Vector2i(21, 25)
 adjacencies = [NodePath("../21_24"), NodePath("../22_25"), NodePath("../21_26"), NodePath("../20_25")]
-has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="21_25" unique_id=1532550339]
+visible = false
 texture = ExtResource("2_lgriu")
 
 [node name="SkeletonSprite2" type="Sprite2D" parent="21_25" unique_id=335583962]
+visible = false
 texture = ExtResource("3_07650")
-
-[node name="TeenyHintImage" type="Sprite2D" parent="21_25" unique_id=1405637793]
-position = Vector2(0, -21)
-texture = ExtResource("8_rfrf6")
-script = ExtResource("9_nsygj")
 
 [node name="22_25" parent="." unique_id=435971114 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(2310, 2625)

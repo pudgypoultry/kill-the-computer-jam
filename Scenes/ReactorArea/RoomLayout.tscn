@@ -2695,63 +2695,71 @@ texture_orm = ExtResource("8_bs17m")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.875351, 1.9043472, -0.12184715)
 
 [node name="Decal" type="Decal" parent="MainRoomHintDecals" unique_id=850852946]
-transform = Transform3D(0.29999998, 0, 0, 0, -1.3113416e-08, 0.29999998, 0, -0.29999998, -1.3113416e-08, 0, 0.41743588, 0)
+transform = Transform3D(0.29999998, 0, 0, 0, -1.3113416e-08, 0.29999998, 0, -0.29999998, -1.3113416e-08, 0, -0.01888299, -0.08515406)
 texture_albedo = ExtResource("23_d2t3s")
 texture_normal = ExtResource("7_2cdcx")
 texture_orm = ExtResource("8_bs17m")
-modulate = Color(0.64705884, 0.05882353, 0, 1)
-albedo_mix = 0.86
+modulate = Color(0.765625, 0.06960225, 0, 1)
+albedo_mix = 0.97
+
+[node name="Decal4" type="Decal" parent="MainRoomHintDecals" unique_id=1728329945]
+transform = Transform3D(0.29999998, 0, 0, 0, -1.3113416e-08, 0.29999998, 0, -0.29999998, -1.3113416e-08, 0.5996027, 0.41743588, -0.08515406)
+texture_albedo = ExtResource("23_d2t3s")
+texture_normal = ExtResource("7_2cdcx")
+texture_orm = ExtResource("8_bs17m")
+modulate = Color(0.765625, 0.06960225, 0, 1)
+albedo_mix = 0.97
 
 [node name="Decal2" type="Decal" parent="MainRoomHintDecals" unique_id=186410886]
-transform = Transform3D(0.29999998, 0, 0, 0, -1.3113416e-08, 0.29999998, 0, -0.29999998, -1.3113416e-08, 0.75716066, -0.47954, 0)
+transform = Transform3D(0.29999998, 0, 0, 0, -1.3113416e-08, 0.29999998, 0, -0.29999998, -1.3113416e-08, 0.60920763, -0.47954, -0.08515406)
 texture_albedo = ExtResource("24_e14fn")
 texture_normal = ExtResource("7_2cdcx")
 texture_orm = ExtResource("8_bs17m")
-modulate = Color(0.64705884, 0.05882353, 0, 1)
-albedo_mix = 0.86
+modulate = Color(0.765625, 0.06960225, 0, 1)
+albedo_mix = 0.97
 
 [node name="Decal3" type="Decal" parent="MainRoomHintDecals" unique_id=438171470]
-transform = Transform3D(0.29999998, 0, 0, 0, -1.3113416e-08, 0.29999998, 0, -0.29999998, -1.3113416e-08, -0.851799, -0.4998703, 0)
+transform = Transform3D(0.29999998, 0, 0, 0, -1.3113416e-08, 0.29999998, 0, -0.29999998, -1.3113416e-08, -0.65328026, -0.02576971, -0.08515406)
 texture_albedo = ExtResource("25_y81hs")
 texture_normal = ExtResource("7_2cdcx")
 texture_orm = ExtResource("8_bs17m")
-modulate = Color(0.64705884, 0.05882353, 0, 1)
-albedo_mix = 0.86
+modulate = Color(0.765625, 0.06960225, 0, 1)
+albedo_mix = 0.97
 
 [node name="MainRoomHintDecals2" type="Node3D" parent="." unique_id=1714152450]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.923215, 1.9043472, -0.12184715)
 
 [node name="Decal" type="Decal" parent="MainRoomHintDecals2" unique_id=1360472496]
-transform = Transform3D(0.29999998, 0, 0, 0, -1.3113416e-08, 0.29999998, 0, -0.29999998, -1.3113416e-08, -0.77966356, 0.41743588, 0)
+transform = Transform3D(0.29999998, 0, 0, 0, -1.3113416e-08, 0.29999998, 0, -0.29999998, -1.3113416e-08, -0.77966356, 0.41743588, -0.08515406)
 texture_albedo = ExtResource("23_d2t3s")
 texture_normal = ExtResource("7_2cdcx")
 texture_orm = ExtResource("8_bs17m")
-modulate = Color(0.64705884, 0.05882353, 0, 1)
-albedo_mix = 0.86
+modulate = Color(0.765625, 0.06960225, 0, 1)
+albedo_mix = 0.97
 
 [node name="Decal2" type="Decal" parent="MainRoomHintDecals2" unique_id=1216060062]
-transform = Transform3D(-0.29999998, -1.1464111e-15, 2.6226832e-08, -2.6226832e-08, 1.3113415e-08, -0.29999998, 0, -0.29999998, -1.3113415e-08, -0.2892294, -0.057010055, 0)
+transform = Transform3D(-0.29999998, -1.1464111e-15, 2.6226832e-08, -2.6226832e-08, 1.3113415e-08, -0.29999998, 0, -0.29999998, -1.3113415e-08, -0.2892294, -0.057010055, -0.08515406)
 texture_albedo = ExtResource("24_e14fn")
 texture_normal = ExtResource("7_2cdcx")
 texture_orm = ExtResource("8_bs17m")
-modulate = Color(0.64705884, 0.05882353, 0, 1)
-albedo_mix = 0.86
+modulate = Color(0.765625, 0.06960225, 0, 1)
+albedo_mix = 0.97
 
 [node name="Decal3" type="Decal" parent="MainRoomHintDecals2" unique_id=1371588314]
-transform = Transform3D(0.29999998, 0, 0, 0, -1.3113416e-08, 0.29999998, 0, -0.29999998, -1.3113416e-08, -0.851799, -0.4998703, 0)
+transform = Transform3D(0.29999998, 0, 0, 0, -1.3113416e-08, 0.29999998, 0, -0.29999998, -1.3113416e-08, -0.851799, -0.4998703, -0.08515406)
 texture_albedo = ExtResource("25_y81hs")
 texture_normal = ExtResource("7_2cdcx")
 texture_orm = ExtResource("8_bs17m")
-modulate = Color(0.64705884, 0.05882353, 0, 1)
-albedo_mix = 0.86
+modulate = Color(0.765625, 0.06960225, 0, 1)
+albedo_mix = 0.97
 
 [node name="Decal4" type="Decal" parent="MainRoomHintDecals2" unique_id=779799590]
-transform = Transform3D(-0.29999998, -1.1464111e-15, 2.6226832e-08, -2.6226832e-08, 1.3113415e-08, -0.29999998, 0, -0.29999998, -1.3113415e-08, 0.3373816, -0.058921695, 0)
+transform = Transform3D(-0.29999998, -1.1464111e-15, 2.6226832e-08, -2.6226832e-08, 1.3113415e-08, -0.29999998, 0, -0.29999998, -1.3113415e-08, 0.3373816, -0.058921695, -0.08515406)
 texture_albedo = ExtResource("25_y81hs")
 texture_normal = ExtResource("7_2cdcx")
 texture_orm = ExtResource("8_bs17m")
-modulate = Color(0.64705884, 0.05882353, 0, 1)
-albedo_mix = 0.86
+modulate = Color(0.765625, 0.06960225, 0, 1)
+albedo_mix = 0.97
 
 [node name="DecalsHallway" type="Node3D" parent="." unique_id=722417648]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.096142, 0, -1.8386679)
@@ -3011,6 +3019,9 @@ emissive_brightness = 3.394
 [node name="OverheadLightFlicker" parent="Lights" unique_id=285439363 instance=ExtResource("25_7solt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 3, -9.883)
 
+[node name="OverheadLightFlicker2" parent="Lights" unique_id=1733838377 instance=ExtResource("25_7solt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, 3, -1.8830004)
+
 [node name="Skeletons" type="Node3D" parent="." unique_id=1562671743]
 
 [node name="SkeletonA" parent="Skeletons" unique_id=892404425 instance=ExtResource("19_4tam1")]
@@ -3042,11 +3053,11 @@ transform = Transform3D(0.20983219, 0, -0.9777374, 0, 1, 0, 0.9777374, 0, 0.2098
 talk_message = Array[String](["\"Oh initiate, permit me to interpret the true meaning of the Commandments by which you control your Blessed Saint:", "It seems you've been taught these ones already, but to refresh:", "The right hand path is 'Fusion.' The left hand path is 'Fission.' ", "'Halo' lets us see the truth, both large and small.\""])
 
 [node name="SkeletonH" parent="Skeletons" unique_id=379935278 instance=ExtResource("19_4tam1")]
-transform = Transform3D(-0.9302268, 0, 0.36698514, 0, 1, 0, -0.36698514, 0, -0.9302268, 25, 0, -1)
+transform = Transform3D(-0.9280331, 0, 0.37249777, 0, 1, 0, -0.37249777, 0, -0.9280331, 25.446115, 0, -1)
 talk_message = Array[String](["\"Oh initiate, permit me to interpret the true meaning of the Commandments by which you control your Blessed Saint:", "'Fallout' is the path, though whether it carries us forward or backward, we cannot yet say.\""])
 
 [node name="SkeletonI" parent="Skeletons" unique_id=1102765580 instance=ExtResource("21_bs17m")]
-transform = Transform3D(-0.99162894, 0, -0.12912127, 0, 1, 0, 0.12912127, 0, -0.99162894, 19.564873, 0, -2.4578445)
+transform = Transform3D(-0.99162894, 0, -0.12912127, 0, 1, 0, 0.12912127, 0, -0.99162894, 19.564873, 0, -2.0181453)
 talk_message = Array[String](["\"The Cruciform's first task was Fission—", "Eternal division between the time before, and the time to come.\" "])
 
 [node name="SkeletonJ" parent="Skeletons" unique_id=410653855 instance=ExtResource("21_bs17m")]
@@ -3361,6 +3372,22 @@ mesh = ExtResource("4_o11oa")
 
 [node name="GrateLight3" parent="." unique_id=146381566 instance=ExtResource("31_7solt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 3, -12)
+light_range = 5.0
+
+[node name="GrateLight4" parent="." unique_id=883646089 instance=ExtResource("31_7solt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 3, -7)
+light_range = 5.0
+
+[node name="GrateLight5" parent="." unique_id=534671408 instance=ExtResource("31_7solt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 3, -2)
+emissive_brightness = 3.303
+light_brightness = 0.763
+light_range = 5.0
+
+[node name="GrateLight6" parent="." unique_id=1226247151 instance=ExtResource("31_7solt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.56851, 3, -2.2030263)
+emissive_brightness = 3.303
+light_brightness = 0.763
 light_range = 5.0
 
 [node name="GrateLightFlicker" parent="." unique_id=1052821185 instance=ExtResource("42_iubb8")]
