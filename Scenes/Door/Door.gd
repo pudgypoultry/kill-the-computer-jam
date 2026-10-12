@@ -26,14 +26,17 @@ func _ready() -> void:
 		door_holder.position -= transform.basis.x * 3.0
 		is_open = true
 
-func open_door():
-	is_open = true
-	original_position = door_holder.position
+func _play_accept_effect() -> void:
 	if is_instance_valid(indicator):
 		indicator.indicator_state = GridIndicator.IndicatorState.CORRECT
 		door_speaker_player.stream = door_success_sound
 		door_speaker_player.play()
 		await get_tree().create_timer(1.0).timeout
+
+func open_door():
+	is_open = true
+	original_position = door_holder.position
+	await _play_accept_effect()
 	door_open_player.play()
 	tween = get_tree().create_tween().bind_node(door_holder)
 	tween.tween_property(door_holder, "global_position", global_position - door_holder.global_transform.basis.z * 0.125, 0.5)

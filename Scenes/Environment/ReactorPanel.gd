@@ -7,11 +7,13 @@ class_name ReactorPanel
 @export var explosion_interval : float = 1.0
 
 func open_correct(_player : Node3D):
+	_play_accept_effect()
 	BoardManager.add_player_actionable_blocker(self)
 	reactor.reactor_state = Reactor.ReactorState.Calm
 	# move player camera however need be
 
 func open_wrong(_player : Node3D):
+	_play_accept_effect()
 	BoardManager.add_player_actionable_blocker(self)
 	reactor.reactor_state = Reactor.ReactorState.Critical
 	# move player camera however need be

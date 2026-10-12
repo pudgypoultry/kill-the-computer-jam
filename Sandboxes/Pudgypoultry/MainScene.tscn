@@ -3,9 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://b85oss8w61nv5" path="res://Scenes/Audio/music_player.tscn" id="1_41b3u"]
 [ext_resource type="PackedScene" uid="uid://qug0b8wetea4" path="res://Scenes/Punchcards/CardScenes/punch_card_fallout.tscn" id="1_gsliy"]
 [ext_resource type="Script" uid="uid://c42y8abk50bqv" path="res://Sandboxes/Pudgypoultry/MainCamera.gd" id="1_w0dj5"]
-[ext_resource type="PackedScene" uid="uid://cied817m3svin" path="res://Scenes/Punchcards/CardScenes/punch_card_fission.tscn" id="3_8q0bl"]
-[ext_resource type="PackedScene" uid="uid://deyytmftgimdu" path="res://Scenes/Punchcards/CardScenes/punch_card_fusion.tscn" id="4_duclc"]
-[ext_resource type="PackedScene" uid="uid://dd12tmva7loan" path="res://Scenes/Punchcards/CardScenes/punch_card_halo.tscn" id="5_q1446"]
 [ext_resource type="PackedScene" uid="uid://nbibkmp3es04" path="res://Scenes/Punchcards/CardScenes/punch_card_cruciform.tscn" id="5_qaeli"]
 [ext_resource type="Environment" uid="uid://ccvtkoherrvxq" path="res://Assets/world_environment.tres" id="7_5msbe"]
 [ext_resource type="PackedScene" uid="uid://dh0rk5hghkdu2" path="res://Scenes/Punchcards/CardScenes/punch_card_blank.tscn" id="7_41b3u"]
@@ -99,15 +96,6 @@ transform = Transform3D(3.2499998, 0, 0, 0, -1.42062e-07, -3.2499998, 0, 3.24999
 collision_layer = 3
 collision_mask = 3
 
-[node name="PunchCardFission" parent="PlayArea" unique_id=458594757 instance=ExtResource("3_8q0bl")]
-transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.6298155e-09, 0, -1.6298155e-09, 0.07, 0.75502896, 0.05722937, -0.20332423)
-
-[node name="PunchCardFusion" parent="PlayArea" unique_id=331653166 instance=ExtResource("4_duclc")]
-transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.6298155e-09, 0, -1.6298155e-09, 0.07, 0.75502896, 0.05722937, -0.20332423)
-
-[node name="PunchCardHalo" parent="PlayArea" unique_id=1893860521 instance=ExtResource("5_q1446")]
-transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.6298155e-09, 0, -1.6298155e-09, 0.07, 0.75502896, 0.05722937, -0.20332423)
-
 [node name="MiddleCollision" type="CollisionShape3D" parent="PlayArea" unique_id=1545407128]
 transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 2.7462477e-12, 0, -2.7462477e-12, 0.9999998, 0.1190872, 0, 0.048133865)
 shape = SubResource("BoxShape3D_tq65w")
@@ -132,15 +120,12 @@ transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.6298185e-09, 0, -1.6298185e-09, 0
 
 [node name="PunchCardBlank" parent="PlayArea" unique_id=142756743 instance=ExtResource("7_41b3u")]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.6298157e-09, 0, -1.6298157e-09, 0.07, 0.795536, 0.032999873, -0.14999998)
-visible = false
 
 [node name="PunchCardBlank2" parent="PlayArea" unique_id=28775954 instance=ExtResource("7_41b3u")]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.6298165e-09, 0, -1.6298165e-09, 0.07, 0.795536, 0.032999933, 0.15)
-visible = false
 
 [node name="PunchCardBlank3" parent="PlayArea" unique_id=233967122 instance=ExtResource("7_41b3u")]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.6298174e-09, 0, -1.6298174e-09, 0.07, 0.795536, 0.032999933, 0.45)
-visible = false
 
 [node name="MouseCursor" parent="PlayArea" unique_id=1458504978 instance=ExtResource("10_tq65w")]
 
