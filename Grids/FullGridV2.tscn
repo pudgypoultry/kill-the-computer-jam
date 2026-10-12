@@ -9473,7 +9473,6 @@ position = Vector2(1365, 2415)
 examine = Array[String](["SWITCH GEAR ROOM", "The grinding of unseen gears behind these rotting walls ", "Reminds you of the vast and unknowable expanse of this place, ", "Of the mysteries of God's unceasing work"])
 grid_position = Vector2i(13, 23)
 adjacencies = [NodePath("../13_22"), NodePath("../14_23"), NodePath("../13_24"), NodePath("../12_23")]
-is_starting_position = true
 has_password = true
 password = Array[String](["Fusion", "Fission"])
 locked_position = NodePath("../14_23")
@@ -10299,6 +10298,7 @@ position = Vector2(1155, 2625)
 examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
 grid_position = Vector2i(11, 25)
 adjacencies = [NodePath("../11_24"), NodePath("../12_25"), NodePath("../11_26"), NodePath("../10_25")]
+is_starting_position = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="11_25" unique_id=528474306]
 texture = ExtResource("2_lgriu")
