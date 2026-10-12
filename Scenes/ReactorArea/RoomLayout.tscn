@@ -54,6 +54,7 @@
 [ext_resource type="Material" uid="uid://dbgyvkgss6pmk" path="res://Assets/Models/SetDec/Materials/matte_black_fill.tres" id="47_273nw"]
 [ext_resource type="Texture2D" uid="uid://vyk6mm3s7h4h" path="res://Assets/Models/Lights/Textures/OverheadLight_normal.tga" id="47_ljt84"]
 [ext_resource type="Texture2D" uid="uid://cd5qlj0nhcqdy" path="res://Assets/Models/Lights/Textures/OverheadLight_mixmap.tga" id="48_indjv"]
+[ext_resource type="ArrayMesh" uid="uid://droxf4b3n7267" path="res://Assets/Models/RoomKit/Meshes/RoomKit_Alcove.res" id="55_pl3xb"]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_306cf"]
 albedo_texture = ExtResource("27_y8adh")
@@ -76,6 +77,17 @@ emission_operator = 1
 emission_texture = ExtResource("28_iubb8")
 normal_enabled = true
 normal_texture = ExtResource("29_11c1r")
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_pl3xb"]
+albedo_texture = ExtResource("45_00rv5")
+orm_texture = ExtResource("48_indjv")
+emission_enabled = true
+emission = Color(1, 0.84705883, 0.69411767, 1)
+emission_energy_multiplier = 2.5
+emission_operator = 1
+emission_texture = ExtResource("46_j1t7v")
+normal_enabled = true
+normal_texture = ExtResource("47_ljt84")
 
 [sub_resource type="Environment" id="Environment_4tam1"]
 background_mode = 1
@@ -279,6 +291,10 @@ mesh = ExtResource("15_fl23l")
 
 [node name="RoomKitCeiling62" type="MeshInstance3D" parent="Ceilings" unique_id=566284009]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -3)
+mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling73" type="MeshInstance3D" parent="Ceilings" unique_id=733163405]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, -3)
 mesh = ExtResource("15_fl23l")
 
 [node name="RoomKitCeiling65" type="MeshInstance3D" parent="Ceilings" unique_id=294454752]
@@ -647,6 +663,10 @@ mesh = ExtResource("1_bripf")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -3)
 mesh = ExtResource("1_bripf")
 
+[node name="RoomKitFloor49" type="MeshInstance3D" parent="Rooms" unique_id=433081717]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, -3)
+mesh = ExtResource("1_bripf")
+
 [node name="RoomKitFloor43" type="MeshInstance3D" parent="Rooms" unique_id=807777850]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 0)
 mesh = ExtResource("1_bripf")
@@ -874,10 +894,6 @@ mesh = ExtResource("3_r6i6q")
 
 [node name="RoomKitStraightWall40" type="MeshInstance3D" parent="Rooms" unique_id=701938913]
 transform = Transform3D(-1.6292067e-07, 0, 1, 0, 1, 0, -1, 0, -1.6292067e-07, 30, 0, 9.536743e-07)
-mesh = ExtResource("3_r6i6q")
-
-[node name="RoomKitStraightWall41" type="MeshInstance3D" parent="Rooms" unique_id=1703391985]
-transform = Transform3D(-1, 0, -2.0663205e-07, 0, 1, 0, 2.0663205e-07, 0, -1, 33, 0, -5.999999)
 mesh = ExtResource("3_r6i6q")
 
 [node name="RoomKitInteriorCorner32" type="MeshInstance3D" parent="Rooms" unique_id=1862048851]
@@ -3161,31 +3177,35 @@ talk_message = Array[String](["\"Fission is the sinistral path—the division of
 
 [node name="SkeletonD" parent="Skeletons" unique_id=425853638 instance=ExtResource("19_4tam1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 0, -13.5)
-talk_message = Array[String](["\"The atom is the smallest of seeds, yet its might can render a mountain down to cinders.", "Halo grants the power to see both the very large and the very small, the world of the atom and the world beyond.", "Receive now the boon of Halo.\""])
+talk_message = Array[String](["\"The atom is the smallest of seeds, yet its might can render a mountain down to cinders.", "Halo grants the power to see both the very large and the very small, the world of the atom and the World to Come.", "Receive now the boon of Halo.\""])
 
 [node name="SkeletonE" parent="Skeletons" unique_id=1571419232 instance=ExtResource("19_4tam1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 0, -13.5)
 talk_message = Array[String](["\"Halo is also a shockwave—the very breath of the God in the Atom that makes a mockery of the fragile works of man.", "The tunnels beyond here have collapsed, but this too is a sign. Know that God is everywhere.\""])
 
 [node name="SkeletonF" parent="Skeletons" unique_id=1197911493 instance=ExtResource("21_bs17m")]
-transform = Transform3D(0.20983219, 0, -0.9777374, 0, 1, 0, 0.9777374, 0, 0.20983219, 31, 0, -7)
-talk_message = Array[String](["\"Oh initiate, permit me to interpret the true meaning of the Commandments by which you control your Blessed Saint:", "It is through the 'Cruciform' that we speak with and understand the world.\" "])
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 31.5, 0, -7.5)
+talk_message = Array[String](["\"Through Fallout do we roam back and forth across a ruined world,", "but is it worth persisting for so long under a poisoned sky?\""])
 
 [node name="SkeletonG" parent="Skeletons" unique_id=602876167 instance=ExtResource("21_bs17m")]
-transform = Transform3D(0.20983219, 0, -0.9777374, 0, 1, 0, 0.9777374, 0, 0.20983219, 31, 0, -2)
-talk_message = Array[String](["\"Oh initiate, permit me to interpret the true meaning of the Commandments by which you control your Blessed Saint:", "It seems you've been taught these ones already, but to refresh:", "The right hand path is 'Fusion.' The left hand path is 'Fission.' ", "'Halo' lets us see the truth, both large and small.\""])
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 31.5, 0, -1.5)
+talk_message = Array[String](["\"Cruciform is the world of man, which we touch only lightly.", "Through seeing and speaking, we know others and are known.", "In the old world, a great cloud arose on the horizon, carving a cross into the sky, and all eyes fell upon it.\" "])
+
+[node name="SkeletonG2" parent="Skeletons" unique_id=678578984 instance=ExtResource("21_bs17m")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 34.5, 0, -4.5)
+talk_message = Array[String](["\"There are those who accuse the Book of Fission of revisionism,", "but my meditations have taught me that each age requires its own truth.\""])
 
 [node name="SkeletonH" parent="Skeletons" unique_id=379935278 instance=ExtResource("19_4tam1")]
-transform = Transform3D(-0.9280331, 0, 0.37249777, 0, 1, 0, -0.37249777, 0, -0.9280331, 25.446115, 0, -1)
-talk_message = Array[String](["\"Oh initiate, permit me to interpret the true meaning of the Commandments by which you control your Blessed Saint:", "'Fallout' is the path, though whether it carries us forward or backward, we cannot yet say.\""])
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 25.446115, 0, -1)
+talk_message = Array[String](["\"In time you will be interred alongside us, here where mortal flesh cannot endure.", "Fitted with the Apparatus, future generations will steer your movements.", "Dead technology should yield to the living.\""])
 
 [node name="SkeletonI" parent="Skeletons" unique_id=1102765580 instance=ExtResource("21_bs17m")]
-transform = Transform3D(-0.99162894, 0, -0.12912127, 0, 1, 0, 0.12912127, 0, -0.99162894, 19.564873, 0, -2.0181453)
-talk_message = Array[String](["\"The Cruciform's first task was Fission—", "Eternal division between the time before, and the time to come.\" "])
+transform = Transform3D(-1.0000001, 0, 8.7422784e-08, 0, 1, 0, -8.7422784e-08, 0, -1.0000001, 19.564873, 0, -2.0181453)
+talk_message = Array[String](["\"Cruciform's first task was Fission—", "Eternal division between the age before, and the World to Come.", "You know these signs; you have seen them before.\""])
 
 [node name="SkeletonJ" parent="Skeletons" unique_id=410653855 instance=ExtResource("21_bs17m")]
-transform = Transform3D(-0.091266006, 0, -0.99582666, 0, 1, 0, 0.99582666, 0, -0.091266006, 15.652, 0, 1.388)
-talk_message = Array[String](["\"I have read the ancient texts. I have suffered through scripture. I have annotated the Apocrypha. ", "My conclusion? ", "I wonder: instead of all this, our vast task of eternal preservation.", "Mightn't we simply have chosen not to create it at all? God?\" "])
+transform = Transform3D(-4.3711392e-08, 0, -1.0000001, 0, 1, 0, 1.0000001, 0, -4.3711392e-08, 15.5, 0, 1.5)
+talk_message = Array[String](["\"I have read the ancient texts. I have suffered through scripture. I have annotated the Apocrypha. ", "My conclusion? ", "I wonder: instead of all this, our vast task of eternal preservation,", "mightn't we simply have chosen not to create it at all? God?\" "])
 
 [node name="SkeletonK" parent="Skeletons" unique_id=342856809 instance=ExtResource("21_bs17m")]
 transform = Transform3D(0.14695807, 0, 0.9891427, 0, 1, 0, -0.9891427, 0, 0.14695807, -17.678617, 0, -4.415737)
@@ -3411,6 +3431,24 @@ transform = Transform3D(0.4226183, 0, 0.90630794, 0, 1, 0, -0.90630794, 0, 0.422
 [node name="OverheadLightFlicker" parent="Skeletons" unique_id=285578281 instance=ExtResource("25_7solt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 3, -9)
 
+[node name="OverheadLightFlicker2" parent="Skeletons" unique_id=1375361744 instance=ExtResource("25_7solt")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 33.50595, 3, -4.5)
+
+[node name="OverheadLightFlicker3" parent="Skeletons" unique_id=1754760647 instance=ExtResource("25_7solt")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15.388847, 3, 1.5)
+flicker_rate_a = 0.1
+flicker_rate_b = 1.0
+flicker_threshold = 0.799
+
+[node name="LightMesh" parent="Skeletons/OverheadLightFlicker3" index="0" unique_id=1584284493]
+gi_mode = 2
+surface_material_override/0 = SubResource("ORMMaterial3D_pl3xb")
+
+[node name="Light" parent="Skeletons/OverheadLightFlicker3" index="1" unique_id=1977279119]
+transform = Transform3D(1, -9.471265e-09, 2.7171666e-08, -2.7171664e-08, -0.6216153, 0.78332275, 9.471265e-09, -0.78332275, -0.6216153, 0, -0.19215298, 0)
+light_color = Color(1, 0.84705883, 0.69411767, 1)
+light_energy = 0.5
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=645849406]
 environment = SubResource("Environment_4tam1")
 
@@ -3597,8 +3635,13 @@ transform = Transform3D(1, 0, 0, 0, 0.5371409, 0.8434925, 0, -0.8434925, 0.53714
 light_color = Color(1, 0.84705883, 0.69411767, 1)
 shadow_enabled = true
 
+[node name="RoomKitAlcove" type="MeshInstance3D" parent="." unique_id=218542304]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36, 0, -3)
+mesh = ExtResource("55_pl3xb")
+
 [editable path="Lights/DoorLight7"]
 [editable path="Lights/DoorLight6"]
+[editable path="Skeletons/OverheadLightFlicker3"]
 [editable path="Doors/FirstDoor"]
 [editable path="GrateLight7"]
 [editable path="ReactorPanel/ReactorPanel"]

@@ -9537,13 +9537,11 @@ texture = ExtResource("2_lgriu")
 visible = false
 texture = ExtResource("3_07650")
 
-[node name="17_23" parent="." unique_id=905132914 node_paths=PackedStringArray("second_door_sprite", "second_locked_position", "third_door_sprite", "third_locked_position", "adjacencies", "locked_position", "door_sprite") instance=ExtResource("1_t47qh")]
+[node name="17_23" parent="." unique_id=905132914 node_paths=PackedStringArray("other_door_sprite", "other_locked_position", "adjacencies", "locked_position", "door_sprite") instance=ExtResource("1_t47qh")]
 position = Vector2(1785, 2415)
 script = ExtResource("7_kh7ha")
-second_door_sprite = NodePath("Door")
-second_locked_position = NodePath("../13_23")
-third_door_sprite = NodePath("../9_23/Door")
-third_locked_position = NodePath("../8_23")
+other_door_sprite = NodePath("../13_23/Door")
+other_locked_position = NodePath("../13_23")
 grid_position = Vector2i(17, 23)
 adjacencies = [NodePath("../17_22"), NodePath("../18_23"), NodePath("../17_24"), NodePath("../16_23")]
 has_password = true
@@ -9617,16 +9615,14 @@ texture = ExtResource("3_07650")
 
 [node name="22_23" parent="." unique_id=228640530 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(2310, 2415)
-active = false
 grid_position = Vector2i(22, 23)
 adjacencies = [NodePath("../22_22"), NodePath("../23_23"), NodePath("../22_24"), NodePath("../21_23")]
+has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="22_23" unique_id=1324997152]
-visible = false
 texture = ExtResource("2_lgriu")
 
 [node name="SkeletonSprite2" type="Sprite2D" parent="22_23" unique_id=1874363002]
-visible = false
 texture = ExtResource("3_07650")
 
 [node name="23_23" parent="." unique_id=1578290410 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
