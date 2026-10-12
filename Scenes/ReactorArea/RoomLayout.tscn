@@ -3208,16 +3208,16 @@ transform = Transform3D(-4.3711392e-08, 0, -1.0000001, 0, 1, 0, 1.0000001, 0, -4
 talk_message = Array[String](["\"I have read the ancient texts. I have suffered through scripture. I have annotated the Apocrypha. ", "My conclusion? ", "I wonder: instead of all this, our vast task of eternal preservation,", "mightn't we simply have chosen not to create it at all? God?\" "])
 
 [node name="SkeletonK" parent="Skeletons" unique_id=342856809 instance=ExtResource("21_bs17m")]
-transform = Transform3D(0.14695807, 0, 0.9891427, 0, 1, 0, -0.9891427, 0, 0.14695807, -17.678617, 0, -4.415737)
-talk_message = Array[String](["\"Someday you too will receive the gift of the apparatus.", "Reunited with your erstwhile mentor here in supplication before the light of God that melts both flesh and organs.", "You too will be Commanded into the Core.\""])
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16.5, 0, -4.5)
+talk_message = Array[String](["\"The frailty of flesh wilts before the light of God's divine blood.", "If humans were meant to survive, would it be so?", "If death is closeness to God, is it not the true life?\""])
 
 [node name="SkeletonL" parent="Skeletons" unique_id=988356585 instance=ExtResource("21_bs17m")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16.5, 0, -10.5)
-talk_message = Array[String](["\"Before you enter, and gaze upon Glory, consider: ", "If instead the world as written no longer suits you, ", "If all must burn and begin anew, ", "take the leftward Path toward Fallout.\""])
+talk_message = Array[String](["\"Before you enter and gaze upon His glory, consider: ", "if the age of man is over,", "if all must burn and begin anew, ", "take the leftward path toward Fallout.\""])
 
 [node name="SkeletonM" parent="Skeletons" unique_id=502640425 instance=ExtResource("21_bs17m")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.5, 0, -10.5)
-talk_message = Array[String](["\"Before you enter, and gaze upon Glory, consider: ", "Should you wish to preserve this present cycle, ", "To join in the company of Saints, our divine Halo.", "Take the rightward Path.\""])
+talk_message = Array[String](["\"Before you enter, and gaze upon His glory, consider: ", "should you wish to preserve this present cycle, ", "to don the Apparatus' grim Halo in service of future generations,", "take the rightward path.\""])
 
 [node name="OldVersions" type="Node3D" parent="Skeletons" unique_id=462912281]
 visible = false
@@ -3448,6 +3448,7 @@ surface_material_override/0 = SubResource("ORMMaterial3D_pl3xb")
 transform = Transform3D(1, -9.471265e-09, 2.7171666e-08, -2.7171664e-08, -0.6216153, 0.78332275, 9.471265e-09, -0.78332275, -0.6216153, 0, -0.19215298, 0)
 light_color = Color(1, 0.84705883, 0.69411767, 1)
 light_energy = 0.5
+shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=645849406]
 environment = SubResource("Environment_4tam1")
@@ -3638,6 +3639,17 @@ shadow_enabled = true
 [node name="RoomKitAlcove" type="MeshInstance3D" parent="." unique_id=218542304]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36, 0, -3)
 mesh = ExtResource("55_pl3xb")
+
+[node name="OverheadLight" parent="." unique_id=1877068359 instance=ExtResource("43_11c1r")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16.177929, 3, -4.5)
+
+[node name="OverheadLight2" parent="." unique_id=1837080997 instance=ExtResource("43_11c1r")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16.177929, 3, -10.5)
+cast_shadows = true
+
+[node name="OverheadLight3" parent="." unique_id=964855187 instance=ExtResource("43_11c1r")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10.967184, 3, -10.5)
+cast_shadows = true
 
 [editable path="Lights/DoorLight7"]
 [editable path="Lights/DoorLight6"]

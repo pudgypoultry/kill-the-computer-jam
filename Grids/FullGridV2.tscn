@@ -5226,11 +5226,12 @@ texture = ExtResource("3_07650")
 [node name="6_13" parent="." unique_id=2089572996 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(630, 1365)
 script = ExtResource("4_07650")
-wrong_password = Array[String](["", ""])
+wrong_password = Array[String](["Fallout", "Fission"])
 grid_position = Vector2i(6, 13)
 adjacencies = [NodePath("../6_12"), NodePath("../7_13"), NodePath("../6_14"), NodePath("../5_13")]
 is_locked = true
 has_password = true
+password = Array[String](["Halo", "Fusion"])
 
 [node name="Sprite2D2" type="Sprite2D" parent="6_13" unique_id=83064288]
 texture = ExtResource("2_lgriu")
