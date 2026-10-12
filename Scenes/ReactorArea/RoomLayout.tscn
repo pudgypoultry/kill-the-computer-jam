@@ -3301,13 +3301,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.076348305)
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 24.115509, 0, -12)
 
 [node name="BlockingDoorEntryway" parent="Doors" unique_id=1267413610 instance=ExtResource("25_hva2l")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.884491, 0, -3)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.099483, 0, -3)
 
-[node name="DoubleAndZoomInDoor" parent="Doors" unique_id=1958122532 node_paths=PackedStringArray("other_door") instance=ExtResource("25_hva2l")]
+[node name="DoubleAndZoomInDoor" parent="Doors" unique_id=1958122532 node_paths=PackedStringArray("first_other_door", "second_other_door") instance=ExtResource("25_hva2l")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 17.875544, 0, -3)
 script = ExtResource("29_fl23l")
-other_door = NodePath("../BlockingDoorEntryway")
-time_offset = 0.0
+first_other_door = NodePath("../FirstDoor")
+second_other_door = NodePath("../BlockingDoorEntryway")
+time_offset = 0.5
 
 [node name="OpenDoor" parent="Doors" unique_id=124037257 instance=ExtResource("34_snsdr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -15)

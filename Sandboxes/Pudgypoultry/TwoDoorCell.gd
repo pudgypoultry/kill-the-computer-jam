@@ -7,7 +7,8 @@ extends GridCell
 
 
 func unlock():
-	locked_position.is_locked = false
+	super()
 	second_locked_position.is_locked = false
-	door_sprite.hide()
+	third_locked_position.is_locked = false
 	second_door_sprite.hide()
+	third_door_sprite.hide()
