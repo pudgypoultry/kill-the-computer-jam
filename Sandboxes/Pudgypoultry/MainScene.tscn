@@ -14,6 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://dyueb8i8cdh30" path="res://Assets/Music/The World to Come.ogg" id="11_tq65w"]
 [ext_resource type="PackedScene" uid="uid://c82j06v17qfbp" path="res://Scenes/ReactorArea/ReactorView.tscn" id="12_qaeli"]
 [ext_resource type="PackedScene" uid="uid://df05gj1qx2fth" path="res://Scenes/Monitor/MonitorScene.tscn" id="12_tq65w"]
+[ext_resource type="Script" uid="uid://vmalpcg167f7" path="res://Sandboxes/Pudgypoultry/TitleScreenTransitionManager.gd" id="15_1uf6b"]
 
 [sub_resource type="Environment" id="Environment_sh0p1"]
 background_mode = 2
@@ -39,10 +40,10 @@ size = Vector3(0.65384674, 0.05, 1.14516)
 [sub_resource type="BoxShape3D" id="BoxShape3D_q1446"]
 size = Vector3(0.2559204, 0.05, 1.14516)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_cmfyp"]
-viewport_path = NodePath("../ReactorView/GridCamera")
-
 [sub_resource type="ViewportTexture" id="ViewportTexture_1uf6b"]
+viewport_path = NodePath("../ReactorView/TitleScreen")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_w0dj5"]
 viewport_path = NodePath("../ReactorView/FPSCamera")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lh8n2"]
@@ -80,7 +81,7 @@ shadow_mesh = SubResource("ArrayMesh_jvvhu")
 [node name="MainScene" type="Node3D" unique_id=904660948]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=552463633 node_paths=PackedStringArray("game_position", "menu_position")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.37406492, 0.5209035)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.76899165, 0.89896667, -0.53625983)
 environment = SubResource("Environment_sh0p1")
 current = true
 script = ExtResource("1_w0dj5")
@@ -166,10 +167,10 @@ song_2 = ExtResource("10_qaeli")
 song_3 = ExtResource("11_tq65w")
 
 [node name="Monitor1" parent="Monitor" index="0" unique_id=55286909]
-texture = SubResource("ViewportTexture_cmfyp")
+texture = SubResource("ViewportTexture_1uf6b")
 
 [node name="Monitor2" parent="Monitor" index="1" unique_id=831061316]
-texture = SubResource("ViewportTexture_1uf6b")
+texture = SubResource("ViewportTexture_w0dj5")
 
 [node name="CardSFX" parent="Monitor/CardSlot1" parent_id_path=PackedInt32Array(1842833820, 1264573134) index="4" unique_id=1088956227]
 volume_db = -8.0
@@ -188,5 +189,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.76899165, 0.89896667, -0.5
 [node name="GameCameraPosition" type="Marker3D" parent="." unique_id=429545565]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.37406492, 0.5209035)
 
+[node name="TitleScreenTransitionManager" type="Node" parent="." unique_id=673831126 node_paths=PackedStringArray("target", "menu_root", "cursor", "start_button")]
+script = ExtResource("15_1uf6b")
+target = NodePath("../ReactorView/TitleScreen")
+menu_root = NodePath("../ReactorView/TitleScreen/TitleScreen")
+cursor = NodePath("../ReactorView/TitleScreen/TitleScreen/MouseCursor")
+start_button = NodePath("../ReactorView/TitleScreen/TitleScreen/Menu/Start")
+mouse_offset = Vector2(-120, -120)
+
 [editable path="ReactorView"]
+[editable path="ReactorView/TitleScreen/TitleScreen"]
 [editable path="Monitor"]

@@ -45,7 +45,7 @@ class_name GridCell
 var grid_manager : GridManager = null
 
 func _update_active() -> void:
-	print(name + ":" + str(grid_position))
+	#print(name + ":" + str(grid_position))
 	if !active or hidden_room:
 		for img in get_children():
 			img.hide()
@@ -68,7 +68,7 @@ func _update_active() -> void:
 			skeleton_sprite.hide()
 
 func _ready() -> void:
-	print(sprite)
+	#print(sprite)
 	_update_active()
 	if is_starting_position and not Engine.is_editor_hint():
 		BoardManager.starting_position = grid_position

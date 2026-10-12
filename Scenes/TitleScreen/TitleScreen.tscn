@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://b4a3bhxm50njh" path="res://Scenes/TitleScreen/LoadButton.gd" id="2_bf2sq"]
 [ext_resource type="Script" uid="uid://bkvqvjd1r4au8" path="res://Scenes/TitleScreen/MenuButton.gd" id="3_at0r8"]
 [ext_resource type="Script" uid="uid://p6iehicpoiy0" path="res://Scenes/TitleScreen/QuitButton.gd" id="4_fkfbp"]
+[ext_resource type="Texture2D" uid="uid://jrqpi4smedvx" path="res://Assets/Overlays/HandCursor.tres" id="6_q82or"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rojf5"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -60,6 +61,7 @@ theme_override_colors/font_color = Color(0.054711282, 0.75625, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_f6ya5")
 theme_override_styles/normal = SubResource("StyleBoxFlat_rojf5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pxqgl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_pxqgl")
 text = "> Start"
 alignment = 0
@@ -71,9 +73,12 @@ custom_minimum_size = Vector2(190, 20)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.054711282, 0.75625, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_f6ya5")
 theme_override_styles/normal = SubResource("StyleBoxFlat_rojf5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pxqgl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_pxqgl")
 text = "> Settings"
 alignment = 0
@@ -86,9 +91,12 @@ custom_minimum_size = Vector2(190, 20)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.054711282, 0.75625, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_f6ya5")
 theme_override_styles/normal = SubResource("StyleBoxFlat_rojf5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pxqgl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_pxqgl")
 text = "> Credits"
 alignment = 0
@@ -101,9 +109,12 @@ custom_minimum_size = Vector2(190, 20)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.054711282, 0.75625, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_f6ya5")
 theme_override_styles/normal = SubResource("StyleBoxFlat_rojf5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pxqgl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_pxqgl")
 text = "> Escape"
 alignment = 0
@@ -337,3 +348,8 @@ scene_to_hide = NodePath("..")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=677465315]
 layout_mode = 2
+mouse_filter = 2
+
+[node name="MouseCursor" type="Sprite2D" parent="." unique_id=1150423686]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_q82or")

@@ -12,8 +12,9 @@ func _ready() -> void:
 
 
 func minus():
-	if progress_bar.value < 100:
+	if progress_bar.value > 0:
 		progress_bar.value -= 5
+		print(progress_bar.name + " : " + str(progress_bar.value))
 		AudioServer.set_bus_volume_db(AudioServer.get_bus_index(audio_bus_name), linear_to_db(progress_bar.value))
 
 

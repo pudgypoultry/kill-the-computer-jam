@@ -46,6 +46,12 @@ var cursor_hidden : bool = false:
 
 
 func _process(_delta : float):
+	#if Input.is_action_just_pressed("pause") && player_actionable:
+		#main_camera.move_to_menu()
+		#await get_tree().create_timer(0.5).timeout
+		#switch_screen_to_menu()
+
+	
 	if not exclusive_text_mode:
 		return
 	
@@ -55,6 +61,8 @@ func _process(_delta : float):
 			terminal_manager.writing = false
 		else:
 			end_text_mode()
+
+
 
 func _switch_screen_to_grid():
 	terminal_screen.texture.viewport_path = reactor_manager.grid_subviewport.get_path()
