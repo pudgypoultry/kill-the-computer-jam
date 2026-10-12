@@ -1,5 +1,6 @@
 extends Node
 
+signal make_switch_go_off_now
 signal player_control_changed(value:bool)
 signal done_talking
 
@@ -142,3 +143,6 @@ func remove_player_actionable_blocker(blocker:Node) -> void:
 		
 		if _player_actionable_blockers.is_empty():
 			player_control_changed.emit(true)
+
+func make_switch_go_off() -> void:
+	make_switch_go_off_now.emit()

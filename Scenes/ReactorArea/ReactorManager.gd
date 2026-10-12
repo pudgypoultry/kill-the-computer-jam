@@ -70,31 +70,34 @@ func _handle_card_slotted_double(card_pattern : String):
 		if slot.has_card():
 			_current_cards_scratch.append(slot.current_card.card_name)
 
-	var door : Door			
+	var found_double_card_interaction:bool = false
+
 	if current_cell is ReactorPanelCell:
 		if door_check_ray.is_colliding():
 			var reactor_panel : ReactorPanel = door_check_ray.get_collider()
 			if not is_instance_valid(reactor_panel):
 				_current_cards_scratch.clear()
 				return
-			print("hi I am a reactor panel cell")
 			reactor_panel.input_string(card_pattern)
+			found_double_card_interaction = true
 			
 			# two cards! Try the door
 			if len(_current_cards_scratch) == 2:
 				_current_cards_scratch.sort()
 				if _current_cards_scratch == current_cell.password:
 					reactor_panel.open_correct(cam)
+					BoardManager.make_switch_go_off()
 				elif _current_cards_scratch == current_cell.wrong_password:
 					reactor_panel.open_wrong(cam)
 				else:
 					reactor_panel.wrong_password()
 	elif current_cell.has_password:
-		door = door_check_ray.get_collider()
+		var door:Door = door_check_ray.get_collider()
 		if not is_instance_valid(door):
 			_current_cards_scratch.clear()
 			return
 			
+		found_double_card_interaction = true
 		door.input_string(card_pattern)
 		
 		# two cards! Try the door
@@ -103,6 +106,7 @@ func _handle_card_slotted_double(card_pattern : String):
 			if _current_cards_scratch == current_cell.password:
 				current_cell.unlock()
 				door.open_door()
+				BoardManager.make_switch_go_off()
 			else:
 				door.wrong_password()
 
@@ -117,7 +121,8 @@ func _handle_card_slotted_double(card_pattern : String):
 			if slot.has_card():
 				slot.eject_card()
 		
-		if not door:
+		if not found_double_card_interaction:
+			BoardManager.make_switch_go_off()
 			print_to_terminal(default_double_card_text)		
 		
 	_current_cards_scratch.clear()

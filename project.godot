@@ -15,6 +15,10 @@ run/main_scene="uid://ctdaasj4f8m1v"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://bahsbycijswkq"
+
 [autoload]
 
 BoardManager="*uid://yn1xtviy3f37"
@@ -23,8 +27,7 @@ BoardManager="*uid://yn1xtviy3f37"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
+window/stretch/mode="viewport"
 
 [input]
 

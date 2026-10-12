@@ -62,26 +62,31 @@ func has_card() -> bool:
 
 
 func eject_card():
+	if not current_card:
+		# nothing to do
+		return
+		
 	if not single_mode:
 		BoardManager.end_background_text_display()
-		
+
+	var ejecting_card:PunchCard = current_card		
+	current_card = null
 	card_ejected.emit()
-	current_card.visible = true
-	current_card.is_slotted = false
-	var tween = get_tree().create_tween().bind_node(current_card)
+	ejecting_card.visible = true
+	ejecting_card.is_slotted = false
+	var tween = get_tree().create_tween().bind_node(ejecting_card)
 	var blocker = BoardManager.add_player_actionable_blocker(self)
 	play_sfx(eject_sfx, 0.0)
 	tween.set_trans(Tween.TRANS_BACK)
-	tween.tween_property(current_card, "global_position", expel_position.global_position, BoardManager.card_insert_time)
+	tween.tween_property(ejecting_card, "global_position", expel_position.global_position, BoardManager.card_insert_time)
 	await tween.finished
 	tween = get_tree().create_tween().bind_node(current_card)
 	tween.set_trans(Tween.TRANS_CUBIC)
 	tween.set_parallel()
 	if original_rotation != null:
-		tween.tween_property(current_card, "global_rotation", original_rotation, BoardManager.card_insert_time/4.0)	
-	tween.tween_property(current_card, "global_position", current_card.original_position, BoardManager.card_insert_time/4.0)	
-	current_card.sort_front = true
-	current_card = null
+		tween.tween_property(ejecting_card, "global_rotation", original_rotation, BoardManager.card_insert_time/4.0)	
+	tween.tween_property(ejecting_card, "global_position", ejecting_card.original_position, BoardManager.card_insert_time/4.0)	
+	ejecting_card.sort_front = true
 	await tween.finished
 	BoardManager.remove_player_actionable_blocker(blocker)
 

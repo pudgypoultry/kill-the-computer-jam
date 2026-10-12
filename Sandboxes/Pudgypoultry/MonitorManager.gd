@@ -33,6 +33,7 @@ var is_focused:bool = false:
 			
 
 func _ready() -> void:
+	BoardManager.make_switch_go_off_now.connect(_on_make_switch_go_off_now)
 	BoardManager.terminal_screen = screen_2
 	BoardManager.player_control_changed.connect(_on_player_control_changed)
 
@@ -45,8 +46,8 @@ func _process(_delta : float):
 		mouse_cursor.remove_grab_target(self)
 
 
-func flip_switch():
-	if BoardManager.player_actionable:
+func flip_switch(force:bool = false):
+	if BoardManager.player_actionable or force:
 		if switch_flipped:
 			for slot in slots:
 				if slot.has_card():
@@ -65,11 +66,9 @@ func flip_switch():
 				
 		_update_highlight_state()
 
-
 func play_sfx(sfx : AudioStreamWAV):
 	audio_player.stream = sfx
 	audio_player.play()
-
 
 func check_slots() -> int:
 	var num_cards = 0
@@ -122,3 +121,7 @@ func _update_highlight_visuals() -> void:
 
 func _on_player_control_changed(_value:bool) -> void:
 	_update_highlight_visuals()
+
+func _on_make_switch_go_off_now() -> void:
+	if switch_flipped:
+		flip_switch(true)

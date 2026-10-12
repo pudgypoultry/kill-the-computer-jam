@@ -32,6 +32,7 @@
 [ext_resource type="PackedScene" uid="uid://co7ucwhfmcig8" path="res://Scenes/Door/steel_door.tscn" id="25_hva2l"]
 [ext_resource type="Texture2D" uid="uid://m0mv6wiuw520" path="res://Assets/Decals/Textures/PipDecal03.tga" id="25_y81hs"]
 [ext_resource type="PackedScene" uid="uid://cuakh38bsxw5a" path="res://Scenes/Skeleton/SkeletonKneel.tscn" id="27_ar56e"]
+[ext_resource type="Texture2D" uid="uid://dfkx4k8btl3vb" path="res://Assets/Decals/Textures/ArrowsTogether_decal.tga" id="27_brjh3"]
 [ext_resource type="Texture2D" uid="uid://lul3fa2ox408" path="res://Assets/Models/Lights/Textures/DoorLight_albedo.tga" id="27_y8adh"]
 [ext_resource type="Texture2D" uid="uid://jclt6mil4ej7" path="res://Assets/Models/Lights/Textures/DoorLight_emissive.tga" id="28_iubb8"]
 [ext_resource type="Texture2D" uid="uid://bc2ojamkc13yv" path="res://Assets/Models/Lights/Textures/DoorLight_normal.tga" id="29_11c1r"]
@@ -43,13 +44,18 @@
 [ext_resource type="ArrayMesh" uid="uid://c5m2ajlu28h0j" path="res://Assets/Models/RoomKit/Meshes/RoomKit_WallNub.res" id="36_y81hs"]
 [ext_resource type="PackedScene" uid="uid://dijockbfqnx7o" path="res://Scenes/Environment/GrateLightFlicker.tscn" id="42_iubb8"]
 [ext_resource type="PackedScene" uid="uid://774i3laiuwm3" path="res://Scenes/Environment/OverheadLight.tscn" id="43_11c1r"]
+[ext_resource type="Texture2D" uid="uid://bss5bbgcjrmuk" path="res://Assets/Models/Lights/Textures/GrateLight_albedo.tga" id="43_273nw"]
 [ext_resource type="Script" uid="uid://bq3v5yaqei8b8" path="res://Scenes/Environment/ReactorPanel.gd" id="43_ilmkx"]
+[ext_resource type="Texture2D" uid="uid://ilism2ljh0w7" path="res://Assets/Models/Lights/Textures/GrateLight_emissive.tga" id="44_pl3xb"]
 [ext_resource type="Texture2D" uid="uid://bfj68a688ylsx" path="res://Assets/Models/Lights/Textures/OverheadLight_albedo.tga" id="45_00rv5"]
+[ext_resource type="Texture2D" uid="uid://da0n2hu4anqjd" path="res://Assets/Models/Lights/Textures/GrateLight_normal.tga" id="45_rdyxd"]
 [ext_resource type="Texture2D" uid="uid://cnerl3knykku1" path="res://Assets/Models/Lights/Textures/OverheadLight_emissive.tga" id="46_j1t7v"]
+[ext_resource type="Texture2D" uid="uid://7a7o1mxmckfh" path="res://Assets/Models/Lights/Textures/GrateLight_mixmap.tga" id="46_nugrd"]
+[ext_resource type="Material" uid="uid://dbgyvkgss6pmk" path="res://Assets/Models/SetDec/Materials/matte_black_fill.tres" id="47_273nw"]
 [ext_resource type="Texture2D" uid="uid://vyk6mm3s7h4h" path="res://Assets/Models/Lights/Textures/OverheadLight_normal.tga" id="47_ljt84"]
 [ext_resource type="Texture2D" uid="uid://cd5qlj0nhcqdy" path="res://Assets/Models/Lights/Textures/OverheadLight_mixmap.tga" id="48_indjv"]
 
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_00rv5"]
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_306cf"]
 albedo_texture = ExtResource("27_y8adh")
 orm_texture = ExtResource("30_ilmkx")
 emission_enabled = true
@@ -60,7 +66,7 @@ emission_texture = ExtResource("28_iubb8")
 normal_enabled = true
 normal_texture = ExtResource("29_11c1r")
 
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_j1t7v"]
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_6gudc"]
 albedo_texture = ExtResource("27_y8adh")
 orm_texture = ExtResource("30_ilmkx")
 emission_enabled = true
@@ -85,7 +91,27 @@ glow_enabled = true
 volumetric_fog_enabled = true
 volumetric_fog_albedo = Color(0.68, 0.63104, 0.5984, 1)
 
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_ljt84"]
+[sub_resource type="BoxMesh" id="BoxMesh_lfxu0"]
+size = Vector3(0.74, 0.055, 1)
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_ic7y4"]
+albedo_texture = ExtResource("43_273nw")
+orm_texture = ExtResource("46_nugrd")
+emission_enabled = true
+emission = Color(1, 0.84705883, 0.69411767, 1)
+emission_energy_multiplier = 5.0
+emission_operator = 1
+emission_texture = ExtResource("44_pl3xb")
+normal_enabled = true
+normal_texture = ExtResource("45_rdyxd")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_lfxu0"]
+top_radius = 0.02
+bottom_radius = 0.02
+height = 1.0
+radial_segments = 8
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_bxpov"]
 albedo_texture = ExtResource("45_00rv5")
 orm_texture = ExtResource("48_indjv")
 emission_enabled = true
@@ -96,7 +122,7 @@ emission_texture = ExtResource("46_j1t7v")
 normal_enabled = true
 normal_texture = ExtResource("47_ljt84")
 
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_indjv"]
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_g0mda"]
 albedo_texture = ExtResource("45_00rv5")
 orm_texture = ExtResource("48_indjv")
 emission_enabled = true
@@ -107,7 +133,7 @@ emission_texture = ExtResource("46_j1t7v")
 normal_enabled = true
 normal_texture = ExtResource("47_ljt84")
 
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_464qw"]
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_oke6j"]
 albedo_texture = ExtResource("45_00rv5")
 orm_texture = ExtResource("48_indjv")
 emission_enabled = true
@@ -118,7 +144,7 @@ emission_texture = ExtResource("46_j1t7v")
 normal_enabled = true
 normal_texture = ExtResource("47_ljt84")
 
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_brjh3"]
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_43m75"]
 albedo_texture = ExtResource("45_00rv5")
 orm_texture = ExtResource("48_indjv")
 emission_enabled = true
@@ -2782,18 +2808,10 @@ texture_normal = ExtResource("7_2cdcx")
 texture_orm = ExtResource("8_bs17m")
 
 [node name="MainRoomHintDecals" type="Node3D" parent="." unique_id=1778899688]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.875351, 1.9043472, -0.12184715)
-
-[node name="Decal" type="Decal" parent="MainRoomHintDecals" unique_id=850852946]
-transform = Transform3D(0.29999998, 0, 0, 0, -1.3113416e-08, 0.29999998, 0, -0.29999998, -1.3113416e-08, 0, -0.01888299, -0.08515406)
-texture_albedo = ExtResource("23_d2t3s")
-texture_normal = ExtResource("7_2cdcx")
-texture_orm = ExtResource("8_bs17m")
-modulate = Color(0.765625, 0.06960225, 0, 1)
-albedo_mix = 0.97
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.291078, 1.9043472, -0.12184715)
 
 [node name="Decal4" type="Decal" parent="MainRoomHintDecals" unique_id=1728329945]
-transform = Transform3D(0.29999998, 0, 0, 0, -1.3113416e-08, 0.29999998, 0, -0.29999998, -1.3113416e-08, 0.5996027, 0.41743588, -0.08515406)
+transform = Transform3D(0.1607285, 0, 0, 0, -1.3113416e-08, 0.1607285, 0, -0.29999998, -7.0256663e-09, 0.5239892, 0.10136294, -0.08515406)
 texture_albedo = ExtResource("23_d2t3s")
 texture_normal = ExtResource("7_2cdcx")
 texture_orm = ExtResource("8_bs17m")
@@ -2801,7 +2819,7 @@ modulate = Color(0.765625, 0.06960225, 0, 1)
 albedo_mix = 0.97
 
 [node name="Decal2" type="Decal" parent="MainRoomHintDecals" unique_id=186410886]
-transform = Transform3D(0.29999998, 0, 0, 0, -1.3113416e-08, 0.29999998, 0, -0.29999998, -1.3113416e-08, 0.60920763, -0.47954, -0.08515406)
+transform = Transform3D(0.1607285, 0, 0, 0, -1.3113416e-08, 0.1607285, 0, -0.29999998, -7.0256663e-09, 0.5291352, -0.37920225, -0.08515406)
 texture_albedo = ExtResource("24_e14fn")
 texture_normal = ExtResource("7_2cdcx")
 texture_orm = ExtResource("8_bs17m")
@@ -2809,7 +2827,48 @@ modulate = Color(0.765625, 0.06960225, 0, 1)
 albedo_mix = 0.97
 
 [node name="Decal3" type="Decal" parent="MainRoomHintDecals" unique_id=438171470]
-transform = Transform3D(0.29999998, 0, 0, 0, -1.3113416e-08, 0.29999998, 0, -0.29999998, -1.3113416e-08, -0.65328026, -0.02576971, -0.08515406)
+transform = Transform3D(0.1607285, 0, 0, 0, -1.3113416e-08, 0.1607285, 0, -0.29999998, -7.0256663e-09, -0.12166405, -0.13608944, -0.08515406)
+texture_albedo = ExtResource("25_y81hs")
+texture_normal = ExtResource("7_2cdcx")
+texture_orm = ExtResource("8_bs17m")
+modulate = Color(0.765625, 0.06960225, 0, 1)
+albedo_mix = 0.97
+
+[node name="Decal" type="Decal" parent="MainRoomHintDecals" unique_id=1360472496]
+transform = Transform3D(0.16072851, 0, 0, 0, -1.3113416e-08, 0.16072851, 0, -0.29999998, -7.0256667e-09, -0.0600996, 0.10136294, -0.08515404)
+texture_albedo = ExtResource("23_d2t3s")
+texture_normal = ExtResource("7_2cdcx")
+texture_orm = ExtResource("8_bs17m")
+modulate = Color(0.765625, 0.06960225, 0, 1)
+albedo_mix = 0.97
+
+[node name="Decal5" type="Decal" parent="MainRoomHintDecals" unique_id=1216060062]
+transform = Transform3D(-0.16072851, -1.1464111e-15, 1.4051334e-08, -1.4051334e-08, 1.3113416e-08, -0.16072851, 0, -0.29999998, -7.0256645e-09, 0.20265675, -0.15282679, -0.08515406)
+texture_albedo = ExtResource("24_e14fn")
+texture_normal = ExtResource("7_2cdcx")
+texture_orm = ExtResource("8_bs17m")
+modulate = Color(0.765625, 0.06960225, 0, 1)
+albedo_mix = 0.97
+
+[node name="Decal6" type="Decal" parent="MainRoomHintDecals" unique_id=1929557554]
+transform = Transform3D(-0.16902082, 0.0018285644, -0.0072728316, 0.007878986, 0.0038191704, -0.15625353, -0.0009221244, -0.30253395, -0.0020164931, 0.22214079, -0.6756246, -0.08515406)
+size = Vector3(5, 5, 5)
+texture_albedo = ExtResource("27_brjh3")
+texture_normal = ExtResource("7_2cdcx")
+texture_orm = ExtResource("8_bs17m")
+modulate = Color(0.765625, 0.06960225, 0, 1)
+albedo_mix = 0.97
+
+[node name="Decal7" type="Decal" parent="MainRoomHintDecals" unique_id=1371588314]
+transform = Transform3D(0.16072851, 0, 0, 0, -1.3113416e-08, 0.16072851, 0, -0.29999998, -7.0256667e-09, -0.0987463, -0.3900944, -0.08515404)
+texture_albedo = ExtResource("25_y81hs")
+texture_normal = ExtResource("7_2cdcx")
+texture_orm = ExtResource("8_bs17m")
+modulate = Color(0.765625, 0.06960225, 0, 1)
+albedo_mix = 0.97
+
+[node name="Decal8" type="Decal" parent="MainRoomHintDecals" unique_id=779799590]
+transform = Transform3D(-0.16072851, -1.1464111e-15, 1.4051334e-08, -1.4051334e-08, 1.3113416e-08, -0.16072851, 0, -0.29999998, -7.0256645e-09, 0.5383711, -0.15385091, -0.08515406)
 texture_albedo = ExtResource("25_y81hs")
 texture_normal = ExtResource("7_2cdcx")
 texture_orm = ExtResource("8_bs17m")
@@ -2817,39 +2876,7 @@ modulate = Color(0.765625, 0.06960225, 0, 1)
 albedo_mix = 0.97
 
 [node name="MainRoomHintDecals2" type="Node3D" parent="." unique_id=1714152450]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.923215, 1.9043472, -0.12184715)
-
-[node name="Decal" type="Decal" parent="MainRoomHintDecals2" unique_id=1360472496]
-transform = Transform3D(0.29999998, 0, 0, 0, -1.3113416e-08, 0.29999998, 0, -0.29999998, -1.3113416e-08, -0.77966356, 0.41743588, -0.08515406)
-texture_albedo = ExtResource("23_d2t3s")
-texture_normal = ExtResource("7_2cdcx")
-texture_orm = ExtResource("8_bs17m")
-modulate = Color(0.765625, 0.06960225, 0, 1)
-albedo_mix = 0.97
-
-[node name="Decal2" type="Decal" parent="MainRoomHintDecals2" unique_id=1216060062]
-transform = Transform3D(-0.29999998, -1.1464111e-15, 2.6226832e-08, -2.6226832e-08, 1.3113415e-08, -0.29999998, 0, -0.29999998, -1.3113415e-08, -0.2892294, -0.057010055, -0.08515406)
-texture_albedo = ExtResource("24_e14fn")
-texture_normal = ExtResource("7_2cdcx")
-texture_orm = ExtResource("8_bs17m")
-modulate = Color(0.765625, 0.06960225, 0, 1)
-albedo_mix = 0.97
-
-[node name="Decal3" type="Decal" parent="MainRoomHintDecals2" unique_id=1371588314]
-transform = Transform3D(0.29999998, 0, 0, 0, -1.3113416e-08, 0.29999998, 0, -0.29999998, -1.3113416e-08, -0.851799, -0.4998703, -0.08515406)
-texture_albedo = ExtResource("25_y81hs")
-texture_normal = ExtResource("7_2cdcx")
-texture_orm = ExtResource("8_bs17m")
-modulate = Color(0.765625, 0.06960225, 0, 1)
-albedo_mix = 0.97
-
-[node name="Decal4" type="Decal" parent="MainRoomHintDecals2" unique_id=779799590]
-transform = Transform3D(-0.29999998, -1.1464111e-15, 2.6226832e-08, -2.6226832e-08, 1.3113415e-08, -0.29999998, 0, -0.29999998, -1.3113415e-08, 0.3373816, -0.058921695, -0.08515406)
-texture_albedo = ExtResource("25_y81hs")
-texture_normal = ExtResource("7_2cdcx")
-texture_orm = ExtResource("8_bs17m")
-modulate = Color(0.765625, 0.06960225, 0, 1)
-albedo_mix = 0.97
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5074878, 1.9043472, -0.12184715)
 
 [node name="DecalsHallway" type="Node3D" parent="." unique_id=722417648]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.096142, 0, -1.8386679)
@@ -3027,7 +3054,7 @@ transform = Transform3D(-1, 4.3711395e-08, 3.1786513e-08, 4.3711395e-08, 1, -1.6
 
 [node name="LightMesh" parent="Lights/DoorLight7" index="0" unique_id=1584284493]
 gi_mode = 2
-surface_material_override/0 = SubResource("ORMMaterial3D_00rv5")
+surface_material_override/0 = SubResource("ORMMaterial3D_306cf")
 
 [node name="Light" parent="Lights/DoorLight7" index="1" unique_id=1977279119]
 light_bake_mode = 2
@@ -3037,7 +3064,7 @@ transform = Transform3D(1, -4.3711395e-08, -1.1920929e-07, 4.3711395e-08, 1, -1.
 
 [node name="LightMesh" parent="Lights/DoorLight6" index="0" unique_id=1584284493]
 gi_mode = 2
-surface_material_override/0 = SubResource("ORMMaterial3D_j1t7v")
+surface_material_override/0 = SubResource("ORMMaterial3D_6gudc")
 
 [node name="Light" parent="Lights/DoorLight6" index="1" unique_id=1977279119]
 light_bake_mode = 2
@@ -3130,7 +3157,7 @@ talk_message = Array[String](["\"As Saint Ex taught you, it is fission and fusio
 
 [node name="SkeletonC" parent="Skeletons" unique_id=657345094 instance=ExtResource("19_4tam1")]
 transform = Transform3D(-4.4703484e-08, 0, -1, 0, 1, 0, 1, 0, -4.4703484e-08, 7.5, 0, -7.5)
-talk_message = Array[String](["\"Fission is the sinistral path—the division of the atom, which brought woe until the world, is not to be trifled with.", "Yet, only by fission and fusion together can one tread the pathway to the Holiest of Holies.", "For you, the curse of Fission.\""])
+talk_message = Array[String](["\"Fission is the sinistral path—the division of the atom, which brought woe unto the world, is not to be trifled with.", "Yet, only by fission and fusion together can one tread the pathway to the Holiest of Holies.", "For you, the curse of Fission.\""])
 
 [node name="SkeletonD" parent="Skeletons" unique_id=425853638 instance=ExtResource("19_4tam1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 0, -13.5)
@@ -3422,10 +3449,53 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -
 mesh = ExtResource("23_bs17m")
 
 [node name="GrateLight" parent="." unique_id=1906500238 instance=ExtResource("31_7solt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 3, -4.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 3, -7.5)
 
-[node name="GrateLight2" parent="." unique_id=611180243 instance=ExtResource("31_7solt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 3, -4.5)
+[node name="GrateLight2" parent="." unique_id=2022481758 instance=ExtResource("31_7solt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 3, -7.5)
+
+[node name="GrateLight8" parent="." unique_id=49873467 instance=ExtResource("31_7solt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 3, -1.5)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1444873893]
+transform = Transform3D(0.99999994, 0, 0, 0, 1.84253, 0, 0, 0, 1, 6.420711, 3.033874, -1.5014902)
+mesh = SubResource("BoxMesh_lfxu0")
+surface_material_override/0 = ExtResource("47_273nw")
+
+[node name="GrateLight7" parent="." unique_id=56443964 instance=ExtResource("31_7solt")]
+transform = Transform3D(0.889784, -0.21613862, 0.40195593, 0, 0.88074464, 0.47359154, -0.45638192, -0.42139417, 0.78367245, 6.5, 2.618311, -1.5)
+
+[node name="LightMesh" parent="GrateLight7" index="0" unique_id=1584284493]
+surface_material_override/0 = SubResource("ORMMaterial3D_ic7y4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="GrateLight7/LightMesh" index="0" unique_id=276719755]
+transform = Transform3D(1, 1.4901161e-08, 0, 0, 1, 0, 0, 0, 1, 3.5261618e-09, 0.1272617, 7.450581e-09)
+mesh = SubResource("BoxMesh_lfxu0")
+surface_material_override/0 = ExtResource("47_273nw")
+
+[node name="Light" parent="GrateLight7" index="1" unique_id=1977279119]
+transform = Transform3D(0.9874172, -0.14579013, -0.061256886, 0.03146615, -0.19848382, 0.97959894, -0.15497439, -0.9692004, -0.19139889, -4.7683716e-07, -0.07387853, -2.3841858e-07)
+spot_angle_attenuation = 0.9012506
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="GrateLight7" unique_id=1163388408]
+transform = Transform3D(0.9997837, -0.020780953, 0.0008763075, 0.018626377, 0.87578607, -0.48234016, 0.009256095, 0.48225212, 0.87598354, 0.039073944, 0.44839168, 0.36254)
+mesh = SubResource("CylinderMesh_lfxu0")
+surface_material_override/0 = ExtResource("47_273nw")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="GrateLight7" unique_id=273978460]
+transform = Transform3D(0.9997837, -0.020780953, 0.0008763075, 0.018626377, 0.87578607, -0.48234016, 0.009256095, 0.48225212, 0.87598354, -0.22229433, 0.41024423, -0.2179153)
+mesh = SubResource("CylinderMesh_lfxu0")
+surface_material_override/0 = ExtResource("47_273nw")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="GrateLight7" unique_id=515776918]
+transform = Transform3D(0.9997837, -0.020780953, 0.0008763075, 0.018626377, 0.87578607, -0.48234016, 0.009256095, 0.48225212, 0.87598354, -0.15455198, 0.44858193, -0.17183995)
+mesh = SubResource("CylinderMesh_lfxu0")
+surface_material_override/0 = ExtResource("47_273nw")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="GrateLight7" unique_id=47120124]
+transform = Transform3D(0.9997837, -0.020780953, 0.0008763075, 0.018626377, 0.87578607, -0.48234016, 0.009256095, 0.48225212, 0.87598354, 0.1797595, 0.44715226, -0.07217789)
+mesh = SubResource("CylinderMesh_lfxu0")
+surface_material_override/0 = ExtResource("47_273nw")
 
 [node name="GrateLight3" parent="." unique_id=146381566 instance=ExtResource("31_7solt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 3, -12)
@@ -3473,7 +3543,7 @@ emissive_brightness = 4.0
 light_brightness = 0.252
 
 [node name="LightMesh" parent="ReactorPanel/ReactorPanel/DoorHolder/OverheadLight" index="0" unique_id=1584284493]
-surface_material_override/0 = SubResource("ORMMaterial3D_ljt84")
+surface_material_override/0 = SubResource("ORMMaterial3D_bxpov")
 
 [node name="Light" parent="ReactorPanel/ReactorPanel/DoorHolder/OverheadLight" index="1" unique_id=1977279119]
 visible = false
@@ -3487,7 +3557,7 @@ emissive_brightness = 4.0
 light_brightness = 0.252
 
 [node name="LightMesh" parent="ReactorPanel/ReactorPanel/DoorHolder/OverheadLight2" index="0" unique_id=1584284493]
-surface_material_override/0 = SubResource("ORMMaterial3D_indjv")
+surface_material_override/0 = SubResource("ORMMaterial3D_g0mda")
 
 [node name="Light" parent="ReactorPanel/ReactorPanel/DoorHolder/OverheadLight2" index="1" unique_id=1977279119]
 visible = false
@@ -3501,7 +3571,7 @@ emissive_brightness = 4.0
 light_brightness = 0.252
 
 [node name="LightMesh" parent="ReactorPanel/ReactorPanel/DoorHolder/OverheadLight4" index="0" unique_id=1584284493]
-surface_material_override/0 = SubResource("ORMMaterial3D_464qw")
+surface_material_override/0 = SubResource("ORMMaterial3D_oke6j")
 
 [node name="Light" parent="ReactorPanel/ReactorPanel/DoorHolder/OverheadLight4" index="1" unique_id=1977279119]
 visible = false
@@ -3515,7 +3585,7 @@ emissive_brightness = 4.0
 light_brightness = 0.252
 
 [node name="LightMesh" parent="ReactorPanel/ReactorPanel/DoorHolder/OverheadLight3" index="0" unique_id=1584284493]
-surface_material_override/0 = SubResource("ORMMaterial3D_brjh3")
+surface_material_override/0 = SubResource("ORMMaterial3D_43m75")
 
 [node name="Light" parent="ReactorPanel/ReactorPanel/DoorHolder/OverheadLight3" index="1" unique_id=1977279119]
 visible = false
@@ -3530,6 +3600,7 @@ shadow_enabled = true
 [editable path="Lights/DoorLight7"]
 [editable path="Lights/DoorLight6"]
 [editable path="Doors/FirstDoor"]
+[editable path="GrateLight7"]
 [editable path="ReactorPanel/ReactorPanel"]
 [editable path="ReactorPanel/ReactorPanel/DoorHolder/OverheadLight"]
 [editable path="ReactorPanel/ReactorPanel/DoorHolder/OverheadLight2"]
