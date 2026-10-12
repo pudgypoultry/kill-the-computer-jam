@@ -115,6 +115,8 @@ func _update_highlight_visuals() -> void:
 		if not mouse_cursor.has_highlight_target(self):
 			mouse_cursor.add_highlight_target(self)
 	else:
+		if BoardManager.current_focus == self:
+			BoardManager.current_focus = null
 		if mouse_cursor.has_highlight_target(self):
 			mouse_cursor.remove_highlight_target(self)
 
