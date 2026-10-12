@@ -8191,7 +8191,7 @@ texture = ExtResource("3_07650")
 
 [node name="16_20" parent="." unique_id=179299713 instance=ExtResource("1_t47qh")]
 position = Vector2(1680, 2100)
-examine = Array[String](["ST.  CAMILLA the POET", "You recall her poetry spoke of God as if she'd seen it. ", "You realize now that perhaps she had. "])
+examine = Array[String](["ST CAMILLA the POET", "You recall her poetry spoke of God as if she'd seen it. ", "You realize now that perhaps she had. "])
 grid_position = Vector2i(16, 20)
 has_skeleton = true
 
@@ -8218,7 +8218,7 @@ texture = ExtResource("3_07650")
 
 [node name="18_20" parent="." unique_id=1395995581 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(1890, 2100)
-examine = Array[String](["ST. CHRYSANTHEMUM the FLOWERING", "Still she blooms."])
+examine = Array[String](["ST CHRYSANTHEMUM the FLOWERING", "Still she blooms."])
 grid_position = Vector2i(18, 20)
 adjacencies = [NodePath("../18_19"), NodePath("../19_20"), NodePath("../18_21"), NodePath("../17_20")]
 has_skeleton = true
@@ -8455,7 +8455,7 @@ texture = ExtResource("3_07650")
 
 [node name="5_21" parent="." unique_id=660770983 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(525, 2205)
-examine = Array[String](["ST. BUCOLUS the EVER-SICKENING", "\"You recall the day he finally died, his sickness ended, and then we cried.", "I'm going off to God, he said, not a thought inside his head.", "For what could make a skull so hard? The very Core which now he guards.\"", "- Apocryphal Poem"])
+examine = Array[String](["ST BUCOLUS the EVER-SICKENING", "\"You recall the day he finally died, his sickness ended, and then we cried.", "I'm going off to God, he said, not a thought inside his head.", "For what could make a skull so hard? The very Core which now he guards.\"", "- Apocryphal Poem"])
 grid_position = Vector2i(5, 21)
 adjacencies = [NodePath("../5_20"), NodePath("../6_21"), NodePath("../5_22"), NodePath("../4_21")]
 has_skeleton = true
@@ -8481,7 +8481,7 @@ texture = ExtResource("3_07650")
 
 [node name="7_21" parent="." unique_id=268147033 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(735, 2205)
-examine = Array[String](["ST. PA0L the ESPECIALLY CYBERNETIC", "You notice the Apparatus hugs more tightly to this Saint's skull than the others.", "Looks painful. "])
+examine = Array[String](["ST PA0L the ESPECIALLY CYBERNETIC", "You notice the Apparatus hugs more tightly to this Saint's skull than the others.", "Looks painful. "])
 grid_position = Vector2i(7, 21)
 adjacencies = [NodePath("../7_20"), NodePath("../8_21"), NodePath("../7_22"), NodePath("../6_21")]
 has_skeleton = true
@@ -8536,7 +8536,7 @@ texture = ExtResource("3_07650")
 
 [node name="11_21" parent="." unique_id=593297637 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(1155, 2205)
-examine = Array[String](["ST. BRIDGET, the GATEKEEPER", "You've heard tales of her since you were young.", "Saint of Blessed Ascension. ", "First to greet new Saints upon their passage through the glowing gates. "])
+examine = Array[String](["ST BRIDGET, the GATEKEEPER", "You've heard tales of her since you were young.", "Saint of Blessed Ascension. ", "First to greet new Saints upon their passage through the glowing gates. "])
 grid_position = Vector2i(11, 21)
 adjacencies = [NodePath("../11_20"), NodePath("../12_21"), NodePath("../11_22"), NodePath("../10_21")]
 has_skeleton = true
@@ -8937,7 +8937,7 @@ texture = ExtResource("3_07650")
 
 [node name="9_22" parent="." unique_id=810848578 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(945, 2310)
-examine = Array[String](["ST. FELICITY the UNLUCKY", "Some might call it a fated blessing, to bear God's mark upon one's face. ", "Felicity dreamed nighlly of the God Cloud blooming. ", "She called it a curse. "])
+examine = Array[String](["ST FELICITY the UNLUCKY", "Some might call it a fated blessing, to bear God's mark upon one's face. ", "But Felicity dreamed nightly of the God Cloud blooming. ", "The mark she only ever called a curse. "])
 grid_position = Vector2i(9, 22)
 adjacencies = [NodePath("../9_21"), NodePath("../10_22"), NodePath("../9_23"), NodePath("../8_22")]
 has_skeleton = true
@@ -8993,7 +8993,7 @@ texture = ExtResource("3_07650")
 
 [node name="13_22" parent="." unique_id=234936949 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(1365, 2310)
-examine = Array[String](["ST. ALPHONSO the HELPFUL", "Some teachers teach to exert their power over this world and the next.", "Alphonso taught to liberate souls from the cycle."])
+examine = Array[String](["ST ALPHONSO the HELPFUL", "Some teachers teach to exert their power over this world and the next.", "Alphonso taught to liberate souls from the cycle."])
 grid_position = Vector2i(13, 22)
 adjacencies = [NodePath("../13_21"), NodePath("../14_22"), NodePath("../13_23"), NodePath("../12_22")]
 has_skeleton = true
@@ -9023,7 +9023,6 @@ position = Vector2(1575, 2310)
 examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
 grid_position = Vector2i(15, 22)
 adjacencies = [NodePath("../15_21"), NodePath("../16_22"), NodePath("../15_23"), NodePath("../14_22")]
-is_starting_position = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="15_22" unique_id=89766867]
 texture = ExtResource("2_lgriu")
@@ -9299,7 +9298,7 @@ texture = ExtResource("3_07650")
 
 [node name="5_23" parent="." unique_id=1778498855 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(525, 2415)
-examine = Array[String](["ST. PIUS the OVERLY-PIUS", "He kind of laid it on thick, don't you think?"])
+examine = Array[String](["ST PIUS the OVERLY-PIUS", "He kind of laid it on thick, don't you think?"])
 grid_position = Vector2i(5, 23)
 adjacencies = [NodePath("../5_22"), NodePath("../6_23"), NodePath("../5_24"), NodePath("../4_23")]
 has_skeleton = true
@@ -9544,7 +9543,7 @@ texture = ExtResource("3_07650")
 
 [node name="21_23" parent="." unique_id=1574809300 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(2205, 2415)
-examine = Array[String](["ST. TITUS the CRYPTIC ", "You always hated his riddles. "])
+examine = Array[String](["ST TITUS the CRYPTIC ", "You always hated his riddles. "])
 grid_position = Vector2i(21, 23)
 adjacencies = [NodePath("../21_22"), NodePath("../22_23"), NodePath("../21_24"), NodePath("../20_23")]
 has_skeleton = true
@@ -10238,6 +10237,7 @@ position = Vector2(1155, 2625)
 examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
 grid_position = Vector2i(11, 25)
 adjacencies = [NodePath("../11_24"), NodePath("../12_25"), NodePath("../11_26"), NodePath("../10_25")]
+is_starting_position = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="11_25" unique_id=528474306]
 texture = ExtResource("2_lgriu")
@@ -10304,7 +10304,7 @@ texture = ExtResource("3_07650")
 
 [node name="16_25" parent="." unique_id=2103776982 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(1680, 2625)
-examine = Array[String](["ST. BIBINIA the BOOKWORM", "She was a true Saint, in life and in death.", "Even in her blashphemy, she glimpsed fragments of the truth. "])
+examine = Array[String](["ST BIBINIA the BOOKWORM", "She was a true Saint, in life and in death.", "Even in her blashphemy, she glimpsed fragments of the truth. "])
 grid_position = Vector2i(16, 25)
 adjacencies = [NodePath("../16_24"), NodePath("../17_25"), NodePath("../16_26"), NodePath("../15_25")]
 hidden_room = true
@@ -10346,7 +10346,7 @@ texture = ExtResource("3_07650")
 
 [node name="19_25" parent="." unique_id=2031972557 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(1995, 2625)
-examine = Array[String](["ST. HIPPO the APTLY NAMED", "He was never fond of his own designation, but it always made you smile, fondly"])
+examine = Array[String](["ST HIPPO the APTLY NAMED", "He was never fond of his own designation, but it always made you smile, fondly"])
 grid_position = Vector2i(19, 25)
 adjacencies = [NodePath("../19_24"), NodePath("../20_25"), NodePath("../19_26"), NodePath("../18_25")]
 
@@ -10375,7 +10375,7 @@ texture = ExtResource("3_07650")
 
 [node name="21_25" parent="." unique_id=169375955 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(2205, 2625)
-examine = Array[String](["ST. SHARBEL, the WAYFINDER", "She was once thought lost, wandering far through forests of corpse trees", "When she retrurned she requested to be interred with a compass", "That she might not lose her way on the path to God."])
+examine = Array[String](["ST SHARBEL, the WAYFINDER", "She was once thought lost, wandering far through forests of corpse trees", "When she retrurned she requested to be interred with a compass", "That she might not lose her way on the path to God."])
 grid_position = Vector2i(21, 25)
 adjacencies = [NodePath("../21_24"), NodePath("../22_25"), NodePath("../21_26"), NodePath("../20_25")]
 has_skeleton = true
