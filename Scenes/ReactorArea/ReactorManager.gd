@@ -135,9 +135,14 @@ func is_valid_move(forward : bool) -> bool:
 	if !forward:
 		current_direction = -current_direction
 	var target_position : Vector2i = current_position + current_direction
-	print(target_position, current_direction)
+	#print(target_position, current_direction)
 	if current_cell.is_adjacent(target_position):
 		var target = grid_manager.position_dict[target_position]
+		if target.grid_position == Vector2i(16,23) && current_position == Vector2i(15,23):
+			return true
+		if target.grid_position == Vector2i(17,23) && current_position == Vector2i(16,23):
+			if grid_manager.position_dict[current_position].is_locked:
+				return false
 		if target.active && !target.is_locked && !target.has_skeleton:
 			return true
 	return false
@@ -154,7 +159,7 @@ func move_forward():
 		await cam_tween.finished
 		if slam_check_ray.is_colliding():
 			var door : Door = slam_check_ray.get_collider()
-			print(door)
+			#print(door)
 			if door.is_open && door.can_slam:
 				door.close_door()
 		if grid_manager.position_dict[current_position].can_slam:
