@@ -23,7 +23,6 @@ normal_texture = ExtResource("6_4m3uk")
 script = ExtResource("1_j8isr")
 mesh_material = ExtResource("2_ja1bt")
 light_colour = Color(1, 0.84705883, 0.69411767, 1)
-light_range = null
 metadata/_custom_type_script = "uid://e6ev50ld814v"
 
 [node name="LightMesh" type="MeshInstance3D" parent="." unique_id=1584284493]
@@ -38,4 +37,5 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -
 light_color = Color(1, 0.84705883, 0.69411767, 1)
 light_indirect_energy = 5.0
 light_volumetric_fog_energy = 5.0
+light_bake_mode = 1
 spot_angle = 60.0

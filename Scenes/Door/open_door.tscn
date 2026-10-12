@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://sfj87uifaxon"]
+
+[ext_resource type="Script" uid="uid://clao7jrbppw6x" path="res://Scenes/Door/Door.gd" id="1_mqdmy"]
+[ext_resource type="AudioStream" uid="uid://cakcaagcl78eq" path="res://Assets/SFX/DoorInput.wav" id="2_2w55i"]
+[ext_resource type="AudioStream" uid="uid://wdteoh22sqjx" path="res://Assets/SFX/DoorSuccess.wav" id="3_v5oys"]
+[ext_resource type="AudioStream" uid="uid://bdgn12du1du5x" path="res://Assets/SFX/DoorFailure.wav" id="4_0tk4d"]
+[ext_resource type="AudioStream" uid="uid://c8ygis0q3p8gi" path="res://Assets/SFX/DoorSlamBehind.wav" id="5_mqdmy"]
+[ext_resource type="AudioStream" uid="uid://bpp7htnntex58" path="res://Assets/SFX/DoorOpen.wav" id="5_wl8i5"]
+[ext_resource type="ArrayMesh" uid="uid://cwni785dsmd7e" path="res://Assets/Models/SetDec/Meshes/SteelDoor.res" id="7_vyo5j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pxqgl"]
+size = Vector3(2, 3, 2)
+
+[node name="OpenDoor" type="StaticBody3D" unique_id=520848132 node_paths=PackedStringArray("indicator", "door_holder")]
+collision_layer = 32
+collision_mask = 32
+script = ExtResource("1_mqdmy")
+can_slam = true
+starts_open = true
+indicator = NodePath("")
+door_holder = NodePath("DoorHolder")
+door_entry_sound = ExtResource("2_2w55i")
+door_success_sound = ExtResource("3_v5oys")
+door_failure_sound = ExtResource("4_0tk4d")
+door_slam_sound = ExtResource("5_mqdmy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=58531294]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4880406, 0.8661499, 0)
+shape = SubResource("BoxShape3D_pxqgl")
+
+[node name="DoorOpenPlayer" type="AudioStreamPlayer3D" parent="." unique_id=104437212]
+unique_name_in_owner = true
+stream = ExtResource("5_wl8i5")
+
+[node name="DoorSpeakerPlayer" type="AudioStreamPlayer3D" parent="." unique_id=2119994018]
+unique_name_in_owner = true
+
+[node name="DoorHolder" type="Node3D" parent="." unique_id=36920210]
+
+[node name="SteelDoor" type="MeshInstance3D" parent="DoorHolder" unique_id=834412746]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.0053094625, 0, 0.0968039)
+mesh = ExtResource("7_vyo5j")

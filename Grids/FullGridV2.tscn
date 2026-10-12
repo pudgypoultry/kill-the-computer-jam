@@ -7182,14 +7182,12 @@ texture = ExtResource("2_lgriu")
 visible = false
 texture = ExtResource("3_07650")
 
-[node name="SkeletonSprite3" type="Sprite2D" parent="5_18" unique_id=640823763]
-texture = ExtResource("3_07650")
-
-[node name="6_18" parent="." unique_id=806886597 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
+[node name="6_18" parent="." unique_id=806886597 node_paths=PackedStringArray("adjacencies", "door_sprite") instance=ExtResource("1_t47qh")]
 position = Vector2(630, 1890)
 examine = Array[String](["CORE NARTHEX", "God awaits. ", "Just past this door. ", "What shall become of us?"])
 grid_position = Vector2i(6, 18)
 adjacencies = [NodePath("../6_17"), NodePath("../7_18"), NodePath("../6_19"), NodePath("../5_18")]
+door_sprite = NodePath("Door")
 
 [node name="Sprite2D2" type="Sprite2D" parent="6_18" unique_id=2112928840]
 texture = ExtResource("2_lgriu")
@@ -7212,9 +7210,6 @@ texture = ExtResource("2_lgriu")
 
 [node name="SkeletonSprite2" type="Sprite2D" parent="7_18" unique_id=219737181]
 visible = false
-texture = ExtResource("3_07650")
-
-[node name="SkeletonSprite3" type="Sprite2D" parent="7_18" unique_id=471062888]
 texture = ExtResource("3_07650")
 
 [node name="8_18" parent="." unique_id=1063938603 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
@@ -7605,11 +7600,19 @@ texture = ExtResource("2_lgriu")
 visible = false
 texture = ExtResource("3_07650")
 
-[node name="6_19" parent="." unique_id=1127185132 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
+[node name="6_19" parent="." unique_id=1127185132 node_paths=PackedStringArray("adjacencies", "door_sprite", "slam_cell") instance=ExtResource("1_t47qh")]
 position = Vector2(630, 1995)
 examine = Array[String](["CORE NARTHEX", "God awaits. ", "Just past this door. ", "What shall become of us?"])
 grid_position = Vector2i(6, 19)
 adjacencies = [NodePath("../6_18"), NodePath("../7_19"), NodePath("../6_20"), NodePath("../5_19")]
+door_sprite = NodePath("Door")
+can_slam = true
+slam_cell = NodePath("../6_20")
+
+[node name="Door" type="Sprite2D" parent="6_19" unique_id=865195302]
+visible = false
+position = Vector2(0, 51)
+texture = ExtResource("4_vs6s3")
 
 [node name="Sprite2D2" type="Sprite2D" parent="6_19" unique_id=314256412]
 texture = ExtResource("2_lgriu")
@@ -8010,26 +8013,24 @@ texture = ExtResource("3_07650")
 
 [node name="5_20" parent="." unique_id=170257357 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(525, 2100)
-examine = Array[String](["CORE NARTHEX", "God awaits. ", "Just past this door. ", "What shall become of us?"])
+active = false
 grid_position = Vector2i(5, 20)
 adjacencies = [NodePath("../5_19"), NodePath("../6_20"), NodePath("../5_21"), NodePath("../4_20")]
 
 [node name="Sprite2D2" type="Sprite2D" parent="5_20" unique_id=203194504]
+visible = false
 texture = ExtResource("2_lgriu")
 
 [node name="SkeletonSprite2" type="Sprite2D" parent="5_20" unique_id=494136829]
 visible = false
 texture = ExtResource("3_07650")
 
-[node name="6_20" parent="." unique_id=1926738051 node_paths=PackedStringArray("adjacencies", "door_sprite", "slam_cell") instance=ExtResource("1_t47qh")]
+[node name="6_20" parent="." unique_id=1926738051 node_paths=PackedStringArray("adjacencies", "door_sprite") instance=ExtResource("1_t47qh")]
 position = Vector2(630, 2100)
 examine = Array[String](["CORE NARTHEX", "God awaits. ", "Just past this door. ", "What shall become of us?"])
 grid_position = Vector2i(6, 20)
 adjacencies = [NodePath("../6_19"), NodePath("../7_20"), NodePath("../6_21"), NodePath("../5_20")]
-is_locked = true
-door_sprite = NodePath("Door")
-can_slam = true
-slam_cell = NodePath("../6_21")
+door_sprite = NodePath("../6_19/Door")
 
 [node name="Sprite2D2" type="Sprite2D" parent="6_20" unique_id=327565944]
 texture = ExtResource("2_lgriu")
@@ -8038,17 +8039,15 @@ texture = ExtResource("2_lgriu")
 visible = false
 texture = ExtResource("3_07650")
 
-[node name="Door" type="Sprite2D" parent="6_20" unique_id=865195302]
-position = Vector2(-1, 51)
-texture = ExtResource("4_vs6s3")
-
 [node name="7_20" parent="." unique_id=687624277 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(735, 2100)
+active = false
 examine = Array[String](["CORE NARTHEX", "God awaits. ", "Just past this door. ", "What shall become of us?"])
 grid_position = Vector2i(7, 20)
 adjacencies = [NodePath("../7_19"), NodePath("../8_20"), NodePath("../7_21"), NodePath("../6_20")]
 
 [node name="Sprite2D2" type="Sprite2D" parent="7_20" unique_id=1035798006]
+visible = false
 texture = ExtResource("2_lgriu")
 
 [node name="SkeletonSprite2" type="Sprite2D" parent="7_20" unique_id=411783769]
@@ -8430,27 +8429,22 @@ texture = ExtResource("3_07650")
 
 [node name="5_21" parent="." unique_id=660770983 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(525, 2205)
-active = false
 grid_position = Vector2i(5, 21)
 adjacencies = [NodePath("../5_20"), NodePath("../6_21"), NodePath("../5_22"), NodePath("../4_21")]
+has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="5_21" unique_id=288870335]
-visible = false
 texture = ExtResource("2_lgriu")
 
 [node name="SkeletonSprite2" type="Sprite2D" parent="5_21" unique_id=1806205641]
-visible = false
 texture = ExtResource("3_07650")
 
-[node name="6_21" parent="." unique_id=909333750 node_paths=PackedStringArray("adjacencies", "locked_position", "door_sprite") instance=ExtResource("1_t47qh")]
+[node name="6_21" parent="." unique_id=909333750 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(630, 2205)
 examine = Array[String](["CORE NARTHEX", "God awaits. ", "Just past this door. ", "What shall become of us?"])
 grid_position = Vector2i(6, 21)
 adjacencies = [NodePath("../6_20"), NodePath("../7_21"), NodePath("../6_22"), NodePath("../5_21")]
-has_password = true
-password = Array[String](["Cruciform", "Fallout"])
-locked_position = NodePath("../6_20")
-door_sprite = NodePath("../6_20/Door")
+is_starting_position = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="6_21" unique_id=1431681243]
 texture = ExtResource("2_lgriu")
@@ -8461,16 +8455,14 @@ texture = ExtResource("3_07650")
 
 [node name="7_21" parent="." unique_id=268147033 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(735, 2205)
-active = false
 grid_position = Vector2i(7, 21)
 adjacencies = [NodePath("../7_20"), NodePath("../8_21"), NodePath("../7_22"), NodePath("../6_21")]
+has_skeleton = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="7_21" unique_id=37398274]
-visible = false
 texture = ExtResource("2_lgriu")
 
 [node name="SkeletonSprite2" type="Sprite2D" parent="7_21" unique_id=1860102436]
-visible = false
 texture = ExtResource("3_07650")
 
 [node name="8_21" parent="." unique_id=1291042290 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
@@ -8874,10 +8866,9 @@ texture = ExtResource("3_07650")
 
 [node name="6_22" parent="." unique_id=1467811870 node_paths=PackedStringArray("adjacencies") instance=ExtResource("1_t47qh")]
 position = Vector2(630, 2310)
-examine = Array[String](["THRESHOLD HALLS", "The drip of unseen liquid. ", "The footsteps of your Blessed Saint. ", "God is near here, yet still so distant."])
+examine = Array[String](["CORE NARTHEX", "God awaits. ", "Just past this door. ", "What shall become of us?"])
 grid_position = Vector2i(6, 22)
 adjacencies = [NodePath("../6_21"), NodePath("../7_22"), NodePath("../6_23"), NodePath("../5_22")]
-is_starting_position = true
 password = Array[String](["Cruciform", "Fallout"])
 
 [node name="Sprite2D2" type="Sprite2D" parent="6_22" unique_id=953452882]
@@ -9394,7 +9385,7 @@ examine = Array[String](["SWITCH GEAR ROOM", "The grinding of unseen gears behin
 grid_position = Vector2i(13, 23)
 adjacencies = [NodePath("../13_22"), NodePath("../14_23"), NodePath("../13_24"), NodePath("../12_23")]
 has_password = true
-password = Array[String](["Fallout", "Fission"])
+password = Array[String](["Fusion", "Fission"])
 locked_position = NodePath("../14_23")
 door_sprite = NodePath("Door")
 has_card_unlock = true

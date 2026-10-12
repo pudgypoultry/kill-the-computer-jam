@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://wdteoh22sqjx" path="res://Assets/SFX/DoorSuccess.wav" id="2_x0vuk"]
 [ext_resource type="AudioStream" uid="uid://bdgn12du1du5x" path="res://Assets/SFX/DoorFailure.wav" id="3_s1bt2"]
 [ext_resource type="AudioStream" uid="uid://bpp7htnntex58" path="res://Assets/SFX/DoorOpen.wav" id="4_a7yaw"]
+[ext_resource type="AudioStream" uid="uid://c8ygis0q3p8gi" path="res://Assets/SFX/DoorSlamBehind.wav" id="5_drlm0"]
 [ext_resource type="PackedScene" uid="uid://dcvbkc2njcps8" path="res://Scenes/Gameplay/DoorGridIndicator.tscn" id="5_s1bt2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pxqgl"]
@@ -20,6 +21,7 @@ door_holder = NodePath("DoorHolder")
 door_entry_sound = ExtResource("2_s1bt2")
 door_success_sound = ExtResource("2_x0vuk")
 door_failure_sound = ExtResource("3_s1bt2")
+door_slam_sound = ExtResource("5_drlm0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=58531294]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4880406, 0.8661499, 0)

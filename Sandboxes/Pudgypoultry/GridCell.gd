@@ -24,6 +24,7 @@ class_name GridCell
 
 @export_category("Door Locking")
 @export var is_locked : bool = false
+@export var auto_open : bool = false
 @export var has_password : bool = false
 @export var password : Array[String] = ["", ""]
 @export var locked_position : GridCell
