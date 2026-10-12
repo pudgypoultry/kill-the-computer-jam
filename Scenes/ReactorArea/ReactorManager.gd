@@ -138,8 +138,10 @@ func is_valid_move(forward : bool) -> bool:
 	#print(target_position, current_direction)
 	if current_cell.is_adjacent(target_position):
 		var target = grid_manager.position_dict[target_position]
+		# Magic
 		if target.grid_position == Vector2i(16,23) && current_position == Vector2i(15,23):
 			return true
+		# More Magic
 		if target.grid_position == Vector2i(17,23) && current_position == Vector2i(16,23):
 			if grid_manager.position_dict[current_position].is_locked:
 				return false
