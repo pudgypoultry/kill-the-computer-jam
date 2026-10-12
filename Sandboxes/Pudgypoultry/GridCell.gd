@@ -45,7 +45,6 @@ class_name GridCell
 var grid_manager : GridManager = null
 
 func _update_active() -> void:
-	#print(name + ":" + str(grid_position))
 	if !active or hidden_room:
 		for img in get_children():
 			img.hide()
