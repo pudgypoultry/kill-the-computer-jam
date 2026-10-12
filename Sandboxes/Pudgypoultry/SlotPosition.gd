@@ -80,7 +80,7 @@ func eject_card():
 	tween.set_trans(Tween.TRANS_BACK)
 	tween.tween_property(ejecting_card, "global_position", expel_position.global_position, BoardManager.card_insert_time)
 	await tween.finished
-	tween = get_tree().create_tween().bind_node(current_card)
+	tween = get_tree().create_tween().bind_node(ejecting_card)
 	tween.set_trans(Tween.TRANS_CUBIC)
 	tween.set_parallel()
 	if original_rotation != null:
