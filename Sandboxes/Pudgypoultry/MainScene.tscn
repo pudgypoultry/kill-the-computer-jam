@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://nbibkmp3es04" path="res://Scenes/Punchcards/CardScenes/punch_card_cruciform.tscn" id="5_qaeli"]
 [ext_resource type="Environment" uid="uid://ccvtkoherrvxq" path="res://Assets/world_environment.tres" id="7_5msbe"]
 [ext_resource type="PackedScene" uid="uid://dh0rk5hghkdu2" path="res://Scenes/Punchcards/CardScenes/punch_card_blank.tscn" id="7_41b3u"]
+[ext_resource type="AudioStream" uid="uid://cakcaagcl78eq" path="res://Assets/SFX/DoorInput.wav" id="7_hwvc8"]
 [ext_resource type="AudioStream" uid="uid://dwj54u80iuo5a" path="res://Assets/SFX/FootstepsTurn01.wav" id="8_cmfyp"]
 [ext_resource type="AudioStream" uid="uid://lg8cmh75j17t" path="res://Assets/SFX/FootstepsTurn02.wav" id="9_1uf6b"]
 [ext_resource type="AudioStream" uid="uid://cgqm3lsrye1cf" path="res://Assets/Music/The Threshold (Ambience).ogg" id="9_3tf8q"]
@@ -41,10 +42,10 @@ size = Vector3(0.1551609, 0.05, 1.14516)
 [sub_resource type="BoxShape3D" id="BoxShape3D_q1446"]
 size = Vector3(0.2559204, 0.05, 1.14516)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_w0dj5"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_8q0bl"]
 viewport_path = NodePath("../ReactorView/TitleScreen")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_41b3u"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_duclc"]
 viewport_path = NodePath("../ReactorView/FPSCamera")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lh8n2"]
@@ -132,6 +133,9 @@ transform = Transform3D(0.07, 0, 0, 0, 0.07, 1.6298174e-09, 0, -1.6298174e-09, 0
 [node name="FootstepSounds" type="AudioStreamPlayer3D" parent="." unique_id=1007414888]
 bus = &"SFX"
 
+[node name="SettingsSound" type="AudioStreamPlayer3D" parent="." unique_id=1737044357]
+stream = ExtResource("7_hwvc8")
+
 [node name="ReactorView" parent="." unique_id=212615922 node_paths=PackedStringArray("card_slots", "menu_subviewport", "footstep_player") instance=ExtResource("12_qaeli")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90, 0, -30)
 card_slots = [NodePath("../Monitor/CardSlot1"), NodePath("../Monitor/CardSlot2")]
@@ -154,6 +158,15 @@ target_position = Vector3(0, 0, -1)
 [node name="GridManager" parent="ReactorView/GridCamera" parent_id_path=PackedInt32Array(212615922, 134290074) index="0" unique_id=401646695]
 file_name = "FullGridCopy.tscn"
 
+[node name="MasterBar" parent="ReactorView/TitleScreen/TitleScreen/Settings" parent_id_path=PackedInt32Array(212615922, 985255105, 1186368129) index="1" unique_id=1395570349 node_paths=PackedStringArray("audio_player")]
+audio_player = NodePath("../../../../../SettingsSound")
+
+[node name="SFXBar" parent="ReactorView/TitleScreen/TitleScreen/Settings" parent_id_path=PackedInt32Array(212615922, 985255105, 1186368129) index="3" unique_id=945149818 node_paths=PackedStringArray("audio_player")]
+audio_player = NodePath("../../../../../SettingsSound")
+
+[node name="MusicBar" parent="ReactorView/TitleScreen/TitleScreen/Settings" parent_id_path=PackedInt32Array(212615922, 985255105, 1186368129) index="5" unique_id=1982915609 node_paths=PackedStringArray("audio_player")]
+audio_player = NodePath("../../../../../SettingsSound")
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1762969380]
 environment = ExtResource("7_5msbe")
 
@@ -168,10 +181,10 @@ song_2 = ExtResource("10_qaeli")
 song_3 = ExtResource("11_tq65w")
 
 [node name="Monitor1" parent="Monitor" index="0" unique_id=55286909]
-texture = SubResource("ViewportTexture_w0dj5")
+texture = SubResource("ViewportTexture_8q0bl")
 
 [node name="Monitor2" parent="Monitor" index="1" unique_id=831061316]
-texture = SubResource("ViewportTexture_41b3u")
+texture = SubResource("ViewportTexture_duclc")
 
 [node name="CardSFX" parent="Monitor/CardSlot1" parent_id_path=PackedInt32Array(1842833820, 1264573134) index="4" unique_id=1088956227]
 volume_db = -8.0

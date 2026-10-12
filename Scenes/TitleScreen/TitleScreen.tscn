@@ -38,6 +38,7 @@ layout_mode = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Menu" type="VBoxContainer" parent="." unique_id=93327392]
+visible = false
 layout_mode = 2
 size_flags_vertical = 4
 
@@ -131,7 +132,6 @@ text = "
 > Kill the Computer Jam"
 
 [node name="Settings" type="VBoxContainer" parent="." unique_id=1186368129]
-visible = false
 layout_mode = 2
 alignment = 1
 
@@ -144,7 +144,7 @@ theme_override_colors/default_color = Color(0.054711282, 0.75625, 0, 1)
 theme_override_fonts/normal_font = ExtResource("1_f6ya5")
 text = "> Master Volume"
 
-[node name="MasterBar" type="HBoxContainer" parent="Settings" unique_id=1395570349 node_paths=PackedStringArray("minus_button", "plus_button", "progress_bar")]
+[node name="MasterBar" type="HBoxContainer" parent="Settings" unique_id=1395570349 node_paths=PackedStringArray("minus_button", "plus_button", "progress_bar", "audio_player")]
 layout_mode = 2
 alignment = 1
 script = ExtResource("2_4lqrc")
@@ -152,6 +152,7 @@ minus_button = NodePath("-")
 plus_button = NodePath("+")
 progress_bar = NodePath("ProgressBar")
 audio_bus_name = "Master"
+audio_player = NodePath("")
 
 [node name="-" type="Button" parent="Settings/MasterBar" unique_id=1075128061]
 custom_minimum_size = Vector2(0, 20)
@@ -196,7 +197,7 @@ theme_override_colors/default_color = Color(0.054711282, 0.75625, 0, 1)
 theme_override_fonts/normal_font = ExtResource("1_f6ya5")
 text = "> SFX Volume"
 
-[node name="SFXBar" type="HBoxContainer" parent="Settings" unique_id=945149818 node_paths=PackedStringArray("minus_button", "plus_button", "progress_bar")]
+[node name="SFXBar" type="HBoxContainer" parent="Settings" unique_id=945149818 node_paths=PackedStringArray("minus_button", "plus_button", "progress_bar", "audio_player")]
 layout_mode = 2
 alignment = 1
 script = ExtResource("2_4lqrc")
@@ -204,6 +205,7 @@ minus_button = NodePath("-")
 plus_button = NodePath("+")
 progress_bar = NodePath("ProgressBar")
 audio_bus_name = "SFX"
+audio_player = NodePath("")
 
 [node name="-" type="Button" parent="Settings/SFXBar" unique_id=1821291761]
 custom_minimum_size = Vector2(0, 20)
@@ -248,7 +250,7 @@ theme_override_colors/default_color = Color(0.054711282, 0.75625, 0, 1)
 theme_override_fonts/normal_font = ExtResource("1_f6ya5")
 text = "> Music Volume"
 
-[node name="MusicBar" type="HBoxContainer" parent="Settings" unique_id=1982915609 node_paths=PackedStringArray("minus_button", "plus_button", "progress_bar")]
+[node name="MusicBar" type="HBoxContainer" parent="Settings" unique_id=1982915609 node_paths=PackedStringArray("minus_button", "plus_button", "progress_bar", "audio_player")]
 layout_mode = 2
 alignment = 1
 script = ExtResource("2_4lqrc")
@@ -256,6 +258,7 @@ minus_button = NodePath("-")
 plus_button = NodePath("+")
 progress_bar = NodePath("ProgressBar")
 audio_bus_name = "Music"
+audio_player = NodePath("")
 
 [node name="-" type="Button" parent="Settings/MusicBar" unique_id=313577969]
 custom_minimum_size = Vector2(0, 20)

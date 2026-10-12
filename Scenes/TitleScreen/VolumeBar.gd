@@ -4,6 +4,7 @@ extends HBoxContainer
 @export var plus_button : Button
 @export var progress_bar : ProgressBar
 @export var audio_bus_name : String = ""
+@export var audio_player : AudioStreamPlayer3D
 
 
 func _ready() -> void:
@@ -16,9 +17,12 @@ func minus():
 		progress_bar.value -= 5
 		print(progress_bar.name + " : " + str(progress_bar.value))
 		AudioServer.set_bus_volume_db(AudioServer.get_bus_index(audio_bus_name), linear_to_db(progress_bar.value / 100.0))
-
+		audio_player.bus = audio_bus_name
+		audio_player.play()
 
 func plus():
 	if progress_bar.value < 100:
 		progress_bar.value += 5
 		AudioServer.set_bus_volume_db(AudioServer.get_bus_index(audio_bus_name), linear_to_db(progress_bar.value / 100.0))
+		audio_player.bus = audio_bus_name
+		audio_player.play()
