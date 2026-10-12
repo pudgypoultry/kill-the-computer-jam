@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://ho7no0jhsvj4"]
+
+[ext_resource type="FontFile" uid="uid://bph2bivxha0mu" path="res://Assets/Fonts/VT323-Regular.ttf" id="2_jq1pl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hh20u"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ytoc7"]
+bg_color = Color(0.054711282, 0.75625, 0, 1)
+
+[node name="Loading" type="VBoxContainer" unique_id=2025825278]
+size_flags_vertical = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1947352672]
+custom_minimum_size = Vector2(190, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_colors/default_color = Color(0.054711282, 0.75625, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_jq1pl")
+text = "> Loading..."
+fit_content = true
+scroll_active = false
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=920184820]
+custom_minimum_size = Vector2(185, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_hh20u")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ytoc7")
+value = 100.0
+show_percentage = false

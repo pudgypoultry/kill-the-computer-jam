@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dsp7ndxd4d6vk"]
+
+[ext_resource type="Script" uid="uid://5f6w00kbsxf0" path="res://Scenes/TitleScreen/AsyncLoad.gd" id="1_kwvqn"]
+[ext_resource type="PackedScene" uid="uid://ho7no0jhsvj4" path="res://Scenes/TitleScreen/LoadingScreen.tscn" id="2_nkkx2"]
+
+[node name="InitialLoadingScreen" type="CanvasLayer" unique_id=1700305904 node_paths=PackedStringArray("progress_bar")]
+script = ExtResource("1_kwvqn")
+progress_bar = NodePath("MarginContainer/Loading/ProgressBar")
+next_scene_path = "res://Sandboxes/Pudgypoultry/MainScene.tscn"
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=445606976]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer" unique_id=565398182]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Loading" parent="MarginContainer" unique_id=2025825278 instance=ExtResource("2_nkkx2")]
+layout_mode = 2
+offset_transform_enabled = true
+
+[node name="RichTextLabel" parent="MarginContainer/Loading" index="0" unique_id=1947352672]
+custom_minimum_size = Vector2(700, 20)
+theme_override_font_sizes/normal_font_size = 100
+
+[node name="ProgressBar" parent="MarginContainer/Loading" index="1" unique_id=920184820]
+custom_minimum_size = Vector2(675, 50)
+
+[editable path="MarginContainer/Loading"]

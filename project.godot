@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="KillTheComputerJam"
-run/main_scene="uid://ctdaasj4f8m1v"
+run/main_scene="uid://dsp7ndxd4d6vk"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -28,6 +28,7 @@ BoardManager="*uid://yn1xtviy3f37"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [input]
 
