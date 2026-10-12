@@ -156,6 +156,9 @@ func move_forward():
 		if reactor_door_check_ray.is_colliding():
 			var door : ReactorEntranceDoor = reactor_door_check_ray.get_collider()
 			door.open_to_reactor()
+
+		_handle_music_trigger()			
+			
 	else:
 		cam_tween = get_tree().create_tween().bind_node(cam)
 		var dir = -cam.basis.z * BoardManager.step_length
@@ -179,6 +182,8 @@ func move_backward():
 		current_position = grid_manager.current_position
 		if grid_manager.position_dict[current_position].can_slam:
 			grid_manager.position_dict[current_position].slam()
+			
+		_handle_music_trigger()
 	else:
 		cam_tween = get_tree().create_tween().bind_node(cam)
 		var dir = cam.basis.z * BoardManager.step_length
@@ -334,3 +339,14 @@ func play_error_bonk() -> void:
 		footstep_player.stream = bonk_sfx
 		footstep_player.play()
 		
+func _handle_music_trigger() -> void:
+	var current_cell := grid_manager.position_dict[current_position]
+	if current_cell.music_cue == MusicPlayer.MusicTrack.NONE:
+		return
+		
+	var music_player = MusicPlayer.get_global_music_player()
+	if not is_instance_valid(music_player):
+		push_error("Setup issue: missing music player")
+		return
+	
+	music_player.change_music(current_cell.music_cue)

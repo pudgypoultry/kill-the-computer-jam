@@ -38,6 +38,9 @@ class_name GridCell
 @export var can_slam : bool = false
 @export var slam_cell : GridCell = null
 
+@export_category("Media")
+@export var music_cue : MusicPlayer.MusicTrack
+
 @export_category("Plugging in Nodes")
 @export var sprite : Sprite2D
 @export var skeleton_sprite : Sprite2D

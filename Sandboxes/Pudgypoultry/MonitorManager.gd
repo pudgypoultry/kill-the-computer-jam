@@ -118,5 +118,5 @@ func _update_highlight_visuals() -> void:
 		if mouse_cursor.has_highlight_target(self):
 			mouse_cursor.remove_highlight_target(self)
 
-func _on_player_control_changed(value:bool) -> void:
+func _on_player_control_changed(_value:bool) -> void:
 	_update_highlight_visuals()

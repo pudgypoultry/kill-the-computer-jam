@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://ctdaasj4f8m1v"]
 
+[ext_resource type="PackedScene" uid="uid://b85oss8w61nv5" path="res://Scenes/Audio/music_player.tscn" id="1_41b3u"]
 [ext_resource type="PackedScene" uid="uid://qug0b8wetea4" path="res://Scenes/Punchcards/CardScenes/punch_card_fallout.tscn" id="1_gsliy"]
 [ext_resource type="Script" uid="uid://c42y8abk50bqv" path="res://Sandboxes/Pudgypoultry/MainCamera.gd" id="1_w0dj5"]
 [ext_resource type="PackedScene" uid="uid://nbibkmp3es04" path="res://Scenes/Punchcards/CardScenes/punch_card_cruciform.tscn" id="5_qaeli"]
@@ -40,10 +41,10 @@ size = Vector3(0.65384674, 0.05, 1.14516)
 [sub_resource type="BoxShape3D" id="BoxShape3D_q1446"]
 size = Vector3(0.2559204, 0.05, 1.14516)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_1uf6b"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_w0dj5"]
 viewport_path = NodePath("../ReactorView/TitleScreen")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_w0dj5"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_41b3u"]
 viewport_path = NodePath("../ReactorView/FPSCamera")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lh8n2"]
@@ -79,6 +80,9 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_jvvhu")
 
 [node name="MainScene" type="Node3D" unique_id=904660948]
+
+[node name="MusicPlayer" parent="." unique_id=1708889719 instance=ExtResource("1_41b3u")]
+volume_db = -1.5
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=552463633 node_paths=PackedStringArray("game_position", "menu_position")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.76899165, 0.89896667, -0.53625983)
@@ -131,8 +135,6 @@ bus = &"SFX"
 
 [node name="ReactorView" parent="." unique_id=212615922 node_paths=PackedStringArray("card_slots", "menu_subviewport", "footstep_player") instance=ExtResource("12_qaeli")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90, 0, -30)
-valid_card_combos = null
-default_talk_message = null
 card_slots = [NodePath("../Monitor/CardSlot1"), NodePath("../Monitor/CardSlot2")]
 starting_position = Vector2i(11, 29)
 menu_subviewport = NodePath("TitleScreen")
@@ -167,10 +169,10 @@ song_2 = ExtResource("10_qaeli")
 song_3 = ExtResource("11_tq65w")
 
 [node name="Monitor1" parent="Monitor" index="0" unique_id=55286909]
-texture = SubResource("ViewportTexture_1uf6b")
+texture = SubResource("ViewportTexture_w0dj5")
 
 [node name="Monitor2" parent="Monitor" index="1" unique_id=831061316]
-texture = SubResource("ViewportTexture_w0dj5")
+texture = SubResource("ViewportTexture_41b3u")
 
 [node name="CardSFX" parent="Monitor/CardSlot1" parent_id_path=PackedInt32Array(1842833820, 1264573134) index="4" unique_id=1088956227]
 volume_db = -8.0
