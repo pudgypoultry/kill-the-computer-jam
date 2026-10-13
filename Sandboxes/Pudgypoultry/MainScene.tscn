@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://c82j06v17qfbp" path="res://Scenes/ReactorArea/ReactorView.tscn" id="12_qaeli"]
 [ext_resource type="PackedScene" uid="uid://df05gj1qx2fth" path="res://Scenes/Monitor/MonitorScene.tscn" id="12_tq65w"]
 [ext_resource type="Script" uid="uid://vmalpcg167f7" path="res://Sandboxes/Pudgypoultry/TitleScreenTransitionManager.gd" id="15_1uf6b"]
+[ext_resource type="Script" uid="uid://cwopkhaiggyw" path="res://Sandboxes/Pudgypoultry/fade_out.gd" id="21_q1446"]
 
 [sub_resource type="Environment" id="Environment_sh0p1"]
 background_mode = 2
@@ -42,10 +43,10 @@ size = Vector3(0.1551609, 0.05, 1.14516)
 [sub_resource type="BoxShape3D" id="BoxShape3D_q1446"]
 size = Vector3(0.2559204, 0.05, 1.14516)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_41b3u"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_hwvc8"]
 viewport_path = NodePath("../ReactorView/TitleScreen")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_hwvc8"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_8q0bl"]
 viewport_path = NodePath("../ReactorView/FPSCamera")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lh8n2"]
@@ -188,10 +189,10 @@ song_2 = ExtResource("10_qaeli")
 song_3 = ExtResource("11_tq65w")
 
 [node name="Monitor1" parent="Monitor" index="0" unique_id=55286909]
-texture = SubResource("ViewportTexture_41b3u")
+texture = SubResource("ViewportTexture_hwvc8")
 
 [node name="Monitor2" parent="Monitor" index="1" unique_id=831061316]
-texture = SubResource("ViewportTexture_hwvc8")
+texture = SubResource("ViewportTexture_8q0bl")
 
 [node name="CardSFX" parent="Monitor/CardSlot1" parent_id_path=PackedInt32Array(1842833820, 1264573134) index="4" unique_id=1088956227]
 volume_db = -8.0
@@ -217,6 +218,21 @@ menu_root = NodePath("../ReactorView/TitleScreen/TitleScreen")
 cursor = NodePath("../ReactorView/TitleScreen/TitleScreen/MouseCursor")
 start_button = NodePath("../ReactorView/TitleScreen/TitleScreen/Menu/Start")
 mouse_offset = Vector2(-120, -120)
+
+[node name="FadeOut" type="CanvasLayer" parent="." unique_id=1100441276 node_paths=PackedStringArray("color_rect")]
+script = ExtResource("21_q1446")
+color_rect = NodePath("ColorRect")
+
+[node name="ColorRect" type="ColorRect" parent="FadeOut" unique_id=1851626057]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0, 0, 0)
 
 [editable path="ReactorView"]
 [editable path="ReactorView/TitleScreen/TitleScreen"]

@@ -34,7 +34,7 @@ var starting_position : Vector2i = Vector2i(-1,-1)
 var main_camera : Node3D
 var blank_cards : Array = []
 var explosion_light : OmniLight3D
-
+var fade_out_screen : CanvasLayer
 var exclusive_text_mode:bool = false
 
 var cursor_hidden : bool = false:

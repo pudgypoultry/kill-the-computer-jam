@@ -85,7 +85,7 @@ albedo_texture = ExtResource("45_00rv5")
 orm_texture = ExtResource("48_indjv")
 emission_enabled = true
 emission = Color(1, 0.84705883, 0.69411767, 1)
-emission_energy_multiplier = 2.5
+emission_energy_multiplier = 3.82405
 emission_operator = 1
 emission_texture = ExtResource("46_j1t7v")
 normal_enabled = true
@@ -3462,7 +3462,7 @@ surface_material_override/0 = SubResource("ORMMaterial3D_6gudc")
 [node name="Light" parent="Skeletons/OverheadLightFlicker3" index="1" unique_id=1977279119]
 transform = Transform3D(1, -9.471265e-09, 2.7171666e-08, -2.7171664e-08, -0.6216153, 0.78332275, 9.471265e-09, -0.78332275, -0.6216153, 0, -0.19215298, 0)
 light_color = Color(1, 0.84705883, 0.69411767, 1)
-light_energy = 0.5
+light_energy = 0.76481
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=645849406]
 environment = SubResource("Environment_4tam1")
