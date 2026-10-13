@@ -49,7 +49,9 @@ func close_door():
 	if !has_slammed:
 		is_open = false
 		has_slammed = true
-		door_holder.position = original_position
+		tween = get_tree().create_tween().bind_node(door_holder)
+		tween.tween_property(door_holder, "position", original_position, 0.5)
+		#door_holder.position = original_position
 		if is_instance_valid(door_slam_sound):
 			door_open_player.stream = door_slam_sound
 			door_open_player.play()
