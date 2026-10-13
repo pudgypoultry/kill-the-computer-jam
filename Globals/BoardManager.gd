@@ -55,7 +55,7 @@ func _process(_delta : float):
 		#switch_screen_to_menu()
 
 	
-	if not exclusive_text_mode:
+	if not exclusive_text_mode or _starting_text_mode:
 		return
 	
 	if Input.is_action_just_pressed("interact"):
@@ -86,10 +86,13 @@ func begin_background_text_display() -> void:
 func end_background_text_display() -> void:
 	_switch_screen_to_grid()
 
+var _starting_text_mode:bool = false
 func begin_text_mode(should_zoom:bool, zoom_position : Transform3D):
-	if exclusive_text_mode:
+	if exclusive_text_mode or _starting_text_mode:
 		push_error("Text mode entered recursively. This is unsupported and very bad things are likely to happen.")
 		return
+		
+	_starting_text_mode = true
 		
 	exclusive_text_mode = true
 	_text_blocker = add_player_actionable_blocker(self)
@@ -102,9 +105,13 @@ func begin_text_mode(should_zoom:bool, zoom_position : Transform3D):
 		camera_zoomed = true
 		await tween.finished
 		
+	_starting_text_mode = false
 	_switch_screen_to_terminal()
 
 func end_text_mode():
+	if _starting_text_mode:
+		return
+	
 	exclusive_text_mode = false
 	
 	_switch_screen_to_grid()
