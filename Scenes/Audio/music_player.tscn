@@ -35,4 +35,5 @@ Vector2i(2, 1): {
 stream = SubResource("AudioStreamInteractive_lfxu0")
 volume_db = -4.0
 autoplay = true
+bus = &"Music"
 script = ExtResource("4_kg70f")
