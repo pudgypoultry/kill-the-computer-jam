@@ -83,7 +83,7 @@ albedo_texture = ExtResource("45_00rv5")
 orm_texture = ExtResource("48_indjv")
 emission_enabled = true
 emission = Color(1, 0.84705883, 0.69411767, 1)
-emission_energy_multiplier = 2.5
+emission_energy_multiplier = 5.0
 emission_operator = 1
 emission_texture = ExtResource("46_j1t7v")
 normal_enabled = true
@@ -3165,7 +3165,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, 3, -1.8830004)
 
 [node name="SkeletonA" parent="Skeletons" unique_id=892404425 instance=ExtResource("19_4tam1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -7.5)
-talk_message = Array[String](["\"The answer you seek is written on my face for all to see. ", "Look closely and ye shall find.\""])
+talk_message = Array[String](["\"The answer you seek is written on my face for those with the power to see. ", "Look closely and ye shall find.", "Or else, come back later once thy power has grown.\""])
 
 [node name="SkeletonB" parent="Skeletons" unique_id=1468821949 instance=ExtResource("19_4tam1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -10.5)
@@ -3455,7 +3455,6 @@ surface_material_override/0 = SubResource("ORMMaterial3D_nugrd")
 [node name="Light" parent="Skeletons/OverheadLightFlicker3" index="1" unique_id=1977279119]
 transform = Transform3D(1, -9.471265e-09, 2.7171666e-08, -2.7171664e-08, -0.6216153, 0.78332275, 9.471265e-09, -0.78332275, -0.6216153, 0, -0.19215298, 0)
 light_color = Color(1, 0.84705883, 0.69411767, 1)
-light_energy = 0.5
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=645849406]
 environment = SubResource("Environment_4tam1")
@@ -3569,9 +3568,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.723206, 0, -34.442764)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.903104, 0, 0.36315155)
 script = ExtResource("43_ilmkx")
 reactor = NodePath("../../Rooms/Reactor/Reactor")
-explosion_intensity = 10.0
-explosion_delay = 3.0
-explosion_interval = 1.0
 
 [node name="DoorHolder" parent="ReactorPanel/ReactorPanel" index="3" unique_id=36920210]
 transform = Transform3D(1, 0, 0, 0, 0.9559237, 0.29361522, 0, -0.29361522, 0.9559237, 0, 0, 0)
