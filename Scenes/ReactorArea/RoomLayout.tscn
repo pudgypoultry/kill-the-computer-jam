@@ -58,34 +58,34 @@
 [ext_resource type="ArrayMesh" uid="uid://droxf4b3n7267" path="res://Assets/Models/RoomKit/Meshes/RoomKit_Alcove.res" id="55_pl3xb"]
 [ext_resource type="ArrayMesh" uid="uid://bof3y0hi4yj8b" path="res://Assets/Models/SetDec/Meshes/Rubble.res" id="57_306cf"]
 
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_pl3xb"]
-albedo_texture = ExtResource("27_y8adh")
-orm_texture = ExtResource("30_ilmkx")
-emission_enabled = true
-emission = Color(1, 0.84705883, 0.69411767, 1)
-emission_energy_multiplier = 5.0
-emission_operator = 1
-emission_texture = ExtResource("28_iubb8")
-normal_enabled = true
-normal_texture = ExtResource("29_11c1r")
-
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_rdyxd"]
-albedo_texture = ExtResource("27_y8adh")
-orm_texture = ExtResource("30_ilmkx")
-emission_enabled = true
-emission = Color(1, 0.84705883, 0.69411767, 1)
-emission_energy_multiplier = 5.0
-emission_operator = 1
-emission_texture = ExtResource("28_iubb8")
-normal_enabled = true
-normal_texture = ExtResource("29_11c1r")
-
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_nugrd"]
+albedo_texture = ExtResource("27_y8adh")
+orm_texture = ExtResource("30_ilmkx")
+emission_enabled = true
+emission = Color(1, 0.84705883, 0.69411767, 1)
+emission_energy_multiplier = 5.0
+emission_operator = 1
+emission_texture = ExtResource("28_iubb8")
+normal_enabled = true
+normal_texture = ExtResource("29_11c1r")
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_306cf"]
+albedo_texture = ExtResource("27_y8adh")
+orm_texture = ExtResource("30_ilmkx")
+emission_enabled = true
+emission = Color(1, 0.84705883, 0.69411767, 1)
+emission_energy_multiplier = 5.0
+emission_operator = 1
+emission_texture = ExtResource("28_iubb8")
+normal_enabled = true
+normal_texture = ExtResource("29_11c1r")
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_6gudc"]
 albedo_texture = ExtResource("45_00rv5")
 orm_texture = ExtResource("48_indjv")
 emission_enabled = true
 emission = Color(1, 0.84705883, 0.69411767, 1)
-emission_energy_multiplier = 4.820536
+emission_energy_multiplier = 2.5
 emission_operator = 1
 emission_texture = ExtResource("46_j1t7v")
 normal_enabled = true
@@ -108,7 +108,7 @@ volumetric_fog_albedo = Color(0.68, 0.63104, 0.5984, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_lfxu0"]
 size = Vector3(0.74, 0.055, 1)
 
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_306cf"]
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_ic7y4"]
 albedo_texture = ExtResource("43_273nw")
 orm_texture = ExtResource("46_nugrd")
 emission_enabled = true
@@ -125,28 +125,6 @@ bottom_radius = 0.02
 height = 1.0
 radial_segments = 8
 
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_6gudc"]
-albedo_texture = ExtResource("45_00rv5")
-orm_texture = ExtResource("48_indjv")
-emission_enabled = true
-emission = Color(1, 0, 0, 1)
-emission_energy_multiplier = 4.0
-emission_operator = 1
-emission_texture = ExtResource("46_j1t7v")
-normal_enabled = true
-normal_texture = ExtResource("47_ljt84")
-
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_ic7y4"]
-albedo_texture = ExtResource("45_00rv5")
-orm_texture = ExtResource("48_indjv")
-emission_enabled = true
-emission = Color(1, 0, 0, 1)
-emission_energy_multiplier = 4.0
-emission_operator = 1
-emission_texture = ExtResource("46_j1t7v")
-normal_enabled = true
-normal_texture = ExtResource("47_ljt84")
-
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_bxpov"]
 albedo_texture = ExtResource("45_00rv5")
 orm_texture = ExtResource("48_indjv")
@@ -159,6 +137,28 @@ normal_enabled = true
 normal_texture = ExtResource("47_ljt84")
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_g0mda"]
+albedo_texture = ExtResource("45_00rv5")
+orm_texture = ExtResource("48_indjv")
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 4.0
+emission_operator = 1
+emission_texture = ExtResource("46_j1t7v")
+normal_enabled = true
+normal_texture = ExtResource("47_ljt84")
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_oke6j"]
+albedo_texture = ExtResource("45_00rv5")
+orm_texture = ExtResource("48_indjv")
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 4.0
+emission_operator = 1
+emission_texture = ExtResource("46_j1t7v")
+normal_enabled = true
+normal_texture = ExtResource("47_ljt84")
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_43m75"]
 albedo_texture = ExtResource("45_00rv5")
 orm_texture = ExtResource("48_indjv")
 emission_enabled = true
@@ -3075,7 +3075,7 @@ transform = Transform3D(-1, 4.3711395e-08, 3.1786513e-08, 4.3711395e-08, 1, -1.6
 
 [node name="LightMesh" parent="Lights/DoorLight7" index="0" unique_id=1584284493]
 gi_mode = 2
-surface_material_override/0 = SubResource("ORMMaterial3D_pl3xb")
+surface_material_override/0 = SubResource("ORMMaterial3D_nugrd")
 
 [node name="Light" parent="Lights/DoorLight7" index="1" unique_id=1977279119]
 light_bake_mode = 2
@@ -3085,7 +3085,7 @@ transform = Transform3D(1, -4.3711395e-08, -1.1920929e-07, 4.3711395e-08, 1, -1.
 
 [node name="LightMesh" parent="Lights/DoorLight6" index="0" unique_id=1584284493]
 gi_mode = 2
-surface_material_override/0 = SubResource("ORMMaterial3D_rdyxd")
+surface_material_override/0 = SubResource("ORMMaterial3D_306cf")
 
 [node name="Light" parent="Lights/DoorLight6" index="1" unique_id=1977279119]
 light_bake_mode = 2
@@ -3306,11 +3306,11 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -13.
 
 [node name="SkeletonKneel" parent="Skeletons/ReactorSkeletons/Row1" unique_id=865415345 instance=ExtResource("27_ar56e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.000001, 0, -6.9999905)
-talk_message = Array[String](["\"GLORY,", "GLORY,", "OH, GLORY!\""])
+talk_message = Array[String](["\"Initiate, hear my cry!", "This world is already over; take the sinister path to Fallout and the ending of all things.\""])
 
 [node name="SkeletonKneel6" parent="Skeletons/ReactorSkeletons/Row1" unique_id=1066754175 instance=ExtResource("27_ar56e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.999999, 0, -6.9999924)
-talk_message = Array[String](["\"GLORY,", "GLORY,", "OH, GLORY!\""])
+talk_message = Array[String](["\"Initiate, hear my cry!", "Honor our ancient ways; take the rightward path to [color=red]Halo[/color].\""])
 
 [node name="SkeletonKneel7" parent="Skeletons/ReactorSkeletons/Row1" unique_id=575704170 instance=ExtResource("27_ar56e")]
 transform = Transform3D(0.81915206, 0, 0.57357645, 0, 1, 0, -0.57357645, 0, 0.81915206, -7.9999995, 0, -5)
@@ -3341,10 +3341,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.536743e-07, 0, 7)
 
 [node name="SkeletonKneel" parent="Skeletons/ReactorSkeletons/Row2" unique_id=785901744 instance=ExtResource("27_ar56e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -6.9999924)
+talk_message = Array[String](["\"Initiate, hear my cry!", "This world is already over; take the sinister path to Fallout and the ending of all things.\""])
 
 [node name="SkeletonKneel6" parent="Skeletons/ReactorSkeletons/Row2" unique_id=1573982930 instance=ExtResource("27_ar56e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.999999, 0, -6.9999924)
-talk_message = Array[String](["\"Oh ye who listens now", "for the sake of all to come", "do what is right. ", "Preserve the cycle. Join with us.\""])
+talk_message = Array[String](["\"Initiate, hear my cry!", "Honor our ancient ways; take the rightward path to [color=red]Halo[/color].\""])
 
 [node name="SkeletonKneel7" parent="Skeletons/ReactorSkeletons/Row2" unique_id=280461849 instance=ExtResource("27_ar56e")]
 transform = Transform3D(0.42261824, 0, 0.9063078, 0, 1, 0, -0.9063078, 0, 0.42261824, -7.999999, 0, -5)
@@ -3375,7 +3376,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.5761986)
 
 [node name="SkeletonKneel" parent="Skeletons/ReactorSkeletons/Row3" unique_id=1746459004 instance=ExtResource("27_ar56e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.000001, 0, -6.9999905)
-talk_message = Array[String](["\"It is not too late", "to begin anew...", "Do it. You know you want to. ", "Why hesistate?", "Burn it all down.\""])
+talk_message = Array[String](["\"Initiate, hear my cry!", "This world is already over; take the sinister path to Fallout and the ending of all things.\""])
 
 [node name="SkeletonKneel7" parent="Skeletons/ReactorSkeletons/Row3" unique_id=1784424246 instance=ExtResource("27_ar56e")]
 transform = Transform3D(0.81915206, 0, 0.57357645, 0, 1, 0, -0.57357645, 0, 0.81915206, -8, 0, -5)
@@ -3389,7 +3390,7 @@ transform = Transform3D(0.819152, 0, 0.5735764, 0, 1, 0, -0.5735764, 0, 0.819152
 
 [node name="SkeletonKneel11" parent="Skeletons/ReactorSkeletons/Row3" unique_id=535993143 instance=ExtResource("27_ar56e")]
 transform = Transform3D(0.99964106, 0, 0.0267877, 0, 1, 0, -0.0267877, 0, 0.99964106, -3.3359852, 0, -7.5379143)
-talk_message = Array[String](["\"Oh ye who listens now", "for the sake of all to come", "do what is right. ", "Preserve the cycle. Join with us.\""])
+talk_message = Array[String](["\"Initiate, hear my cry!", "Honor our ancient ways; take the rightward path to [color=red]Halo[/color].\""])
 
 [node name="SkeletonKneel3" parent="Skeletons/ReactorSkeletons/Row3" unique_id=543255666 instance=ExtResource("27_ar56e")]
 transform = Transform3D(0.819152, 0, -0.5735764, 0, 1, 0, 0.5735764, 0, 0.819152, 8.000001, 0, -4.9999733)
@@ -3411,10 +3412,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.3260918)
 
 [node name="SkeletonKneel" parent="Skeletons/ReactorSkeletons/Row4" unique_id=1775717665 instance=ExtResource("27_ar56e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.000001, 0, -6.9999905)
+talk_message = Array[String](["\"Initiate, hear my cry!", "This world is already over; take the sinister path to Fallout and the ending of all things.\""])
 
 [node name="SkeletonKneel6" parent="Skeletons/ReactorSkeletons/Row4" unique_id=225836698 instance=ExtResource("27_ar56e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -6.9999924)
-talk_message = Array[String](["\"GLORY,", "GLORY,", "OH, GLORY!\""])
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.000001, 0, -6.9999924)
+talk_message = Array[String](["\"Initiate, hear my cry!", "Honor our ancient ways; take the rightward path to [color=red]Halo[/color].\""])
 
 [node name="SkeletonKneel7" parent="Skeletons/ReactorSkeletons/Row4" unique_id=1561992792 instance=ExtResource("27_ar56e")]
 transform = Transform3D(0.81915206, 0, 0.57357645, 0, 1, 0, -0.57357645, 0, 0.81915206, -8, 0, -5)
@@ -3455,12 +3457,12 @@ flicker_threshold = 0.799
 
 [node name="LightMesh" parent="Skeletons/OverheadLightFlicker3" index="0" unique_id=1584284493]
 gi_mode = 2
-surface_material_override/0 = SubResource("ORMMaterial3D_nugrd")
+surface_material_override/0 = SubResource("ORMMaterial3D_6gudc")
 
 [node name="Light" parent="Skeletons/OverheadLightFlicker3" index="1" unique_id=1977279119]
 transform = Transform3D(1, -9.471265e-09, 2.7171666e-08, -2.7171664e-08, -0.6216153, 0.78332275, 9.471265e-09, -0.78332275, -0.6216153, 0, -0.19215298, 0)
 light_color = Color(1, 0.84705883, 0.69411767, 1)
-light_energy = 0.9641072
+light_energy = 0.5
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=645849406]
 environment = SubResource("Environment_4tam1")
@@ -3519,7 +3521,7 @@ transform = Transform3D(0.11583844, -0.47040328, 0.8748155, 1.3601241e-08, 0.880
 
 [node name="LightMesh" parent="GrateLight7" index="0" unique_id=1584284493]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.12372571, 0)
-surface_material_override/0 = SubResource("ORMMaterial3D_306cf")
+surface_material_override/0 = SubResource("ORMMaterial3D_ic7y4")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="GrateLight7/LightMesh" index="0" unique_id=276719755]
 transform = Transform3D(1, 1.4901161e-08, 0, 0, 1, 0, 0, 0, 1, 3.5261618e-09, 0.1272617, 7.450581e-09)
@@ -3594,7 +3596,7 @@ emissive_brightness = 4.0
 light_brightness = 0.252
 
 [node name="LightMesh" parent="ReactorPanel/ReactorPanel/DoorHolder/OverheadLight" index="0" unique_id=1584284493]
-surface_material_override/0 = SubResource("ORMMaterial3D_6gudc")
+surface_material_override/0 = SubResource("ORMMaterial3D_bxpov")
 
 [node name="Light" parent="ReactorPanel/ReactorPanel/DoorHolder/OverheadLight" index="1" unique_id=1977279119]
 visible = false
@@ -3608,7 +3610,7 @@ emissive_brightness = 4.0
 light_brightness = 0.252
 
 [node name="LightMesh" parent="ReactorPanel/ReactorPanel/DoorHolder/OverheadLight2" index="0" unique_id=1584284493]
-surface_material_override/0 = SubResource("ORMMaterial3D_ic7y4")
+surface_material_override/0 = SubResource("ORMMaterial3D_g0mda")
 
 [node name="Light" parent="ReactorPanel/ReactorPanel/DoorHolder/OverheadLight2" index="1" unique_id=1977279119]
 visible = false
@@ -3622,7 +3624,7 @@ emissive_brightness = 4.0
 light_brightness = 0.252
 
 [node name="LightMesh" parent="ReactorPanel/ReactorPanel/DoorHolder/OverheadLight4" index="0" unique_id=1584284493]
-surface_material_override/0 = SubResource("ORMMaterial3D_bxpov")
+surface_material_override/0 = SubResource("ORMMaterial3D_oke6j")
 
 [node name="Light" parent="ReactorPanel/ReactorPanel/DoorHolder/OverheadLight4" index="1" unique_id=1977279119]
 visible = false
@@ -3636,7 +3638,7 @@ emissive_brightness = 4.0
 light_brightness = 0.252
 
 [node name="LightMesh" parent="ReactorPanel/ReactorPanel/DoorHolder/OverheadLight3" index="0" unique_id=1584284493]
-surface_material_override/0 = SubResource("ORMMaterial3D_g0mda")
+surface_material_override/0 = SubResource("ORMMaterial3D_43m75")
 
 [node name="Light" parent="ReactorPanel/ReactorPanel/DoorHolder/OverheadLight3" index="1" unique_id=1977279119]
 visible = false
