@@ -2,6 +2,7 @@
 
 [ext_resource type="ArrayMesh" uid="uid://ohewximqt2ql" path="res://Assets/Models/RoomKit/Meshes/RoomKit_Floor.res" id="1_bripf"]
 [ext_resource type="ArrayMesh" uid="uid://dumdvm4gy4q6q" path="res://Assets/Models/RoomKit/Meshes/RoomKit_HallwayWall.res" id="2_64b3b"]
+[ext_resource type="Material" uid="uid://b2k5uxfxw2ojq" path="res://Assets/Models/Reactor/Materials/ReactorShadowBlocker_mat.tres" id="2_nugrd"]
 [ext_resource type="ArrayMesh" uid="uid://d2otdcqf1tnx1" path="res://Assets/Models/RoomKit/Meshes/RoomKit_StraightWall.res" id="3_r6i6q"]
 [ext_resource type="ArrayMesh" uid="uid://ff1ifx0hhi10" path="res://Assets/Models/RoomKit/Meshes/RoomKit_Door.res" id="4_o11oa"]
 [ext_resource type="ArrayMesh" uid="uid://105jecp2igls" path="res://Assets/Models/RoomKit/Meshes/RoomKit_InteriorCorner.res" id="5_mhh6y"]
@@ -55,6 +56,7 @@
 [ext_resource type="Texture2D" uid="uid://vyk6mm3s7h4h" path="res://Assets/Models/Lights/Textures/OverheadLight_normal.tga" id="47_ljt84"]
 [ext_resource type="Texture2D" uid="uid://cd5qlj0nhcqdy" path="res://Assets/Models/Lights/Textures/OverheadLight_mixmap.tga" id="48_indjv"]
 [ext_resource type="ArrayMesh" uid="uid://droxf4b3n7267" path="res://Assets/Models/RoomKit/Meshes/RoomKit_Alcove.res" id="55_pl3xb"]
+[ext_resource type="ArrayMesh" uid="uid://bof3y0hi4yj8b" path="res://Assets/Models/SetDec/Meshes/Rubble.res" id="57_306cf"]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_pl3xb"]
 albedo_texture = ExtResource("27_y8adh")
@@ -83,7 +85,7 @@ albedo_texture = ExtResource("45_00rv5")
 orm_texture = ExtResource("48_indjv")
 emission_enabled = true
 emission = Color(1, 0.84705883, 0.69411767, 1)
-emission_energy_multiplier = 2.5
+emission_energy_multiplier = 4.820536
 emission_operator = 1
 emission_texture = ExtResource("46_j1t7v")
 normal_enabled = true
@@ -276,6 +278,11 @@ mesh = ExtResource("15_fl23l")
 [node name="RoomKitCeiling53" type="MeshInstance3D" parent="Ceilings" unique_id=728695212]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -12)
 mesh = ExtResource("15_fl23l")
+
+[node name="RoomKitCeiling74" type="MeshInstance3D" parent="Ceilings" unique_id=1421323370]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -15)
+mesh = ExtResource("15_fl23l")
+surface_material_override/0 = ExtResource("2_nugrd")
 
 [node name="RoomKitCeiling55" type="MeshInstance3D" parent="Ceilings" unique_id=530699894]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -9)
@@ -714,6 +721,7 @@ mesh = ExtResource("1_bripf")
 [node name="RoomKitFloor47" type="MeshInstance3D" parent="Rooms" unique_id=416240858]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -15)
 mesh = ExtResource("1_bripf")
+surface_material_override/0 = ExtResource("2_nugrd")
 
 [node name="RoomKitFloor33" type="MeshInstance3D" parent="Rooms" unique_id=1702622899]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -12)
@@ -3452,7 +3460,7 @@ surface_material_override/0 = SubResource("ORMMaterial3D_nugrd")
 [node name="Light" parent="Skeletons/OverheadLightFlicker3" index="1" unique_id=1977279119]
 transform = Transform3D(1, -9.471265e-09, 2.7171666e-08, -2.7171664e-08, -0.6216153, 0.78332275, 9.471265e-09, -0.78332275, -0.6216153, 0, -0.19215298, 0)
 light_color = Color(1, 0.84705883, 0.69411767, 1)
-light_energy = 0.5
+light_energy = 0.9641072
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=645849406]
 environment = SubResource("Environment_4tam1")
@@ -3653,6 +3661,19 @@ cast_shadows = true
 [node name="OverheadLight3" parent="." unique_id=964855187 instance=ExtResource("43_11c1r")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10.967184, 3, -10.5)
 cast_shadows = true
+
+[node name="RoomKitWallHallwayEnd" type="MeshInstance3D" parent="." unique_id=734924016]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 21, 0, -18)
+mesh = ExtResource("5_r6i6q")
+surface_material_override/0 = ExtResource("2_nugrd")
+
+[node name="Rubble" type="MeshInstance3D" parent="." unique_id=445776847]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 19.854485, 0.3148836, -14.141664)
+mesh = ExtResource("57_306cf")
+
+[node name="Rubble2" type="MeshInstance3D" parent="." unique_id=819570831]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 18.153004, 0.3148836, -14.520212)
+mesh = ExtResource("57_306cf")
 
 [editable path="Lights/DoorLight7"]
 [editable path="Lights/DoorLight6"]

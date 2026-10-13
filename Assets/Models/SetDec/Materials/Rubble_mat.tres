@@ -1,0 +1,12 @@
+[gd_resource type="ORMMaterial3D" format=3 uid="uid://d21xn6h4swbj5"]
+
+[ext_resource type="Texture2D" uid="uid://bs46gab2qq8ds" path="res://Assets/Models/SetDec/Textures/Rubble_albedo.tga" id="1_40ig3"]
+[ext_resource type="Texture2D" uid="uid://8sv4hmxdb6u7" path="res://Assets/Models/SetDec/Textures/Rubble_normal.tga" id="2_cg287"]
+[ext_resource type="Texture2D" uid="uid://p48wvtgfudeu" path="res://Assets/Models/SetDec/Textures/Rubble_mixmap.tga" id="3_ybd1y"]
+
+[resource]
+albedo_texture = ExtResource("1_40ig3")
+orm_texture = ExtResource("3_ybd1y")
+normal_enabled = true
+normal_texture = ExtResource("2_cg287")
+texture_filter = 2
