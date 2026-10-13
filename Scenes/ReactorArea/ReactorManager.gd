@@ -28,6 +28,8 @@ class_name ReactorManager
 @export var turn_sfx : Array[AudioStreamWAV]
 @export var bonk_sfx : AudioStreamWAV
 
+@export var explosion_light : OmniLight3D
+
 @onready var fps_camera: SubViewport = %FPSCamera
 @onready var monitor_tinter: ColorRect = %MonitorTinter
 @onready var game_camera: GameCamera = %Camera3D
@@ -401,3 +403,10 @@ func uh_oh_we_really_exploded() -> void:
 	var tween = get_tree().create_tween()
 	tween.tween_property(monitor_tinter, "color", Color(1.0, 0.9, 0.6), 0.25)
 	_we_started_exploding = true
+	await get_tree().create_timer(6.5).timeout
+	var light_tween = get_tree().create_tween()
+	light_tween.set_ease(Tween.EASE_IN)
+	light_tween.set_trans(Tween.TRANS_CUBIC)
+	light_tween.tween_property(explosion_light, "omni_range", 10000.0, 1.0)
+	await get_tree().create_timer(1.0).timeout
+	get_tree().quit()
