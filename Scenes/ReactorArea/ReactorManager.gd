@@ -150,6 +150,8 @@ func is_valid_move(forward : bool) -> bool:
 			if grid_manager.position_dict[current_position].is_locked:
 				return false
 		# Magic^2
+		if !forward && target.grid_position == Vector2i(6, 18) && current_position == Vector2i(6, 19):
+			return false
 		if !forward && target.grid_position == Vector2i(6, 17) && current_position == Vector2i(6, 18):
 			return false
 		if target.active && !target.is_locked && !target.has_skeleton:
