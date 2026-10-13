@@ -28,12 +28,17 @@ class_name ReactorManager
 @export var turn_sfx : Array[AudioStreamWAV]
 @export var bonk_sfx : AudioStreamWAV
 
+@onready var fps_camera: SubViewport = %FPSCamera
+@onready var monitor_tinter: ColorRect = %MonitorTinter
+@onready var game_camera: GameCamera = %Camera3D
+
 var _current_cards_scratch : Array = []
 var current_position : Vector2i
 var cam_tween : Tween
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	BoardManager.monitor_off.connect(_on_monitor_off)
 	BoardManager.reactor_manager = self
 	BoardManager.fps_camera = cam
 	for slot in card_slots:
@@ -356,3 +361,31 @@ func _handle_music_trigger() -> void:
 		return
 	
 	music_player.change_music(current_cell.music_cue)
+
+var _we_started_exploding:bool = false
+var _we_have_been_fully_blown_up:bool = false
+
+func _on_monitor_off() -> void:
+	fps_camera.audio_listener_enable_3d = false
+	fps_camera.disable_3d = true
+	monitor_tinter.visible = true
+	monitor_tinter.color = Color.BLACK
+	_we_have_been_fully_blown_up = true
+
+func set_explosion_fx_val(value:float) -> void:
+	if _we_started_exploding or _we_have_been_fully_blown_up:
+		return
+	
+	monitor_tinter.visible = true
+	monitor_tinter.color = Color(1.0, 0.7, 0.25)
+	monitor_tinter.color.a = value
+	
+	game_camera.noise_speed = 2.0
+	game_camera.noise_strength = value
+
+func uh_oh_we_really_exploded() -> void:
+	monitor_tinter.visible = true
+	monitor_tinter.color = Color(1.0, 0.7, 0.25)
+	var tween = get_tree().create_tween()
+	tween.tween_property(monitor_tinter, "color", Color(1.0, 0.9, 0.6), 0.25)
+	_we_started_exploding = true

@@ -15,6 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://dak5o5i8xxc8b" path="res://Assets/SFX/ReactorAgitated.wav" id="13_0apso"]
 [ext_resource type="AudioStream" uid="uid://cc45n7l8ytbdx" path="res://Assets/SFX/ReactorCalm.wav" id="14_fdmgl"]
 [ext_resource type="AudioStream" uid="uid://cp0ajrlwxusef" path="res://Assets/SFX/WarningSiren.wav" id="15_l2tw6"]
+[ext_resource type="AudioStream" uid="uid://fg3o0rposav" path="res://Assets/SFX/ReactorExplosion.wav" id="16_fdmgl"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_r6c0r"]
 material = ExtResource("8_fdmgl")
@@ -31,8 +32,8 @@ stream_1/volume = 0.0
 script = ExtResource("1_ixt3g")
 rod_material = ExtResource("2_v5i4w")
 reactor_glow_material = ExtResource("3_u4eti")
-reactor_noise_volume_db = -8.0
-reactor_alarm_volume_db = -6.0
+reactor_noise_volume_db = -10.0
+reactor_alarm_volume_db = -8.0
 
 [node name="ReactorRods" parent="." unique_id=436975991 instance=ExtResource("1_6x60j")]
 unique_name_in_owner = true
@@ -139,3 +140,8 @@ unit_size = 20.0
 max_db = 0.0
 autoplay = true
 bus = &"SFX"
+
+[node name="ReactorExploder" type="AudioStreamPlayer" parent="." unique_id=2123530182]
+unique_name_in_owner = true
+stream = ExtResource("16_fdmgl")
+bus = &"ExplosionFX"

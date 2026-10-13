@@ -42,3 +42,8 @@ func change_music(music_track:MusicTrack) -> void:
 	
 	_current_music = music_track	
 	interactive_playback.switch_to_clip_by_name(music_table[music_track])
+
+func fade_out(time:float) -> void:
+	var tween = get_tree().create_tween()
+	tween.tween_property(self, "volume_linear", 0.0, 3.0)
+	

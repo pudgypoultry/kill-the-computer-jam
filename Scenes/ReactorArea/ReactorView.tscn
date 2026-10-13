@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://deq2k7nrovb6d" path="res://Assets/SFX/Footsteps02.wav" id="3_3cvd1"]
 [ext_resource type="PackedScene" uid="uid://duq477hnsw1wp" path="res://Sandboxes/Pudgypoultry/GridManager.tscn" id="3_5q44f"]
 [ext_resource type="PackedScene" uid="uid://dtf7t8rdoi3jd" path="res://Scenes/Terminal/Terminal.tscn" id="4_4gxma"]
+[ext_resource type="Script" uid="uid://dn1e6dr3xwfq7" path="res://Scenes/ReactorArea/game_camera.gd" id="4_jjjyx"]
 [ext_resource type="Shader" uid="uid://ntxjgq0i3c13" path="res://Assets/Shaders/crt.gdshader" id="5_42u3o"]
 [ext_resource type="PackedScene" uid="uid://bws36qtjwcoju" path="res://Scenes/ReactorArea/RoomLayout.tscn" id="5_oglby"]
 [ext_resource type="PackedScene" uid="uid://dbxpkhsyt01o8" path="res://Scenes/TitleScreen/TitleScreen.tscn" id="9_3cvd1"]
@@ -37,13 +38,16 @@ reactor_door_check_ray = NodePath("FPSCamera/Camera3D/ReactorDoorCheckRay")
 footstep_sfx = Array[AudioStreamWAV]([ExtResource("2_g0q32"), ExtResource("3_3cvd1")])
 
 [node name="FPSCamera" type="SubViewport" parent="." unique_id=726431392]
+unique_name_in_owner = true
 handle_input_locally = false
 audio_listener_enable_3d = true
 render_target_update_mode = 4
 
 [node name="Camera3D" type="Camera3D" parent="FPSCamera" unique_id=417143241]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 1.5, 10.5)
 current = true
+script = ExtResource("4_jjjyx")
 
 [node name="SkeletonCheckRay" type="RayCast3D" parent="FPSCamera/Camera3D" unique_id=1885323365]
 target_position = Vector3(0, 0, -3)
@@ -61,10 +65,17 @@ collision_mask = 32
 target_position = Vector3(0, 0, -7)
 collision_mask = 64
 
-[node name="AudioListener3D" type="AudioListener3D" parent="FPSCamera/Camera3D" unique_id=717798574]
-current = true
-
 [node name="CanvasLayer" type="CanvasLayer" parent="FPSCamera" unique_id=2136070968]
+
+[node name="MonitorTinter" type="ColorRect" parent="FPSCamera/CanvasLayer" unique_id=241183133]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [node name="TextureRect" type="ColorRect" parent="FPSCamera/CanvasLayer" unique_id=165340112]
 material = ExtResource("2_oglby")

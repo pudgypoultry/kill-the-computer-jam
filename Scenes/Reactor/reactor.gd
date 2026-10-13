@@ -7,6 +7,11 @@ class_name Reactor
 @onready var reactor_ambient_light: OmniLight3D = %ReactorAmbientLight
 @onready var reactor_sound: AudioStreamPlayer3D = $ReactorSound
 @onready var reactor_alarm: AudioStreamPlayer3D = $ReactorAlarm
+@onready var reactor_exploder: AudioStreamPlayer = %ReactorExploder
+
+@export var reactor_explosion_delay:float = 3.0
+@export var reactor_explode_for_real_delay:float = 9.35
+@export var reactor_monitor_kill_delay:float = 1.0
 
 @export var rod_material:ShaderMaterial:
 	set(value):
@@ -18,7 +23,7 @@ class_name Reactor
 		reactor_glow_material = value
 		_update_materials()
 
-@export var reactor_state:ReactorState:
+@export var reactor_state:ReactorState: 
 	set(value):
 		_change_reactor_state(value)
 	get():
@@ -93,6 +98,11 @@ func _process(delta:float) -> void:
 	if is_instance_valid(_cur_rod_material):
 		_reactor_wave_time += delta * _reactor_wave_speed
 		_cur_rod_material.set_shader_parameter("wave_time", _reactor_wave_time)
+		
+	if reactor_state == ReactorState.Critical:
+		var exp_bus_volume = BoardManager.get_explosion_bus_vol()
+		reactor_ambient_light.light_energy = 5.0 + exp_bus_volume * 100.0
+		BoardManager.reactor_manager.set_explosion_fx_val(exp_bus_volume)
 
 func _get_colour_for_state() -> Color:
 	match _reactor_state:
@@ -172,11 +182,21 @@ func _change_reactor_state(new_state:ReactorState) -> void:
 			_reactor_state_tween.tween_property(self, "_reactor_panic_sound", 0.0, state_change_time)
 			_reactor_state_tween.tween_property(self, "_reactor_alarm_fade_amt", 0.0, state_change_time)
 		ReactorState.Critical:
+			# CW: this is not reentrant, so when we flip this switch, it stays here hahaha
 			_reactor_state_tween.tween_property(self, "_reactor_wave_amplitude", 1.25, state_change_time)
 			_reactor_state_tween.tween_property(self, "_reactor_wave_speed", 1.5, state_change_time)
 			_reactor_state_tween.tween_property(self, "_reactor_chaos", 5.0, state_change_time)			
 			_reactor_state_tween.tween_property(self, "_reactor_panic_sound", 1.0, state_change_time)
 			_reactor_state_tween.tween_property(self, "_reactor_alarm_fade_amt", 1.0, state_change_time)
+			MusicPlayer.get_global_music_player().fade_out(reactor_explosion_delay)
+			await get_tree().create_timer(reactor_explosion_delay).timeout
+			reactor_exploder.play()
+			await get_tree().create_timer(reactor_explode_for_real_delay).timeout
+			BoardManager.reactor_manager.uh_oh_we_really_exploded()
+			await get_tree().create_timer(reactor_monitor_kill_delay).timeout
+			BoardManager.kill_monitor()
+			reactor_sound.stop()
+			reactor_alarm.stop()
 
 func _change_reactor_panic_sound() -> void:
 	if not is_instance_valid(reactor_sound):

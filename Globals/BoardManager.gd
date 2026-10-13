@@ -3,6 +3,7 @@ extends Node
 signal make_switch_go_off_now
 signal player_control_changed(value:bool)
 signal done_talking
+signal monitor_off
 
 # General game parameters
 @export var board_height : float = 0.15
@@ -146,3 +147,13 @@ func remove_player_actionable_blocker(blocker:Node) -> void:
 
 func make_switch_go_off() -> void:
 	make_switch_go_off_now.emit()
+
+func kill_monitor() -> void:
+	monitor_off.emit()
+
+# CW: this is here because it's easy to find hahaha
+func get_explosion_bus_vol() -> float:
+	var explosion_idx = AudioServer.get_bus_index("ExplosionFX")
+	var analyzer:AudioEffectSpectrumAnalyzerInstance = AudioServer.get_bus_effect_instance(explosion_idx, 0) as AudioEffectSpectrumAnalyzerInstance
+	var val = analyzer.get_magnitude_for_frequency_range(0, 10000).length()
+	return val
