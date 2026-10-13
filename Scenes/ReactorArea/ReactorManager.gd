@@ -286,10 +286,16 @@ func talk():
 
 
 func print_new_card():
-	var blocker = BoardManager.add_player_actionable_blocker(self)
-	BoardManager.cursor_hidden = true
 	var current_cell = grid_manager.position_dict[current_position]
 	if current_cell.has_card_unlock:
+		if BoardManager.has_already_printed_card(current_cell.card_to_unlock):
+			push_warning("Double print of card due to known bug.")
+			return
+
+		BoardManager.cursor_hidden = true
+		var blocker = BoardManager.add_player_actionable_blocker(self)
+		BoardManager.register_printed_card(current_cell.card_to_unlock)
+
 		var blank_card = BoardManager.blank_cards.pop_front()
 		var original_transform = blank_card.global_transform
 		var new_card : PunchCard = current_cell.card_to_unlock.instantiate()
@@ -329,8 +335,8 @@ func print_new_card():
 		tween.tween_property(new_card, "global_transform", original_transform, 0.5)
 		await tween.finished
 		blank_card.queue_free()
-	BoardManager.remove_player_actionable_blocker(blocker)
-	BoardManager.cursor_hidden = false
+		BoardManager.remove_player_actionable_blocker(blocker)
+		BoardManager.cursor_hidden = false
 
 func insert_blank_card() -> void:
 	print_to_terminal(blank_card_text)

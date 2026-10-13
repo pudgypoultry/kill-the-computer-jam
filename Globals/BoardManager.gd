@@ -37,6 +37,8 @@ var explosion_light : OmniLight3D
 var fade_out_screen : CanvasLayer
 var exclusive_text_mode:bool = false
 
+var _printed_cards:Array[PackedScene]
+
 var cursor_hidden : bool = false:
 	set(value):
 		cursor_hidden = value
@@ -164,3 +166,10 @@ func get_explosion_bus_vol() -> float:
 	var analyzer:AudioEffectSpectrumAnalyzerInstance = AudioServer.get_bus_effect_instance(explosion_idx, 0) as AudioEffectSpectrumAnalyzerInstance
 	var val = analyzer.get_magnitude_for_frequency_range(0, 10000).length()
 	return val
+
+func register_printed_card(card_scene:PackedScene) -> void:
+	if not _printed_cards.has(card_scene):
+		_printed_cards.push_back(card_scene)
+		
+func has_already_printed_card(card_scene:PackedScene) -> bool:
+	return _printed_cards.has(card_scene)
