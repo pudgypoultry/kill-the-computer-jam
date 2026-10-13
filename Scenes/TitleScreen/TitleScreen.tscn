@@ -38,7 +38,6 @@ layout_mode = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Menu" type="VBoxContainer" parent="." unique_id=93327392]
-visible = false
 layout_mode = 2
 size_flags_vertical = 4
 
@@ -132,6 +131,7 @@ text = "
 > Kill the Computer Jam"
 
 [node name="Settings" type="VBoxContainer" parent="." unique_id=1186368129]
+visible = false
 layout_mode = 2
 alignment = 1
 
