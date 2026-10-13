@@ -3470,6 +3470,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.076348305)
 
 [node name="ZoomOutDoor" parent="Doors" unique_id=1073256528 instance=ExtResource("25_hva2l")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 24.115509, 0, -12)
+can_slam = true
 
 [node name="BlockingDoorEntryway" parent="Doors" unique_id=1267413610 instance=ExtResource("25_hva2l")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.099483, 0, -3)

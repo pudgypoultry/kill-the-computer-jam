@@ -146,14 +146,20 @@ turn_sfx = Array[AudioStreamWAV]([ExtResource("8_cmfyp"), ExtResource("9_1uf6b")
 bonk_sfx = ExtResource("10_1uf6b")
 
 [node name="FPSCamera" parent="ReactorView" index="0" unique_id=726431392]
+unique_name_in_owner = false
 screen_space_aa = 1
 size = Vector2i(240, 240)
 
 [node name="Camera3D" parent="ReactorView/FPSCamera" index="0" unique_id=417143241]
+unique_name_in_owner = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.5, 1.5, -16)
+script = null
 
 [node name="ReactorDoorCheckRay" parent="ReactorView/FPSCamera/Camera3D" index="3" unique_id=1064242224]
 target_position = Vector3(0, 0, -1)
+
+[node name="AudioListener3D" parent="ReactorView/FPSCamera/Camera3D" index="4" unique_id=717798574]
+current = true
 
 [node name="GridManager" parent="ReactorView/GridCamera" parent_id_path=PackedInt32Array(212615922, 134290074) index="0" unique_id=401646695]
 file_name = "FullGridCopy.tscn"

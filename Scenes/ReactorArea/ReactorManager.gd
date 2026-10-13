@@ -224,6 +224,9 @@ func turn(dir : String):
 		"right":
 			cam_tween.tween_property(cam, "rotation:y", cam.rotation.y + deg_to_rad(-90.0), BoardManager.player_move_time)
 			
+	if reactor_door_check_ray.is_colliding():
+		var door : ReactorEntranceDoor = reactor_door_check_ray.get_collider()
+		door.open_to_reactor()
 	play_turn_sfx()
 
 
