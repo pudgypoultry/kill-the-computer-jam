@@ -7267,6 +7267,7 @@ position = Vector2(525, 1890)
 examine = Array[String](["CORE NARTHEX", "God awaits. ", "Just past this door. ", "What shall become of us?"])
 grid_position = Vector2i(5, 18)
 adjacencies = [NodePath("../5_17"), NodePath("../6_18"), NodePath("../5_19"), NodePath("../4_18")]
+is_locked = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="5_18" unique_id=240161771]
 texture = ExtResource("2_lgriu")
@@ -7298,6 +7299,7 @@ position = Vector2(735, 1890)
 examine = Array[String](["CORE NARTHEX", "God awaits. ", "Just past this door. ", "What shall become of us?"])
 grid_position = Vector2i(7, 18)
 adjacencies = [NodePath("../7_17"), NodePath("../8_18"), NodePath("../7_19"), NodePath("../6_18")]
+is_locked = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="7_18" unique_id=984176396]
 texture = ExtResource("2_lgriu")
@@ -7684,6 +7686,7 @@ position = Vector2(525, 1995)
 examine = Array[String](["CORE NARTHEX", "God awaits. ", "Just past this door. ", "What shall become of us?"])
 grid_position = Vector2i(5, 19)
 adjacencies = [NodePath("../5_18"), NodePath("../6_19"), NodePath("../5_20"), NodePath("../4_19")]
+is_locked = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="5_19" unique_id=1244073636]
 texture = ExtResource("2_lgriu")
@@ -7718,6 +7721,7 @@ position = Vector2(735, 1995)
 examine = Array[String](["CORE NARTHEX", "God awaits. ", "Just past this door. ", "What shall become of us?"])
 grid_position = Vector2i(7, 19)
 adjacencies = [NodePath("../7_18"), NodePath("../8_19"), NodePath("../7_20"), NodePath("../6_19")]
+is_locked = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="7_19" unique_id=1399035190]
 texture = ExtResource("2_lgriu")

@@ -149,6 +149,9 @@ func is_valid_move(forward : bool) -> bool:
 		if target.grid_position == Vector2i(17,23) && current_position == Vector2i(16,23):
 			if grid_manager.position_dict[current_position].is_locked:
 				return false
+		# Magic^2
+		if !forward && target.grid_position == Vector2i(6, 17) && current_position == Vector2i(6, 18):
+			return false
 		if target.active && !target.is_locked && !target.has_skeleton:
 			return true
 	return false
@@ -230,6 +233,7 @@ func turn(dir : String):
 			cam_tween.tween_property(cam, "rotation:y", cam.rotation.y + deg_to_rad(-90.0), BoardManager.player_move_time)
 			
 	if reactor_door_check_ray.is_colliding():
+		print("hi")
 		var door : ReactorEntranceDoor = reactor_door_check_ray.get_collider()
 		door.open_to_reactor()
 	play_turn_sfx()
