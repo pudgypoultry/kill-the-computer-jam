@@ -38,6 +38,7 @@ layout_mode = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Menu" type="VBoxContainer" parent="." unique_id=93327392]
+visible = false
 layout_mode = 2
 size_flags_vertical = 4
 
@@ -310,7 +311,6 @@ scene_to_show = NodePath("../../Menu")
 scene_to_hide = NodePath("..")
 
 [node name="Credits" type="VBoxContainer" parent="." unique_id=1997220517]
-visible = false
 layout_mode = 2
 size_flags_vertical = 4
 
@@ -322,9 +322,9 @@ size_flags_vertical = 6
 theme_override_colors/default_color = Color(0.054711282, 0.75625, 0, 1)
 theme_override_fonts/normal_font = ExtResource("1_f6ya5")
 text = "> Game made by:
->    1HandWill
->    BunchesOfBees
->    Pudgypoultry
+>  1HandWill     - Scripture
+>  Axiomata      - Code
+>  BunchesOfBees - Everything
 
 > Sprite outline - TerryTwo
 > CRT shader - Harrison Allen
