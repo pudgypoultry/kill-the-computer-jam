@@ -97,6 +97,7 @@ func _handle_card_slotted_double(card_pattern : String):
 					BoardManager.make_switch_go_off()
 				else:
 					reactor_panel.wrong_password()
+					BoardManager.make_switch_go_off()
 	elif current_cell.has_password:
 		var door:Door = door_check_ray.get_collider()
 		if not is_instance_valid(door):
@@ -115,6 +116,7 @@ func _handle_card_slotted_double(card_pattern : String):
 				BoardManager.make_switch_go_off()
 			else:
 				door.wrong_password()
+				BoardManager.make_switch_go_off()
 
 	if len(_current_cards_scratch) == 1:
 		BoardManager.begin_background_text_display()

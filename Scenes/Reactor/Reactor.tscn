@@ -81,7 +81,8 @@ light_color = Color(1, 0, 0, 1)
 light_energy = 5.0
 light_indirect_energy = 2.0
 light_volumetric_fog_energy = 0.0
-omni_range = 20.0
+shadow_enabled = true
+omni_range = 30.0
 
 [node name="ShadowBlockers" type="Node3D" parent="." unique_id=171672695]
 

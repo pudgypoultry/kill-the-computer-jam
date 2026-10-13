@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://dxqo0qwumtu5a" path="res://Assets/SFX/CardEject.wav" id="8_73dq0"]
 [ext_resource type="Texture2D" uid="uid://47m5jkj355bh" path="res://Sandboxes/Pudgypoultry/Outline.png" id="9_8ti2q"]
 [ext_resource type="AudioStream" uid="uid://c1xhthfrmey3q" path="res://Assets/SFX/CardPunch.wav" id="10_ctek8"]
+[ext_resource type="Material" uid="uid://b2k5uxfxw2ojq" path="res://Assets/Models/Reactor/Materials/ReactorShadowBlocker_mat.tres" id="12_ttdpg"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_w0dj5"]
 viewport_path = NodePath("ReactorView/GridCamera")
@@ -23,6 +24,8 @@ size = Vector3(0.37805176, 0.9367139, 2.139956)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_10p01"]
 size = Vector3(5.316194, 1.4041016, 5.238037)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hjb8m"]
 
 [node name="Monitor" type="Node3D" unique_id=1842833820 node_paths=PackedStringArray("switched_faceplate", "audio_player", "slots", "screen_2")]
 transform = Transform3D(-1.3584404e-08, 0, 0.31077492, 0, 0.31077492, 0, -0.31077492, 0, -1.3584404e-08, 0, 0, 0)
@@ -160,6 +163,11 @@ light_color = Color(1, 0.675, 0.35000002, 1)
 light_energy = 2.5
 shadow_enabled = true
 spot_range = 13.58
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1605663397]
+transform = Transform3D(-4.357746e-07, -0.99999964, -7.16007e-07, 9.969361, -4.371137e-08, 7.160072e-07, -4.3577467e-07, -4.3711367e-08, 16.380333, 4.7027497, 0, 2.0556371e-07)
+mesh = SubResource("PlaneMesh_hjb8m")
+surface_material_override/0 = ExtResource("12_ttdpg")
 
 [connection signal="mouse_entered" from="ToggleArea" to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="ToggleArea" to="." method="_on_mouse_exited"]

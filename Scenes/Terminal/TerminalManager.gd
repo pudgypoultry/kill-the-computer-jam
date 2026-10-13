@@ -16,6 +16,8 @@ var writing : bool = false
 var blink_timer:float = blink_delay
 var current_message : String = ">"
 
+var _stripped_message:String
+
 func _ready() -> void:
 	BoardManager.terminal_manager = self
 	label.visible_characters = 0
@@ -25,7 +27,7 @@ func _process(delta: float) -> void:
 		text_timer += delta
 		
 		var interval_to_use:float = 0.0
-		var last_printed_char:String = label.text[label.visible_characters - 1] if label.visible_characters > 0 else ""
+		var last_printed_char:String = _stripped_message[label.visible_characters - 1] if label.visible_characters > 0 else ""
 		match(last_printed_char):
 			".":
 				interval_to_use = period_interval
@@ -44,7 +46,7 @@ func _process(delta: float) -> void:
 			text_timer = 0.0
 			label.visible_characters += 1
 			text_beeps.play()
-			if label.visible_characters >= len(current_message):
+			if label.visible_characters >= len(_stripped_message):
 				label.visible_characters = -1
 				writing = false
 	elif BoardManager.exclusive_text_mode:
@@ -62,6 +64,11 @@ func new_message(message : Array[String]):
 	current_message = printout_message
 	label.visible_characters = 0
 	label.text = printout_message
+	
+	var regex = RegEx.new()
+	regex.compile("\\[.*?\\]")
+	_stripped_message = regex.sub(printout_message, "", true)
+	
 	writing = true
 
 func construct_message(message : Array[String]) -> String:
