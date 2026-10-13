@@ -201,6 +201,12 @@ func move_backward():
 		var dir = cam.basis.z * BoardManager.step_length
 		cam_tween.tween_property(cam, "global_position", cam.global_position + dir, BoardManager.player_move_time)
 		play_footsteps()
+		await cam_tween.finished
+		if door_check_ray.is_colliding():
+			var door : Door = door_check_ray.get_collider()
+			#print(door)
+			if door.is_open && door.can_slam:
+				door.close_door()
 		current_position = grid_manager.current_position
 		if grid_manager.position_dict[current_position].can_slam:
 			grid_manager.position_dict[current_position].slam()

@@ -11,3 +11,5 @@ func fade_out():
 	color_rect.show()
 	var tween = get_tree().create_tween()
 	tween.tween_property(color_rect, "color", Color.BLACK, 3.0)
+	await get_tree().create_timer(5.0).timeout
+	get_tree().quit()
