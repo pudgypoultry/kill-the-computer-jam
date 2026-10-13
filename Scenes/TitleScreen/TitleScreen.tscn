@@ -38,7 +38,6 @@ layout_mode = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Menu" type="VBoxContainer" parent="." unique_id=93327392]
-visible = false
 layout_mode = 2
 size_flags_vertical = 4
 
@@ -311,6 +310,7 @@ scene_to_show = NodePath("../../Menu")
 scene_to_hide = NodePath("..")
 
 [node name="Credits" type="VBoxContainer" parent="." unique_id=1997220517]
+visible = false
 layout_mode = 2
 size_flags_vertical = 4
 
