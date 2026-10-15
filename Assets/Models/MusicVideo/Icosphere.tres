@@ -1,0 +1,28 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://lutkqkkqw3gv"]
+
+[ext_resource type="Shader" uid="uid://cmpjbltvylym5" path="res://Assets/Shaders/music_sphere.gdshader" id="1_60dui"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_2nj83"]
+noise_type = 2
+offset = Vector3(0, 0, 1000)
+metadata/_preview_in_3d_space_ = true
+
+[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_rbies"]
+noise = SubResource("FastNoiseLite_2nj83")
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_60dui")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/roughness = 0.0
+shader_parameter/metallic = 1.0
+shader_parameter/noise_scale = 16.9510008051725
+shader_parameter/noise = SubResource("NoiseTexture3D_rbies")
+shader_parameter/speed = 0.10000000475
+shader_parameter/offset = 1.5000000712500001
+shader_parameter/period = 5.0000002375
+shader_parameter/normal_bend = 0.50000002375
+shader_parameter/band_1 = 0.0
+shader_parameter/band_2 = 0.0
+shader_parameter/band_3 = 0.0
+shader_parameter/band_4 = 0.0

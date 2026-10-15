@@ -1,0 +1,342 @@
+[gd_scene format=3 uid="uid://p7djdra2ot35"]
+
+[ext_resource type="Script" uid="uid://bkhx5hhgymvjo" path="res://Scenes/MusicVideo/music_video_driver.gd" id="1_cg3rs"]
+[ext_resource type="PackedScene" uid="uid://bws36qtjwcoju" path="res://Scenes/ReactorArea/RoomLayout.tscn" id="2_6bvik"]
+[ext_resource type="Shader" uid="uid://ntxjgq0i3c13" path="res://Assets/Shaders/crt.gdshader" id="3_6bvik"]
+[ext_resource type="ArrayMesh" uid="uid://ohewximqt2ql" path="res://Assets/Models/RoomKit/Meshes/RoomKit_Floor.res" id="3_rbies"]
+[ext_resource type="Texture2D" uid="uid://lul3fa2ox408" path="res://Assets/Models/Lights/Textures/DoorLight_albedo.tga" id="3_sqyl4"]
+[ext_resource type="Texture2D" uid="uid://jclt6mil4ej7" path="res://Assets/Models/Lights/Textures/DoorLight_emissive.tga" id="4_iy1iq"]
+[ext_resource type="Texture2D" uid="uid://bc2ojamkc13yv" path="res://Assets/Models/Lights/Textures/DoorLight_normal.tga" id="5_rbies"]
+[ext_resource type="Texture2D" uid="uid://br4731k0sv05k" path="res://Assets/Models/Lights/Textures/DoorLight_mixmap.tga" id="6_4eyrg"]
+[ext_resource type="Texture2D" uid="uid://bfj68a688ylsx" path="res://Assets/Models/Lights/Textures/OverheadLight_albedo.tga" id="7_2nj83"]
+[ext_resource type="Texture2D" uid="uid://cnerl3knykku1" path="res://Assets/Models/Lights/Textures/OverheadLight_emissive.tga" id="8_6er6k"]
+[ext_resource type="Texture2D" uid="uid://vyk6mm3s7h4h" path="res://Assets/Models/Lights/Textures/OverheadLight_normal.tga" id="9_e34vo"]
+[ext_resource type="Texture2D" uid="uid://cd5qlj0nhcqdy" path="res://Assets/Models/Lights/Textures/OverheadLight_mixmap.tga" id="10_kd6q5"]
+[ext_resource type="Texture2D" uid="uid://bss5bbgcjrmuk" path="res://Assets/Models/Lights/Textures/GrateLight_albedo.tga" id="11_bnsya"]
+[ext_resource type="Texture2D" uid="uid://ilism2ljh0w7" path="res://Assets/Models/Lights/Textures/GrateLight_emissive.tga" id="12_dbjr5"]
+[ext_resource type="Texture2D" uid="uid://da0n2hu4anqjd" path="res://Assets/Models/Lights/Textures/GrateLight_normal.tga" id="13_rn3rx"]
+[ext_resource type="Texture2D" uid="uid://7a7o1mxmckfh" path="res://Assets/Models/Lights/Textures/GrateLight_mixmap.tga" id="14_v3r2q"]
+[ext_resource type="AudioStream" uid="uid://dkjit5l4pu3nh" path="res://Assets/Music/Atomic_Suite.ogg" id="16_sqyl4"]
+[ext_resource type="ArrayMesh" uid="uid://rp8xjesgh4hl" path="res://Assets/Models/MusicVideo/Icosphere.res" id="18_4eyrg"]
+
+[sub_resource type="Environment" id="Environment_ykwvm"]
+background_mode = 2
+tonemap_mode = 4
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
+sdfgi_read_sky_light = false
+glow_enabled = true
+glow_intensity = 1.12
+glow_bloom = 0.2
+volumetric_fog_enabled = true
+volumetric_fog_albedo = Color(0.43, 0.43, 0.43, 1)
+adjustment_enabled = true
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_bijmi"]
+albedo_texture = ExtResource("3_sqyl4")
+orm_texture = ExtResource("6_4eyrg")
+emission_enabled = true
+emission = Color(1, 0.84705883, 0.69411767, 1)
+emission_energy_multiplier = 5.0
+emission_operator = 1
+emission_texture = ExtResource("4_iy1iq")
+normal_enabled = true
+normal_texture = ExtResource("5_rbies")
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_bm27g"]
+albedo_texture = ExtResource("3_sqyl4")
+orm_texture = ExtResource("6_4eyrg")
+emission_enabled = true
+emission = Color(1, 0.84705883, 0.69411767, 1)
+emission_energy_multiplier = 5.0
+emission_operator = 1
+emission_texture = ExtResource("4_iy1iq")
+normal_enabled = true
+normal_texture = ExtResource("5_rbies")
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_31045"]
+albedo_texture = ExtResource("7_2nj83")
+orm_texture = ExtResource("10_kd6q5")
+emission_enabled = true
+emission = Color(1, 0.84705883, 0.69411767, 1)
+emission_energy_multiplier = 2.5
+emission_operator = 1
+emission_texture = ExtResource("8_6er6k")
+normal_enabled = true
+normal_texture = ExtResource("9_e34vo")
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_ci66p"]
+albedo_texture = ExtResource("11_bnsya")
+orm_texture = ExtResource("14_v3r2q")
+emission_enabled = true
+emission = Color(1, 0.84705883, 0.69411767, 1)
+emission_energy_multiplier = 5.0
+emission_operator = 1
+emission_texture = ExtResource("12_dbjr5")
+normal_enabled = true
+normal_texture = ExtResource("13_rn3rx")
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_7ncof"]
+albedo_texture = ExtResource("7_2nj83")
+orm_texture = ExtResource("10_kd6q5")
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 4.0
+emission_operator = 1
+emission_texture = ExtResource("8_6er6k")
+normal_enabled = true
+normal_texture = ExtResource("9_e34vo")
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_6y41v"]
+albedo_texture = ExtResource("7_2nj83")
+orm_texture = ExtResource("10_kd6q5")
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 4.0
+emission_operator = 1
+emission_texture = ExtResource("8_6er6k")
+normal_enabled = true
+normal_texture = ExtResource("9_e34vo")
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_grewl"]
+albedo_texture = ExtResource("7_2nj83")
+orm_texture = ExtResource("10_kd6q5")
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 4.0
+emission_operator = 1
+emission_texture = ExtResource("8_6er6k")
+normal_enabled = true
+normal_texture = ExtResource("9_e34vo")
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_xvy8g"]
+albedo_texture = ExtResource("7_2nj83")
+orm_texture = ExtResource("10_kd6q5")
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 4.0
+emission_operator = 1
+emission_texture = ExtResource("8_6er6k")
+normal_enabled = true
+normal_texture = ExtResource("9_e34vo")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j0k8m"]
+shader = ExtResource("3_6bvik")
+shader_parameter/mask_type = 0
+shader_parameter/curve = 0.002000000095
+shader_parameter/sharpness = 0.6666667
+shader_parameter/color_offset = 0.0
+shader_parameter/mask_brightness = 0.8710000413725
+shader_parameter/scanline_brightness = 1.0
+shader_parameter/min_scanline_thickness = 0.300000002375
+shader_parameter/aspect = 0.75
+shader_parameter/wobble_strength = 0.0
+
+[node name="MusicVideo" type="Node3D" unique_id=1490569614 node_paths=PackedStringArray("reactor")]
+script = ExtResource("1_cg3rs")
+reactor = NodePath("RoomMeshes/Rooms/Reactor/Reactor")
+song_1_duration = 241.0
+song_2_duration = 193.0
+song_3_duration = 213.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1057807048]
+light_energy = 0.0
+
+[node name="WorldEnvironment2" type="WorldEnvironment" parent="." unique_id=265707084]
+environment = SubResource("Environment_ykwvm")
+
+[node name="RoomMeshes" parent="." unique_id=360548649 instance=ExtResource("2_6bvik")]
+
+[node name="RoomKitFloor24" type="MeshInstance3D" parent="RoomMeshes/Rooms/Reactor" parent_id_path=PackedInt32Array(360548649, 585722236) index="390" unique_id=571812631]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -36)
+mesh = ExtResource("3_rbies")
+
+[node name="RoomKitFloor33" type="MeshInstance3D" parent="RoomMeshes/Rooms/Reactor" parent_id_path=PackedInt32Array(360548649, 585722236) index="391" unique_id=2075452886]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -39)
+mesh = ExtResource("3_rbies")
+
+[node name="RoomKitFloor96" type="MeshInstance3D" parent="RoomMeshes/Rooms/Reactor" parent_id_path=PackedInt32Array(360548649, 585722236) index="392" unique_id=1817720956]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -42)
+mesh = ExtResource("3_rbies")
+
+[node name="RoomKitFloor97" type="MeshInstance3D" parent="RoomMeshes/Rooms/Reactor" parent_id_path=PackedInt32Array(360548649, 585722236) index="393" unique_id=522873971]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -45)
+mesh = ExtResource("3_rbies")
+
+[node name="RoomKitFloor27" type="MeshInstance3D" parent="RoomMeshes/Rooms/Reactor" parent_id_path=PackedInt32Array(360548649, 585722236) index="394" unique_id=574020613]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -45)
+mesh = ExtResource("3_rbies")
+
+[node name="RoomKitFloor37" type="MeshInstance3D" parent="RoomMeshes/Rooms/Reactor" parent_id_path=PackedInt32Array(360548649, 585722236) index="395" unique_id=1864130575]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -48)
+mesh = ExtResource("3_rbies")
+
+[node name="RoomKitFloor98" type="MeshInstance3D" parent="RoomMeshes/Rooms/Reactor" parent_id_path=PackedInt32Array(360548649, 585722236) index="396" unique_id=1190813158]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -51)
+mesh = ExtResource("3_rbies")
+
+[node name="RoomKitFloor99" type="MeshInstance3D" parent="RoomMeshes/Rooms/Reactor" parent_id_path=PackedInt32Array(360548649, 585722236) index="397" unique_id=531394512]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -54)
+mesh = ExtResource("3_rbies")
+
+[node name="RoomKitFloor41" type="MeshInstance3D" parent="RoomMeshes/Rooms/Reactor" parent_id_path=PackedInt32Array(360548649, 585722236) index="398" unique_id=1875366117]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -51)
+mesh = ExtResource("3_rbies")
+
+[node name="RoomKitFloor43" type="MeshInstance3D" parent="RoomMeshes/Rooms/Reactor" parent_id_path=PackedInt32Array(360548649, 585722236) index="399" unique_id=1168878407]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -54)
+mesh = ExtResource("3_rbies")
+
+[node name="RoomKitFloor100" type="MeshInstance3D" parent="RoomMeshes/Rooms/Reactor" parent_id_path=PackedInt32Array(360548649, 585722236) index="400" unique_id=2131862964]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -57)
+mesh = ExtResource("3_rbies")
+
+[node name="RoomKitFloor101" type="MeshInstance3D" parent="RoomMeshes/Rooms/Reactor" parent_id_path=PackedInt32Array(360548649, 585722236) index="401" unique_id=451990702]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -60)
+mesh = ExtResource("3_rbies")
+
+[node name="RoomKitFloor48" type="MeshInstance3D" parent="RoomMeshes/Rooms/Reactor" parent_id_path=PackedInt32Array(360548649, 585722236) index="402" unique_id=414465396]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -60)
+mesh = ExtResource("3_rbies")
+
+[node name="RoomKitFloor50" type="MeshInstance3D" parent="RoomMeshes/Rooms/Reactor" parent_id_path=PackedInt32Array(360548649, 585722236) index="403" unique_id=347407579]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -63)
+mesh = ExtResource("3_rbies")
+
+[node name="RoomKitFloor102" type="MeshInstance3D" parent="RoomMeshes/Rooms/Reactor" parent_id_path=PackedInt32Array(360548649, 585722236) index="404" unique_id=2048325955]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -66)
+mesh = ExtResource("3_rbies")
+
+[node name="RoomKitFloor103" type="MeshInstance3D" parent="RoomMeshes/Rooms/Reactor" parent_id_path=PackedInt32Array(360548649, 585722236) index="405" unique_id=169634706]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -69)
+mesh = ExtResource("3_rbies")
+
+[node name="RoomKitFloor104" type="MeshInstance3D" parent="RoomMeshes/Rooms/Reactor" parent_id_path=PackedInt32Array(360548649, 585722236) index="417" unique_id=889965443]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -45)
+mesh = ExtResource("3_rbies")
+
+[node name="RoomKitFloor105" type="MeshInstance3D" parent="RoomMeshes/Rooms/Reactor" parent_id_path=PackedInt32Array(360548649, 585722236) index="418" unique_id=1196360688]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -42)
+mesh = ExtResource("3_rbies")
+
+[node name="RoomKitFloor69" type="MeshInstance3D" parent="RoomMeshes/Rooms/Reactor" parent_id_path=PackedInt32Array(360548649, 585722236) index="419" unique_id=2040883498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -36)
+mesh = ExtResource("3_rbies")
+
+[node name="RoomKitFloor60" type="MeshInstance3D" parent="RoomMeshes/Rooms/Reactor" parent_id_path=PackedInt32Array(360548649, 585722236) index="420" unique_id=106532685]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -39)
+mesh = ExtResource("3_rbies")
+
+[node name="RoomKitFloor106" type="MeshInstance3D" parent="RoomMeshes/Rooms/Reactor" parent_id_path=PackedInt32Array(360548649, 585722236) index="421" unique_id=2067590305]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -57)
+mesh = ExtResource("3_rbies")
+
+[node name="RoomKitFloor107" type="MeshInstance3D" parent="RoomMeshes/Rooms/Reactor" parent_id_path=PackedInt32Array(360548649, 585722236) index="422" unique_id=764353501]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -54)
+mesh = ExtResource("3_rbies")
+
+[node name="RoomKitFloor70" type="MeshInstance3D" parent="RoomMeshes/Rooms/Reactor" parent_id_path=PackedInt32Array(360548649, 585722236) index="423" unique_id=1735319281]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -48)
+mesh = ExtResource("3_rbies")
+
+[node name="RoomKitFloor62" type="MeshInstance3D" parent="RoomMeshes/Rooms/Reactor" parent_id_path=PackedInt32Array(360548649, 585722236) index="424" unique_id=1228779932]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -51)
+mesh = ExtResource("3_rbies")
+
+[node name="RoomKitFloor108" type="MeshInstance3D" parent="RoomMeshes/Rooms/Reactor" parent_id_path=PackedInt32Array(360548649, 585722236) index="425" unique_id=128383059]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -69)
+mesh = ExtResource("3_rbies")
+
+[node name="RoomKitFloor109" type="MeshInstance3D" parent="RoomMeshes/Rooms/Reactor" parent_id_path=PackedInt32Array(360548649, 585722236) index="426" unique_id=888407666]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -66)
+mesh = ExtResource("3_rbies")
+
+[node name="RoomKitFloor71" type="MeshInstance3D" parent="RoomMeshes/Rooms/Reactor" parent_id_path=PackedInt32Array(360548649, 585722236) index="427" unique_id=1781727768]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -60)
+mesh = ExtResource("3_rbies")
+
+[node name="RoomKitFloor66" type="MeshInstance3D" parent="RoomMeshes/Rooms/Reactor" parent_id_path=PackedInt32Array(360548649, 585722236) index="428" unique_id=1679752661]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -63)
+mesh = ExtResource("3_rbies")
+
+[node name="Reactor" parent="RoomMeshes/Rooms/Reactor" parent_id_path=PackedInt32Array(360548649, 585722236) index="436" unique_id=56980223]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.5, 0, -36)
+reactor_state = 1
+
+[node name="ReactorAmbientLight" parent="RoomMeshes/Rooms/Reactor/Reactor" index="7" unique_id=1720096222]
+shadow_caster_mask = 4294967293
+
+[node name="LightMesh" parent="RoomMeshes/Lights/DoorLight7" parent_id_path=PackedInt32Array(360548649, 2101883988) index="0" unique_id=1584284493]
+surface_material_override/0 = SubResource("ORMMaterial3D_bijmi")
+
+[node name="LightMesh" parent="RoomMeshes/Lights/DoorLight6" parent_id_path=PackedInt32Array(360548649, 1665018343) index="0" unique_id=1584284493]
+surface_material_override/0 = SubResource("ORMMaterial3D_bm27g")
+
+[node name="LightMesh" parent="RoomMeshes/Skeletons/OverheadLightFlicker3" parent_id_path=PackedInt32Array(360548649, 1754760647) index="0" unique_id=1584284493]
+surface_material_override/0 = SubResource("ORMMaterial3D_31045")
+
+[node name="LightMesh" parent="RoomMeshes/GrateLight7" parent_id_path=PackedInt32Array(360548649, 56443964) index="0" unique_id=1584284493]
+surface_material_override/0 = SubResource("ORMMaterial3D_ci66p")
+
+[node name="LightMesh" parent="RoomMeshes/ReactorPanel/ReactorPanel/DoorHolder/OverheadLight" parent_id_path=PackedInt32Array(360548649, 1905714567) index="0" unique_id=1584284493]
+surface_material_override/0 = SubResource("ORMMaterial3D_7ncof")
+
+[node name="LightMesh" parent="RoomMeshes/ReactorPanel/ReactorPanel/DoorHolder/OverheadLight2" parent_id_path=PackedInt32Array(360548649, 1322411264) index="0" unique_id=1584284493]
+surface_material_override/0 = SubResource("ORMMaterial3D_6y41v")
+
+[node name="LightMesh" parent="RoomMeshes/ReactorPanel/ReactorPanel/DoorHolder/OverheadLight4" parent_id_path=PackedInt32Array(360548649, 1904984289) index="0" unique_id=1584284493]
+surface_material_override/0 = SubResource("ORMMaterial3D_grewl")
+
+[node name="LightMesh" parent="RoomMeshes/ReactorPanel/ReactorPanel/DoorHolder/OverheadLight3" parent_id_path=PackedInt32Array(360548649, 2111078630) index="0" unique_id=1584284493]
+surface_material_override/0 = SubResource("ORMMaterial3D_xvy8g")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=136877260]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5, 2.85, -34.595)
+
+[node name="CRTLayer" type="CanvasLayer" parent="." unique_id=1446290047]
+
+[node name="CRTRect" type="ColorRect" parent="CRTLayer" unique_id=1811721094]
+material = SubResource("ShaderMaterial_j0k8m")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FaderLayer" type="CanvasLayer" parent="." unique_id=834296691]
+
+[node name="Fader" type="ColorRect" parent="FaderLayer" unique_id=24967541]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=605586987]
+unique_name_in_owner = true
+stream = ExtResource("16_sqyl4")
+volume_db = -80.0
+bus = &"Music"
+
+[node name="Icosphere" type="MeshInstance3D" parent="." unique_id=326228919]
+unique_name_in_owner = true
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -13.5, 5.8664246, -50)
+layers = 2
+gi_mode = 2
+mesh = ExtResource("18_4eyrg")
+
+[editable path="RoomMeshes"]
+[editable path="RoomMeshes/Rooms/Reactor/Reactor"]
+[editable path="RoomMeshes/Lights/DoorLight7"]
+[editable path="RoomMeshes/Lights/DoorLight6"]
+[editable path="RoomMeshes/Skeletons/OverheadLightFlicker3"]
+[editable path="RoomMeshes/Doors/FirstDoor"]
+[editable path="RoomMeshes/GrateLight7"]
+[editable path="RoomMeshes/ReactorPanel/ReactorPanel"]
+[editable path="RoomMeshes/ReactorPanel/ReactorPanel/DoorHolder/OverheadLight"]
+[editable path="RoomMeshes/ReactorPanel/ReactorPanel/DoorHolder/OverheadLight2"]
+[editable path="RoomMeshes/ReactorPanel/ReactorPanel/DoorHolder/OverheadLight4"]
+[editable path="RoomMeshes/ReactorPanel/ReactorPanel/DoorHolder/OverheadLight3"]
